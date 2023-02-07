@@ -3,6 +3,10 @@
 
 The sample code covers the creation of an **ec2 instance on AWS** associated with a **security group** with **Nginx** installed and serving on port **80**.
 
+YouTube Video: https://youtu.be/tJ6L1332WU4
+
+[![TerraformWorkflow](10C193E5-FDF4-48A9-8E4F-845B816D74E3.png)](https://youtu.be/tJ6L1332WU4)
+
 ## Setup: Terraform CLI and VSCode
 - **Download**: https://developer.hashicorp.com/terraform/downloads
 - **VSCode extension**: https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform
