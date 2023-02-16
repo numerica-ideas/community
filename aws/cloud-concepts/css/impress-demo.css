@@ -681,6 +681,10 @@ a:focus {
     margin-bottom: 20px;
 }
 
-.elasticity h1 {
-    font-size: 81px !important;
+.advantage h1 {
+    font-size: 78px !important;
+}
+
+.advantage .fa-fire {
+    color: rgb(218, 73, 0);
 }
