@@ -36,3 +36,5 @@ The sample code covers the creation of an **ec2 instance on AWS** associated wit
 - Terraform is **stateful**: roll-back is easily manageable since you can version your infrastructure state via a generated file.
 - **Integrates** well with existing Software Development workflows.
 - Terraform is modular and favors the **DRY principle (Do Not Repeat Yourself)** in order to write high-quality and reusable codes.
+
+By Orleando Dassi

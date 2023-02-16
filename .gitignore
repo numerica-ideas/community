@@ -1,4 +1,7 @@
-# Ignoring Terraform files
+# General
+.DS_Store
+
+# Terraform
 .terraform*
 terraform.tfstate
 terraform.tfstate.backup
