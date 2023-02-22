@@ -4,7 +4,7 @@
 Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.gg/UTP7Davtvg) to stay in touch with the community and be part of independently organized events.
 
 ## Social Media
-Present on social media with the following accounts.
+Present on social media with the following accounts:
 - [Twitter](https://twitter.com/numericaideas)
 - [LinkedIn](https://www.linkedin.com/company/numericaideas)
 - [Facebook](https://facebook.com/numericaideas)
@@ -17,7 +17,7 @@ There are a lot of **activities** that you can contribute to within the communit
 - **Speak** at organized [Meetups](https://github.com/numerica-ideas/meetups) events.
 - Be part of [Workshops](https://discord.gg/UTP7Davtvg) to **host or attend** tech topics discussions.
 - Do pre-recorded **videos** uploaded to our [YouTube (English & Français)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) channels.
-- [Pair Interviews](https://discord.gg/UTP7Davtvg) for Software Jobs: be the **interviewee or **interviewer**.
+- [Pair Interviews](https://docs.google.com/forms/d/e/1FAIpQLSfapW9TSe2RR43QF65MRlJjXaQ3uFC0RssvtWforWLZXF4zRg/viewform) for Software Jobs: be the **interviewee or interviewer** for technical assessments.
 - **Sharing** our content (articles and videos) on social media to get us noticed.
 - **Re-using** our content by crediting us.
 - Be **active** in the [Discord](https://discord.gg/UTP7Davtvg) community.
