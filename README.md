@@ -12,7 +12,7 @@ Present on social media with the following accounts:
 - [YouTube (English & Français)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
 
 ## Contribute
-There are a lot of **activities** that you can contribute to within the community:
+There are a lot of **activities** that you can contribute to within the community, the idea is to help others grow while sharpening your hard and soft skills at the same time:
 - Become an **author** and be featured in the [Blog](https://blog.numericaideas.com).
 - **Speak** at organized [Meetups](https://github.com/numerica-ideas/meetups) events.
 - Be part of [Workshops](https://discord.gg/UTP7Davtvg) to **host or attend** tech topics discussions.
@@ -21,7 +21,9 @@ There are a lot of **activities** that you can contribute to within the communit
 - **Sharing** our content (articles and videos) on social media to get us noticed.
 - **Re-using** our content by crediting us.
 - Be **active** in the [Discord](https://discord.gg/UTP7Davtvg) community.
-- **Committing** to our [Open source projects](https://github.com/numerica-ideas).
+- **Committing** to our [tech projects](https://github.com/numerica-ideas/community#tech-projects).
+
+Your contributions are **precious** and some are [awarded](https://github.com/numerica-ideas/community#numies) at the end of each year, **Thank you for making NumericaIdeas shine** ⚡️
 
 **Note**: Feel free to **suggest** new ideas/enhancement to work on by [creating an issue](https://github.com/numerica-ideas/community/issues).
 
@@ -38,5 +40,10 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [web](./web)
 - [meetups](https://github.com/numerica-ideas/meetups)
 - [open source](https://github.com/numerica-ideas)
+
+## Numies
+**Numies** is the NumericaIdeas Awards conducted each year-end to celebrate a few **top contributors** who worked toward the vision of our professional network while impacting more people and differentiating themselves by their commitments and presence. There are many categories available and some prizes are given away.
+
+The [contribution opportunities](https://github.com/numerica-ideas/community#ni-community-activities) are available on the top, the **2022** winners are now public on the [Award](https://numericaideas.com/award) page.
 
 By [NumericaIdeas Network](https://numericaideas.com)
