@@ -1,10 +1,10 @@
 # Ni Community Activities&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com)
-[NumericaIdeas](https://numericaideas.com/about) is striving to build a supportive technical network that can spike multiple professional opportunities around the globe, it might be the community you’ll secure your dreamed job through, or the right area to start experiencing (sandbox-like but real) a role before doing it professionally at work, but for sure the group in which you can develop your hard and soft skills at your own pace. Our motto is **Discover, Learn, Build, & Share**.
+[NumericaIdeas](https://numericaideas.com/about) is striving to build a supportive technical network that can spike multiple professional opportunities around the globe, it might be the community you’ll secure your dreamed job through, or the right area to start experiencing (sandbox-like but real) a role before doing it professionally at work, but for sure the group in which you can develop your hard and soft skills at your own pace. Our motto is **Discover, Learn, Build, & Share** 🚀
 
 Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.gg/UTP7Davtvg) to stay in touch with the community and be part of independently organized events.
 
 ## Social Media
-Present on social media with the following accounts:
+Present on social media with the following accounts :eight_spoked_asterisk:
 - [Twitter](https://twitter.com/numericaideas)
 - [LinkedIn](https://www.linkedin.com/company/numericaideas)
 - [Facebook](https://facebook.com/numericaideas)
@@ -25,7 +25,7 @@ There are a lot of **activities** that you can contribute to within the communit
 
 Your contributions are **precious** and some are [awarded](https://github.com/numerica-ideas/community#numies) at the end of each year, **Thank you for making NumericaIdeas shine** ⚡️
 
-**Note**: Feel free to **suggest** new ideas/enhancement to work on by [creating an issue](https://github.com/numerica-ideas/community/issues).
+**Note**: Feel free to **suggest** new ideas/enhancement to work on by [creating an issue](https://github.com/numerica-ideas/community/issues) :bulb:
 
 ## Tech Projects
 The articles, workshops, and other events **projects** are centralized in this repository:
@@ -42,8 +42,8 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [open source](https://github.com/numerica-ideas)
 
 ## Numies
-**Numies** is the NumericaIdeas Awards conducted each year-end to celebrate a few **top contributors** who worked toward the vision of our professional network while impacting more people and differentiating themselves by their commitments and presence. There are many categories available and some prizes are given away.
+**Numies** is the NumericaIdeas Awards conducted each year-end to celebrate a few **top contributors** who worked toward the vision of our professional network while impacting more people and differentiating themselves by their commitments and presence. There are many categories available and some prizes are given away 🎉
 
 The [contribution opportunities](https://github.com/numerica-ideas/community#contribute) are available on the top, the **2022** winners are now public on the [Award](https://numericaideas.com/award) page.
 
-By [NumericaIdeas Network](https://numericaideas.com)
+By [NumericaIdeas Network](https://numericaideas.com) :fire:
