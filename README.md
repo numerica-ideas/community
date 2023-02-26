@@ -1,4 +1,4 @@
-# NI Community Initiatives [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com)
+# Ni Community Activities&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com)
 [NumericaIdeas](https://numericaideas.com/about) is striving to build a supportive technical network that can spike multiple professional opportunities around the globe, it might be the community you’ll secure your dreamed job through, or the right area to start experiencing (sandbox-like but real) a role before doing it professionally at work, but for sure the group in which you can develop your hard and soft skills at your own pace. Our motto is **Discover, Learn, Build, & Share**.
 
 Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.gg/UTP7Davtvg) to stay in touch with the community and be part of independently organized events.
@@ -36,6 +36,7 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [security](./security)
 - [terraform](./terraform)
 - [web](./web)
-- [Meetups](https://github.com/numerica-ideas/meetups)
+- [meetups](https://github.com/numerica-ideas/meetups)
+- [open source](https://github.com/numerica-ideas)
 
 By [NumericaIdeas Network](https://numericaideas.com)
