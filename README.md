@@ -13,6 +13,7 @@ Present on social media with the following accounts :eight_spoked_asterisk:
 
 ## Contribute
 There are a lot of **activities** that you can contribute to within the community, the idea is to help others grow while sharpening your hard and soft skills at the same time:
+- Publicly shared [TODO list](https://github.com/numerica-ideas/community/issues).
 - Become an **author** and be featured in the [Blog](https://blog.numericaideas.com).
 - **Speak** at organized [Meetups](https://github.com/numerica-ideas/meetups) events.
 - Be part of [Workshops](https://discord.gg/UTP7Davtvg) to **host or attend** tech topics discussions.
