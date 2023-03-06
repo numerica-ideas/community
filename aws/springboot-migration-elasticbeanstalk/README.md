@@ -6,7 +6,7 @@ Migrating an App with the **Lift And Shift** approach is often done by updating 
 
 [![PresentationImage](aws-elasticbeanstalk-migration.png)](https://youtu.be/tWQFavEJQ7c)
 
-This first [video](https://youtu.be/tWQFavEJQ7c) is part of a [series](https://github.com/numerica-ideas/community/tree/master/aws/spring-boot-migration-elasticbeanstalk#series), it goes over the definition of the **Lift And Shift (Rehosting)** Cloud migration strategy and demonstrates it in only 5 steps:
+This first [video](https://youtu.be/tWQFavEJQ7c) is part of a [series](https://github.com/numerica-ideas/community/tree/master/aws/springboot-migration-elasticbeanstalk#series), it goes over the definition of the **Lift And Shift (Rehosting)** Cloud migration strategy and demonstrates it in only 5 steps:
 - **Step 1**: Initialize the Project
 - **Step 2**: Create the Environment
 - **Step 3**: Deployment Package (build)
