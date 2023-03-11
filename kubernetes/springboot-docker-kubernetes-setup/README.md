@@ -51,13 +51,13 @@ In this demo, we will deploy a **Spring Boot** application using Docker and Kube
 ### Clone the Github Repository
 Let's start by cloning the project from the [github repository](link-to-provide-soon):
 ```
-git clone https://github.com/numerica-ideas/setup-docker-containers-kubernetes.git
+git clone https://github.com/numerica-ideas/community.git
 ```
 
 Then, go to the directory that contains the project:
 
 ```
-cd setup-docker-containers-kubernetes/
+cd community/kubernetes/springboot-docker-kubernetes-setup/
 ```
  ![1](https://user-images.githubusercontent.com/70517765/215277950-21cdf26a-8781-4af9-bc48-7d10ddd7c3ac.PNG)
 
