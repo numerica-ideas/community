@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: dassiorleando/crud-spring-boot
+        image: lugar2020/crud-spring-boot
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8020
