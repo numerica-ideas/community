@@ -1,4 +1,4 @@
-# Lift And Shift Cloud Migration of "Spring Boot + MySQL" App Using AWS ElasticBeanstalk
+# Lift And Shift Cloud Migration of "Spring Boot + MySQL" App Using AWS ElasticBeanstalk&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fspringboot-migration-elasticbeanstalk&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://youtube.com/playlist?list=PLJl2liPyo6s3oQkBT2UWbuSfrwO4aS-9Z)
 
 Migrating a *Spring Boot + MySQL* project to AWS Cloud using **[ElasticBeanstalk](https://aws.amazon.com/elasticbeanstalk/)** service.
 
