@@ -10,7 +10,6 @@ Moving to the following sections, we assume that you have **Java (OpenJDK 11), D
 ## Docker
 [Docker](https://www.docker.com) is an open-source tool for containerizing applications, it encapsulates an application with all the dependencies needed for it to run. Docker containers are lightweight and easy to move around, allowing applications to be deployed quickly and efficiently on any system that supports Docker.
 
-### Advantages of Containerization
 The advantage of containerizing applications is that it allows applications to be separated from operating systems. Applications can be deployed on different operating systems without having to worry about configuration differences. It also makes it easier to scale and manage applications because containers can be moved easily between servers.
 
 To containerize an application with Docker, you must first create a file called `Dockerfile` that describes the steps needed to create a container. This file describes the commands to install the dependencies, configure the application and start the main process.
@@ -21,7 +20,6 @@ Once the Dockerfile is created, you can build the container image using the `doc
 
 [Kubernetes](https://kubernetes.io/) aka **k8s** is an open-source container orchestration tool, it allows you to manage containers' clusters using concepts such as pods, replicasets, and deployments. **Pods** are groups of containers that work together to run an application, while **Replicasets** ensure that the number of running pods matches the number specified in the configuration, in the other hand **Deployments** manage application updates by defining scaling and rollback policies. Kubernetes also provides high availability, load balancing, and monitoring capabilities.
 
-### Advantages of Kubernetes
 Kubernetes has several advantages for managing application containers, including:
 - **Scalability**: makes it easier to scale applications by increasing or decreasing the number of running pods in regard to the application's usage, also refers to as horizontal scaling.
 - **High availability**: automatically manage the distribution of containers across different nodes to ensure application availability.
@@ -30,13 +28,13 @@ Kubernetes has several advantages for managing application containers, including
 - **Integration**: facilitates the integration of different services and tools, such as monitoring systems, storage systems, and so on.
 - **Update**: when updates are available, it's easy to apply them using Kubernetes, without interrupting the services.
 
-## Deploying a Containerized Application with Docker and Kubernetes
+## Deploying with Docker and Kubernetes
 
 ### Application Preparation
 To deploy an application with Docker, you must first create a configuration file called `Dockerfile` which describes the steps needed to build the application's image.
 
 ### Building the Image
-Next, the Dockerfile is used to build the image of the application using the `docker build` command. This image is then stored in a Docker image registry like the famous **Docker Hub**.
+Next, the **Dockerfile** is used to build the image of the application using the `docker build` command. This image is then stored in a Docker image registry like the famous **Docker Hub**.
 
 ### Deploying the Image
 Then, to deploy the application in a Kubernetes cluster, you need to create a configuration file called `deployment.yaml` which describes the deployment parameters such as the number of replicas (instances of the application), required resources, ... etc.
@@ -44,22 +42,21 @@ Then, to deploy the application in a Kubernetes cluster, you need to create a co
 ### Running the Application
 Finally, with the configuration file in place, Kubernetes has everything to deploy the application in the cluster(s) using the command `kubectl create -f deployment.yaml`. It takes care of creating the necessary containers, placing them on the appropriate nodes, and managing them as needed (restarting, scaling, .. etc).
 
-## Demo: Spring Boot Application Deployment in a Kubernetes Cluster**
+## Demo: Spring Boot Application Deployment in a Kubernetes Cluster
 
 In this demo, we will deploy a **Spring Boot** application using Docker and Kubernetes with **MySQL** as the database management system. A **Dockerfile** is created to build the image of the application, and then we will use this image to deploy the application on a Kubernetes cluster.
 
 ### Clone the Github Repository
-Let's start by cloning the project from the [github repository](link-to-provide-soon):
+Let's start by cloning the project from the [github repository](https://github.com/numerica-ideas/community):
 ```
-git clone https://github.com/numerica-ideas/setup-docker-containers-kubernetes.git
+git clone https://github.com/numerica-ideas/community
 ```
 
 Then, go to the directory that contains the project:
 
 ```
-cd setup-docker-containers-kubernetes/
+cd community/kubernetes/springboot-docker-kubernetes-setup
 ```
- ![1](https://user-images.githubusercontent.com/70517765/215277950-21cdf26a-8781-4af9-bc48-7d10ddd7c3ac.PNG)
 
 ### Project Compilation
 To compile the project, let's run the following command if you are on a **Unix** based operating system:
@@ -71,8 +68,8 @@ To compile the project, let's run the following command if you are on a **Unix**
 mvnw.cmd clean install -DskipTests
  ```
 
-After that you will get the following files and directories as illustrated in the screenshot:
- ![3](https://user-images.githubusercontent.com/70517765/215277975-cdcb7143-2233-4507-bfee-04bf2533f3eb.PNG)
+After that, you will get the following files and directories as illustrated in the screenshot:
+![SpringBootBuild](./images/docker-kubernetes-springboot-build.png)
 
 ### Presentation of the Dockerfile
 The Dockerfile is used to create a Docker image of our application. Actually, it contains instructions to:
@@ -102,7 +99,7 @@ Start the Docker process, then run this command which specifies the image tag (-
 docker build -t lugar2020/crud-spring-boot .
 ```
 
-![4](https://user-images.githubusercontent.com/70517765/215278215-c44f1884-7000-42a5-aaf8-f0a274e82cc2.PNG)
+![DockerImage](./images/docker-kubernetes-springboot-image.png)
 
 ### Uploading the Image to the Docker Hub
 Once we have created our application image, we can upload it to the Docker Hub using the docker push command. This will allow us to easily upload the image to a Kubernetes cluster for deployment purposes.
@@ -112,13 +109,13 @@ First, sign in to your Docker Hub account:
 ```
 docker login
 ```
-![5](https://user-images.githubusercontent.com/70517765/215278502-bc4432c5-4728-41cb-a958-ee53e75d88ed.PNG)
+![DockerLogin](./images/docker-kubernetes-springboot-login.png)
 
-Check the Docker image existence:
+Check the Docker image existence with the command:
 ```
 docker images
 ```
-![6](https://user-images.githubusercontent.com/70517765/215278609-592ae9f7-2e8a-4e81-bf57-b31d44180674.PNG)
+![DockerImages](./images/docker-kubernetes-springboot-images.png)
 
 Push the application image to your Docker Hub repository:
 
@@ -126,9 +123,9 @@ Push the application image to your Docker Hub repository:
 docker push lugar2020/crud-spring-boot
 ```
 
-![7](https://user-images.githubusercontent.com/70517765/215278740-adb9db56-de59-440e-ad96-e0c73eedd836.PNG)
+![DockerPush](./images/docker-kubernetes-springboot-push.png)
 
-### Deploying the Application in Kubernetes Cluster
+### Deploying the Application
 To deploy in a Kubernetes cluster, we need two manifest files for both Spring-Boot and for Mysql, these files are respectively of **Service** and **Deployment** kinds.
 
 The deployment manifest file defines a deployment on Kubernetes. It allows you to deploy and manage one or more replicas (instances) of your App in the cluster. The file describes the features (pod, replicas) that your App needs to run and to be accessible by users.
@@ -198,7 +195,7 @@ The same goes by for **MySQL** configurations, you'll find all these files in th
 
 In case you are using **Docker Desktop**, you have to **enable** Kubernetes from its settings:
 
-![EnableKubernetes](./docker-enable-kubernetes.png)
+![EnableKubernetes](./images/docker-enable-kubernetes.png)
 
 To deploy the App, a script has been created which you can run from within the root folder, it applies all the Kubernetes `deployment/service` manifests:
 ```
@@ -210,11 +207,11 @@ Once deployed, feel free to run the following command to display all Kubernetes 
 kubectl get all
 ```
 
-![13](https://user-images.githubusercontent.com/70517765/215279890-5b01da1e-5ccd-4205-a77f-2d4c5e4f6d23.PNG)
+![KubernetesResources](./images/docker-kubernetes-springboot-resources.png)
 
 Finally, we can open the App once exposed outside the cluster with the script `./expose.sh` which uses the [port forwarding method](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/) to serve it on **localhost** using the port **4646**.
 
-![ClusterExposedOnLocalhost](./kube-cluster-exposed-on-localhost.png)
+![ClusterExposedOnLocalhost](./images/kube-cluster-exposed-on-localhost.png)
 
 ## Environment Variables
 **Environment Variables** are parameters that can be set and used to configure applications and services. In our case we have defined some in the `application.properties` file and we assigned values to these variables at deployment time to the App from the `app-deploy.yml` file in the `containers.env` key pairs.
@@ -226,10 +223,7 @@ spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
 ```
 
-Then, we provide the following lines in `app-deploy.yml` file:
-
-
-For a production grade application, the way we provide these variables could differ but the general idea remains, passing them to the App.
+For a production grade application, the way to provide these variables could differ but the general idea remains passing them to the App.
 
 ## Conclusion
-In conclusion, Docker and Kubernetes are incredibly powerful tools for deploying containerized applications in clusters. Using these two tools together makes it possible to deploy applications efficiently, reliably, and in a productive manner by taking advantage of Docker's isolation and Kubernetes' clusters management. Having a good understanding of both in terms of features/concenpts is a must to put them in a perfect symbiose.
+To summarize, Docker and Kubernetes are incredibly powerful and flexible tools for deploying containerized applications in clusters. Using these two tools together makes it possible to deploy applications efficiently, reliably, and in a productive manner by taking advantage of Docker's isolation and Kubernetes' clusters management. Having a good understanding of both in terms of features/concenpts is a must to put them in a perfect symbiose.
