@@ -234,7 +234,7 @@ For a production grade application, the way to provide these variables could dif
 ———————
 
 We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
-Does this speak to you? If YES, feel free to [Join our Discord Server](https://discord.gg/UTP7Davtvg) to stay in touch with the community and be part of independently organized events.
+Does this speak to you? If YES, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
 ———————
 
