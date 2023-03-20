@@ -2,14 +2,14 @@
 
 [NumericaIdeas](https://numericaideas.com/about) is striving to build a supportive technical network that can spike multiple professional opportunities around the globe, it might be the community you’ll secure your dreamed job through, or the right area to start experiencing (sandbox-like but real) a role before doing it professionally at work, but for sure the group in which you can develop your hard and soft skills at your own pace. Our motto is **Discover, Learn, Build, & Share** 🚀
 
-Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.gg/UTP7Davtvg) to stay in touch with the community and be part of independently organized events.
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
 ## Social Media
 Present on social media with the following accounts :eight_spoked_asterisk:
 - [Twitter](https://twitter.com/numericaideas)
 - [LinkedIn](https://www.linkedin.com/company/numericaideas)
 - [Facebook](https://facebook.com/numericaideas)
-- [Discord](https://discord.gg/UTP7Davtvg)
+- [Discord](https://discord.numericaideas.com)
 - [YouTube (English & Français)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
 
 ## Contribute
@@ -17,12 +17,12 @@ There are a lot of **activities** that you can contribute to within the communit
 - Publicly shared [TODO list](https://github.com/numerica-ideas/community/issues).
 - Become an **author** and be featured in the [Blog](https://blog.numericaideas.com).
 - **Speak** at organized [Meetups](https://github.com/numerica-ideas/meetups) events.
-- Be part of [Workshops](https://discord.gg/UTP7Davtvg) to **host or attend** tech topics discussions.
+- Be part of [Workshops](https://discord.numericaideas.com) to **host or attend** tech topics discussions.
 - Do pre-recorded **videos** uploaded to our [YouTube (English & Français)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) channels.
 - [Pair Interviews](https://docs.google.com/forms/d/e/1FAIpQLSfapW9TSe2RR43QF65MRlJjXaQ3uFC0RssvtWforWLZXF4zRg/viewform) for Software Jobs: be the **interviewee or interviewer** for technical assessments.
 - **Sharing** our content (articles and videos) on social media to get us noticed.
 - **Re-using** our content by crediting us.
-- Be **active** in the [Discord](https://discord.gg/UTP7Davtvg) community.
+- Be **active** in the [Discord](https://discord.numericaideas.com) community.
 - **Committing** to our [tech projects](https://github.com/numerica-ideas/community#tech-projects).
 
 Your contributions are **precious** and some are [awarded](https://github.com/numerica-ideas/community#numies) at the end of each year, **Thank you for making NumericaIdeas shine** ⚡️
