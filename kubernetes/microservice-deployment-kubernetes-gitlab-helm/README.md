@@ -84,4 +84,11 @@ deploy_application:
     - helm install backend spring-backend
   
 ```
+Now let's dive into our .gitlab-ci.yml file to get a better understanding 
+
+```
+variables:
+  BACKEND_IMAGE_NAME: lugar2020/spring-backend
+  FRONTEND_IMAGE_NAME: lugar2020/angular-frontend
+```
 
