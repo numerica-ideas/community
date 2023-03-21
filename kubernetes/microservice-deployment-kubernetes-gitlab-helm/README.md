@@ -120,12 +120,13 @@ build_spring_image:
 ```
 This step in the .gitlab-ci.yml file is called build_spring_image and is defined as stage: build_push_image. It builds and pushes the Docker image for the backend done in Spring boot on the docker hub.
 
-**image: docker:20.10.16** : uses the docker image docker:20.10.16 as the runtime environment for this step. Since we will have to execute docker commands we need a docker client and docker daemon which are available in this image. In this part we use the docker in docker concept for more information [see the article](https://blog.packagecloud.io/3-methods-to-run-docker-in-docker-containers/#:~:text=Docker%20In%20Docker%20)
+-**image: docker:20.10.16** : uses the docker image docker:20.10.16 as the runtime environment for this step. Since we will have to execute docker commands we need a docker client and docker daemon which are available in this image. In this part we use the docker in docker concept for more information [see the article](https://blog.packagecloud.io/3-methods-to-run-docker-in-docker-containers/#:~:text=Docker%20In%20Docker%20)
 
-**services: docker:20.10.16-dind** : uses the docker image docker:20.10.16-dind as a service for Docker, which allows you to execute Docker commands inside the Docker container of this step.
+-**services: docker:20.10.16-dind** : uses the docker image docker:20.10.16-dind as a service for Docker, which allows you to execute Docker commands inside the Docker container of this step.
 
-**variables: DOCKER_TLS_CERTDIR: "/certs"**: defines a `DOCKER_TLS_CERTDIR` environment variable that specifies the TLS certificate directory for Docker.
+-**variables: DOCKER_TLS_CERTDIR: "/certs"**: defines a `DOCKER_TLS_CERTDIR` environment variable that specifies the TLS certificate directory for Docker.
 
-**before_script:** a list of commands to be executed before the main task of this step is executed. In this step, there are two commands to execute. The first command is to authenticate to the `Docker registry`. The second command `cd spring-boot-h2-database-crud/` changes the current directory to one containing the backend source code.
+-**before_script:** a list of commands to be executed before the main task of this step is executed. In this step, there are two commands to execute. The first command is to authenticate to the `Docker registry`. The second command `cd spring-boot-h2-database-crud/` changes the current directory to one containing the backend source code.
 
 To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain your docker hub IDs. To do this, go to `settings > CI/CD` then `variable`
+
