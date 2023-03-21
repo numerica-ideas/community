@@ -32,7 +32,7 @@ The above screenshot shows the different directories of the source code:
 
 ## Step 2 : Configuration of Gitlab CI
 
-**important**: Before you start you need to make sure you can use the gitlab shared runners we will be using in this demo if this is not the case you can add our own runners to the project. To do this in your project go to settings > CI/CD then Runners then disable the shared runners and add your own by following the steps provided
+**important**: Before you start you need to make sure you can use the gitlab shared runners that we will use in this demo. If this is not the case you can add our own runners to the project. To do this in your project go to `settings > CI/CD` then `Runners` then disable the shared runners and add your own by following the steps provided
 
 Open the .gitlab-ci.yml file located at the root of the repository
 ```
