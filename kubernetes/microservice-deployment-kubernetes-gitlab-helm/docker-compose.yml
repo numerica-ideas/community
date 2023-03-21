@@ -1,0 +1,29 @@
+version: '3'
+services:
+  
+  spring-api:
+    container_name: spring-api
+    build: ./spring-boot-h2-database-crud
+    restart: always
+    ports:
+      - 9090:9090
+    networks:
+      - my-network
+
+  angular-ui:
+    container_name: angular-ui
+    build: ./angular-14-crud-example
+    restart: always
+    ports:
+     - 5050:80
+    networks:
+      - my-network
+    depends_on:
+     - spring-api
+    environment:
+      API_URL: "http://localhost:9090/api/tutorials"
+     
+networks:
+  my-network:
+    driver: bridge
+ 

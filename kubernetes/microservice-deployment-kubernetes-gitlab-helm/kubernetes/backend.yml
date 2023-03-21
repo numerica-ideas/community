@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deploy
+  labels:
+   app: backend-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-app
+  template:
+    metadata:
+      labels:
+        app: backend-app
+    spec:
+      containers:
+      - name: backend-container
+        image: lugar2020/backend
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9090
+
+---
+
+apiVersion: v1
+kind: Service
+metadata: 
+  name: spring-api
+  labels:
+    name: backend-service
+spec:
+  ports:
+    - port: 9090
+      targetPort: 9090
+  selector:
+    app: backend-app

@@ -1,0 +1,57 @@
+variables:
+  BACKEND_IMAGE_NAME: lugar2020/spring-backend
+  FRONTEND_IMAGE_NAME: lugar2020/angular-frontend
+
+stages:
+  # - test
+  - build_push_image
+  - deploy
+
+# run_tests:
+#   stage: test
+#   image: maven:3.8-jdk-11-slim
+#   script: 
+
+build_spring_image:
+  stage: build_push_image
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+    - cd spring-boot-h2-database-crud/
+  script: 
+    - docker build -t $BACKEND_IMAGE_NAME .
+    - docker push $BACKEND_IMAGE_NAME
+
+build_angular_image:
+  stage: build_push_image
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+    - cd angular-14-crud-example/
+  script: 
+    - docker build -t $FRONTEND_IMAGE_NAME .
+    - docker push $FRONTEND_IMAGE_NAME
+
+deploy_application:
+  # variables:
+  #   KUBE_CONTEXT: kemanedonfack/devops-project-05:k8s-cluster
+  stage: deploy
+  image: devth/helm:latest
+  before_script:
+    - cd helm/
+    - kubectl config get-contexts
+    - kubectl config use-context kemanedonfack/devops-project-05:k8s-cluster
+    # - kubectl config use-context "$KUBE_CONTEXT"
+  script: 
+    - helm install frontend angular-frontend
+    - helm install backend spring-backend
+  
+
