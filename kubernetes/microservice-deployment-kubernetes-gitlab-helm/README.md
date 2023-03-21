@@ -137,3 +137,13 @@ To perform this step perfectly you need to create the variables `DOCKER_PASSWORD
 For more information on the configurations of this part please refer to the official Gitlab CI documentation [here](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-in-docker)
 
 The configurations to be performed in the `build_angular_image` step are the same as in the previous step `build_spring_image`
+
+
+### deploy stage
+
+**important**: you must install `Helm` in your kubernetes cluster
+In this step you would need a working kubernetes cluster with helm install then you need to connect your cluster to gitlab you need to install an agent for kubernetes. for more information see the official documentation [here](https://docs.gitlab.com/ee/user/clusters/agent/install/index.html#register-the-agent-with-gitlab)
+In our case we use **EKS (Elastic Kubernetes Service)** from **aws** which we have already connected to our Gitlab project
+
+
+
