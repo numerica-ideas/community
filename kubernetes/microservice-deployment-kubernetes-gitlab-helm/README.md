@@ -30,4 +30,58 @@ The above screenshot shows the different directories of the source code:
 - **.gitlab-ci.yml**: which is the core of our pipeline is the file where we describe the different steps of our pipeline
 - **docker-compose.yml** this file allows us to deploy our application under docker
 
+## Step 2 : Configuration of gitlab
+
+**important**: Before you start you need to make sure you can use the gitlab shared runners we will be using in this demo if this is not the case you can add our own runners to the project. To do this in your project go to settings > CI/CD then Runners then disable the shared runners and add your own by following the steps provided
+
+Open the .gitlab-ci.yml file located at the root of the repository
+```
+variables:
+  BACKEND_IMAGE_NAME: lugar2020/spring-backend
+  FRONTEND_IMAGE_NAME: lugar2020/angular-frontend
+
+stages:
+  - build_push_image
+  - deploy
+
+build_spring_image:
+  stage: build_push_image
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+    - cd spring-boot-h2-database-crud/
+  script: 
+    - docker build -t $BACKEND_IMAGE_NAME .
+    - docker push $BACKEND_IMAGE_NAME
+
+build_angular_image:
+  stage: build_push_image
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+    - cd angular-14-crud-example/
+  script: 
+    - docker build -t $FRONTEND_IMAGE_NAME .
+    - docker push $FRONTEND_IMAGE_NAME
+
+deploy_application:
+  stage: deploy
+  image: devth/helm:latest
+  before_script:
+    - cd helm/
+    - kubectl config get-contexts
+    - kubectl config use-context kemanedonfack/devops-project-05:k8s-cluster
+  script: 
+    - helm install frontend angular-frontend
+    - helm install backend spring-backend
+  
+```
 
