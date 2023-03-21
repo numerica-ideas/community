@@ -130,3 +130,8 @@ This step in the .gitlab-ci.yml file is called build_spring_image and is defined
 
 To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain your docker hub IDs. To do this, go to `settings > CI/CD` then `variable`
 
+<img width="341" alt="1" src="https://user-images.githubusercontent.com/70517765/226735876-f1236c68-ef6f-43da-940b-477f1cfb8555.png">
+<img width="726" alt="2" src="https://user-images.githubusercontent.com/70517765/226735906-9e12442b-23da-4cd9-b9f2-9837875c7261.png">
+
+
+
