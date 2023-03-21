@@ -10,3 +10,9 @@ To perform this demo, you will need to have the following prerequisites:
 - **A Kubernetes cluster**: You can use an existing Kubernetes cluster or create a new one on a cloud provider such as Google Cloud, Amazon Web Services or Microsoft Azure.
 - **A GitLab account**: You will need a GitLab account to set up the CI/CD pipeline.
 - **Docker Hub account**: You will need a Docker Hub account to store Docker images.
+
+## What is Helm ?
+[Helm](https://helm.sh/) is a package manager for Kubernetes that allows you to easily install and manage applications on a Kubernetes cluster. Helm uses charts to define the structure and configuration of an application, which can be versioned and shared between teams.
+
+**Helm chart** is a package that contains all the Kubernetes manifests, configuration files and dependencies needed to install and run an application on a Kubernetes cluster. It defines the structure and configuration of an application, including items such as environment variables, ports, volumes and service dependencies.
+
