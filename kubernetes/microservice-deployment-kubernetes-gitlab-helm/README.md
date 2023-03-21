@@ -92,3 +92,31 @@ variables:
   FRONTEND_IMAGE_NAME: lugar2020/angular-frontend
 ```
 
+At the top of the file you will find a variable declaring `BACKEND_IMAGE_NAME` and `FRONTEND_IMAGE_NAME` as their names indicate, these are the names of the docker images we will use in our pipeline. You have to create in your docker hub account two repositories to store these images, **don't forget to change lugar2020 to your docker hub ID**.
+
+```
+stages:
+  - build_push_image
+  - deploy
+```
+Our pipeline will contain only two steps : **building and publishing** our images on the docker hub and **deploying** our application on a kubernetes cluster
+
+### build & push stage
+
+```
+build_spring_image:
+  stage: build_push_image
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+    - cd spring-boot-h2-database-crud/
+  script: 
+    - docker build -t $BACKEND_IMAGE_NAME .
+    - docker push $BACKEND_IMAGE_NAME
+```
+
+
