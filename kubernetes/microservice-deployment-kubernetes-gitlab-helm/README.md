@@ -5,3 +5,8 @@ In today's fast-paced software development environment, it is essential to deplo
 
 [GitLab CI](https://gitlab.com/) is an integral part of the GitLab platform and provides a robust continuous integration and deployment (CI/CD) pipeline. It allows developers to automate the building, testing and deployment of their applications. [Helm](https://helm.sh/) is a package manager for Kubernetes that allows users to install, upgrade and manage applications in a Kubernetes cluster.
 
+## Prerequisites
+To perform this demo, you will need to have the following prerequisites:
+- **A Kubernetes cluster**: You can use an existing Kubernetes cluster or create a new one on a cloud provider such as Google Cloud, Amazon Web Services or Microsoft Azure.
+- **A GitLab account**: You will need a GitLab account to set up the CI/CD pipeline.
+- **Docker Hub account**: You will need a Docker Hub account to store Docker images.
