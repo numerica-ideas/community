@@ -132,7 +132,10 @@ This step in the .gitlab-ci.yml file is called build_spring_image and is defined
 To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain your docker hub IDs. To do this, go to `settings > CI/CD` then `variable`
 
 <img width="341" alt="1" src="https://user-images.githubusercontent.com/70517765/226735876-f1236c68-ef6f-43da-940b-477f1cfb8555.png">
-![Capture](https://user-images.githubusercontent.com/70517765/227020117-9a2031e6-bdf8-4d4d-94ba-ed76f7bb6366.PNG)
+
+![Capture](https://user-images.githubusercontent.com/70517765/227020591-7e9746be-7a14-42c5-b6dc-38f11205e8d1.PNG)
+
+
 
 - **script**: the main task of this step. In this step, two Docker commands are executed. The first command `docker build -t $BACKEND_IMAGE_NAME .` builds the Docker image for the Spring backend using the Dockerfile present in the current directory `spring-boot-h2-database-crud`. The second `docker push $BACKEND_IMAGE_NAME` command pushes the previously built image into the Docker registry specified by the variable `$BACKEND_IMAGE_NAME`.
 For more information on the configurations of this part please refer to the official Gitlab CI documentation [here](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-in-docker)
