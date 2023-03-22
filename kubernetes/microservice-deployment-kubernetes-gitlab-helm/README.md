@@ -53,7 +53,7 @@ build_spring_image:
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
   before_script:
-    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_LOGIN --password-stdin
     - cd spring-boot-h2-database-crud/
   script: 
     - docker build -t $BACKEND_IMAGE_NAME .
@@ -67,7 +67,7 @@ build_angular_image:
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
   before_script:
-    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_LOGIN --password-stdin
     - cd angular-14-crud-example/
   script: 
     - docker build -t $FRONTEND_IMAGE_NAME .
@@ -113,7 +113,7 @@ build_spring_image:
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
   before_script:
-    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_LOGIN --password-stdin
     - cd spring-boot-h2-database-crud/
   script: 
     - docker build -t $BACKEND_IMAGE_NAME .
