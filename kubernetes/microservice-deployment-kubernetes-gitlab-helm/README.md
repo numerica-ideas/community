@@ -173,3 +173,5 @@ deploy_application:
 
 - **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are "frontend" and "backend" for the frontend and backend parts of the application respectively.
 
+## Step 3 : Launch our pipeline
+
