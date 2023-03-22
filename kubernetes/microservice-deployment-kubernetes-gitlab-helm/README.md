@@ -17,7 +17,8 @@ To perform this demo, you will need to have the following prerequisites:
 **Helm chart** is a package that contains all the Kubernetes manifests, configuration files and dependencies needed to install and run an application on a Kubernetes cluster. It defines the structure and configuration of an application, including items such as environment variables, ports, volumes and service dependencies.
 
 ## Step 1 : Create your own repository
-You will find the complete source code of the project at the address below: [source code](https://github.com/kemanedonfack/community/tree/master/kubernetes/microservice-deployment-kubernetes-gitlab-helm) so put all the content on your own repository
+You will find the complete source code of the project at the address below: [source code](https://github.com/kemanedonfack/community/tree/master/kubernetes/microservice-deployment-kubernetes-gitlab-helm) so put all the content on your own repository.
+
 Let's  briefly explain the folders in the repository
 
 ![Capture](https://user-images.githubusercontent.com/70517765/226720738-84c6c466-43ab-40af-923e-ddf208bffc10.PNG)
