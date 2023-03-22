@@ -19,6 +19,7 @@ To perform this demo, you will need to have the following prerequisites:
 ## Step 1 : Clone the repository
 You can find the complete source code of the project at the address below: [source code](https://github.com/kemanedonfack/community/tree/master/kubernetes/microservice-deployment-kubernetes-gitlab-helm)
 Let's  briefly explain the folders in the repository
+
 ![Capture](https://user-images.githubusercontent.com/70517765/226720738-84c6c466-43ab-40af-923e-ddf208bffc10.PNG)
 
 The above screenshot shows the different directories of the source code: 
