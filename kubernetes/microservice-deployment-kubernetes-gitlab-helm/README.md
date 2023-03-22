@@ -149,7 +149,9 @@ The configurations to be performed in the `build_angular_image` step are the sam
 To be able to use the gitlab shared runners here you need to add a credit card containing 1$ then you would have access to the gitlab shared runners in all your projects. 
 
 Let's now launch our pipeline for that on your project go on `CI/CD > pipelines` then click on `Run pipeline`
+
 ![Capture](https://user-images.githubusercontent.com/70517765/227025049-8ed6015f-39da-4682-828d-a2261a10b281.PNG)
+
 In the next screen, don't put anything, just click on Run Pipeline. After that you will get the result below. The build_push_image stage worked perfectly
 
 ![Capture](https://user-images.githubusercontent.com/70517765/227026981-2b5a30f4-3dcf-426f-9623-d26a388053fe.PNG)
