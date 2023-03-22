@@ -146,5 +146,24 @@ The configurations to be performed in the `build_angular_image` step are the sam
 In this step you would need a working kubernetes cluster with helm install then you need to connect your cluster to gitlab you need to install an agent for kubernetes. for more information see the official documentation [here](https://docs.gitlab.com/ee/user/clusters/agent/install/index.html#register-the-agent-with-gitlab)
 In our case we use **EKS (Elastic Kubernetes Service)** from **aws** which we have already connected to our Gitlab project
 
+<img width="751" alt="Capture d’écran 2023-03-21 123214" src="https://user-images.githubusercontent.com/70517765/226848300-a5d4fc34-f168-4ec9-a234-02e43ed0d0f8.png">
 
+the agent configuration file is located in the **.gitlab/agents/k8s-cluster** directory 
 
+<img width="428" alt="Capture d’écran 2023-03-21 124703" src="https://user-images.githubusercontent.com/70517765/226848962-82d75c76-d0cb-4bc9-a765-c827b4c59d58.png">
+
+**id** : corresponds to the project path on gitlab
+
+```
+deploy_application:
+  stage: deploy
+  image: devth/helm:latest
+  before_script:
+    - cd helm/
+    - kubectl config get-contexts
+    - kubectl config use-context kemanedonfack/devops-project-05:k8s-cluster
+  script: 
+    - helm install frontend angular-frontend
+    - helm install backend spring-backend
+  
+```
