@@ -142,6 +142,17 @@ For more information on the configurations of this part please refer to the offi
 
 The configurations to be performed in the `build_angular_image` step are the same as in the previous step `build_spring_image`
 
+### Run the first stage
+
+**important**: Before you start you need to make sure you can use the gitlab shared runners that we will use in this demo. If not, you can add our own runners to the project. To do this in your project go to `settings > CI/CD` then `Runners` then disable the shared runners and add your own by following the steps provided.
+
+To be able to use the gitlab shared runners here you need to add a credit card containing 1$ then you would have access to the gitlab shared runners in all your projects. 
+
+Let's now launch our pipeline for that on your project go on `CI/CD > pipelines` then click on `Run pipeline`
+![Capture](https://user-images.githubusercontent.com/70517765/227025049-8ed6015f-39da-4682-828d-a2261a10b281.PNG)
+In the next screen, don't put anything, just click on Run Pipeline. After that you will get the result below. The build_push_image stage worked perfectly
+
+![Capture](https://user-images.githubusercontent.com/70517765/227026981-2b5a30f4-3dcf-426f-9623-d26a388053fe.PNG)
 
 ### deploy stage
 
