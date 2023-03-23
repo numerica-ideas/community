@@ -185,7 +185,7 @@ deploy_application:
 
 - **before_script** : This step defines the commands to be executed before the main script is executed. In this case, there are three commands executed. First, we move to the "helm" directory which contains the Helm files. Next, we use the `kubectl config get-contexts` command to display the list of available Kubernetes contexts. Finally, we use the `kubectl config use-context` command to select the Kubernetes context to use for the deployment which is the one of our agent.
 
-- **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are `frontend` and `backend` for the frontend and backend parts of the application respectively. we have added a variable `BACKEND_PUBLIC_ACCESS` who is the association of our public api address and backend port who is `30007`. it's important in order to be able to access at our application so you have to create it. You will see below mine but yours could be something like `13.216.28.12:30007`
+- **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are `frontend` and `backend` for the frontend and backend parts of the application respectively. we have added a variable `BACKEND_PUBLIC_ACCESS` who is the association of our public ip address and backend application port who is `30007`. It's important in order to be able to access at our application so you have to create it. You will see below mine but yours could be something like `13.216.28.12:30007`
 
 <img width="563" alt="Capture d’écran 2023-03-23 162841" src="https://user-images.githubusercontent.com/70517765/227253306-78f4071a-b9d4-431d-9c03-0a23e747a5bd.png">
 
@@ -194,4 +194,14 @@ deploy_application:
 Now let's run our pipeline one more time and after a while you will get the following result
 
 <img width="743" alt="Capture d’écran 2023-03-23 143606" src="https://user-images.githubusercontent.com/70517765/227220786-1ced4fac-c99c-48e4-9525-c0a87428298e.png">
+
+Great everything went well let's check our kuberntes cluster and our application if everything is working like expected
+
+<img width="587" alt="Capture d’écran 2023-03-23 151133" src="https://user-images.githubusercontent.com/70517765/227255476-ea9171b1-7aad-4187-83f0-ca0ba449120e.png">
+
+<img width="682" alt="Capture d’écran 2023-03-23 160911" src="https://user-images.githubusercontent.com/70517765/227255558-e8266e2a-6899-4bc0-b585-0fdff53ff385.png">
+
+<img width="628" alt="Capture d’écran 2023-03-23 160937" src="https://user-images.githubusercontent.com/70517765/227255609-ba90d1c9-ea33-4e98-beb3-760a8d35de45.png">
+
+<img width="673" alt="Capture d’écran 2023-03-23 161001" src="https://user-images.githubusercontent.com/70517765/227255626-cfa940dd-ec0c-4604-8982-49b7b44569c7.png">
 
