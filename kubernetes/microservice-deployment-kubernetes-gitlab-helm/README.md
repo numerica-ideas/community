@@ -79,7 +79,7 @@ deploy_application:
   before_script:
     - cd helm/
     - kubectl config get-contexts
-    - kubectl config use-context kemanedonfack/devops-project-05:k8s-cluster
+    - kubectl config use-context kemanedonfack/microservice-app-deployment:k8s-cluster
   script: 
     - helm install frontend angular-frontend
     - helm install backend spring-backend
@@ -176,12 +176,12 @@ deploy_application:
   before_script:
     - cd helm/
     - kubectl config get-contexts
-    - kubectl config use-context kemanedonfack/devops-project-05:k8s-cluster
+    - kubectl config use-context kemanedonfack/microservice-app-deployment:k8s-cluster
   script: 
     - helm install frontend angular-frontend
     - helm install backend spring-backend
-  
 ```
+
 - **image: devth/helm:latest** : This step specifies the Docker image to use for this step, which is "devth/helm:latest". This image contains Helm Kubernetes package manager that we will use to deploy our application.
 
 - **before_script** : This step defines the commands to be executed before the main script is executed. In this case, there are three commands executed. First, we move to the "helm" directory which contains the Helm files. Next, we use the `kubectl config get-contexts` command to display the list of available Kubernetes contexts. Finally, we use the `kubectl config use-context` command to select the Kubernetes context to use for the deployment which is the one of our agent.
@@ -189,6 +189,4 @@ deploy_application:
 - **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are `frontend` and `backend` for the frontend and backend parts of the application respectively.
 
 ## Step 3 : Launch our pipeline
-
-
 
