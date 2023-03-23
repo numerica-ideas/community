@@ -81,9 +81,8 @@ deploy_application:
     - kubectl config get-contexts
     - kubectl config use-context kemanedonfack/microservice-app-deployment:k8s-cluster
   script: 
-    - helm install --set-string PUBLIC_API=$PUBLIC_API frontend angular-frontend
-    - helm install backend spring-backend
-  
+    - helm install --set-string BACKEND_PUBLIC_ACCESS=$BACKEND_PUBLIC_ACCESS frontend angular-frontend
+    - helm install backend spring-backend  
 ```
 Now let's dive into our .gitlab-ci.yml file to get a better understanding 
 
@@ -178,7 +177,7 @@ deploy_application:
     - kubectl config get-contexts
     - kubectl config use-context kemanedonfack/microservice-app-deployment:k8s-cluster
   script: 
-    - helm install --set-string PUBLIC_API=$PUBLIC_API frontend angular-frontend
+    - helm install --set-string BACKEND_PUBLIC_ACCESS=$BACKEND_PUBLIC_ACCESS frontend angular-frontend
     - helm install backend spring-backend
 ```
 
@@ -186,7 +185,7 @@ deploy_application:
 
 - **before_script** : This step defines the commands to be executed before the main script is executed. In this case, there are three commands executed. First, we move to the "helm" directory which contains the Helm files. Next, we use the `kubectl config get-contexts` command to display the list of available Kubernetes contexts. Finally, we use the `kubectl config use-context` command to select the Kubernetes context to use for the deployment which is the one of our agent.
 
-- **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are `frontend` and `backend` for the frontend and backend parts of the application respectively. we have added a variable `BACKEND_PUBLIC_ACCESS` who is the association of our public api address and backend port who is `30007`. it's important in order to be able to access at our application so you have to create it. You will see below my public mine but yours could be something like `13.216.28.12:30007`
+- **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are `frontend` and `backend` for the frontend and backend parts of the application respectively. we have added a variable `BACKEND_PUBLIC_ACCESS` who is the association of our public api address and backend port who is `30007`. it's important in order to be able to access at our application so you have to create it. You will see below mine but yours could be something like `13.216.28.12:30007`
 
 <img width="563" alt="Capture d’écran 2023-03-23 162841" src="https://user-images.githubusercontent.com/70517765/227253306-78f4071a-b9d4-431d-9c03-0a23e747a5bd.png">
 
