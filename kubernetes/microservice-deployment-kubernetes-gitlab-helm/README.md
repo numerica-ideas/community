@@ -159,7 +159,7 @@ In the next screen, don't put anything, just click on Run Pipeline. After that y
 ### deploy stage
 
 **important** : In this step you will need a working kubernetes cluster with Helm install then you have to connect your cluster to gitlab. to do so you need to install an agent for kubernetes. for more information see the official documentation [here](https://docs.gitlab.com/ee/user/clusters/agent/install/index.html#register-the-agent-with-gitlab). 
-In our case we have created a **kubernetes cluster** on **aws** which we have already connected to our Gitlab project
+In our case we have created a **kubernetes cluster** which we have already connected to our Gitlab project
 
 <img width="751" alt="Capture d’écran 2023-03-21 123214" src="https://user-images.githubusercontent.com/70517765/226848300-a5d4fc34-f168-4ec9-a234-02e43ed0d0f8.png">
 
