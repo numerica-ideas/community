@@ -165,9 +165,9 @@ In our case we have created a **kubernetes cluster** which we have already conne
 
 the agent configuration file is located in the **.gitlab/agents/k8s-cluster** directory 
 
-<img width="428" alt="Capture d’écran 2023-03-21 124703" src="https://user-images.githubusercontent.com/70517765/226848962-82d75c76-d0cb-4bc9-a765-c827b4c59d58.png">
+<img width="473" alt="Capture d’écran 2023-03-23 140559" src="https://user-images.githubusercontent.com/70517765/227213764-e22793d1-ea0c-439f-bf81-062626b2110b.png">
 
-**id** : corresponds to the project path on gitlab
+**id** : contains the path to the project on gitlab
 
 ```
 deploy_application:
