@@ -190,3 +190,7 @@ deploy_application:
 
 ## Step 3 : Launch our pipeline
 
+Now let's run our pipeline one more time and after a while you will get the following result
+
+<img width="743" alt="Capture d’écran 2023-03-23 143606" src="https://user-images.githubusercontent.com/70517765/227220786-1ced4fac-c99c-48e4-9525-c0a87428298e.png">
+
