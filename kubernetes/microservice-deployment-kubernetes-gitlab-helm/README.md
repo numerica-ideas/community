@@ -188,8 +188,7 @@ deploy_application:
 
 - **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are `frontend` and `backend` for the frontend and backend parts of the application respectively. we have added a variable `BACKEND_PUBLIC_ACCESS` who is the association of our public api address and backend port who is `30007`. it's important in order to be able to access at our application so you have to create it. You will see below my public mine but yours could be something like `13.216.28.12:30006`
 
-<img width="560" alt="Capture d’écran 2023-03-23 160714" src="https://user-images.githubusercontent.com/70517765/227249885-7a1b06cb-a5a2-4429-a857-669e75eddebf.png">
-
+<img width="563" alt="Capture d’écran 2023-03-23 162841" src="https://user-images.githubusercontent.com/70517765/227253306-78f4071a-b9d4-431d-9c03-0a23e747a5bd.png">
 
 ## Step 3 : Launch our pipeline
 
