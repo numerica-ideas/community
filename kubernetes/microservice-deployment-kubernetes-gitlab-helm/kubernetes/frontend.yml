@@ -16,10 +16,13 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: lugar2020/frontend
+        image: lugar2020/angular-frontend
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
+        env:
+        - name: API_URL
+          value: "http://localhost:9090/api/tutorials"
 
 ---
 

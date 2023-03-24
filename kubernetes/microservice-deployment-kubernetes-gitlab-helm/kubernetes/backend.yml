@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: lugar2020/backend
-        imagePullPolicy: IfNotPresent
+        image: lugar2020/spring-backend
         ports:
         - containerPort: 9090
 
@@ -30,8 +29,11 @@ metadata:
   labels:
     name: backend-service
 spec:
+  type: NodePort
   ports:
     - port: 9090
       targetPort: 9090
+      nodePort: 30007
   selector:
     app: backend-app
+

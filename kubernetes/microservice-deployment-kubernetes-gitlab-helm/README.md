@@ -204,4 +204,3 @@ Great, everything went well, let's check our Kuberntes cluster and our applicati
 <img width="628" alt="Capture d’écran 2023-03-23 160937" src="https://user-images.githubusercontent.com/70517765/227255609-ba90d1c9-ea33-4e98-beb3-760a8d35de45.png">
 
 <img width="673" alt="Capture d’écran 2023-03-23 161001" src="https://user-images.githubusercontent.com/70517765/227255626-cfa940dd-ec0c-4604-8982-49b7b44569c7.png">
-

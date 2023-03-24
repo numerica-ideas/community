@@ -37,6 +37,9 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+          - name: API_URL 
+            value: {{ .Values.BACKEND_PUBLIC_ACCESS }}{{ .Values.API_URL }}
 #           livenessProbe:
 #             httpGet:
 #               path: /

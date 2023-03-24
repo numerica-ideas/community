@@ -3,6 +3,8 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
+BACKEND_PUBLIC_ACCESS: "test.com"
+API_URL: "/api/tutorials"
 
 image:
   repository: lugar2020/angular-frontend
