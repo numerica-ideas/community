@@ -142,9 +142,9 @@ The configurations to be done in the `build_angular_image` step are the same as 
 
 ### Run the first stage
 
-**important**: Before you start you need to make sure you can use the gitlab shared runners that we will use in this demo. If not, you can add our own runners to the project. To do this in your project go to `settings > CI/CD` then `Runners` then disable the shared runners and add your own by following the steps provided.
+**important** : Before you start you need to make sure you can use the gitlab shared runners that we will use in this demo. If not, you can add our own runner to the project. To do this in your project go to `settings > CI/CD` then `Runners` then disable the shared runners and add your own by following the steps provided.
 
-To be able to use the gitlab shared runners here you need to add a credit card containing 1$ then you would have access to the gitlab shared runners in all your projects. 
+To be able to use the shared runners of gitlab you must validate your gitlab account. Launch the pipeline then a button to validate account will appear then you must add a credit card containing **1$**. Then you will have access to the gitlab shared runners in all your projects. 
 
 Let's now launch our pipeline for that on your project go on `CI/CD > pipelines` then click on `Run pipeline`
 
@@ -156,12 +156,13 @@ In the next screen, don't put anything, just click on Run Pipeline. After that y
 
 ### deploy stage
 
-**important** : In this step you will need a working kubernetes cluster with Helm install then you have to connect your cluster to gitlab. to do so you need to install an agent for kubernetes for on your project go to `Infrastructure > Kubernetes clusters` click on `connect a cluster` then follow the steps the name of our kubernetes cluster is `k8s-cluster`. For more information see the official documentation [here](https://docs.gitlab.com/ee/user/clusters/agent/install/index.html#register-the-agent-with-gitlab). 
-In our case we have created a **kubernetes cluster** which we have already connected to our Gitlab project
+**important**: In this step you will need a working Kubernetes cluster with Helm installed, then you will need to connect your cluster to gitlab. To do this you need to install an agent for Kubernetes in your cluster, go to `Infrastructure > Kubernetes clusters` click on `connect a cluster` then follow the steps, the name of our Kubernetes cluster is `k8s-cluster`. For more information, see the official documentation [here] (https://docs.gitlab.com/ee/user/clusters/agent/install/index.html#register-the-agent-with-gitlab). 
+
+In our case we have created a **kubernetes cluster** that we have already connected to our Gitlab project
 
 <img width="745" alt="Capture d’écran 2023-03-23 141809" src="https://user-images.githubusercontent.com/70517765/227216410-84ff8812-6435-47c5-9858-2283201dfada.png">
 
-the agent configuration file is located in the **.gitlab/agents/k8s-cluster** directory 
+The agent configuration file is located in the **.gitlab/agents/k8s-cluster** directory 
 
 <img width="473" alt="Capture d’écran 2023-03-23 140559" src="https://user-images.githubusercontent.com/70517765/227213764-e22793d1-ea0c-439f-bf81-062626b2110b.png">
 
@@ -184,7 +185,7 @@ deploy_application:
 
 - **before_script** : This step defines the commands to be executed before the main script is executed. In this case, there are three commands executed. First, we move to the "helm" directory which contains the Helm files. Next, we use the `kubectl config get-contexts` command to display the list of available Kubernetes contexts. Finally, we use the `kubectl config use-context` command to select the Kubernetes context to use for the deployment which is the one of our agent.
 
-- **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are `frontend` and `backend` for the frontend and backend parts of the application respectively. we have added a variable `BACKEND_PUBLIC_ACCESS` who is the association of our public ip address and backend application port who is `30007`. It's important in order to be able to access at our application so you have to create it. You will see below mine but yours could be something like `13.216.28.12:30007`
+- **script** : This step defines the commands to be executed for the deployment of the application. In this case, we install two Helm charts from the "helm" directory. The charts are `frontend` and `backend` for the frontend and backend parts of the application respectively. we have added a variable `BACKEND_PUBLIC_ACCESS` who is the association of our public ip address and backend application port who is `30007`. It's important in order to be able to access at our application so you have to create it. You will see below mine but yours could be something like `13.216.28.12:30007`. If you work locally use your local ip address
 
 <img width="563" alt="Capture d’écran 2023-03-23 162841" src="https://user-images.githubusercontent.com/70517765/227253306-78f4071a-b9d4-431d-9c03-0a23e747a5bd.png">
 
@@ -194,7 +195,7 @@ Now let's run our pipeline one more time and after a while you will get the foll
 
 <img width="743" alt="Capture d’écran 2023-03-23 143606" src="https://user-images.githubusercontent.com/70517765/227220786-1ced4fac-c99c-48e4-9525-c0a87428298e.png">
 
-Great everything went well let's check our kuberntes cluster and our application if everything is working like expected
+Great, everything went well, let's check our Kuberntes cluster and our application if everything works as expected.
 
 <img width="587" alt="Capture d’écran 2023-03-23 151133" src="https://user-images.githubusercontent.com/70517765/227255476-ea9171b1-7aad-4187-83f0-ca0ba449120e.png">
 
