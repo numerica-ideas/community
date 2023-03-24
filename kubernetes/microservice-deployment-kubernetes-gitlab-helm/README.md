@@ -7,9 +7,9 @@ In today's fast-paced software development environment, it is essential to deplo
 
 ## Prerequisites
 To perform this demo, you will need to have the following prerequisites:
-- **A Kubernetes cluster**: You can use an existing Kubernetes cluster or create a new one on a cloud provider such as Google Cloud, Amazon Web Services or Microsoft Azure.
-- **A GitLab account**: You will need a GitLab account to set up the CI/CD pipeline.
-- **Docker Hub account**: You will need a Docker Hub account to store Docker images.
+- **A Kubernetes cluster** : You can use an existing Kubernetes cluster or create a new one on a cloud provider such as Google Cloud, Amazon Web Services or Microsoft Azure.
+- **A GitLab account** : You will need a GitLab account to set up the CI/CD pipeline.
+- **Docker Hub account** : You will need a Docker Hub account to store Docker images.
 
 ## What is Helm ?
 [Helm](https://helm.sh/) is a package manager for Kubernetes that allows you to easily install and manage applications on a Kubernetes cluster. Helm uses charts to define the structure and configuration of an application, which can be versioned and shared between teams.
