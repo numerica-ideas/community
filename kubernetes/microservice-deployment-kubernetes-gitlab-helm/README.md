@@ -35,7 +35,7 @@ The above screenshot shows the different directories of the source code :
 
 ## Step 2 : Configuration of Gitlab CI
 
-Open the .gitlab-ci.yml file located at the root of the repository
+Open the `.gitlab-ci.yml` file located at the root of the repository
 ```
 variables:
   BACKEND_IMAGE_NAME: lugar2020/spring-backend
@@ -84,7 +84,7 @@ deploy_application:
     - helm install --set-string BACKEND_PUBLIC_ACCESS=$BACKEND_PUBLIC_ACCESS frontend angular-frontend
     - helm install backend spring-backend  
 ```
-Now let's dive into our .gitlab-ci.yml file to get a better understanding 
+Now let's dive into our `.gitlab-ci.yml` file to get a better understanding 
 
 ```
 variables:
@@ -99,7 +99,7 @@ stages:
   - build_push_image
   - deploy
 ```
-Our pipeline will contain only two steps : **building and publishing** our images on the docker hub and **deploying** our application on a kubernetes cluster
+Our pipeline will contain only two steps : **building and publishing** our images to the docker hub and **deploying** our application on a kubernetes cluster
 
 ### build & push stage
 
@@ -118,7 +118,7 @@ build_spring_image:
     - docker build -t $BACKEND_IMAGE_NAME .
     - docker push $BACKEND_IMAGE_NAME
 ```
-This step in the .gitlab-ci.yml file is called build_spring_image and is defined as stage: build_push_image. It builds and pushes the Docker image for the backend done in Spring boot on the docker hub.
+This step in the `.gitlab-ci.yml` file is called build_spring_image and is defined as stage: build_push_image. It builds and pushes the Docker image for the backend done in Spring boot to the docker hub.
 
 - **image: docker:20.10.16** : uses the docker image docker:20.10.16 as the runtime environment for this step. Since we will have to execute docker commands we need a docker client and docker daemon which are available in this image. In this part we use the docker in docker concept for more information [see the article](https://blog.packagecloud.io/3-methods-to-run-docker-in-docker-containers/#:~:text=Docker%20In%20Docker%20)
 
@@ -128,18 +128,17 @@ This step in the .gitlab-ci.yml file is called build_spring_image and is defined
 
 - **before_script:** a list of commands to be executed before the main task of this step is executed. In this step, there are two commands to execute. The first command is to authenticate to the `Docker registry`. The second command `cd spring-boot-h2-database-crud/` changes the current directory to one containing the backend source code.
 
-To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain your docker hub IDs. To do this, go to `settings > CI/CD` then `variable`
+To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain the password and username of your docker hub account. To do this, go to `settings > CI/CD` then `variable`
 
 <img width="341" alt="1" src="https://user-images.githubusercontent.com/70517765/226735876-f1236c68-ef6f-43da-940b-477f1cfb8555.png">
 
 ![Capture](https://user-images.githubusercontent.com/70517765/227020591-7e9746be-7a14-42c5-b6dc-38f11205e8d1.PNG)
 
 
+- **script**: the main task of this step. In this step, two Docker commands are executed. The first command `docker build -t $BACKEND_IMAGE_NAME .` builds the Docker image for the backend application using the Dockerfile present in the current directory `spring-boot-h2-database-crud`. The second `docker push $BACKEND_IMAGE_NAME` command pushes the previously built image into the Docker registry specified by the variable `$BACKEND_IMAGE_NAME`.
+For more information on the configurations of this stage please refer to the official Gitlab CI documentation [here](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-in-docker)
 
-- **script**: the main task of this step. In this step, two Docker commands are executed. The first command `docker build -t $BACKEND_IMAGE_NAME .` builds the Docker image for the Spring backend using the Dockerfile present in the current directory `spring-boot-h2-database-crud`. The second `docker push $BACKEND_IMAGE_NAME` command pushes the previously built image into the Docker registry specified by the variable `$BACKEND_IMAGE_NAME`.
-For more information on the configurations of this part please refer to the official Gitlab CI documentation [here](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-in-docker)
-
-The configurations to be performed in the `build_angular_image` step are the same as in the previous step `build_spring_image`
+The configurations to be done in the `build_angular_image` step are the same as in the previous `build_spring_image` step
 
 ### Run the first stage
 
