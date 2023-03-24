@@ -27,11 +27,11 @@ Let's  briefly explain the folders in the repository
 The above screenshot shows the different directories of the source code : 
 - **.gitlab/agents/k8s-cluster** : contains the configurations of our kubernetes agent for server we will discuss in more detail later in this article
 - **angular-14-crud-example** : this directory contains the source code of our frontend application developed with the Angular Framework
-- **helm**: contains the different files to deploy our application under kubernetes via Helm
-- **kubernetes**: contains the different files to deploy our application on kubernetes without using Helm
+- **helm** : contains the different files to deploy our application under kubernetes via Helm
+- **kubernetes** : contains the different files to deploy our application on kubernetes without using Helm
 - **spring-boot-h2-database-crud** : contains the source code of our backend application developed with the Spring boot framework
 - **.gitlab-ci.yml** : which is the core of our pipeline is the file where we describe the different steps of our pipeline
-- **docker-compose.yml** this file allows us to deploy our application under docker
+- **docker-compose.yml** : this file allows us to deploy our application under docker
 
 ## Step 2 : Configuration of Gitlab CI
 
