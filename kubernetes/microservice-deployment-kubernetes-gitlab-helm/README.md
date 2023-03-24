@@ -128,7 +128,7 @@ This step in the `.gitlab-ci.yml` file is called build_spring_image and is defin
 
 - **before_script:** a list of commands to be executed before the main task of this step is executed. In this step, there are two commands to execute. The first command is to authenticate to the `Docker registry`. The second command `cd spring-boot-h2-database-crud/` changes the current directory to one containing the backend source code.
 
-To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain the password and username of your docker hub account. To do this, go to `settings > CI/CD` then `variable`
+To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain the password and username of your docker hub account. To do this, go to `settings > CI/CD` then `variables`
 
 <img width="341" alt="1" src="https://user-images.githubusercontent.com/70517765/226735876-f1236c68-ef6f-43da-940b-477f1cfb8555.png">
 
