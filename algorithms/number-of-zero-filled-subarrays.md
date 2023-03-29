@@ -9,13 +9,13 @@ Our solution is quite simple, first we map the array, then count and store the n
 **Sample Code**:
 ```javascript
 function zeroFilledSubarray(nums: number[]) {
-    let sum:number = 0;
-    let acc:number=0;
+    let sum: number = 0;
+    let acc: number = 0;
 
-    nums.forEach((n)=>{
-        if(n == 0){
+    nums.forEach((n) => {
+        if(n == 0) {
             sum++;
-            sum+=acc;
+            sum += acc;
             acc++;
             return;
         }
