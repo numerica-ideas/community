@@ -31,6 +31,8 @@ Your contributions are **precious** and some are [awarded](https://github.com/nu
 
 ## Tech Projects
 The articles, workshops, and other events **projects** are centralized in this repository:
+- [algorithms](./algorithms)
+- [architecture](./architecture)
 - [aws](./aws)
 - [azure](./azure)
 - [design](./design)
