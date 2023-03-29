@@ -8,12 +8,18 @@ Our solution is quite simple, first we map the array, then count and store the n
 
 **Sample Code**:
 ```javascript
-function zeroFilledSubarray(nums: number[]) {
+/**
+ * Finding the number of zero-filled subarrays from a provided array.
+ * See {@link https://leetcode.com/problems/number-of-zero-filled-subarrays}.
+ * 
+ * @param nums An array of integers.
+ */
+function zeroFilledSubarray(nums: number[]): number {
     let sum: number = 0;
     let acc: number = 0;
 
     nums.forEach((n) => {
-        if(n == 0) {
+        if (n == 0) {
             sum++;
             sum += acc;
             acc++;
@@ -22,7 +28,7 @@ function zeroFilledSubarray(nums: number[]) {
         acc = 0;
     });
     return sum;
-};
+}
 ```
 
 By Ismael Messa
