@@ -4,7 +4,7 @@
 
 Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
-## Social Media
+## Social Networks
 Present on social media with the following accounts :eight_spoked_asterisk:
 - [Twitter](https://twitter.com/numericaideas)
 - [LinkedIn](https://www.linkedin.com/company/numericaideas)
