@@ -5,9 +5,9 @@
 Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
 ## Social Media
-Multilingual presence on social media with the following accounts :eight_spoked_asterisk:
-- [Discord (EN & FR)](https://discord.numericaideas.com)
-- [YouTube (English | Français)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
+Multilingual (English & Français) presence on social media with the following accounts :eight_spoked_asterisk:
+- [Discord (EN | FR)](https://discord.numericaideas.com)
+- [YouTube (EN | FR)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
 - Twitter  : [EN](https://twitter.com/numericaideas) | [FR](https://twitter.com/NumericaIdeasFr)
 - Facebook : [EN](https://facebook.com/numericaideas) | [FR](https://facebook.com/NumericaIdeasFr)
 - LinkedIn : [EN](https://www.linkedin.com/company/numericaideas) | [FR](https://www.linkedin.com/company/numericaideas-fr)
