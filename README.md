@@ -9,7 +9,7 @@ Multilingual presence on social media with the following accounts :eight_spoked_
 - [Discord (EN & FR)](https://discord.numericaideas.com)
 - [YouTube (English | Français)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
 - Twitter  : [EN](https://twitter.com/numericaideas) | [FR](https://twitter.com/NumericaIdeasFr)
-- Facebook : [EN](https://facebook.com/numericaideas) | [EN](https://facebook.com/NumericaIdeasFr)
+- Facebook : [EN](https://facebook.com/numericaideas) | [FR](https://facebook.com/NumericaIdeasFr)
 - LinkedIn : [EN](https://www.linkedin.com/company/numericaideas) | [FR](https://www.linkedin.com/company/numericaideas-fr)
 
 ## Contribute
