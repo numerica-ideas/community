@@ -1,6 +1,6 @@
 # Ni Community Activities&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com)
 
-[NumericaIdeas](https://numericaideas.com) is a technical community that creates opportunities for professionals, the place where you’ll secure your dream job, and certainly the group through which you can develop your hard and soft skills at your own pace. Our motto is **"Discover, Learn, Build, & Share"** 🚀
+[NumericaIdeas](https://numericaideas.com) is a technical community that creates opportunities for IT professionals, the place where you’ll secure your dream job, and certainly the group through which you can develop your hard and soft skills at your own pace. Our motto is **"Discover, Learn, Build, & Share"** 🚀
 
 Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
