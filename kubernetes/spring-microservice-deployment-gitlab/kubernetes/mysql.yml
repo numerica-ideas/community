@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deploy
+  labels:
+   app: mysql-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-app
+  template:
+    metadata:
+      labels:
+        app: mysql-app
+    spec:
+      containers:
+      - name: mysql-container
+        image: mysql:5.7
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: kemane
+        - name: MYSQL_DATABASE
+          value: microservice-ecommerce
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysqldb
+  labels:
+    name: mysql-service
+spec:
+  ports:
+    - port: 3306
+      targetPort: 3306
+  selector:
+    app: mysql-app

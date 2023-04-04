@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ecommerce-sale-service
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER:http://localhost:8090}
+      profile: ${ENV:dev}
+server:
+  port: 8085

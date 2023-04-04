@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sale-service-deploy
+  labels:
+   app: sale-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sale-service-app
+  template:
+    metadata:
+      labels:
+        app: sale-service-app
+    spec:
+      containers:
+      - name: sale-service-container
+        image: lugar2020/sale-service
+        ports:
+        - containerPort: 8085
+        env:
+        - name: CONFIG_SERVER
+          value: "http://10.0.0.2:30090"
+        - name: ENV
+          value: "prod"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata: 
+  name: sale
+  labels:
+    name: sale-service-service
+spec:
+  type: NodePort
+  ports:
+    - port: 8085
+      targetPort: 8085
+      nodePort: 30085
+  selector:
+    app: sale-service-app

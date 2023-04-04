@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registry-service-deploy
+  labels:
+   app: registry-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: registry-service-app
+  template:
+    metadata:
+      labels:
+        app: registry-service-app
+    spec:
+      containers:
+      - name: registry-service-container
+        image: lugar2020/registry-service
+        ports:
+        - containerPort: 8081
+        env:
+        - name: SERVICE_REGISTRY
+          value: "http://10.0.0.2:30081/eureka"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata: 
+  name: registry
+  labels:
+    name: registry-service-service
+spec:
+  type: NodePort
+  ports:
+    - port: 8081
+      targetPort: 8081
+      nodePort: 30081
+  selector:
+    app: registry-service-app
