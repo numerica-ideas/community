@@ -25,6 +25,8 @@ There are a lot of **activities** that you can contribute to within the communit
 - Be **active** in the [Discord](https://discord.numericaideas.com) community.
 - **Committing** to our [tech projects](https://github.com/numerica-ideas/community#tech-projects).
 
+🔔 Please note that any contribution to our community will be considered voluntary and free. Any content (article, video, and post) shared on our social media channels will not be compensated, unless mentioned. If you do not wish to have your content shared, please refrain from contributing.
+
 Your contributions are **precious** and some are [awarded](https://github.com/numerica-ideas/community#numies) at the end of each year, **Thank you for making NumericaIdeas shine** ⚡️
 
 **Note**: Feel free to **suggest** new ideas/enhancement to work on by [creating an issue](https://github.com/numerica-ideas/community/issues) :bulb:
