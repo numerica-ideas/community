@@ -18,7 +18,7 @@ To perform this demo, you will need to have the following prerequisites:
 
 ## Step 1 : Create your own repository
 
-We have two repositories. The first one is used to store the source code of our microservices, you can find it [here](https://github.com/kemanedonfack/community/tree/master/kubernetes/spring-microservice-deployment-gitlab) and the other one is used to externalize our configuration files with **Spring Cloud Config Server**, you can find the code [here]([https://](https://github.com/kemanedonfack/community/tree/master/kubernetes/microservices-configuration)).
+We have two repositories. The first one is used to store the source code of our microservices, you can find it [here](https://github.com/kemanedonfack/community/tree/master/kubernetes/spring-microservice-deployment-gitlab) and the other one is used to externalize our configuration files with **Spring Cloud Config Server**, you can find the code [here]([https://](https://github.com/kemanedonfack/community/tree/master/kubernetes/microservices-configuration).
 
 Let's  briefly explain the folders in the repository
 
