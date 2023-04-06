@@ -45,7 +45,7 @@ deploy_application:
     - kubectl config use-context kemanedonfack/spring-microservice-deployment:k8s-cluster
   script: 
     - helm install mysqldb mysql
-    - helm install config config-server
+    - helm install --set-string GIT_URL_CONFIG=$GIT_URL_CONFIG config config-server
     - helm install --set-string SERVICE_REGISTRY=$SERVICE_REGISTRY registry registry-service
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER gateway api-gateway
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER order order-service

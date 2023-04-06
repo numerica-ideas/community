@@ -24,7 +24,9 @@ services:
       - 8090:8090
     networks:
       - my-network
- 
+    environment:
+      GIT_URL_CONFIG: https://github.com/kemanedonfack/ecommerce-configurations.git
+
   order-service:
     container_name: order-service
     image: lugar2020/order-service

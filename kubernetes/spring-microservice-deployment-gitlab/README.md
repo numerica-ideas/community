@@ -41,6 +41,8 @@ The above screenshot shows the different directories of the source code :
 - **ecommerce-api-gateway-dev.yml** : This file contains all the configurations of the gateway api in the dev environment (development)
 - **ecommerce-api-gateway-prod.yml** : This file contains all the gateway api configurations in the prod(production) environment
 
+**Important** : You must have these two repositories in your own repository 
+
 ## Step 2 : Configuration of Gitlab CI
 
 Open the `.gitlab-ci.yml` file located at the root of the repository
@@ -92,13 +94,14 @@ deploy_application:
     - kubectl config use-context kemanedonfack/spring-microservice-deployment:k8s-cluster
   script: 
     - helm install mysqldb mysql
-    - helm install config config-server
+    - helm install --set-string GIT_URL_CONFIG=$GIT_URL_CONFIG config config-server
     - helm install --set-string SERVICE_REGISTRY=$SERVICE_REGISTRY registry registry-service
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER gateway api-gateway
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER order order-service
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER product product-service
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER sale sale-service
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER user user-service
+
 ```
 Now let's dive into our `.gitlab-ci.yml` file to get a better understanding 
 
@@ -208,7 +211,7 @@ deploy_application:
     - kubectl config use-context kemanedonfack/spring-microservice-deployment:k8s-cluster
   script: 
     - helm install mysqldb mysql
-    - helm install config config-server
+    - helm install --set-string GIT_URL_CONFIG=$GIT_URL_CONFIG config config-server
     - helm install --set-string SERVICE_REGISTRY=$SERVICE_REGISTRY registry registry-service
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER gateway api-gateway
     - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER order order-service
@@ -223,13 +226,16 @@ deploy_application:
 
 - **script** : These commands use the Helm package manager to install applications based on Helm charts. Here is a brief description of each command: 
     - **helm install mysqldb mysql**: This command installs a MySQL instance using the mysql Helm chart.
-    - **helm install config config-server**: This command installs a configuration server using the `config-server` Helm chart.
+    - **helm install --set-string GIT_URL_CONFIG=$GIT_URL_CONFIG config config-server**: This command installs a configuration server using the `config-server` Helm chart, by setting the `GIT_URL_CONFIG` environment variable value.
     - **helm install --set-string SERVICE_REGISTRY=$SERVICE_REGISTRY registry registry-service**: This command installs a Eureka service registry using the registry-service Helm chart, by setting the `SERVICE_REGISTRY` environment variable value.
     - **helm install --set-string CONFIG_SERVER=$CONFIG_SERVER gateway api-gateway**: This command installs an API gateway using the api-gateway Helm chart, by setting the `CONFIG_SERVER` environment variable value.
    
-You need to create two variables `SERVICE_REGISTRY` and `CONFIG_SERVER`  which will contain the link to each service. You should have something like `http://16.170.253.192:30081/eureka` and `http://16.170.253.192:30090`
+You need to create three variables `SERVICE_REGISTRY`, `CONFIG_SERVER` AND `GIT_URL_CONFIG`. **SERVICE_REGISTRY** contains the link to the service registry application something like  `http://16.170.253.192:30081/eureka`. 
+**CONFIG_SERVER** contains the link to the configuration server something like `http://16.170.253.192:30090` 
+**GIT_URL_CONFIG** contains the link to the repository containing the configuration files something like `https://github.com/kemanedonfack/ecommerce-configurations.git`
 
-![jkkkop](https://user-images.githubusercontent.com/70517765/229897444-14495bc1-1fc1-4d74-9fef-55fb14a16086.PNG)
+<img width="702" alt="Capture d’écran 2023-04-06 101132" src="https://user-images.githubusercontent.com/70517765/230338945-3e65ad36-a048-4016-a607-d15a4f9a8b2a.png">
+
 
 **Important** : You must also modify the different ip address and link to the registry service in your second repository. For each microservice, modify only in the production configuration file (prod).
 

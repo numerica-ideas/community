@@ -19,6 +19,9 @@ spec:
         image: lugar2020/config-server
         ports:
         - containerPort: 8090
+        env:
+          - name: GIT_URL_CONFIG
+            value: "https://github.com/kemanedonfack/ecommerce-configurations.git"
 
 ---
 

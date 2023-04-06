@@ -37,6 +37,9 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            - name: GIT_URL_CONFIG
+              value: {{ .Values.GIT_URL_CONFIG }}
           # livenessProbe:
           #   httpGet:
           #     path: /

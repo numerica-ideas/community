@@ -11,8 +11,8 @@
         <module name="ecommerce-api-gateway" />
         <module name="ecommerce-service-registry" />
         <module name="ecommerce-order-service" />
-        <module name="ecommerce-product-service" />
         <module name="ecommerce-sale-service" />
+        <module name="ecommerce-product-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
