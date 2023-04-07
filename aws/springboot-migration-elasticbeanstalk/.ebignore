@@ -32,12 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/config.yml
-!.elasticbeanstalk/*.global.yml
-
 # custom
 .java-version
 runnable.jar

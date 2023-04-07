@@ -21,8 +21,8 @@ This first [video](https://youtu.be/tWQFavEJQ7c) is part of a [series](https://g
 
 ## Series
 It's part of a **[Cloud Migration Series](https://youtube.com/playlist?list=PLJl2liPyo6s3oQkBT2UWbuSfrwO4aS-9Z)** whose content is below:
-- **Part 1** : Lift And Shift (rehosting) to ElasticBeanstalk
-- **Part 2** : Scalability
+- **Part 1** : [Lift And Shift (rehosting) to ElasticBeanstalk](https://youtu.be/tWQFavEJQ7c)
+- **Part 2** : [Scalability](https://youtu.be/KHOxmHL5USI)
 - **Part 3** : CI / CD
 - **Part 4** : Monitoring
 - **Part 5** : Domain Name + HTTPS Setup (R53 + ACM )
@@ -31,6 +31,21 @@ It's part of a **[Cloud Migration Series](https://youtube.com/playlist?list=PLJl
 This video has no intention to highlight the advantages of the Cloud, but directly to migrate an Application to AWS, I’ll assume you have some basic knowledge around, if not, feel free to watch our [previous video](https://youtu.be/0II0ikOZEYE) which covers the most important advantages the Cloud has to offer.
 
 We invite you to **subscribe** to the [YouTube Channels](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) to be aware of the release of the next videos in the following weeks.
+
+## Scalability
+In case you want to scale the infrastructure dynamically, you have to rename the folder **ebextensions** to **.ebextensions** since ElasticBeanstalk expects it to be hidden, we let it that way for the **Part 1** of the video not to scale.
+
+Once done, here's the command to run to create your **scalable environment (load balanced)** instead of the precent one (single instance): `eb create spring-cloud-migration --sample --min-instances 2 --max-instances 4 --timeout 30 --instance_type t2.micro --database.username SpringBootAdmin --database.password Strange_Pwd --envvars PORT=9090 --tags tag1=val1,tag2=val2`
+
+Once your *.ebextensions* file is ready with your configurations, feel free to build and deploy the App once more and they'll be picked up by AWS.
+
+[![ScalabilityTypesImage](scalability-types.png)](https://youtu.be/KHOxmHL5USI)
+
+**Video**: https://youtu.be/KHOxmHL5USI
+
+**Notes**:
+- Making these changes via the **UI** for an existing deployment is demonstrated in the **Part 2** video, while the **.ebextensions** way works for new and existing environments.
+- There is **order of precedence** for configurations options: https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html#configuration-options-precedence
 
 ## Prerequisites
 - Install MySQL and run it.
