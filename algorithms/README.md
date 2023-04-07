@@ -5,7 +5,7 @@
 Here are some accepted solutions from our challenges:
 
 - [Number of Zero-Filled Subarrays](./number-of-zero-filled-subarrays.md)
-- [Letter Combination of a Phone Number](./phone-number.md)
+- [Letter Combination of a Phone Number](./letter-combinations-of-a-phone-number.md.md)
 
 Click [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) to subscribe to our **YouTube channels (En & Fr)** and be notified about future Workshops and Events.
 
