@@ -3,7 +3,7 @@ This challenge comes from Leetcode, it's about finding the number of zero-filled
 
 **Challenge**: https://leetcode.com/problems/letter-combinations-of-a-phone-number/.
 
-**Solution 1 (using JavaScript)**: 
+**Solution 1 (using TypeScript)**: 
 Our solution is quite simple, first we map the array, then count and store the number of occurrences and the number of previous direct neighbors for each zero.
 
 **Sample Code**:
@@ -21,7 +21,7 @@ function letterCombination(digits: string): string[] {
     }
 
 
-    function combinaison(numeroEntree: string, listCombPrec:    string[]) {
+    function combinaison(numeroEntree: string, listCombPrec: string[]) {
         let accComb: string =[];
         for(let combprec of listCombPrec) {
             for(combSuiv of list[numeroEntree[0]]) {
