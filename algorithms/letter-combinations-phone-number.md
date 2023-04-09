@@ -38,7 +38,7 @@ By [Noel Foka](https://github.com/noelfoka)
 
 **Solution 2 (using Python 3)**: 
 Our solution is quite simple. First, we validate user's input and display appropriate error messages in case there is any error.
-Next, we create an empty list that will serve as an accumulator and another list for matches containing strings who values are the equivalent
+Next, we create an empty list that will serve as an accumulator and another list for matches containing strings whose values are the equivalent
 of each character in the input digit.
 Finally, we launch a loop and make use of the matches list and the accumulator while calling the function 
 ```buildCombinations(self, current: list[str], next: list[str]) -> list[str]```
