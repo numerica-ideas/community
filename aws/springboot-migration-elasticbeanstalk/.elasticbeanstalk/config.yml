@@ -2,6 +2,8 @@ branch-defaults:
   default:
     environment: null
     group_suffix: null
+  deploy:
+    artifact: runnable.jar
 global:
   application_name: springboot-migration-elasticbeanstalk
   branch: null
