@@ -34,11 +34,13 @@ Your contributions are **precious** and some are [awarded](https://github.com/nu
 ## Tech Projects
 The articles, workshops, and other events **projects** are centralized in this repository:
 - [algorithms](./algorithms)
+- [android](./android)
 - [architecture](./architecture)
 - [aws](./aws)
 - [azure](./azure)
 - [design](./design)
 - [docker](./docker)
+- [ios](./ios)
 - [gcp](./gcp)
 - [kubernetes](./kubernetes)
 - [security](./security)
