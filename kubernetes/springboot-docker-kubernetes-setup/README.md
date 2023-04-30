@@ -1,6 +1,6 @@
 # Deploying a Spring Boot App with Docker in a Kubernetes Cluster&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fkubernetes%2Fspringboot-docker-kubernetes-setup&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
 
-**The article**: https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes
+**This article was originally published by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes
 
 ## Introduction
 In the modern application ecosystem, it is becoming increasingly common to use technologies like **Docker** and **Kubernetes** to deploy applications in an efficient and scalable manner. By using Docker to **containerize** applications and Kubernetes to **orchestrate** them, developers can easily manage and deploy applications at scale.
@@ -234,11 +234,12 @@ For a production grade application, the way to provide these variables could dif
 ———————
 
 We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
-Does this speak to you? If YES, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
 ———————
 
 ## Conclusion
 To summarize, Docker and Kubernetes are incredibly powerful and flexible tools for deploying containerized applications in clusters. Using these two tools together makes it possible to deploy applications efficiently, reliably, and in a productive manner by taking advantage of Docker's isolation and Kubernetes' clusters management. Having a good understanding of both in terms of features/concepts is a must to put them in a perfect symbiose.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
