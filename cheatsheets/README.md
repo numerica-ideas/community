@@ -2,8 +2,7 @@
 
 A collection of Cheats Sheets produced by the community from their experience and understanding of the official documentations.
 
-- ...
-- ...
+- [Git](./git)
 
 Click [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) to subscribe to our **YouTube channels (En & Fr)** and be notified about future Workshops and Events.
 
