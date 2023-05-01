@@ -272,3 +272,4 @@ In conclusion, deploying **microservices** to a Kubernetes cluster with Helm via
 By following the steps outlined in this article, you can set up a robust **CI/CD pipeline** to automate the deployment of your microservices to Kubernetes. With the ability to quickly and efficiently deploy applications, you can streamline your development process and increase productivity.
 
 Overall, the combination of GitLab CI, Kubernetes, and Helm provides a reliable and scalable solution for deploying microservices in a modern software development environment. By leveraging these technologies, developers can focus on writing code, and let the automation handle the rest.
+
