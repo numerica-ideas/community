@@ -26,7 +26,7 @@ Advantages of using Helm for deployment on a Kubernetes cluster:
 
 ## Step 1 : Create your own repository
 
-You should create two repositories. The first one is used to store the source code of our microservices, and the other one is used to externalize our configuration files with **Spring Cloud Config Server** you will find all code [here](https://github.com/kemanedonfack/community/tree/master/kubernetes/spring-microservice-deployment-gitlab).
+You should create two repositories. The first one is used to store the source code of our microservices, and the other one is used to externalize our configuration files with **Spring Cloud Config Server** you will find all code [here](https://github.com/kemanedonfack/community/tree/master/kubernetes/spring-microservice-deployment-gitlab-helm).
 
 Let's  briefly explain the folders in the repository
 
