@@ -16,14 +16,21 @@ To perform this demo, you will need to have the following prerequisites:
 
 [**Helm chart**](https://helm.sh/docs/topics/charts/#:~:text=Helm%20uses%20a%20packaging%20format,%2C%20caches%2C%20and%20so%20on.) is a package that contains all the Kubernetes manifests, configuration files and dependencies needed to install and run an application on a Kubernetes cluster. It defines the structure and configuration of an application, including items such as environment variables, ports, volumes and service dependencies.
 
+Advantages of using Helm for deployment on a Kubernetes cluster:
+
+- **Simplified deployment** : Helm provides a simple and efficient way to package and deploy applications to Kubernetes clusters, making it easier for developers and operators to manage complex deployments.
+- **Version control** : Helm charts are version-controlled, which enables easy rollback to previous versions in case of issues or errors.
+- **Reusability** : Helm charts can be easily shared and reused across different teams, enabling better collaboration and productivity.
+- **Modular architecture** : Helm charts have a modular architecture, allowing you to separate and manage different components of an application separately, making it easier to maintain and upgrade individual components without affecting the entire application.
+- **Template engine** : Helm uses a template engine that allows you to define variables and dynamically generate Kubernetes manifests, which can be customized for different environments, reducing the need for repetitive manual configuration.
+
 ## Step 1 : Create your own repository
 
-We have two repositories. The first one is used to store the source code of our microservices, you can find it [here](https://github.com/kemanedonfack/community/tree/master/kubernetes/spring-microservice-deployment-gitlab) and the other one is used to externalize our configuration files with **Spring Cloud Config Server**, you can find the code [here](https://github.com/kemanedonfack/community/tree/master/kubernetes/microservices-configuration).
+You should create two repositories. The first one is used to store the source code of our microservices, and the other one is used to externalize our configuration files with **Spring Cloud Config Server** you will find all code [here](https://github.com/kemanedonfack/community/tree/master/kubernetes/spring-microservice-deployment-gitlab).
 
 Let's  briefly explain the folders in the repository
 
-![4525](https://user-images.githubusercontent.com/70517765/229854543-4484940f-8a77-4a5c-b06d-652ade72f531.PNG)
-![54ze](https://user-images.githubusercontent.com/70517765/229899879-b14a2425-db56-485b-9ad7-2851606cdb44.PNG)
+![Capture](https://user-images.githubusercontent.com/70517765/235350300-2c51a9a4-3b2d-4fd0-bcad-999c83acbdd0.PNG)
 
 The above screenshot shows the different directories of the source code : 
 - **.gitlab/agents/k8s-cluster** : contains the configurations of our kubernetes agent for server we will discuss in more detail later in this article
@@ -38,10 +45,11 @@ The above screenshot shows the different directories of the source code :
 - **kubernetes** : contains the different files to deploy our application on kubernetes without using Helm
 - **.gitlab-ci.yml** : which is the core of our pipeline is the file where we describe the different steps of our pipeline
 - **docker-compose.yml** : this file allows us to deploy our application under docker
-- **ecommerce-api-gateway-dev.yml** : This file contains all the configurations of the gateway api in the dev environment (development)
-- **ecommerce-api-gateway-prod.yml** : This file contains all the gateway api configurations in the prod(production) environment
+- **microservices-configuration** : this folder must be stored in another repository, it contains the configuration files of our different microservices such as :
+  - **ecommerce-api-gateway-dev.yml** : This file contains all the configurations of the gateway api in the dev environment (development)
+  - **ecommerce-api-gateway-prod.yml** : This file contains all the gateway api configurations in the prod(production) environment
 
-**Important** : You must have these two repositories in your own repository 
+**Important** : You must have the two repositories mentioned
 
 ## Step 2 : Configuration of Gitlab CI
 
@@ -163,7 +171,7 @@ This step in the `.gitlab-ci.yml` file is called build_push_microservice_image a
 
 - **before_script:** a list of commands to be executed before the main task of this step is executed. In this step, there is one command to execute. it is to authenticate to the `Docker registry`.
 
-To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain the password and username of your docker hub account. To do this, go to `settings > CI/CD` then `variables`
+To perform this step perfectly you need to create the variables `DOCKER_PASSWORD` and `DOCKER_LOGIN` in your project. These variables must contain the password and username of your docker hub account. To do this, go to `settings > CI/CD` then `variables`. **Don't forget to set them as protected because they are sensitive**.
 
 <img width="341" alt="1" src="https://user-images.githubusercontent.com/70517765/226735876-f1236c68-ef6f-43da-940b-477f1cfb8555.png">
 
@@ -189,9 +197,11 @@ In the next screen, don't put anything, just click on Run Pipeline. After that y
 
 ### deploy stage
 
-**important**: In this step you will need a working Kubernetes cluster with Helm installed, then you will need to connect your cluster to gitlab. To do this you need to install an agent for Kubernetes in your cluster, go to `Infrastructure > Kubernetes clusters` click on `connect a cluster` then follow the steps, the name of our Kubernetes cluster is `k8s-cluster`. For more information, see the official documentation [here](https://docs.gitlab.com/ee/user/clusters/agent/install/index.html#register-the-agent-with-gitlab). 
+In my case, I used a **kubernetes cluster** on killercoda that I already connected to my Gitlab CI project [my cluster](https://killercoda.com/helm/scenario/use). 
+#### What is Killercoda
+[Killercoda](https://killercoda.com/) is a place where you open your browser and get instant access to a real Linux or Kubernetes environment ready to use. These environments are maintained remotely and accessed locally, hence no setup or huge resource usage in local browsers. As a user you can learn from existing scenarios and as a creator you can provide scenarios to teach any kind of tools or technologies.
 
-In our case we have created a **kubernetes cluster** that we have already connected to our Gitlab project
+**important**: In this step you will need a working Kubernetes cluster with Helm installed, then you will need to connect your cluster to gitlab. To do this you need to install an agent for Kubernetes in your cluster, go to `Infrastructure > Kubernetes clusters` click on `connect a cluster` then follow the steps, the name of our Kubernetes cluster is `k8s-cluster`. For more information, see the official documentation [here](https://docs.gitlab.com/ee/user/clusters/agent/install/index.html#register-the-agent-with-gitlab). 
 
 ![Capture](https://user-images.githubusercontent.com/70517765/229860467-6d2b6c34-4d90-4344-bbc3-96202044b04c.PNG)
 
@@ -254,3 +264,11 @@ Great, everything went well, let's check our Kuberntes cluster and our applicati
 <img width="950" alt="Capture d’écran 2023-04-04 165526" src="https://user-images.githubusercontent.com/70517765/229889286-05f14969-c7f0-44cd-9b31-884518ade70b.png">
 
 <img width="955" alt="Capture d’écran 2023-04-04 165905" src="https://user-images.githubusercontent.com/70517765/229889326-01730c05-d2e3-424d-b495-501434fc54da.png">
+
+## Conclusion
+
+In conclusion, deploying **microservices** to a Kubernetes cluster with Helm via **GitLab CI** can be a powerful way to automate the building, testing, and deployment of your applications. With the use of **Helm**, we can easily install, upgrade, and manage applications in a **Kubernetes cluster** by defining the structure and configuration of an application through charts.
+
+By following the steps outlined in this article, you can set up a robust **CI/CD pipeline** to automate the deployment of your microservices to Kubernetes. With the ability to quickly and efficiently deploy applications, you can streamline your development process and increase productivity.
+
+Overall, the combination of GitLab CI, Kubernetes, and Helm provides a reliable and scalable solution for deploying microservices in a modern software development environment. By leveraging these technologies, developers can focus on writing code, and let the automation handle the rest.
