@@ -1,0 +1,120 @@
+version: '3'
+services:
+
+  api-gateway:
+    container_name: api-gateway
+    image: lugar2020/api-gateway
+    restart: always
+    ports:
+      - 8082:8082
+    networks:
+      - my-network
+    depends_on:
+      - config-server
+      - registry-service
+    environment:
+      CONFIG_SERVER: http://10.0.0.2:8090
+      ENV: prod
+
+  config-server:
+    container_name: config-server
+    image: lugar2020/config-server
+    restart: always
+    ports:
+      - 8090:8090
+    networks:
+      - my-network
+    environment:
+      GIT_URL_CONFIG: https://github.com/kemanedonfack/ecommerce-configurations.git
+
+  order-service:
+    container_name: order-service
+    image: lugar2020/order-service
+    restart: always
+    ports:
+      - 8086:8086
+    networks:
+      - my-network
+    depends_on:
+      - config-server
+      - registry-service
+      - mysqldb
+    environment:
+      CONFIG_SERVER: http://10.0.0.2:8090
+      ENV: prod
+      
+  product-service:
+    container_name: product-service
+    image: lugar2020/product-service
+    restart: always
+    ports:
+      - 8083:8083
+    networks:
+      - my-network
+    depends_on:
+      - config-server
+      - registry-service
+      - mysqldb
+    environment:
+      CONFIG_SERVER: http://10.0.0.2:8090
+      ENV: prod
+      
+  sale-service:
+    container_name: sale-service
+    image: lugar2020/sale-service
+    restart: always
+    ports:
+      - 8085:8085
+    networks:
+      - my-network
+    depends_on:
+      - config-server
+      - registry-service
+      - mysqldb
+    environment:
+      CONFIG_SERVER: http://10.0.0.2:8090
+      ENV: prod
+
+  registry-service:
+    container_name: registry-service
+    image: lugar2020/registry-service
+    restart: always
+    ports:
+      - 8081:8081
+    networks:
+      - my-network
+    environment:
+      SERVICE_REGISTRY: http://10.0.0.2:8081/eureka
+      
+  user-service:
+    container_name: user-service
+    image: lugar2020/user-service
+    restart: always
+    ports:
+      - 8084:8084
+    networks:
+      - my-network
+    depends_on:
+      - config-server
+      - registry-service
+      - mysqldb
+    environment:
+      CONFIG_SERVER: http://10.0.0.2:8090
+      ENV: prod
+
+  mysqldb:
+    image: mysql:5.7
+    ports:
+     - 3306:3306
+    networks:
+      - my-network
+    environment:
+      MYSQL_PASSWORD: kemane
+      MYSQL_ROOT_PASSWORD: kemane
+      MYSQL_DATABASE: microservice-ecommerce
+    restart: always
+     
+networks:
+  my-network:
+    driver: bridge
+ 

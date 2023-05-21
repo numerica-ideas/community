@@ -1,0 +1,17 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:mysql://mysqldb:3306/microservice-ecommerce?createDatabaseIfNotExist=true
+    username: root
+    password: kemane
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: #http://10.0.0.2:30081/eureka with docker use port 8081 with k8s 30081
+

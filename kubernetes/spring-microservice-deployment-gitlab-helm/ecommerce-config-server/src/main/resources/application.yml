@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ecommerce-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GIT_URL_CONFIG:https://github.com/kemanedonfack/ecommerce-configurations.git}
+server:
+  port: 8090
