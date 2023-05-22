@@ -86,7 +86,7 @@ behaviorsubject.next(‘value 2'); 
 // Output: value 2
 ```
 
-If you are interested to build a **Custom State Management Architecture using RxJS**, the following article is for you:
+If you are interested to build a **Custom State Management**, the following article is for you:
 
 https://blog.numericaideas.com/custom-rxjs-store-architecture
 
@@ -100,4 +100,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 ## Conclusion
 
-In conclusion, we hope that this article has cleared up any confusion surrounding Observable, Subject, and BehaviorSubject. If you have any further thoughts or insights to add, please do not hesitate to share them with us. We welcome all feedback and suggestions.
+We hope that this article has cleared up any confusion surrounding Observable, Subject, and BehaviorSubject. If you have any further thoughts or insights to add, please do not hesitate to share them with us. We welcome all feedback and suggestions.
+
+Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
