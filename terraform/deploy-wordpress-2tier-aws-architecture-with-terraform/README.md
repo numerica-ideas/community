@@ -1,4 +1,6 @@
-# Deploying WordPress on a 2-Tier AWS Architecture with Terraform
+# Deploy WordPress on a 2-Tier AWS Architecture with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fdeploy-wordpress-2tier-aws-architecture-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://www.youtube.com/playlist?list=PLJl2liPyo6s2DEWVgvW_J7MSI-7JikMOW)
+
+**This article was originally published by "Kemane Donfack" on the blog**: https://blog.numericaideas.com
 
 ## Introduction
 
@@ -10,17 +12,21 @@ In this article, we will explore the step-by-step process of deploying WordPress
 
 ## What is Terraform?
 
-[**Terraform**](https://www.terraform.io/) is an open-source tool developed by [**HashiCorp**](https://www.hashicorp.com/) that allows for the automated management of IT infrastructure. It uses a declarative approach to create, modify, and delete cloud resources. With **Terraform**, you can describe your infrastructure in configuration files, making it easier to manage as code. The tool is compatible with multiple cloud providers, enabling you to provision resources on different platforms. Terraform provides a powerful and flexible solution for automating the deployment and management of your cloud infrastructure.
+[**Terraform**](https://youtu.be/tJ6L1332WU4) is an open-source tool developed by [**HashiCorp**](https://www.hashicorp.com/) that allows for the automated management of IT infrastructure. It uses a declarative approach to create, modify, and delete cloud resources. With **Terraform**, you can describe your infrastructure in configuration files, making it easier to manage as code. The tool is compatible with multiple cloud providers, enabling you to provision resources on different platforms. Terraform provides a powerful and flexible solution for automating the deployment and management of your cloud infrastructure.
 
-### Advantages of Terraform
+Here are some **advantages** of Terraform:
 - **Infrastructure Automation**: Terraform allows for the automation of provisioning and managing your cloud infrastructure. You can describe your infrastructure using configuration files, making it easy to deploy and update your resources.
 - **Multi-Cloud and Multi-Provider**: Terraform supports multiple public cloud providers such as AWS, Azure, GCP, as well as private cloud providers. You can use the same Terraform configuration files to provision resources on different platforms.
 - **Modularity**: Terraform allows you to define infrastructure as reusable modules. These modules can encapsulate specific configurations and be used to create complex and scalable infrastructures. This also facilitates sharing and reusing best practices within your organization.
 - **Dependency Management**: Terraform automatically manages dependencies between different resources in your infrastructure. It identifies dependencies and updates them consistently during changes. This simplifies the management of complex infrastructures with many interconnected components.
 
+In case you aren't familiar with Terraform yet, we have an introduction [video tutorial](https://youtu.be/tJ6L1332WU4) along with a demo available on YouTube:
+
+[![TerraformWorkflow](images/terraform-introduction.png)](https://youtu.be/tJ6L1332WU4)
+
 ## What is a 2-Tier Architecture?
 
-In the context of the article about deploying WordPress on a 2-Tier AWS architecture with Terraform, here is a concise description of what a 2-Tier architecture is:
+In the context of the article about deploying WordPress on a **2-Tier AWS architecture with Terraform**, here is a concise description of what a 2-Tier architecture is:
 
 A 2-Tier architecture, also known as a two-tier architecture, is a model of IT infrastructure that separates application components into two distinct layers: `the presentation layer` and `the data layer`.
 
@@ -32,17 +38,19 @@ By using a 2-Tier architecture, we can achieve several benefits. Firstly, it all
 
 Additionally, this approach provides greater **flexibility** and **scalability**. In the event of traffic spikes, we can scale only the presentation layer by adding additional web server instances, without impacting the data layer. This ensures optimal performance and a smooth user experience.
 
-## Prerequisites
+## Infrastructure Provisioning
+
+### Prerequisites
 
 Before starting the deployment process, make sure you have the following prerequisites in place:
 
-- Basic knowledge of Terraform & AWS
-- Installed AWS CLI
-- Installed Terraform CLI 
+- Basic knowledge of [Terraform](https://youtu.be/tJ6L1332WU4) & AWS
+- Installed AWS CLI, as documented [here](https://blog.numericaideas.com/configure-aws-cli)
+- Installed Terraform CLI
 
 Now, let’s start configuring our project
 
-## Step 1: Configure our provider
+### Step 1: Provider Configuration
 
 create a file `provider.tf` with the below content
 
@@ -67,7 +75,7 @@ The resources defined in this file are:
 - **provider "aws"**: Specifies the AWS provider for Terraform. It sets the region to "eu-north-1", indicating that the resources will be provisioned in the AWS EU (Stockholm) region. The role of this resource is to authenticate Terraform with the specified AWS region and allow it to manage AWS resources.
 - **terraform block**: Defines the required providers for the Terraform configuration. In this case, it specifies that the "aws" provider is required, with a specific version of "4.65.0". The role of this block is to ensure that the correct version of the AWS provider is used for the configuration.
 
-## Step 2: Create VPC and subnets
+### Step 2: Create VPC and Subnets
 
 First, let's create a `variables.tf` file to store all our variables.
 ```
@@ -146,7 +154,7 @@ resource "aws_vpc" "infrastructure_vpc" {
   }
 }
 
-#It enables our vpc to connect to the internet
+# It enables our vpc to connect to the internet
 resource "aws_internet_gateway" "tier_architecture_igw" {
   vpc_id = aws_vpc.infrastructure_vpc.id
   tags = {
@@ -154,7 +162,7 @@ resource "aws_internet_gateway" "tier_architecture_igw" {
   }
 }
 
-#first ec2 instance public subnet
+# First ec2 instance public subnet
 resource "aws_subnet" "ec2_1_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[1]
@@ -165,7 +173,7 @@ resource "aws_subnet" "ec2_1_public_subnet" {
   }
 }
 
-#second ec2 instance public subnet
+# Second ec2 instance public subnet
 resource "aws_subnet" "ec2_2_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[2]
@@ -176,7 +184,7 @@ resource "aws_subnet" "ec2_2_public_subnet" {
   }
 }
 
-#database private subnet
+# Database private subnet
 resource "aws_subnet" "database_private_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[4]
@@ -187,7 +195,7 @@ resource "aws_subnet" "database_private_subnet" {
   }
 }
 
-#database read replica private subnet
+# Database read replica private subnet
 resource "aws_subnet" "database_read_replica_private_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[3]
@@ -198,6 +206,7 @@ resource "aws_subnet" "database_read_replica_private_subnet" {
   }
 }
 ```
+
 The `vpc.tf` file contains the definition of the **Virtual Private Cloud (VPC)** where the infrastructure resources will be created for our 2-tier AWS architecture using Terraform.
 
 The resources defined in this file are:
@@ -206,7 +215,7 @@ The resources defined in this file are:
 - **aws_internet_gateway**: Adds a gateway to allow the VPC to connect to the internet. The role of this resource is to enable internet connectivity for the VPC, which will be used to provide internet access to the EC2 instances.
 - **aws_subnet**: Defines the subnets that will be used to create the EC2 instances and RDS databases. Two subnets are public for the EC2 instances, while the other two are private for the databases. The role of this resource is to create the subnets for the different resources that will be created in the VPC.
 
-create `route_table.tf` file and add the below content
+Create `route_table.tf` file and add the below content:
 
 ```
 resource "aws_route_table" "infrastructure_route_table" {
@@ -242,7 +251,7 @@ The resources defined in this file are:
 - **aws_route_table**: Defines the main route table for the VPC. It specifies that any traffic with a destination CIDR block of "0.0.0.0/0" (which represents all IP addresses) should be routed through the aws_internet_gateway.tier_architecture_igw resource. The role of this resource is to enable internet connectivity for the associated subnets.
 - **aws_route_table_association**: Associates the EC2 subnets with the route table. It specifies that the aws_subnet.ec2_1_public_subnet and aws_subnet.ec2_2_public_subnet subnets should be associated with the aws_route_table.infrastructure_route_table. This association allows the instances in these subnets to access the internet through the configured route. The role of these resources is to establish the routing between the subnets and the internet gateway.
 
-## Step 3: Create Security groups
+### Step 3: Create Security Groups
 
 create `security_group.tf` file and add the below content
 
@@ -304,7 +313,7 @@ The resources defined in this file are:
 - **aws_security_group "database-sg"**: This resource defines the security group for the database. It allows inbound traffic on port 3306 from the **production-instance-sg security group**. The egress block allows all outbound traffic.
 
 
-## Step 4: Create Application load balancer
+### Step 4: Create Application Load Balancer
 
 create `loadbalancer.tf` file and add the below content
 ```
@@ -370,7 +379,7 @@ The resources defined in this file are:
 - **aws_lb_listener "external-elb"**: This resource attaches the target group to the load balancer's listener. It specifies the load balancer ARN, port, and protocol. The default_action block defines the action to be performed for incoming requests, which is forwarding to the target group.
 
 
-## Step 5: Create EC2 Instances and RDS databases
+### Step 5: Provision EC2 Instances and RDS Database
 
 create `main.tf` file and add the below content
 
@@ -471,7 +480,7 @@ The resources defined in this file are:
 - **aws_db_instance "rds_replica"**: This resource creates the replica RDS instance. It specifies the replicate source DB (the identifier of the master RDS instance), instance class, identifier, allocated storage, skip final snapshot flag, multi-AZ deployment, availability zone, security group ID, storage encryption, and tags. It tags the RDS instance as `my-rds-replica`.
 
 
-create `install_script.sh` file with the bellow content
+Create `install_script.sh` file with the bellow content
 
 ```
 #!/bin/bash
@@ -566,12 +575,14 @@ Specifically, this file defines the following outputs:
 
 These outputs will be used to connect to the RDS database instance and accessing the application via the application load balancer.
 
-## Step 6: Deploy our Infrastructure
+### Step 6: Deployment
 
 To start the deployment process, we need to initialize Terraform in our project directory. This step ensures that Terraform downloads the necessary providers and sets up the backend configuration. Run the following command in your terminal:
+
 ```
 terraform init
 ```
+
 ![terraform-init](./images/terraform-init.png)
 
 After initializing Terraform, we can generate an execution plan to preview the changes that will be made to our AWS infrastructure. The plan provides a detailed overview of the resources that will be created, modified, or destroyed.
@@ -588,9 +599,11 @@ terraform plan
 Once we are satisfied with the execution plan, we can proceed with deploying our infrastructure on AWS. Terraform will provision the necessary resources and configure them according to our specifications.
 
 To deploy the infrastructure, run the following command:
+
 ```
 terraform apply
 ```
+
 Terraform will prompt for confirmation before proceeding with the deployment. Type `yes` and press Enter to continue.
 
 
@@ -620,11 +633,18 @@ Now let's check our infrastructure
 
 **Congratulations! You have successfully deployed your WordPress application on a 2-tier AWS architecture using Terraform**. You can now access your WordPress website and start customizing it to suit your needs.
 
-## Conclusion:
+———————
+
+We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+———————
+
+## Conclusion
 
 To conclude, deploying WordPress on a 2-Tier AWS architecture with Terraform offers a reliable and scalable solution for hosting your website. This approach allows any team, regardless of their level of Cloud experience, to successfully set up and manage their WordPress application. By leveraging Terraform's infrastructure-as-code capabilities, the deployment process becomes streamlined and repeatable.
 
 However, it is important to emphasize the significance of conducting thorough research and due diligence when selecting the appropriate AWS services and configurations for your specific requirements. Ensuring high availability, fault tolerance, and security should be prioritized during the deployment process.
 
-By following the steps outlined in this article and leveraging the power of AWS and Terraform, you can confidently deploy WordPress on a 2-Tier architecture, benefiting from the scalability and flexibility of the Cloud while maintaining control over your infrastructure.
-
+Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
