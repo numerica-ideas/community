@@ -1,8 +1,12 @@
-# Difference between Observable, Subject, and BehaviorSubject in RxJS&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fdifference-between-observable-subject-behaviorsubject-in-rxjs&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com)
+# Difference between RxJS Observable, Subject, and BehaviorSubject&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fweb%2Fdifference-between-observable-subject-behaviorsubject-in-rxjs&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/difference-between-rxjs-observable-subject-and-behaviorsubject)
+
+**This article was originally written by "Ismael Messa" on the blog**: https://blog.numericaideas.com/difference-between-rxjs-observable-subject-and-behaviorsubject
 
 ## Introduction
 
-**RxJS** (Reactive Extensions for JavaScript) is a library that brings the concept of reactive programming that deals with asynchronous data calls, callbacks, and event-based programs using observables. It provides a lot of operators to allow handling asynchronous events as collections. Using the Observables pattern, RxJS comes with two other types of Observables: Subject and BehaviorSubject; each with its own particularity. Understanding the distinctions between Observable, Subject, and BehaviorSubject is crucial. Therefore, in this article, we will outline the differences between these distinct entities.
+**RxJS** (Reactive Extensions for JavaScript) is a library that brings the concept of reactive programming that deals with asynchronous data calls, callbacks, and event-based programs using observables. It provides a lot of operators to allow handling asynchronous events as collections. Using the Observables pattern, RxJS comes with two other types of Observables which include **Subject** and **BehaviorSubject**. Understanding the distinctions between Observable, Subject, and BehaviorSubject is important while building Reactive Apps, which this article intends to outline.
+
+[![FeaturedImage](./RxJS-Observables-Difference.png)](https://blog.numericaideas.com/difference-between-rxjs-observable-subject-and-behaviorsubject)
 
 ## Observable
 
@@ -56,7 +60,7 @@ subject.next(‘value 2'); 
 
 ## BehaviorSubject
 
-About **BehaviorSubject**, this one is very similar to **Subject** except that **it can have an initial value**. BehaviorSubject also ensures the last published event is consumed by new consumers.
+About **BehaviorSubject**, this one is very similar to **Subject** except that **it can have an initial value**. Technically, it extends from the **Subject** model while ensuring the last published event is consumed by new consumers.
 
 ### Methods
 
@@ -81,6 +85,18 @@ behaviorsubject.next(‘value 1'); 
 behaviorsubject.next(‘value 2'); 
 // Output: value 2
 ```
+
+If you are interested to build a **Custom State Management Architecture using RxJS**, the following article is for you:
+
+https://blog.numericaideas.com/custom-rxjs-store-architecture
+
+———————
+
+We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+———————
 
 ## Conclusion
 

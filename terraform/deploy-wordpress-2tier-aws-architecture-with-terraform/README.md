@@ -1,6 +1,6 @@
 # Deploy WordPress on a 2-Tier AWS Architecture with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fdeploy-wordpress-2tier-aws-architecture-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://www.youtube.com/playlist?list=PLJl2liPyo6s2DEWVgvW_J7MSI-7JikMOW)
 
-**This article was originally published by "Kemane Donfack" on the blog**: https://blog.numericaideas.com
+**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com
 
 ## Introduction
 
@@ -8,7 +8,7 @@ Deploying WordPress on a **two-tier AWS architecture** with Terraform provides a
 
 In this article, we will explore the step-by-step process of deploying WordPress on a two-tier AWS architecture using Terraform. By following this guide, you will be able to set up a reliable infrastructure that separates the presentation layer from the data layer, thereby optimizing performance and providing flexibility for future growth.
 
-![architecture](./images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)
+[![architecture](./images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://blog.numericaideas.com/xxxxxxxxxxxx)
 
 ## What is Terraform?
 
