@@ -22,7 +22,7 @@ resource "aws_subnet" "ec2_1_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[1]
   map_public_ip_on_launch = "true" //it makes this a public subnet
-  availability_zone       = var.availability_zone[1]
+  availability_zone       = var.availability_zone[0]
   tags = {
     Name = "first ec2 public subnet"
   }
@@ -33,7 +33,7 @@ resource "aws_subnet" "ec2_2_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[2]
   map_public_ip_on_launch = "true" //it makes this a public subnet
-  availability_zone       = var.availability_zone[2]
+  availability_zone       = var.availability_zone[1]
   tags = {
     Name = "second ec2 public subnet"
   }
@@ -44,7 +44,7 @@ resource "aws_subnet" "database_private_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[4]
   map_public_ip_on_launch = "false" //it makes this a private subnet
-  availability_zone       = var.availability_zone[2]
+  availability_zone       = var.availability_zone[1]
   tags = {
     Name = "database private subnet"
   }
@@ -55,7 +55,7 @@ resource "aws_subnet" "database_read_replica_private_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[3]
   map_public_ip_on_launch = "false"
-  availability_zone       = var.availability_zone[1]
+  availability_zone       = var.availability_zone[0]
   tags = {
     Name = "database read replica private subnet"
   }
