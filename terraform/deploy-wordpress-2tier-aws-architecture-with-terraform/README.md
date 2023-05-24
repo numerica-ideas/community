@@ -142,7 +142,7 @@ variable "target_application_port" {
 
 The `variables.tf` file defines and initializes the Terraform variables required for configuring and deploying the 2-Tier architecture on AWS. These variables include information about **inbound ports**, **database settings**, **instance type**, **AMI ID**, **availability zones**, **VPC CIDR**, **subnet CIDRs**, and **target application ports**. Customize these variables to suit your project's requirements.
 
-**Important:** You should create the Key pair name `wordpressKey`
+**Important:** You should create the Key pair name `wordpressKey`.
 
 Create `vpc.tf` file and add the below content:
 
@@ -158,7 +158,7 @@ resource "aws_vpc" "infrastructure_vpc" {
   }
 }
 
-#It enables our vpc to connect to the internet
+# It enables our vpc to connect to the internet
 resource "aws_internet_gateway" "tier_architecture_igw" {
   vpc_id = aws_vpc.infrastructure_vpc.id
   tags = {
@@ -166,7 +166,7 @@ resource "aws_internet_gateway" "tier_architecture_igw" {
   }
 }
 
-#first ec2 instance public subnet
+# first ec2 instance public subnet
 resource "aws_subnet" "ec2_1_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[1]
@@ -177,7 +177,7 @@ resource "aws_subnet" "ec2_1_public_subnet" {
   }
 }
 
-#second ec2 instance public subnet
+# second ec2 instance public subnet
 resource "aws_subnet" "ec2_2_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[2]
@@ -188,7 +188,7 @@ resource "aws_subnet" "ec2_2_public_subnet" {
   }
 }
 
-#database private subnet
+# database private subnet
 resource "aws_subnet" "database_private_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[4]
@@ -199,7 +199,7 @@ resource "aws_subnet" "database_private_subnet" {
   }
 }
 
-#database read replica private subnet
+# database read replica private subnet
 resource "aws_subnet" "database_read_replica_private_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[3]
@@ -210,6 +210,7 @@ resource "aws_subnet" "database_read_replica_private_subnet" {
   }
 }
 ```
+
 The `vpc.tf` file defines the **Virtual Private Cloud (VPC)** and subnets for the 2-Tier architecture. It creates the **VPC** with the specified CIDR block and enables DNS support and hostnames and a **gateway** to allow the VPC to connect to the internet. Additionally, it creates **two public subnets** for EC2 instances, a **private subnet** for the database, and another for the database read replica.
 
 Create `route_table.tf` file and add the below content:
@@ -475,6 +476,7 @@ sudo systemctl start docker
 sudo echo ${aws_db_instance.rds_master.password} | sudo tee /root/db_password.txt > /dev/null
 sudo echo ${aws_db_instance.rds_master.username} | sudo tee /root/db_username.txt > /dev/null
 sudo echo ${aws_db_instance.rds_master.endpoint} | sudo tee /root/db_endpoint.txt > /dev/null
+
 # create docker-compose
 sudo cat <<EOF | sudo tee docker-compose.yml > /dev/null
 version: '3'
@@ -576,7 +578,7 @@ Once the deployment is complete, Terraform will output the information about the
 
 ![outputs](./images/outputs.png)
 
-Now let's check our infrastructure
+Finally, let's check our infrastructure from the AWS Console:
 
 ![vpc](./images/vpc.png)
 
@@ -588,7 +590,11 @@ Now let's check our infrastructure
 
 ![loadbalancer](./images/loadbalancer.png)
 
+The **WordPress** installation is available via the generated Load Balancer domain:
+
 ![wordpress](./images/wordpress.png)
+
+**Important**: Let's note that we can link it to a custom domain along with an HTTP certificate by using AWS ACM service.
 
 **Congratulations! You have successfully deployed your WordPress application on a 2-tier AWS architecture using Terraform**. You can now access your WordPress website and start customizing it to suit your needs.
 
