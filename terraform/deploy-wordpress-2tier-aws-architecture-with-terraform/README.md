@@ -1,6 +1,6 @@
-# Deploy WordPress on a 2-Tier AWS Architecture with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fdeploy-wordpress-2tier-aws-architecture-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://www.youtube.com/playlist?list=PLJl2liPyo6s2DEWVgvW_J7MSI-7JikMOW)
+# Deploy WordPress on a 2-Tier AWS Architecture with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fdeploy-wordpress-2tier-aws-architecture-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
-**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com
+**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform
 
 ## Introduction
 
@@ -8,8 +8,7 @@ Deploying WordPress on a **two-tier AWS architecture with Terraform** offers a r
 
 In this article, we will guide you through deploying WordPress on a two-tier AWS architecture using Terraform. By following this guide, you'll establish a reliable infrastructure that optimizes performance and allows for future growth.
 
-
-[![architecture](./images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://blog.numericaideas.com/xxxxxxxxxxxx)
+[![FeaturedImage](./images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ## What is Terraform?
 
@@ -40,6 +39,10 @@ A 2-Tier architecture, also known as a two-tier architecture, is a model of IT i
 
 ## Infrastructure Provisioning
 
+The overall architecture looks like the following image in which the **AWS Cloud Services** are highlighted:
+
+[![ArchitectureDiagram](images/Architecture-Diagram.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+
 ### Prerequisites
 
 Before starting the deployment process, make sure you have the following prerequisites in place:
@@ -52,7 +55,7 @@ Now, let’s start configuring our project
 
 ### Step 1: Provider Configuration
 
-Create a file named `provider.tf` with the following content
+Create a file named `provider.tf` with the following content:
 
 ```
 provider "aws" {
@@ -141,7 +144,7 @@ The `variables.tf` file defines and initializes the Terraform variables required
 
 **Important:** You should create the Key pair name `wordpressKey`
 
-create `vpc.tf` file and add the below content
+Create `vpc.tf` file and add the below content:
 
 ```
 resource "aws_vpc" "infrastructure_vpc" {
@@ -242,10 +245,10 @@ The `route_table.tf` file configures the route table for the VPC. It creates a r
 
 ### Step 3: Create Security Groups
 
-create `security_group.tf` file and add the below content
+Create `security_group.tf` file and add the below content:
 
 ```
-#Create a security  group for production node to allow traffic 
+# Create a security  group for production node to allow traffic 
 resource "aws_security_group" "production-instance-sg" {
   name        = "production-instance-sg"
   description = "Security from who allow inbound traffic on port 22 and 9090"
@@ -270,7 +273,7 @@ resource "aws_security_group" "production-instance-sg" {
   }
 }
 
-#Create a security  group for database to allow traffic on port 3306 and from ec2 production security group
+# Create a security  group for database to allow traffic on port 3306 and from ec2 production security group
 resource "aws_security_group" "database-sg" {
   name        = "database-sg"
   description = "security  group for database to allow traffic on port 3306 and from ec2 production security group"
@@ -298,7 +301,8 @@ The `security_group.tf` file defines two AWS **security groups** using Terraform
 
 ### Step 4:  an Application Load Balancer
 
-create `loadbalancer.tf` file and add the below content
+Create `loadbalancer.tf` file and add the below content:
+
 ```
 # Creation of application LoadBalancer
 resource "aws_lb" "application_loadbalancer" {
@@ -353,7 +357,7 @@ The `loadbalancer.tf` file configures the **application load balancer (ALB)** an
 
 ### Step 5: Provision EC2 Instances and RDS Database
 
-To provision EC2 instances and an RDS database, you need to create a main.tf file with the following content
+To provision EC2 instances and an RDS database, you need to create a main.tf file with the following content:
 
 ```
 resource "aws_instance" "production_1_instance" {
@@ -414,7 +418,6 @@ resource "aws_db_instance" "rds_master" {
 }
 
 resource "aws_db_instance" "rds_replica" {
-
   replicate_source_db    = aws_db_instance.rds_master.identifier
   instance_class         = "db.t3.micro"
   identifier             = "replica-rds-instance"
@@ -445,7 +448,7 @@ The resources defined in this file are:
 - **aws_db_instance "rds_replica"**: resource creates the replica RDS instance, which replicates from the master RDS instance. It has similar configuration options but with a different identifier and availability zone.
 
 
-Create `install_script.sh` file with the below content
+Create `install_script.sh` file with the below content:
 
 ```
 #!/bin/bash
@@ -497,7 +500,7 @@ sudo docker-compose up
 
 The `install_script.sh` file is a shell script that installs Docker and Docker-compose, configures a WordPress environment, and launches the application.
 
-create `outputs.tf` file with the bellow content
+Create `outputs.tf` file with the bellow content:
 
 ```
 output "public_1_ip" {
