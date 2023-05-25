@@ -1,7 +1,12 @@
-# Accelerate Android App Delivery via Bitrise CI/CD Pipelines
+# Accelerate Android App Delivery via Bitrise CI/CD Pipelines&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fandroid%2Fconfigure-bitrise-for-android-apps&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines)
+
+**This article was originally written by "Waheed Abbas" on the blog**: https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines
 
 ## Introduction
-**Bitrise** is a Continuous Integration and Delivery (CI/CD) Platform as a Service (PaaS) with a main focus on mobile app development (iOS, Android, React Native, Flutter, and so on). It is a collection of tools and services to help you with the development and automation of your software projects.
+**Bitrise** is a Continuous Integration and Delivery (CI/CD) Platform as a Service (PaaS) with a main focus on mobile app development (iOS, Android, React Native, Flutter, and so on). It's a collection of tools and services that we'll be use during the following lines to automate an Android App delivery.
+
+[![FeaturedImage](./images/Android-App-Delivery-via-Bitrise.png)](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines)
+
 ## Why use Bitrise?
 Using a CI/CD platform like Bitrise for your Android app development has many benefits:
 1. **Efficiency:** Bitrise automates many manual steps in the development, testing, and deployment process, saving you time and effort.
@@ -11,6 +16,7 @@ Using a CI/CD platform like Bitrise for your Android app development has many be
 5. **Scalability:** It can scale to accommodate projects of any size, from small apps to enterprise-level applications.
 
 Overall, using Bitrise can help you streamline your Android app development process, improve the quality of your app, and stay ahead of the competition.
+
 ## Setting Up a Bitrise Account
 You can create a **Bitrise** account by visiting the Bitrise Sign-up page [here](https://app.bitrise.io/users/sign_up). You can sign up using your **Google** or **GitHub** account or create a new Bitrise account using your email address. Signing up with either of the Git service providers means you connect your Bitrise account to your account on that service provider. With a connected account, you can grant Bitrise access to any of your repositories on that account.
 
@@ -21,7 +27,7 @@ After signing up, you can connect your Bitrise account to all three supported Gi
 - Click on the toggle switch to connect the desired Git account
 ![Connect Git Accounts](./images/bitrise_connect_git_accounts.png)
 
-## Adding an Android app to Bitrise
+### Adding an Android App to Bitrise
 1. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard).
 2. Click the + sign on the top menu bar and select Add New App on the web UI, which takes you to the [Create New App page](https://app.bitrise.io/apps/add).
 ![Add New App](./images/bitrise_add_new_app.png "New app page")
@@ -43,6 +49,7 @@ Congratulations! Bitrise will kick off your first test build now!
 
 ## Signing your Android App
 Now that you have successfully built your Android project, it's time to sign your app for production release.
+
 ### Add Code Signing Files
 1. [Generate a keystore file](https://developer.android.com/studio/publish/app-signing#generate-key) or use existing if you have one already.
 2. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard) and select your Android app.
@@ -65,7 +72,6 @@ Now that you have successfully built your Android project, it's time to sign you
 
 Your workflow steps order should now look like the figure below. Hit **Run Workflow**. Once the build finishes, you have now successfully **Signed** your Android app using **Bitrise**.
 
-
 ![Bitrise Final Workflow Step](./images/bitrise_android_app_signing_steps.png)
 
 ### Access App Files and Test Reports
@@ -78,6 +84,14 @@ After the build finishes, Bitrise will produce artifacts: for example, test repo
 3. Switch to **Artifacts** tab to access **APK/AAB** files.
 
 ![Bitrise App Artifacts](./images/bitrise_app_artifacts.png)
+
+———————
+
+We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+———————
 
 ## Conclusion
 In conclusion, using Bitrise for your Mobile apps can significantly improve the efficiency and quality of your app development process. With Bitrise, you can automate many of the manual steps involved in building, testing, and deploying your app, saving you time and effort while ensuring consistent, high-quality results. Whether you're a solo developer or part of a larger team, Bitrise can help you streamline your Android app development process, reduce errors, and bring your app to market faster.
