@@ -44,3 +44,25 @@ resource "aws_security_group" "database-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+#efs volume security group
+resource "aws_security_group" "efs_sg" {
+  name        = "efs security group"
+  description = "Allow EFS PORT"
+  vpc_id      = aws_vpc.infrastructure_vpc.id
+  ingress {
+    description     = "EFS mount target"
+    from_port       = 2049
+    to_port         = 2049
+    protocol        = "tcp"
+    cidr_blocks     = ["0.0.0.0/0"]
+    security_groups = [aws_security_group.production-instance-sg.id]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
