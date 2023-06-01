@@ -3,8 +3,7 @@ resource "aws_instance" "production_1_instance" {
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.ec2_1_public_subnet.id
   vpc_security_group_ids = [aws_security_group.production-instance-sg.id]
-  key_name               = var.key_name
-  user_data              = file("install_script.sh")
+  key_name               = aws_key_pair.aws_ec2_access_key.id
   tags = {
     Name = "Production instance 1"
   }
@@ -18,8 +17,7 @@ resource "aws_instance" "production_2_instance" {
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.ec2_2_public_subnet.id
   vpc_security_group_ids = [aws_security_group.production-instance-sg.id]
-  key_name               = var.key_name
-  user_data              = file("install_script.sh")
+  key_name               = aws_key_pair.aws_ec2_access_key.id
   tags = {
     Name = "Production instance 2"
   }
