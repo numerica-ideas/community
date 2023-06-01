@@ -582,17 +582,17 @@ The above code provisions an **EFS** file system and configures EFS mount points
 
 The defined resources are as follows:
 
-**aws_efs_file_system "efs_volume"**: This resource creates an EFS file system with a creation token creation_token set as `efs_volume_token`. Its role is to provide durable and scalable storage for the application. It can be attached to `several ec2 instances`.
+- **aws_efs_file_system "efs_volume"**: This resource creates an EFS file system with a creation token creation_token set as `efs_volume_token`. Its role is to provide durable and scalable storage for the application. It can be attached to `several ec2 instances`.
 
-**aws_efs_mount_target "efs_mount_target_1" and "efs_mount_target_2"**: These resources define EFS mount points for EC2 instances. They specify the EFS file system ID, the subnet ID where EC2 instances are deployed, and the associated security group ID. Their role is to establish the connectivity between the EC2 instances and the `EFS file system`, enabling the instances to access and use the shared storage.
+- **aws_efs_mount_target "efs_mount_target_1" and "efs_mount_target_2"**: These resources define EFS mount points for EC2 instances. They specify the EFS file system ID, the subnet ID where EC2 instances are deployed, and the associated security group ID. Their role is to establish the connectivity between the EC2 instances and the `EFS file system`, enabling the instances to access and use the shared storage.
 
-**tls_private_key "ssh"**: This resource generates an `SSH key pair` for connecting to the EC2 instances. Its role is to facilitate secure remote access to the EC2 instances.
+- **tls_private_key "ssh"**: This resource generates an `SSH key pair` for connecting to the EC2 instances. Its role is to facilitate secure remote access to the EC2 instances.
 
-**aws_key_pair "aws_ec2_access_key"**: This resource creates an EC2 access key using the previously generated public key. Its role is to associate the generated public key with the EC2 instances, allowing SSH access using the corresponding private key.
+- **aws_key_pair "aws_ec2_access_key"**: This resource creates an EC2 access key using the previously generated public key. Its role is to associate the generated public key with the EC2 instances, allowing SSH access using the corresponding private key.
 
-**local_file "private_key"**: This resource saves the generated private key to a local file at the specified location.
+- **local_file "private_key"**: This resource saves the generated private key to a local file at the specified location.
 
-**null_resource "ec2_1_install_script" and "ec2_2_install_script"**: These resources execute an installation script on the EC2 instances to configure Docker, mount the EFS file system, and run a Docker container WordPress that uses the RDS database. The script is executed via an SSH connection to the EC2 instance using the previously generated private key.
+- **null_resource "ec2_1_install_script" and "ec2_2_install_script"**: These resources execute an installation script on the EC2 instances to configure Docker, mount the EFS file system, and run a Docker container WordPress that uses the RDS database. The script is executed via an SSH connection to the EC2 instance using the previously generated private key.
 
 The **depends_on** option is used to set the resource dependencies, ensuring that the EC2 instances, private key, EFS mount points, and RDS database are available before running the installation scripts.
 
