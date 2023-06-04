@@ -5,7 +5,7 @@ resource "aws_instance" "production_1_instance" {
   vpc_security_group_ids = [aws_security_group.production-instance-sg.id]
   key_name               = aws_key_pair.aws_ec2_access_key.id
   tags = {
-    Name = "Production instance 1"
+    Name = "production-instance"
   }
   depends_on = [
     aws_db_instance.rds_master,
@@ -19,7 +19,7 @@ resource "aws_instance" "production_2_instance" {
   vpc_security_group_ids = [aws_security_group.production-instance-sg.id]
   key_name               = aws_key_pair.aws_ec2_access_key.id
   tags = {
-    Name = "Production instance 2"
+    Name = "production-instance"
   }
   depends_on = [
     aws_db_instance.rds_master,
@@ -54,7 +54,6 @@ resource "aws_db_instance" "rds_master" {
 }
 
 resource "aws_db_instance" "rds_replica" {
-
   replicate_source_db    = aws_db_instance.rds_master.identifier
   instance_class         = "db.t3.micro"
   identifier             = "replica-rds-instance"

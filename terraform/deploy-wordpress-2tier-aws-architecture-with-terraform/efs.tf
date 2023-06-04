@@ -1,5 +1,5 @@
 resource "aws_efs_file_system" "efs_volume" {
-  creation_token = "efs_volume_token"
+  creation_token = "efs_volume"
 }
 
 resource "aws_efs_mount_target" "efs_mount_target_1" {
@@ -25,58 +25,37 @@ resource "aws_key_pair" "aws_ec2_access_key" {
 }
 
 resource "local_file" "private_key" {
-  content         = tls_private_key.ssh.private_key_pem
-  filename        = var.private_key_location
+  content  = tls_private_key.ssh.private_key_pem
+  filename = var.private_key_location
 }
 
-resource "null_resource" "ec2_1_install_script" {
-
+data "aws_instances" "production_instances" {
+  instance_tags = {
+    "Name" = "production-instance"
+  }
   depends_on = [
-    aws_db_instance.rds_master,
-    local_file.private_key,
-    aws_efs_mount_target.efs_mount_target_1,
-    aws_instance.production_1_instance
+    aws_instance.production_1_instance,
+    aws_instance.production_2_instance
   ]
-
-  connection {
-    type        = "ssh"
-    host        = aws_instance.production_1_instance.public_ip
-    user        = "ec2-user"
-    private_key = file(var.private_key_location) # Location of the Private Key
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "sudo yum update -y",
-      "sudo yum install docker -y",
-      "wget https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)",
-      "sudo mv docker-compose-$(uname -s)-$(uname -m) /usr/local/bin/docker-compose",
-      "sudo chmod -v +x /usr/local/bin/docker-compose",
-      "sudo systemctl enable docker.service",
-      "sudo systemctl start docker.service",
-      "sudo yum -y install amazon-efs-utils",
-      "sudo mkdir -p ${var.mount_directory}",
-      "sudo mount -t efs -o tls ${aws_efs_file_system.efs_volume.id}:/ ${var.mount_directory}",
-      "sudo docker run --name wordpress-docker -e WORDPRESS_DB_USER=${aws_db_instance.rds_master.username} -e WORDPRESS_DB_HOST=${aws_db_instance.rds_master.endpoint} -e WORDPRESS_DB_PASSWORD=${aws_db_instance.rds_master.password} -v ${var.mount_directory}:${var.mount_directory} -p 80:80 -d wordpress:4.8-apache",
-    ]
-  }
 }
 
-
-resource "null_resource" "ec2_2_install_script" {
+resource "null_resource" "install_script" {
+  count = 2
 
   depends_on = [
     aws_db_instance.rds_master,
     local_file.private_key,
     aws_efs_mount_target.efs_mount_target_1,
+    aws_efs_mount_target.efs_mount_target_2,
+    aws_instance.production_1_instance,
     aws_instance.production_2_instance
   ]
 
   connection {
     type        = "ssh"
-    host        = aws_instance.production_2_instance.public_ip
+    host        = data.aws_instances.production_instances.public_ips[count.index]
     user        = "ec2-user"
-    private_key = file(var.private_key_location) # Location of the Private Key
+    private_key = file(var.private_key_location)
   }
 
   provisioner "remote-exec" {
@@ -95,4 +74,3 @@ resource "null_resource" "ec2_2_install_script" {
     ]
   }
 }
-

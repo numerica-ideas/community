@@ -57,6 +57,6 @@ variable "private_key_location" {
 }
 
 variable "mount_directory" {
-  type = string
+  type    = string
   default = "/var/www/html"
 }
