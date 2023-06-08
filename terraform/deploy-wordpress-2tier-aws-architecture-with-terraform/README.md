@@ -41,7 +41,7 @@ A 2-Tier architecture, also known as a two-tier architecture, is a model of IT i
 
 The overall architecture looks like the following image in which the **AWS Cloud Services** are highlighted:
 
-[![ArchitectureDiagram](images/Architecture-Diagram.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+[![ArchitectureDiagram](images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ### Prerequisites
 
@@ -280,7 +280,7 @@ resource "aws_security_group" "production-instance-sg" {
   }
 }
 
-#Create a security  group for database to allow traffic on port 3306 and from ec2 production security group
+# Create a security  group for database to allow traffic on port 3306 and from ec2 production security group
 resource "aws_security_group" "database-sg" {
   name        = "database-sg"
   description = "security  group for database to allow traffic on port 3306 and from ec2 production security group"
@@ -325,10 +325,10 @@ resource "aws_security_group" "efs_sg" {
 }
 ```
 
-The `security_group.tf` file defines three AWS **security groups** using Terraform. The first security group (aws_security_group.production-instance-sg) allows inbound traffic on specified ports (these ports are specified in the file `variables.tf` variable `inbound_port_production_ec2`) from any source **(0.0.0.0/0)**. The second security group (aws_security_group.database-sg) allows inbound traffic on port **3306** from the security group associated with the production instances. The thirth is for the **EFS** which allows inbound traffic on port **2049** NFS port volume, all security groups allow all outbound traffic.
+The `security_group.tf` file defines three AWS **security groups** using Terraform. The first security group (aws_security_group.production-instance-sg) allows inbound traffic on specified ports (these ports are specified in the file `variables.tf` variable `inbound_port_production_ec2`) from any source **(0.0.0.0/0)**. The second security group (aws_security_group.database-sg) allows inbound traffic on port **3306** from the security group associated with the production instances. The third is for the **EFS** which allows inbound traffic on port **2049** NFS port volume, all security groups allow all outbound traffic.
 
 
-### Step 4:  an Application Load Balancer
+### Step 4:  The Application Load Balancer
 
 Create `loadbalancer.tf` file and add the below content:
 
@@ -474,7 +474,7 @@ The resources defined in this file are:
 
 - **aws_db_instance "rds_replica"**: resource creates the replica RDS instance, which replicates from the master RDS instance. It has similar configuration options but with a different identifier and availability zone.
 
-### Step 6: Provisioning the EFS file system
+### Step 6: Provisioning the EFS file System
 
 This step is very important as we have **two EC2 instances** connected to a load balancer. It is essential to ensure **data consistency** between the different EC2 instances that make up our architecture. This ensures that regardless of the instance selected by the load balancer, users will always see the same information without any inconsistency or data loss.
 
