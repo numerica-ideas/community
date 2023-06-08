@@ -55,7 +55,7 @@ Now, let’s start configuring our project
 
 ### Step 1: Provider Configuration
 
-Create a file named `provider.tf` with the following content:
+Create a file named [`provider.tf`](./provider.tf) with the following content:
 
 ```
 provider "aws" {
@@ -80,7 +80,8 @@ The resources defined in this file are:
 
 ### Step 2: Create VPC and Subnets
 
-Create a file named `variables.tf` to store the necessary variables.
+Create a file named [`variables.tf`](./variables.tf) to store the necessary variables.
+
 ```
 variable "inbound_port_production_ec2" {
   type        = list(any)
@@ -150,7 +151,7 @@ The `variables.tf` file defines and initializes the Terraform variables required
 
 **Important:** You should create the Key pair name `wordpressKey`.
 
-Create `vpc.tf` file and add the below content:
+Create [`vpc.tf`](./vpc.tf) file and add the below content:
 
 ```
 resource "aws_vpc" "infrastructure_vpc" {
@@ -219,7 +220,7 @@ resource "aws_subnet" "database_read_replica_private_subnet" {
 
 The `vpc.tf` file defines the **Virtual Private Cloud (VPC)** and subnets for the 2-Tier architecture. It creates the **VPC** with the specified CIDR block and enables DNS support and hostnames and a **gateway** to allow the VPC to connect to the internet. Additionally, it creates **two public subnets** for EC2 instances, a **private subnet** for the database, and another for the database read replica.
 
-Create `route_table.tf` file and add the below content:
+Create [`route_table.tf`](./route_table.tf) file and add the below content:
 
 ```
 resource "aws_route_table" "infrastructure_route_table" {
@@ -252,7 +253,7 @@ The `route_table.tf` file configures the route table for the VPC. It creates a r
 
 ### Step 3: Create Security Groups
 
-Create `security_group.tf` file and add the below content:
+Create [`security_group.tf`](./security_group.tf) file and add the below content:
 
 ```
 # Create a security  group for production nodes to allow traffic 
@@ -330,7 +331,7 @@ The `security_group.tf` file defines three AWS **security groups** using Terrafo
 
 ### Step 4:  The Application Load Balancer
 
-Create `loadbalancer.tf` file and add the below content:
+Create [`loadbalancer.tf`](./loadbalancer.tf) file and add the below content:
 
 ```
 # Creation of application LoadBalancer
@@ -386,7 +387,7 @@ The `loadbalancer.tf` file configures the **application load balancer (ALB)** an
 
 ### Step 5: Provision EC2 Instances and RDS Database
 
-To provision EC2 instances and an RDS database, you need to create a main.tf file with the following content:
+To provision EC2 instances and an RDS database, you need to create a [`main.tf`](./main.tf) file with the following content:
 
 ```
 resource "aws_instance" "production_1_instance" {
@@ -480,7 +481,7 @@ This step is very important as we have **two EC2 instances** connected to a load
 
 An effective way to guarantee this data consistency is to use **Amazon Elastic File System (EFS)** as a shared storage system for our EC2 instances in order to store the files of our WordPress site.
 
-Create `efs.tf` file with the content below:
+Create [`efs.tf`](./efs.tf) file with the content below:
 
 ```
 resource "aws_efs_file_system" "efs_volume" {
@@ -581,7 +582,7 @@ The defined resources are as follows:
 
 The **depends_on** option is used to set the resource dependencies, ensuring that the EC2 instances, private key, EFS mount points, and RDS database are available before running the installation scripts.
 
-Create `outputs.tf` file with the bellow content:
+Create [`output.tf`](./output.tf) file with the bellow content:
 
 ```
 output "public_1_ip" {
@@ -598,7 +599,8 @@ output "lb_dns_name" {
   value       = aws_lb.application_loadbalancer.dns_name
 }
 ```
-The `outputs.tf` file is used to define the outputs of the resources created in the Terraform code. It specifies **the public IP** addresses of the **EC2 instances** and the **DNS name of the application load balancer**.
+
+The `output.tf` file is used to define the outputs of the resources created in the Terraform code. It specifies **the public IP** addresses of the **EC2 instances** and the **DNS name of the application load balancer**.
 
 These outputs will be used to connect to the RDS database instance and access the application via the application load balancer.
 
