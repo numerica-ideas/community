@@ -26,12 +26,7 @@ variable "instance_type" {
 
 variable "ami" {
   type    = string
-  default = "ami-0940df33750ae6e7f"
-}
-
-variable "key_name" {
-  type    = string
-  default = "wordpressKey"
+  default = "ami-0cbfa6bba4589dcbb"
 }
 
 variable "availability_zone" {
@@ -53,4 +48,15 @@ variable "subnet_cidrs" {
 variable "target_application_port" {
   type    = string
   default = "80"
+}
+
+variable "private_key_location" {
+  description = "Location of the private key"
+  type        = string
+  default     = "aws_access_key.pem"
+}
+
+variable "mount_directory" {
+  type    = string
+  default = "/var/www/html"
 }

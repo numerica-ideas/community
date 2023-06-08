@@ -110,12 +110,7 @@ variable "instance_type" {
 
 variable "ami" {
   type    = string
-  default = "ami-0940df33750ae6e7f"
-}
-
-variable "key_name" {
-  type    = string
-  default = "wordpressKey"
+  default = "ami-0cbfa6bba4589dcbb"
 }
 
 variable "availability_zone" {
@@ -137,6 +132,17 @@ variable "subnet_cidrs" {
 variable "target_application_port" {
   type    = string
   default = "80"
+}
+
+variable "private_key_location" {
+  description = "Location of the private key"
+  type        = string
+  default     = "aws_access_key.pem"
+}
+
+variable "mount_directory" {
+  type    = string
+  default = "/var/www/html"
 }
 ```
 
@@ -220,9 +226,9 @@ resource "aws_route_table" "infrastructure_route_table" {
   vpc_id = aws_vpc.infrastructure_vpc.id
 
   route {
-    //associated subnet can reach everywhere
+    // associated subnet can reach everywhere
     cidr_block = "0.0.0.0/0"
-    //CRT uses this IGW to reach internet
+    // CRT uses this IGW to reach internet
     gateway_id = aws_internet_gateway.tier_architecture_igw.id
   }
 
@@ -249,7 +255,7 @@ The `route_table.tf` file configures the route table for the VPC. It creates a r
 Create `security_group.tf` file and add the below content:
 
 ```
-# Create a security  group for production node to allow traffic 
+# Create a security  group for production nodes to allow traffic 
 resource "aws_security_group" "production-instance-sg" {
   name        = "production-instance-sg"
   description = "Security from who allow inbound traffic on port 22 and 9090"
@@ -274,7 +280,7 @@ resource "aws_security_group" "production-instance-sg" {
   }
 }
 
-# Create a security  group for database to allow traffic on port 3306 and from ec2 production security group
+#Create a security  group for database to allow traffic on port 3306 and from ec2 production security group
 resource "aws_security_group" "database-sg" {
   name        = "database-sg"
   description = "security  group for database to allow traffic on port 3306 and from ec2 production security group"
@@ -295,9 +301,31 @@ resource "aws_security_group" "database-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+# EFS volume security group
+resource "aws_security_group" "efs_sg" {
+  name        = "efs security group"
+  description = "Allow EFS PORT"
+  vpc_id      = aws_vpc.infrastructure_vpc.id
+  ingress {
+    description     = "EFS mount target"
+    from_port       = 2049
+    to_port         = 2049
+    protocol        = "tcp"
+    cidr_blocks     = ["0.0.0.0/0"]
+    security_groups = [aws_security_group.production-instance-sg.id]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
 ```
 
-The `security_group.tf` file defines two AWS **security groups** using Terraform. The first security group (aws_security_group.production-instance-sg) allows inbound traffic on specified ports (these ports are specified in the file `variables.tf` variable `inbound_port_production_ec2`) from any source **(0.0.0.0/0)**. The second security group (aws_security_group.database-sg) allows inbound traffic on port **3306** from the security group associated with the production instances. Both security groups allow all outbound traffic.
+The `security_group.tf` file defines three AWS **security groups** using Terraform. The first security group (aws_security_group.production-instance-sg) allows inbound traffic on specified ports (these ports are specified in the file `variables.tf` variable `inbound_port_production_ec2`) from any source **(0.0.0.0/0)**. The second security group (aws_security_group.database-sg) allows inbound traffic on port **3306** from the security group associated with the production instances. The thirth is for the **EFS** which allows inbound traffic on port **2049** NFS port volume, all security groups allow all outbound traffic.
 
 
 ### Step 4:  an Application Load Balancer
@@ -366,10 +394,9 @@ resource "aws_instance" "production_1_instance" {
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.ec2_1_public_subnet.id
   vpc_security_group_ids = [aws_security_group.production-instance-sg.id]
-  key_name               = var.key_name
-  user_data              = file("install_script.sh")
+  key_name               = aws_key_pair.aws_ec2_access_key.id
   tags = {
-    Name = "Production instance 1"
+    Name = "production-instance"
   }
   depends_on = [
     aws_db_instance.rds_master,
@@ -381,10 +408,9 @@ resource "aws_instance" "production_2_instance" {
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.ec2_2_public_subnet.id
   vpc_security_group_ids = [aws_security_group.production-instance-sg.id]
-  key_name               = var.key_name
-  user_data              = file("install_script.sh")
+  key_name               = aws_key_pair.aws_ec2_access_key.id
   tags = {
-    Name = "Production instance 2"
+    Name = "production-instance"
   }
   depends_on = [
     aws_db_instance.rds_master,
@@ -440,7 +466,7 @@ The `main.tf` file contains the main configuration for creating various AWS reso
 
 The resources defined in this file are:
 
-- **aws_instance "production_1_instance" and "production_2_instance"**: The instances use the specified AMI, instance type, subnet ID, security group ID, key name, user data script, and tags. They depend on the availability of the RDS master instance.
+- **aws_instance "production_1_instance" and "production_2_instance"**: The instances use the specified AMI, instance type, subnet ID, security group ID, key name, and tags. They depend on the availability of the RDS master instance.
 
 - **aws_db_subnet_group "database_subnet"**: resource defines the database subnet group, specifying a name and the subnet IDs of the private subnets where the RDS instances will be deployed.
 
@@ -448,59 +474,112 @@ The resources defined in this file are:
 
 - **aws_db_instance "rds_replica"**: resource creates the replica RDS instance, which replicates from the master RDS instance. It has similar configuration options but with a different identifier and availability zone.
 
+### Step 6: Provisioning the EFS file system
 
-Create `install_script.sh` file with the below content:
+This step is very important as we have **two EC2 instances** connected to a load balancer. It is essential to ensure **data consistency** between the different EC2 instances that make up our architecture. This ensures that regardless of the instance selected by the load balancer, users will always see the same information without any inconsistency or data loss.
+
+An effective way to guarantee this data consistency is to use **Amazon Elastic File System (EFS)** as a shared storage system for our EC2 instances in order to store the files of our WordPress site.
+
+Create `efs.tf` file with the content below:
 
 ```
-#!/bin/bash
+resource "aws_efs_file_system" "efs_volume" {
+  creation_token = "efs_volume"
+}
 
-#install docker 
-sudo apt-get update
-sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-sudo apt  install docker-compose -y
-sudo systemctl enable docker
-sudo systemctl start docker
+resource "aws_efs_mount_target" "efs_mount_target_1" {
+  file_system_id  = aws_efs_file_system.efs_volume.id
+  subnet_id       = aws_subnet.ec2_1_public_subnet.id
+  security_groups = [aws_security_group.efs_sg.id]
+}
 
-sudo echo ${aws_db_instance.rds_master.password} | sudo tee /root/db_password.txt > /dev/null
-sudo echo ${aws_db_instance.rds_master.username} | sudo tee /root/db_username.txt > /dev/null
-sudo echo ${aws_db_instance.rds_master.endpoint} | sudo tee /root/db_endpoint.txt > /dev/null
+resource "aws_efs_mount_target" "efs_mount_target_2" {
+  file_system_id  = aws_efs_file_system.efs_volume.id
+  subnet_id       = aws_subnet.ec2_2_public_subnet.id
+  security_groups = [aws_security_group.efs_sg.id]
+}
 
-# create docker-compose
-sudo cat <<EOF | sudo tee docker-compose.yml > /dev/null
-version: '3'
+resource "tls_private_key" "ssh" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
 
-services:
-  wordpress:
-   image: wordpress:4.8-apache
-   ports:
-    - 80:80
-   environment:
-     WORDPRESS_DB_USER: $(cat /root/db_username.txt)
-     WORDPRESS_DB_HOST: $(cat /root/db_endpoint.txt)
-     WORDPRESS_DB_PASSWORD: $(cat /root/db_password.txt)
-   volumes:
-     - wordpress-data:/var/wwww/html
+resource "aws_key_pair" "aws_ec2_access_key" {
+  key_name_prefix = "efs_key"
+  public_key      = tls_private_key.ssh.public_key_openssh
+}
 
-volumes:
-  wordpress-data:
-EOF
+resource "local_file" "private_key" {
+  content  = tls_private_key.ssh.private_key_pem
+  filename = var.private_key_location
+}
 
-sudo docker-compose up
+data "aws_instances" "production_instances" {
+  instance_tags = {
+    "Name" = "production-instance"
+  }
+  depends_on = [
+    aws_instance.production_1_instance,
+    aws_instance.production_2_instance
+  ]
+}
+
+resource "null_resource" "install_script" {
+  count = 2
+
+  depends_on = [
+    aws_db_instance.rds_master,
+    local_file.private_key,
+    aws_efs_mount_target.efs_mount_target_1,
+    aws_efs_mount_target.efs_mount_target_2,
+    aws_instance.production_1_instance,
+    aws_instance.production_2_instance
+  ]
+
+  connection {
+    type        = "ssh"
+    host        = data.aws_instances.production_instances.public_ips[count.index]
+    user        = "ec2-user"
+    private_key = file(var.private_key_location)
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum update -y",
+      "sudo yum install docker -y",
+      "wget https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)",
+      "sudo mv docker-compose-$(uname -s)-$(uname -m) /usr/local/bin/docker-compose",
+      "sudo chmod -v +x /usr/local/bin/docker-compose",
+      "sudo systemctl enable docker.service",
+      "sudo systemctl start docker.service",
+      "sudo yum -y install amazon-efs-utils",
+      "sudo mkdir -p ${var.mount_directory}",
+      "sudo mount -t efs -o tls ${aws_efs_file_system.efs_volume.id}:/ ${var.mount_directory}",
+      "sudo docker run --name wordpress-docker -e WORDPRESS_DB_USER=${aws_db_instance.rds_master.username} -e WORDPRESS_DB_HOST=${aws_db_instance.rds_master.endpoint} -e WORDPRESS_DB_PASSWORD=${aws_db_instance.rds_master.password} -v ${var.mount_directory}:${var.mount_directory} -p 80:80 -d wordpress:4.8-apache",
+    ]
+  }
+}
 ```
 
-The `install_script.sh` file is a shell script that installs Docker and Docker-compose, configures a WordPress environment, and launches the application.
+The above code provisions an **EFS** file system and configures EFS mount points for EC2 instances.
+
+The defined resources are as follows:
+
+- **aws_efs_file_system "efs_volume"**: This resource creates an EFS file system with a creation token creation_token set as `efs_volume_token`. Its role is to provide durable and scalable storage for the application. It can be attached to `several ec2 instances`.
+
+- **aws_efs_mount_target "efs_mount_target_1" and "efs_mount_target_2"**: These resources define EFS mount points for EC2 instances. They specify the EFS file system ID, the subnet ID where EC2 instances are deployed, and the associated security group ID. Their role is to establish the connectivity between the EC2 instances and the `EFS file system`, enabling the instances to access and use the shared storage.
+
+- **tls_private_key "ssh"**: This resource generates an `SSH key pair` for connecting to the EC2 instances. Its role is to facilitate secure remote access to the EC2 instances.
+
+- **aws_key_pair "aws_ec2_access_key"**: This resource creates an EC2 access key using the previously generated public key. Its role is to associate the generated public key with the EC2 instances, allowing SSH access using the corresponding private key.
+
+- **local_file "private_key"**: This resource saves the generated private key to a local file at the specified location.
+
+- **"data" resource aws_instances**: is used to retrieve information about existing EC2 instances in your AWS account. In this case, the targeted EC2 instances should have a tag with the key "Name" and the value "production-instance". `These are our two already created EC2 instances.`
+
+- **null_resource "install_script"**: This resource execute an installation script on the EC2 instances to configure Docker, mount the EFS file system, and run a Docker container WordPress that uses the RDS database. The script is executed via an SSH connection to the EC2 instance using the previously generated private key.
+
+The **depends_on** option is used to set the resource dependencies, ensuring that the EC2 instances, private key, EFS mount points, and RDS database are available before running the installation scripts.
 
 Create `outputs.tf` file with the bellow content:
 
@@ -513,30 +592,17 @@ output "public_2_ip" {
   value = aws_instance.production_2_instance.public_ip
 }
 
-output "rds_endpoint" {
-  value = aws_db_instance.rds_master.endpoint
-}
-
-output "rds_username" {
-  value = aws_db_instance.rds_master.username
-}
-
-
-output "rds_name" {
-  value = aws_db_instance.rds_master.db_name
-}
-
 # print the DNS of load balancer
 output "lb_dns_name" {
   description = "The DNS name of the load balancer"
   value       = aws_lb.application_loadbalancer.dns_name
 }
 ```
-The `outputs.tf` file is used to define the outputs of the resources created in the Terraform code. It specifies **the public IP** addresses of the **EC2 instances**, the **RDS endpoint**, **username**, and **database name**, as well as the **DNS name of the application load balancer**.
+The `outputs.tf` file is used to define the outputs of the resources created in the Terraform code. It specifies **the public IP** addresses of the **EC2 instances** and the **DNS name of the application load balancer**.
 
 These outputs will be used to connect to the RDS database instance and access the application via the application load balancer.
 
-### Step 6: Deployment
+### Step 7: Deployment
 
 To start the deployment process, we need to initialize Terraform in our project directory. This step ensures that Terraform downloads the necessary providers and sets up the backend configuration. Run the following command in your terminal:
 
