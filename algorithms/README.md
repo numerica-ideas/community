@@ -6,6 +6,7 @@ Here are some accepted solutions from our challenges:
 
 - [Number of Zero-Filled Subarrays](./number-of-zero-filled-subarrays.md)
 - [Letter Combinations of a Phone Number](./letter-combinations-phone-number.md)
+- [Maximum Subarray](./maximum-subarray.md)
 
 ### Contribution
 
