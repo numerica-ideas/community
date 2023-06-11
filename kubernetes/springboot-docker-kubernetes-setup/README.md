@@ -7,7 +7,7 @@ In the modern application ecosystem, it is becoming increasingly common to use t
 
 The following lines will clearly differentiate between **containerized and orchestration** terms in a beginner-friendly way along with a practical sample using **Java** programming language.
 
-[![DockerImage](./Dockerized-Spring-Boot-Deployment-in-K8s-Cluster.png)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
+[![DockerImage](./images/Dockerized-Spring-Boot-Deployment-in-K8s-Cluster.png)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
 
 Moving to the following sections, we assume that you have **Java (OpenJDK 11), Docker, and Kubernetes** properly installed on your computer.
 
