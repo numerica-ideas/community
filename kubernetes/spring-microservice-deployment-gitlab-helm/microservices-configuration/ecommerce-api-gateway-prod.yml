@@ -1,0 +1,13 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+eureka:
+  client:
+    service-url:
+      defaultZone: #http://10.0.0.2:30081/eureka with docker use port 8081 with k8s 30081
+service:
+  product: #http://10.0.0.2:30083 with docker use port 8083 with k8s 30083
+  user: #http://10.0.0.2:30084 with docker use port 8084 with k8s 30084
+  sale: #http://10.0.0.2:30085 with docker use port 8085 with k8s 30085
+  order: #http://10.0.0.2:30086 with docker use port 8086 with k8s 30086

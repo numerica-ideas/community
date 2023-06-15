@@ -1,13 +1,13 @@
 # Deploying a Spring Boot App with Docker in a Kubernetes Cluster&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fkubernetes%2Fspringboot-docker-kubernetes-setup&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
 
-**This article was originally published by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes
+**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes
 
 ## Introduction
 In the modern application ecosystem, it is becoming increasingly common to use technologies like **Docker** and **Kubernetes** to deploy applications in an efficient and scalable manner. By using Docker to **containerize** applications and Kubernetes to **orchestrate** them, developers can easily manage and deploy applications at scale.
 
 The following lines will clearly differentiate between **containerized and orchestration** terms in a beginner-friendly way along with a practical sample using **Java** programming language.
 
-[![DockerImage](./Dockerized-Spring-Boot-Deployment-in-K8s-Cluster.png)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
+[![DockerImage](./images/Dockerized-Spring-Boot-Deployment-in-K8s-Cluster.png)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
 
 Moving to the following sections, we assume that you have **Java (OpenJDK 11), Docker, and Kubernetes** properly installed on your computer.
 

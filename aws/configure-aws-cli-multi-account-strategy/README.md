@@ -1,6 +1,6 @@
 # How to Configure AWS CLI for Multi-Account Strategy&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fconfigure-aws-cli-multi-account-strategy&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/configure-aws-cli)
 
-**This article was originally published by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/configure-aws-cli
+**This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/configure-aws-cli
 
 ## Introduction
 The **AWS CLI** is a powerful tool that allows you to interact with various AWS services through a command-line interface. In this article, we will go through the steps to configure AWS CLI for multiple accounts on your local machine or any server with Terminal access.
