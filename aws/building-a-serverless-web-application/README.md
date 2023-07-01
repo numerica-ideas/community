@@ -25,7 +25,7 @@ Before diving into building a serverless web application with AWS services, it i
 
 To facilitate the practical implementation of the concepts discussed in this article, we have provided a GitHub repository containing all the necessary files to build your serverless web application using AWS services. You can access the repository at the following link:
 
-[**GitHub - Serverless Web Application with AWS**](web/)
+[**GitHub - Serverless Web Application with AWS**](/)
 
 ## **STEP 1: Configure AWS S3, CloudFront, and WAF**
 
