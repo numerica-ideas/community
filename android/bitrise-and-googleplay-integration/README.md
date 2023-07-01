@@ -31,3 +31,11 @@ After creating the Service Account, you will be redirected to the [list](https:/
 2. On the keys page, click **ADD KEY** -> **Create new Key**. Keep **JSON** as the selected type and click **Create**. This will automatically download and save the key to your local machine. 
 Keep this file safe as it will be needed later when configuring **Bitrise** settings.
 ## Setting up Google Play Console
+
+## Setting up Bitrise Workflow
+1. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard) and select your Android app.
+2. Click on **Edit workflow**. 
+3. Go to the **Code Signing & Files** tab, drag and drop your **Service Account** JSON file to **GENERIC FILE STORAGE**.
+4. Enter an ID for **Service Account** JSON file and then upload it using the button below.
+![Bitrise Upload Service Account JSON](./images/bitrise_upload_json.png)
+5. Note the file URL *(e.g $BITRISEIO_ServiceAccountJSON_ID_URL)* as it will be needed in the next steps.
