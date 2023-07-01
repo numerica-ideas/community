@@ -1,4 +1,4 @@
-# **Building a Serverless Web Application with AWS S3, Lambda, DynamoDB, CloudFront, and AWS WAF**
+# **Build a Serverless App with AWS Lambda, S3, DynamoDB and Python**
 
 ## **Introduction**
 Serverless architecture has revolutionized the way we build and deploy web applications. By abstracting away server management and scaling, it allows developers to focus on writing code and delivering value to users. In this article, we will explore the world of **serverless web applications** using a powerful combination of AWS services. We will leverage **AWS S3** for hosting, **Lambda functions** for data retrieval and storage, **DynamoDB** as a scalable database, **API Gateway** for creating RESTful APIs, **CloudFront** for global content delivery, and **AWS WAF** to secure against SQL injections. Join us on this journey as we dive into the implementation details, best practices, and benefits of building a serverless web application using AWS services.
@@ -18,7 +18,14 @@ Before diving into building a serverless web application with AWS services, it i
 - **AWS Account**: Create an AWS account to access and utilize the AWS services mentioned in this article.
 - **AWS IAM**: Understand the basics of AWS `Identity and Access Management (IAM)` for managing user permissions and roles within the AWS environment.
 - **Knowledge of AWS Lambda**: Familiarize yourself with AWS Lambda, as it will be used to write the serverless functions for this application.
+- **Basic knowledge of Python**: Familiarize yourself with the basics of the Python programming language, as the Lambda functions in this tutorial will be written in Python
 - **Understanding of REST APIs**: Have a basic understanding of REST (Representational State Transfer) APIs and their fundamental principles, including the `HTTP` methods such as `GET`, `POST`, and `DELETE`, which will be used to interact with the API Gateway.
+
+## **Resources**
+
+To facilitate the practical implementation of the concepts discussed in this article, we have provided a GitHub repository containing all the necessary files to build your serverless web application using AWS services. You can access the repository at the following link:
+
+[**GitHub - Serverless Web Application with AWS**](web/)
 
 ## **STEP 1: Configure AWS S3, CloudFront, and WAF**
 
