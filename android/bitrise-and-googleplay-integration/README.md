@@ -33,9 +33,22 @@ Keep this file safe as it will be needed later when configuring **Bitrise** sett
 ## Setting up Google Play Console
 
 ## Setting up Bitrise Workflow
+### Adding Service Account JSON
 1. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard) and select your Android app.
 2. Click on **Edit workflow**. 
 3. Go to the **Code Signing & Files** tab, drag and drop your **Service Account** JSON file to **GENERIC FILE STORAGE**.
 4. Enter an ID for **Service Account** JSON file and then upload it using the button below.
 ![Bitrise Upload Service Account JSON](./images/bitrise_upload_json.png)
 5. Note the file URL *(e.g $BITRISEIO_ServiceAccountJSON_ID_URL)* as it will be needed in the next steps.
+### Setting up Google Play Deploy step
+1. Go to **Workflows** tab and add **Google Play Deploy** step after **Android Sign** step.
+![Bitrise Add Google Play Step](./images/bitrise_add_google_play_step.png)
+2. Set **Service Account JSON key file path** variable to the previously uploaded JSON file ID e.g *BITRISEIO_ServiceAccountJSON_ID_URL*
+![Bitrise Enter Service Account JSON Path](./images/bitrise_enter_service_account_json.png)
+3. Enter **Package name** of your app from **build.gradle** file.
+![Bitrise Enter App Package](./images/bitrise_enter_package_name.png)
+4. Set **App file path** to just **$BITRISE_AAB_PATH**.
+![Bitrise Set App File Path](./images/bitrise_set_app_file_path.png)
+5. The **Track** will be *production* because we want to release the app for everyone.
+![Bitrise Set App Track](./images/bitrise_set_app_track.png)
+6. Finally save all the changes and start a build to deploy your app to **Google Play Store** using **Bitrise**.
