@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In today's digital landscape, building `highly available` and `scalable` infrastructure is crucial for ensuring the `reliability` and `performance` of applications. **Amazon Web Services (AWS)** provides a comprehensive suite of cloud services that enable organizations to build `resilient` and `elastic` environments. In this article, we will explore how to set up a highly available infrastructure on AWS using **Terraform**, a popular infrastructure-as-code tool.
+In today's digital landscape, building `highly available` and `scalable` infrastructures is crucial for ensuring the `reliability` and `performance` of applications. **Amazon Web Services (AWS)** provides a comprehensive suite of cloud services that enable organizations to build `resilient` and `elastic` environments. In this article, we will explore how to set up a highly available infrastructure on AWS using **Terraform**, a popular infrastructure-as-code tool.
 
 ![FeaturedImage](./images/Auto%20Scaling%20Group%20on%20AWS%20with%20Terraform.png)
 
@@ -28,7 +28,7 @@ The **Auto Scaling Group** plays a crucial role in building resilient and elasti
 
 - **High Availability**: By distributing instances across multiple availability zones, the Auto Scaling Group ensures that if one zone becomes unavailable, your applications can continue running on instances in other zones. This helps minimize downtime and provides resilience against infrastructure failures.
 
-- **Scalability**: The Auto Scaling Group allows your infrastructure to scale up or down automatically based on demand. As traffic increases, the group adds more instances to handle the load, ensuring that your applications remain responsive and performant. Conversely, during periods of low demand, instances are scaled down to optimize resource utilization and reduce costs.
+- **Scalability**: The Auto Scaling Group allows your infrastructure to scale out or in automatically based on demand. As traffic increases, the group adds more instances to handle the load, ensuring that your applications remain responsive and performant. Conversely, during periods of low demand, instances are scaled in to optimize resource utilization and reduce costs.
 
 - **Fault Tolerance**: If an instance within the Auto Scaling Group fails, the group automatically replaces it with a new instance. This self-healing capability helps maintain application availability and reduces the need for manual intervention.
 
@@ -70,7 +70,7 @@ terraform {
 
 ### Step 2: Network Configuration
 
-Create a file named `variables.tf` with the following content:
+Create a file named `variables.tf` whose content follows:
 
 ```
 variable "inbound_ec2" {
@@ -91,7 +91,7 @@ variable "ami" {
 
 variable "key_name" {
   type    = string
-  default = "wordpressKey"
+  default = "ec2Key"
 }
 
 variable "availability_zone" {
@@ -111,7 +111,7 @@ variable "subnet_cidrs" {
 }
 ```
 
-Create a file named `vpc.tf` with the following content:
+Create a file named `vpc.tf` with the content below:
 
 ```
 resource "aws_vpc" "infrastructure_vpc" {
@@ -125,7 +125,7 @@ resource "aws_vpc" "infrastructure_vpc" {
   }
 }
 
-#It enables our vpc to connect to the internet
+# It enables our vpc to connect to the internet
 resource "aws_internet_gateway" "infrastructure_igw" {
   vpc_id = aws_vpc.infrastructure_vpc.id
   tags = {
@@ -133,30 +133,30 @@ resource "aws_internet_gateway" "infrastructure_igw" {
   }
 }
 
-#first public subnet
+# first public subnet
 resource "aws_subnet" "first_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
-  cidr_block              = var.subnet_cidrs[1]
-  map_public_ip_on_launch = "true" //it makes this a public subnet
-  availability_zone       = var.availability_zone[1]
+  cidr_block              = var.subnet_cidrs[0]
+  map_public_ip_on_launch = "true" //assigned a public IP address.
+  availability_zone       = var.availability_zone[0]
   tags = {
     Name = "first public subnet"
   }
 }
 
-#second public subnet
+# second public subnet
 resource "aws_subnet" "second_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
-  cidr_block              = var.subnet_cidrs[0]
-  map_public_ip_on_launch = "true" //it makes this a public subnet
-  availability_zone       = var.availability_zone[0]
+  cidr_block              = var.subnet_cidrs[1]
+  map_public_ip_on_launch = "true" //assigned a public IP address.
+  availability_zone       = var.availability_zone[1]
   tags = {
     Name = "second public subnet"
   }
 }
 ```
 
-Create a file named `route_table.tf` with the following content:
+Create a file named `route_table.tf` Here is the content:
 
 ```
 resource "aws_route_table" "infrastructure_route_table" {
@@ -186,13 +186,13 @@ resource "aws_route_table_association" "route-ec2-2-subnet-to-igw" {
 
 ### Step 3: Security Group Configuration
 
-Create a file named `security_group.tf` with the following content:
+Create a file named `security_group.tf` below, you will find the content:
 
 ```
 resource "aws_security_group" "instance_sg" {
   name = "asg-instance-sg"
 
-  # dynamic block who create two rules to allow inbound traffic 
+  # Dynamic block that creates two rules to allow inbound traffic 
   dynamic "ingress" {
     for_each = var.inbound_ec2
     content {
@@ -235,7 +235,7 @@ resource "aws_security_group" "alb_sg" {
 
 ### Step 4: Elastic Load Balancer Configuration
 
-Create a file named `loadbalancer.tf` with the following content:
+Create a file named `loadbalancer.tf` whose content follows:
 
 ```
 resource "aws_lb" "alb" {
@@ -266,7 +266,7 @@ resource "aws_lb_target_group" "alb_target_group" {
 ```
 ### Step 5: Auto Scaling group 
 
-Create a file named `main.tf` with the following content:
+Create a file named `main.tf` with the content below:
 
 ```
 resource "aws_launch_template" "instances_configuration" {
@@ -326,19 +326,13 @@ The resources defined in this file are:
 
 - **aws_launch_template "instances_configuration"**: This resource defines a launch template that specifies the configuration for the EC2 instances launched by the Auto Scaling Group. It includes parameters such as the image ID, key name, instance type, user data script, and security group IDs. The launch template serves as a blueprint for creating instances within the Auto Scaling Group.
 
-**Role**: The launch template serves as a central configuration template for the EC2 instances created by the Auto Scaling Group. It enables centralized definition of instance characteristics and configurations to ensure consistency and reproducibility when launching instances.
-
 - **aws_autoscaling_group "asg"**: This resource configures the Auto Scaling Group. It defines the group's name, minimum and maximum number of instances, desired capacity, health check settings, and the VPC subnets where instances will be launched. It references the previously defined launch template to specify the instance configuration.
-
-**Role**: The Auto Scaling Group is responsible for automatic management of the number of instances based on demand. It ensures scalability of the infrastructure by adding or removing instances in response to monitoring metrics, such as system load or resource utilization. The Auto Scaling Group utilizes the launch template to create new instances with the specified configuration.
 
 - **aws_autoscaling_policy "avg_cpu_policy_greater"**: This resource creates an Auto Scaling policy that adjusts the capacity of the Auto Scaling Group based on CPU utilization. In this example, the policy is set to target tracking scaling with a target value of 50% CPU utilization. It ensures that the Auto Scaling Group maintains the desired CPU utilization by scaling the number of instances up or down accordingly.
 
-**Role**: The Auto Scaling policy defines the rules by which the Auto Scaling Group adjusts its capacity. In this case, the policy monitors CPU utilization and increases or decreases the number of instances based on the defined target value. This helps maintain a balance between the required capacity to handle the workload and efficient resource utilization.
-
 - **aws_autoscaling_attachment "asg_attachment"**: This resource attaches the Auto Scaling Group to a Load Balancer target group. It specifies the ASG and the ARN of the target group, allowing the instances launched by the ASG to receive traffic from the Load Balancer.
 
-By combining these resources, the Auto Scaling Group is able to maintain an optimal number of EC2 instances based on demand, while the launch template ensures consistency in instance configurations. The Auto Scaling policy monitors and dynamically adjusts capacity based on the defined metrics, ensuring efficient resource utilization and scalability tailored to the application's needs.
+**Role**: All these resources work together in a comprehensive Auto Scaling architecture. The launch template provides a centralized configuration template for the EC2 instances, ensuring consistent deployment and reproducibility. The Auto Scaling Group utilizes the launch template to create and manage the desired number of instances, automatically scaling the infrastructure based on demand. The Auto Scaling policy adds an additional layer of intelligence by dynamically adjusting the capacity of the Auto Scaling Group based on CPU utilization. This helps maintain optimal performance and resource utilization. Finally, the attachment of the Auto Scaling Group to the Load Balancer target group allows for effective traffic distribution, improving the availability and responsiveness of the application. Together, these components enable a scalable, resilient, and efficient infrastructure for handling varying workloads.
 
 Create a file named `install_script.sh` with the following content:
 
@@ -350,13 +344,13 @@ sudo apt-get install nginx -y
 sudo systemctl enable nginx
 sudo systemctl start nginx
 EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
-echo "<h3 align='center'> Hello World from Availability zon : $EC2_AVAIL_ZONE ; Hostname $(hostname -f) </h3>" > /var/www/html/index.html
+echo "<h3 align='center'> Hello World from Availability zone : $EC2_AVAIL_ZONE ; Hostname $(hostname -f) </h3>" > /var/www/html/index.html
 sudo apt install stress -y
 ```
 
 The `install_script.sh` file is a Bash script that contains a series of commands to be executed on the EC2 instances when they are launched. A script that updates the package repository, installs Nginx, configures it to start on boot, and starts the service. It then Retrieves the availability zone of the EC2 instance using the instance metadata service and Creates an HTML file with a customized message that includes the availability zone and hostname of the EC2 instance. The file is saved in the default Nginx web server document root directory. And finaly installs the stress testing tool, which can be used to simulate high CPU usage on the EC2 instance.
 
-Create a file named `outputs.tf` with the following content:
+Create a file named `outputs.tf` here is the content:
 
 ```
 output "application_endpoint" {

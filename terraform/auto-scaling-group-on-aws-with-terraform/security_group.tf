@@ -1,7 +1,7 @@
 resource "aws_security_group" "instance_sg" {
   name = "asg-instance-sg"
 
-  # dynamic block who create two rules to allow inbound traffic 
+  # Dynamic block that creates two rules to allow inbound traffic 
   dynamic "ingress" {
     for_each = var.inbound_ec2
     content {

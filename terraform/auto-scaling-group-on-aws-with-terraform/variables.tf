@@ -16,7 +16,7 @@ variable "ami" {
 
 variable "key_name" {
   type    = string
-  default = "wordpressKey"
+  default = "ec2Key"
 }
 
 variable "availability_zone" {
