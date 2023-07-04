@@ -4,6 +4,7 @@
 - [How to Configure AWS CLI for Multi-Account Strategy](./configure-aws-cli-multi-account-strategy)
 - [Lift And Shift Cloud Migration of "Spring Boot + MySQL" App Using AWS ElasticBeanstalk](./springboot-migration-elasticbeanstalk)
 - [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](../terraform/deploy-wordpress-2tier-aws-architecture-with-terraform)
+- [Auto Scaling Group on AWS with Terraform](../terraform/auto-scaling-group-on-aws-with-terraform)
 
 Click [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) to subscribe to our **YouTube channels (En & Fr)** and be notified about future Workshops and Events.
 
