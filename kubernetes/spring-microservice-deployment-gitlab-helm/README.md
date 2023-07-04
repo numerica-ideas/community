@@ -276,6 +276,8 @@ Great, everything went well, let's check our Kuberntes cluster and our applicati
 
 ![result-3](./images/result-3.png)
 
+The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/kubernetes/spring-microservice-deployment-gitlab-helm).
+
 ———————
 
 We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
