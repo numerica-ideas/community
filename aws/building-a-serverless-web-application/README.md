@@ -8,7 +8,7 @@ Serverless architecture has revolutionized the way we build and deploy web appli
 Serverless architecture is a cloud computing paradigm that eliminates the need for managing servers and infrastructure. In this model, the cloud provider takes care of server provisioning, scaling, and maintenance, allowing developers to focus solely on writing code. Applications are built using small, stateless functions that are triggered by events. These functions are executed in a managed environment and automatically scale based on demand. Serverless architecture offers benefits such as cost efficiency, scalability, reduced operational overhead, and rapid development.
 
 To build a serverless web application, we leverage several key AWS services.
-- [**Amazon S3 (Simple Storage Service)**](https://aws.amazon.com/s3/) : is a highly scalable and durable cloud storage service provided by Amazon Web Services. It allows you to store and retrieve large amounts of data, such as files, images, videos, and backups, in a secure and cost-effective manner. provides us with a highly scalable and durable storage solution for hosting our web application files. 
+- [**Amazon S3 (Simple Storage Service)**](https://aws.amazon.com/s3/) : is a highly scalable and durable cloud storage service provided by Amazon Web Services. It allows you to store and retrieve large amounts of data, such as files, images, videos, and backups, in a secure and cost-effective manner.
 
 - [**AWS Lambda**](https://aws.amazon.com/lambda/) : is a **serverless** compute service provided by Amazon Web Services (AWS). It allows you to run your code without provisioning or managing servers, making it an ideal choice for building scalable and cost-effective applications.
 
@@ -194,6 +194,7 @@ Repeat the same steps to create the other functions. For example, create a funct
 ![Lambda](./images/39.png) 
 
 **deleteEmployee Function**
+
 ![Lambda](./images/53.png) 
 
 **Remember to deploy your functions after creating them.**
