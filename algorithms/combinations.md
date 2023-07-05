@@ -3,7 +3,7 @@ This challenge comes from Leetcode, it's about implementation of the "combine" f
 
 **Challenge**: https://leetcode.com/problems/combinations/description/.
 
-**Solution**: 
+**Solution**:
 The code provided below is a JavaScript implementation of the "combine" function, which generates all possible combinations of numbers from 1 to n with length k.
 
  This is because the function takes two parameters, n and k, which represent the range of numbers and the length of the combinations, respectively. It returns an array of arrays, where each inner array represents a combination.
