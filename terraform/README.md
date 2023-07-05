@@ -2,6 +2,7 @@
 
 - [Introduction to Terraform](./introduction)
 - [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](./deploy-wordpress-2tier-aws-architecture-with-terraform)
+- [Auto Scaling Group on AWS with Terraform](./auto-scaling-group-on-aws-with-terraform)
 
 Click [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) to subscribe to our **YouTube channels (En & Fr)** and be notified about future Workshops and Events.
 

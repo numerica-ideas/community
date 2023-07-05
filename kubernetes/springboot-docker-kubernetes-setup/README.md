@@ -231,6 +231,8 @@ spring.datasource.password=${DB_PASSWORD}
 
 For a production grade application, the way to provide these variables could differ but the general idea remains passing them to the App.
 
+The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/kubernetes/springboot-docker-kubernetes-setup).
+
 ———————
 
 We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.

@@ -1,10 +1,12 @@
-# Auto Scaling Group on AWS with Terraform
+# Auto Scaling Group on AWS with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fauto-scaling-group-on-aws-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
+
+**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform
 
 ## Introduction
 
 In today's digital landscape, building `highly available` and `scalable` infrastructures is crucial for ensuring the `reliability` and `performance` of applications. **Amazon Web Services (AWS)** provides a comprehensive suite of cloud services that enable organizations to build `resilient` and `elastic` environments. In this article, we will explore how to set up a highly available infrastructure on AWS using **Terraform**, a popular infrastructure-as-code tool.
 
-![FeaturedImage](./images/Auto%20Scaling%20Group%20on%20AWS%20with%20Terraform.png)
+[![FeaturedImage](./images/Auto-Scaling-Group-on-AWS-with-Terraform.png)](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
 
 ## Auto Scaling Group (ASG)
 
@@ -116,8 +118,8 @@ Create a file named `vpc.tf` with the content below:
 ```
 resource "aws_vpc" "infrastructure_vpc" {
   cidr_block           = var.vpc_cidr
-  enable_dns_support   = "true" #gives you an internal domain name
-  enable_dns_hostnames = "true" #gives you an internal host name
+  enable_dns_support   = "true" # gives you an internal domain name
+  enable_dns_hostnames = "true" # gives you an internal host name
   instance_tenancy     = "default"
 
   tags = {
@@ -137,7 +139,7 @@ resource "aws_internet_gateway" "infrastructure_igw" {
 resource "aws_subnet" "first_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[0]
-  map_public_ip_on_launch = "true" //assigned a public IP address.
+  map_public_ip_on_launch = "true" // assigned a public IP address.
   availability_zone       = var.availability_zone[0]
   tags = {
     Name = "first public subnet"
@@ -148,7 +150,7 @@ resource "aws_subnet" "first_public_subnet" {
 resource "aws_subnet" "second_public_subnet" {
   vpc_id                  = aws_vpc.infrastructure_vpc.id
   cidr_block              = var.subnet_cidrs[1]
-  map_public_ip_on_launch = "true" //assigned a public IP address.
+  map_public_ip_on_launch = "true" // assigned a public IP address.
   availability_zone       = var.availability_zone[1]
   tags = {
     Name = "second public subnet"
@@ -413,11 +415,22 @@ stress -c 8
 
 Then wait a few minutes and you'll get the results below, of a new instance created by the Auto Scaling group.
 
-![result](./images/scale%20activity.png)
+![result](./images/scale-activity.png)
 
 ![result](./images/scale-instance.png)
+
+The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/auto-scaling-group-on-aws-with-terraform).
+
+———————
+
+We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+———————
 
 ## Conclusion
 
 To conclude, implementing an Auto Scaling Group on AWS with Terraform provides a flexible and efficient solution for managing application scalability. By leveraging Terraform's infrastructure-as-code capabilities, teams can easily handle workload fluctuations and optimize performance. Thorough research and careful configuration are crucial for achieving optimal results. Regular monitoring and adjustments ensure high availability and cost-effectiveness. Deploying an Auto Scaling Group with Terraform empowers teams to scale resources, improve performance, and leverage AWS's elastic infrastructure.
 
+Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
