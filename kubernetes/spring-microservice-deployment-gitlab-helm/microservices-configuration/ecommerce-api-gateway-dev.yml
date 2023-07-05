@@ -1,0 +1,13 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+service:
+  product: http://localhost:8083/
+  user: http://localhost:8084/
+  sale: http://localhost:8085/
+  order: http://localhost:8086/

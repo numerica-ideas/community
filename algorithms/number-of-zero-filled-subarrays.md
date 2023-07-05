@@ -31,4 +31,4 @@ function zeroFilledSubarray(nums: number[]): number {
 }
 ```
 
-By Ismael Messa
+By [Ismael Messa](https://github.com/messaismael)

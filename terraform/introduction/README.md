@@ -12,7 +12,7 @@ The sample code covers the creation of an **ec2 instance on AWS** associated wit
 - **Download**: https://developer.hashicorp.com/terraform/downloads
 - **VSCode extension**: https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform
 
-## General concepts
+## General Concepts
 - **HCL**: Hashicorp configuration language.
 - **Backend**: while automating your infrastructure, Terraform keeps a state of your resources in a location called the backend.
 - **Provider**: The provider is one of the most important parts of your Terraform configurations since it specifies the place you would like your resources to be created. A few well-known providers are AWS, MS Azure, GCP, and Docker.
