@@ -22,7 +22,7 @@ Otherwise, the function iterates from x0 to n (inclusive) and adds each number t
 
 After the recursive call, the last number added to "y0" is removed using the pop() method to go back and explore other combinations.
 
-After all recursive calls are complete, the "result" array contains all generated combinations, which are then returned.
+After all recursive calls are complete, the "result" array contains all generated combinations, which are then returned. 
 
 **Sample Code**:
 ```javascript
