@@ -8,17 +8,17 @@ Serverless architecture has revolutionized the way we build and deploy web appli
 Serverless architecture is a cloud computing paradigm that eliminates the need for managing servers and infrastructure. In this model, the cloud provider takes care of server provisioning, scaling, and maintenance, allowing developers to focus solely on writing code. Applications are built using small, stateless functions that are triggered by events. These functions are executed in a managed environment and automatically scale based on demand. Serverless architecture offers benefits such as cost efficiency, scalability, reduced operational overhead, and rapid development.
 
 To build our serverless web application, we used the different AWS services below:
-- [**Amazon S3 (Simple Storage Service)**](https://aws.amazon.com/s3/) : is a highly scalable and durable cloud storage service provided by Amazon Web Services. It allows you to store and retrieve large amounts of data, such as files, images, videos, and backups, in a secure and cost-effective manner.
+- [**Amazon S3 (Simple Storage Service)**](https://aws.amazon.com/s3/): is a highly scalable and durable cloud storage service provided by Amazon Web Services. It allows you to store and retrieve large amounts of data, such as files, images, videos, and backups, in a secure and cost-effective manner.
 
-- [**AWS Lambda**](https://aws.amazon.com/lambda/) : is a **serverless** compute service provided by Amazon Web Services (AWS). It allows you to run your code without provisioning or managing servers, making it an ideal choice for building scalable and cost-effective applications.
+- [**AWS Lambda**](https://aws.amazon.com/lambda/): is a **serverless** compute service provided by Amazon Web Services (AWS). It allows you to run your code without provisioning or managing servers, making it an ideal choice for building scalable and cost-effective applications.
 
-- [**DynamoDB**](https://aws.amazon.com/dynamodb/) : is a fully managed **NoSQL database** service provided by Amazon Web Services (AWS). It is designed to deliver seamless and scalable performance for applications that require low-latency, consistent, and highly available data storage.
+- [**DynamoDB**](https://aws.amazon.com/dynamodb/): is a fully managed **NoSQL database** service provided by Amazon Web Services (AWS). It is designed to deliver seamless and scalable performance for applications that require low-latency, consistent, and highly available data storage.
 
-- [**AWS API Gateway**](https://aws.amazon.com/api-gateway/) : is a fully managed service that allows you to create, publish, and manage APIs for your applications. It acts as a front door, enabling you to expose your application's functionality as secure and scalable APIs that can be accessed by clients such as web browsers, mobile devices, or other services.
+- [**AWS API Gateway**](https://aws.amazon.com/api-gateway/): is a fully managed service that allows you to create, publish, and manage APIs for your applications. It acts as a front door, enabling you to expose your application's functionality as secure and scalable APIs that can be accessed by clients such as web browsers, mobile devices, or other services.
 
-- [**CloudFront**](https://aws.amazon.com/cloudfront/) : is a content delivery network (CDN) service provided by Amazon Web Services (AWS). It enables the efficient distribution of your content, including web pages, images, videos, and other static or dynamic files, to end users across the globe. AWS's content delivery network (CDN), ensures fast and reliable global content distribution of our web application. Lastly, 
+- [**CloudFront**](https://aws.amazon.com/cloudfront/): is a content delivery network (CDN) service provided by Amazon Web Services (AWS). It enables the efficient distribution of your content, including web pages, images, videos, and other static or dynamic files, to end users across the globe. AWS's content delivery network (CDN), ensures fast and reliable global content distribution of our web application. Lastly, 
 
-- [**AWS WAF (Web Application Firewall)**](https://aws.amazon.com/waf/) : is a cloud-based firewall service that helps protect your web applications from common web exploits and attacks. It allows you to define and enforce rules to control access to your web application and filter out malicious traffic. 
+- [**AWS WAF (Web Application Firewall)**](https://aws.amazon.com/waf/): is a cloud-based firewall service that helps protect your web applications from common web exploits and attacks. It allows you to define and enforce rules to control access to your web application and filter out malicious traffic. 
 
 ## **Prerequisites**
 
@@ -34,7 +34,7 @@ Before diving into building our serverless solution, it is essential to have the
 
 ### Setting up an AWS S3 bucket 
 
-Once log in to your AWS console, navigate to the **AWS Console Management > AWS S3**. From there, you can create a new S3 bucket by clicking on **Create Bucket**.
+Once log in to your AWS console, navigate to the `AWS Console Management > AWS S3`. From there, you can create a new S3 bucket by clicking on **Create Bucket**.
 
 ![1](./images/1.png)
 
@@ -54,13 +54,13 @@ Select the files from your local machine that make up your web application, and 
 
 ### Setting up AWS WAF rules
 
-Navigate in the **AWS Console Management > AWS WAF**, Click on **Create web ACL** to create a new web Access Control List (ACL).
+Navigate in the `AWS Console Management > AWS WAF`, Click on **Create web ACL** to create a new web Access Control List (ACL).
 
 ![waf](./images/8.png)
 
-Provide a name for your web ACL and select ressource type in our case **Amazon cloudFront distributions**. Then click on **Next**
+Provide a name for your web ACL and select the ressource type in our case **Amazon cloudFront distributions**. Then click on **Next**
 
-In the **Add rules and rule groups** section, click on Add rules, and then select Add managed rule groups.
+In the **Add rules and rule groups** section, click on **Add rules**, and then select **Add managed rule groups**.
 
 ![rules](./images/9.png) 
 
@@ -84,7 +84,7 @@ Click on `Next` until you reach the end, leaving the default settings as they ar
 
 ### Setting up CloudFront distribution for the S3 bucket
 
-Navigate in the **AWS Console Management > CloudFront** Click on **Create Distribution** to create a new CloudFront distribution. 
+Navigate in the `AWS Console Management > CloudFront` Click on **Create Distribution** to create a new CloudFront distribution. 
 
 In the Create Distribution interface, click on the `Origin Domain` field and select the previously created S3 bucket.
 
@@ -130,7 +130,7 @@ Wait a few minutes for your distribution to deploy, then copy the domain name an
 
 ### Create a DynamoDB table
 
-Navigate in the **AWS Management Console > DynamoDB**, click on **Create table.** 
+Navigate in the `AWS Management Console > DynamoDB`, click on **Create table.** 
 
 ![dynamoDB](./images/27.png) 
 
@@ -163,7 +163,7 @@ Enter the role name, verify the chosen policy, and click on **Create role.**
 
 ### Create Lambda Functions 
 
-Navigate in the **AWS Management Console > AWS Lambda**, Click on **create a function**.
+Navigate in the `AWS Management Console > AWS Lambda`, Click on **create a function**.
 You will find the code for each function [**here**](functions/)
 
 Enter the function name and select **Python 3.9** as the `runtime`.
@@ -212,11 +212,11 @@ Let's start by creating a method to retrieve employees saved in our `DynamoDB ta
 
 ![apigateway](./images/44.png)
 
-For the **insertEmployee** function, create a method of type `POST`. 
+For the `insertEmployee` function, create a method of type `POST`. 
 
 ![apigateway](./images/45.png)
 
-For the **deleteEmployee** function, create a method of type `DELETE`. 
+For the `deleteEmployee` function, create a method of type `DELETE`. 
 
 With our methods ready, let's deploy our API. Click on `Action,` then **Deploy API.** In the popup window, select **New stage** and enter the stage name. Then, deploy.
 
@@ -244,14 +244,18 @@ Go to the source code of your application, specifically the `scripts.js` file. M
 
 ## STEP 4: Testing the Application
 
-Navigate in the **AWS Console Management > CloudFront**, on your CloudFront Distribution copy the URL of your domain name and paste it into your browser
+Navigate in the `AWS Console Management > CloudFront`, on your CloudFront Distribution copy the URL of your domain name and paste it into your browser
 
 ![apigateway](./images/51.png)
 
 ![apigateway](./images/52.png)
 
+## Resources
+
+To facilitate the practical implementation of the concepts discussed in this article, we have provided a GitHub repository containing all the necessary files to build your serverless web application using AWS services. You can access the repository at the following link [here]()
+
 ## Conclusion
 
-In conclusion, this article outlined the process of building a serverless web application using AWS services. We configured AWS S3 for hosting, utilized CloudFront for content delivery, and implemented AWS WAF for security. DynamoDB and Lambda functions handled data storage and retrieval, while API Gateway exposed our functions as RESTful API endpoints.
+In conclusion, this article provided a comprehensive guide on building a serverless web application using AWS services. We successfully configured AWS S3 for efficient hosting, leveraged CloudFront for optimized content delivery, and implemented AWS WAF to ensure robust security measures. Additionally, the dynamic duo of DynamoDB and Lambda functions seamlessly managed data storage and retrieval, while API Gateway served as a gateway for RESTful API endpoints.
 
 With these tools, we achieved a scalable, secure, and efficient deployment. By leveraging serverless architecture and AWS services, you can build your own serverless web applications, delivering exceptional user experiences in the cloud.
