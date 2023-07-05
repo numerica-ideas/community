@@ -7,7 +7,7 @@ Serverless architecture has revolutionized the way we build and deploy web appli
 
 Serverless architecture is a cloud computing paradigm that eliminates the need for managing servers and infrastructure. In this model, the cloud provider takes care of server provisioning, scaling, and maintenance, allowing developers to focus solely on writing code. Applications are built using small, stateless functions that are triggered by events. These functions are executed in a managed environment and automatically scale based on demand. Serverless architecture offers benefits such as cost efficiency, scalability, reduced operational overhead, and rapid development.
 
-To build a serverless web application, we leverage several key AWS services.
+To build our serverless web application, we used the different AWS services below:
 - [**Amazon S3 (Simple Storage Service)**](https://aws.amazon.com/s3/) : is a highly scalable and durable cloud storage service provided by Amazon Web Services. It allows you to store and retrieve large amounts of data, such as files, images, videos, and backups, in a secure and cost-effective manner.
 
 - [**AWS Lambda**](https://aws.amazon.com/lambda/) : is a **serverless** compute service provided by Amazon Web Services (AWS). It allows you to run your code without provisioning or managing servers, making it an ideal choice for building scalable and cost-effective applications.
@@ -20,11 +20,9 @@ To build a serverless web application, we leverage several key AWS services.
 
 - [**AWS WAF (Web Application Firewall)**](https://aws.amazon.com/waf/) : is a cloud-based firewall service that helps protect your web applications from common web exploits and attacks. It allows you to define and enforce rules to control access to your web application and filter out malicious traffic. 
 
-Together, these AWS services provide a comprehensive infrastructure for building a secure and scalable serverless web application.
-
 ## **Prerequisites**
 
-Before diving into building a serverless web application with AWS services, it is essential to have a few prerequisites in place. 
+Before diving into building our serverless solution, it is essential to have the following prerequisites: 
 
 - **AWS Account**: Create an AWS account to access and utilize the AWS services mentioned in this article.
 - **AWS IAM**: Understand the basics of AWS `Identity and Access Management (IAM)` for managing user permissions and roles within the AWS environment.
@@ -32,27 +30,21 @@ Before diving into building a serverless web application with AWS services, it i
 - **Basic knowledge of Python**: Familiarize yourself with the basics of the Python programming language, as the Lambda functions in this tutorial will be written in Python
 - **Understanding of REST APIs**: Have a basic understanding of REST (Representational State Transfer) APIs and their fundamental principles, including the `HTTP` methods such as `GET`, `POST`, and `DELETE`, which will be used to interact with the API Gateway.
 
-## **Resources**
-
-To facilitate the practical implementation of the concepts discussed in this article, we have provided a GitHub repository containing all the necessary files to build your serverless web application using AWS services. You can access the repository at the following link:
-
-[**GitHub - Serverless Web Application with AWS**]()
-
 ## **STEP 1: Configure AWS S3, CloudFront, and WAF**
 
-### Setting up an AWS S3 bucket for hosting the web application
+### Setting up an AWS S3 bucket 
 
-To begin, log in to the AWS Management Console and navigate to the `Amazon S3` service. From there, you can create a new S3 bucket by clicking on **Create Bucket**.
+Once log in to your AWS console, navigate to the **AWS Console Management > AWS S3**. From there, you can create a new S3 bucket by clicking on **Create Bucket**.
 
 ![1](./images/1.png)
 
-Pprovide a unique name for your bucket. It's important to choose a name that is globally unique within the entire `AWS S3 namespace`. This ensures that there are no naming conflicts with existing buckets. Select the region where you want to host your web application.
+Provide a unique name for your bucket. It's important to choose a name that is globally unique within the entire `AWS S3 namespace`. This ensures that there are no naming conflicts with existing buckets. Select the region where you want to host your web application.
 
 ![2](./images/2.png)
 
 Then click on `Create bucket`
 
-Once the bucket is created, you can proceed to upload your web application files. Click on your bucket and select the **Upload** option then **Add files**. 
+Once the bucket is created, you can proceed to upload your web application files. Click on your bucket and select the **Upload** option then **Add files**. You'll find the application files [**here**](web/)
 
 ![4](./images/4.png)
 
@@ -62,7 +54,7 @@ Select the files from your local machine that make up your web application, and 
 
 ### Setting up AWS WAF rules
 
-Navigate to the **AWS WAF service** in the AWS Management Console **>** AWS WAF, Click on  **Create web ACL** to create a new web Access Control List (ACL).
+Navigate in the **AWS Console Management > AWS WAF**, Click on **Create web ACL** to create a new web Access Control List (ACL).
 
 ![waf](./images/8.png)
 
@@ -92,7 +84,7 @@ Click on `Next` until you reach the end, leaving the default settings as they ar
 
 ### Setting up CloudFront distribution for the S3 bucket
 
-Navigate to the **AWS CloudFront service** in the AWS Management Console **>** Click on **Create Distribution** to create a new CloudFront distribution. 
+Navigate in the **AWS Console Management > CloudFront** Click on **Create Distribution** to create a new CloudFront distribution. 
 
 In the Create Distribution interface, click on the `Origin Domain` field and select the previously created S3 bucket.
 
@@ -136,13 +128,13 @@ Wait a few minutes for your distribution to deploy, then copy the domain name an
 
 ## STEP 2: Configure DynamoDB and Lambda Functions
 
-### Creating an AWS DynamoDB table for data storage
+### Create a DynamoDB table
 
-Navigate to the **DynamoDB service** in the AWS Management Console **>** DynamoDB, click on **Create table.** 
+Navigate in the **AWS Management Console > DynamoDB**, click on **Create table.** 
 
 ![dynamoDB](./images/27.png) 
 
-Provide a name for your table and specify the **partition key** value. Leave all other parameters at their default settings.
+Provide a name for your table and specify the **partition key** value. Leave all other settings at their defaults.
 
 **Your table has been successfully created.**
 
@@ -171,7 +163,8 @@ Enter the role name, verify the chosen policy, and click on **Create role.**
 
 ### Create Lambda Functions 
 
-Navigate to the **AWS Lambda service** in the AWS Management Console **>** AWS Lambda, Click on **create a function** .
+Navigate in the **AWS Management Console > AWS Lambda**, Click on **create a function**.
+You will find the code for each function [**here**](functions/)
 
 Enter the function name and select **Python 3.9** as the `runtime`.
 
@@ -251,7 +244,7 @@ Go to the source code of your application, specifically the `scripts.js` file. M
 
 ## STEP 4: Testing the Application
 
-Go to CloudFront service and copy the url and paste it in your browser
+Navigate in the **AWS Console Management > CloudFront**, on your CloudFront Distribution copy the URL of your domain name and paste it into your browser
 
 ![apigateway](./images/51.png)
 
