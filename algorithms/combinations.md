@@ -10,9 +10,9 @@ The function first checks if the input is valid (`n` must be greater than or equ
 
 Otherwise, the function initializes an empty array called ``result`` to store the combinations.
 
-Then it calls the auxiliary function ``combination`` with the initial values for ``result``, an empty array ``currentCombination``, the starting index ``currentIndex`` (initialized to ``0``), ``n`` and ``k``.
+Then it calls the auxiliary function ``generateCombinations`` with the initial values for ``result``, an empty array ``currentCombination``, the starting index ``currentIndex`` (initialized to ``0``), ``n`` and ``k``.
 
-The auxiliary function ``combination`` is a recursive function that generates combinations. It takes the same parameters as the main function.
+The auxiliary function ``generateCombinations`` is a recursive function that generates combinations. It takes the same parameters as the main function.
 
 If ``k`` is equal to ``0``, it means that a combination has been completed. In this case, the current combination (stored in ``currentCombination``) is added to the ``result`` array using ``Array.from()`` to create a copy of the combination.
 
