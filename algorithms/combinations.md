@@ -4,7 +4,7 @@ This challenge comes from Leetcode, it's about finding all possible letter combi
 **Challenge**: https://leetcode.com/problems/combinations/description/.
 
 **Solution**: 
-The code provided below is a JavaScript implementation of the "combine" function, which generates all possible combinations of numbers from 1 to n with length k.
+The code provided below is a JavaScript implementation of the "combine" function, which generates all possible combinations of numbers from `1` to `n` with length `k`.
 
 **Sample Code**:
 ```javascript
@@ -19,25 +19,25 @@ var combine = function(n, k) {
 
   var result = [];
 
-  x(result, [], 0, n, k);
+  generateCombinations(result, [], 0, n, k);
 
   return result;
 };
 
-var x = function (result, y0, x0, n, k) {
+var generateCombinations = function (result, currentCombination, currentIndex, n, k) {
   if (k === 0) {
-    result.push(Array.from(y0));
+    result.push(Array.from(currentCombination));
     return;
   }
 
-  for (var i = x0; i < n; i++) {
-    y0.push(i + 1)
-    x(result, y0, i + 1, n, k - 1);
-    y0.pop();
+  for (var i = currentIndex; i < n; i++) {
+    currentCombination.push(i + 1)
+    generateCombinations(result, currentCombination, i + 1, n, k - 1);
+    currentCombination.pop();
   }
 };
 ```
 
 Runtime: 85 ms
 
-By Noel Foka
+By [Noel Foka](https://github.com/noelfoka)
