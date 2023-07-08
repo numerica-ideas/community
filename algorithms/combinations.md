@@ -38,4 +38,6 @@ var x = function (result, y0, x0, n, k) {
 };
 ```
 
+Runtime: 85 ms
+
 By Noel Foka
