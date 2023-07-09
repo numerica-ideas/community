@@ -41,6 +41,12 @@ Cloud enables us to accomplish even more quickly, in case you opted for moving i
 - **Azure** Scale Set
 - **GCP** Managed Instance Groups
 
+Let's note that the **Elasticity** property of the Cloud allows your system, not only to scale **UP** and **OUT** but also to scale **DOWN** and **IN** to release unused resources once the trafic decreased.
+
+If you are interested into a [demo](https://www.youtube.com/watch?v=KHOxmHL5USI) of how we scaled **OUT/IN** a project migrated to AWS public Cloud, the following video is for you:
+
+[![FeaturedImage](./images/scaling-lift-and-shift-cloud-migration-with-aws-elb.png)](https://www.youtube.com/watch?v=KHOxmHL5USI)
+
 ———————
 
 We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
@@ -50,7 +56,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ———————
 
 ## Conclusion
-
-...
+This article higlighted the different types of **Scalability Types**, their particularities as well as pointing out what the possibilities are in term of services while using public Clouds like AWS, Azure or GCP.
 
 Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
