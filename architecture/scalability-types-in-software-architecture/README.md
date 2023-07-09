@@ -32,7 +32,7 @@ There are many approaches for the scaling activities to be launched so that our 
 
 - **Manual scaling**: in which you’ll personally handle the scaling by manually adding and removing instance(s) to the pool.
 - **Dynamic scaling**: where some conditions are to be met for a **“scale activity”** to launch automatically, they can be of many natures depending on what you are measuring your infrastructure operations with. A system could scale based on the usages of the following metrics: the CPU, Latency, Memory (RAM), and so on.
-- **Scheduled scaling**: scaling based on a schedule (date + time) gives you the possibility to scale your infrastructure in response to **predictable trafics** _for e.g. Christmas, Black Friday._
+- **Scheduled scaling**: scaling based on a schedule (date + time) gives you the possibility to scale your infrastructure in response to **predictable trafics**, for example: Christmas, Black Friday.
 
 ## Cloud Scaling Services
 Cloud enables us to accomplish even more quickly, in case you opted for moving into the Cloud, depending on the public Cloud provider that you use, some services are available to scale infrastructures:
