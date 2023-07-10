@@ -1,4 +1,4 @@
-# Scalability Types in Software Architecture
+# Scalability Types in Software Architecture&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Farchitecture%2Fscalability-types-in-software-architecture&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/scalability-types)
 
 **This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/scalability-types
 
@@ -56,6 +56,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ———————
 
 ## Conclusion
-This article higlighted the different types of **Scalability Types**, their particularities as well as pointing out what the possibilities are in term of services while using public Clouds like AWS, Azure or GCP.
+This article higlighted the different types of **Scalability Types**, their particularities as well as pointing out what the possibilities are in term of services while using public Clouds like Amazon Web Services, Microsoft Azure or Google Cloud Platform.
 
 Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
