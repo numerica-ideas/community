@@ -8,7 +8,7 @@ A scalable system is one that has the ability to adapt itself by providing more 
 [![FeaturedImage](./images/scalability-types.png)](https://blog.numericaideas.com/scalability-types)
 
 ## Scalability Types
-There’s no single way to make a system scale, sometimes it’s done by offloading some tasks to other threads, but in this section, we’ll focus on the main **Scaling Types** applied to IT systems, which are the **vertical** and the **horizontal** approaches, respectively referred to as scaling **UP** and scaling **OUT**.
+There’s no single way to make a system scale, sometimes it’s done by offloading some tasks to other threads, but in this section, we’ll focus on the main **Scalability Types** applied to IT systems, which are the **vertical** and the **horizontal** approaches, respectively referred to as scaling **UP** and scaling **OUT**.
 
 ### Horizontal Scaling
 Working on scaling your system horizontally means making sure that more compute resources, generally with the same specs, are added to your infrastructure. To make it simple, if one computer (VM: virtual machine) was used to process your web App requests, with more processing power needed, more computers will be added to the float while making sure to use a **Load Balancer** that distributes the workload amongst them.
@@ -25,7 +25,7 @@ The purpose of scaling remains, but the approach differs, with Vertical Scaling,
 Contrary to the precedent, it’s easier to apply this approach and to manage vertically scaled systems. But if it’s the only method that our system benefited from, we should watch it carefully since there’s a big risk of downtimes.
 
 ### Mixed Scaling
-In reality, depending on the system, it’s possible to mix up both scaling types in order to reach our goals, putting together the vertical and horizontal ways for our App to be as responsive as possible according to our target.
+In reality, depending on the system, it’s possible to mix up both scalability types in order to reach our goals, putting together the vertical and horizontal ways for our App to be as responsive as possible according to our target.
 
 ## Scaling Policies
 There are many approaches for the scaling activities to be launched so that our infrastructure changes to accommodate the traffic, the most common are:
