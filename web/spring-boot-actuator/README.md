@@ -40,7 +40,7 @@ let's dive into the world of Spring Boot Actuator and unlock the enhanced monito
 
     Furthermore, Actuator integrates seamlessly with popular monitoring systems like Prometheus, Graphite, and Micrometer, enabling you to visualize and analyze the collected metrics using powerful monitoring and alerting tools.
 
-### Helth Monitoring and Readiness checks
+### Health Monitoring and Readiness checks
     Ensuring the health and readiness of our application is crucial, especially in production environments. Actuator's health endpoint provides a quick and convenient way to check the overall health of our application and its dependencies. It performs various checks, such as database connectivity, disk space availability, and external service availability, providing a holistic view of your application's well-being.
 
 
@@ -48,21 +48,19 @@ let's dive into the world of Spring Boot Actuator and unlock the enhanced monito
 
 ## Setting up Spring Boot Actuator
 
-    In this part we will go through the process of enabling Actuator in our Spring Boot project, exploring the configuration options available, and ensuring the appropriate security measures are in place.
+In this part we will go through the process of enabling Actuator in our Spring Boot project, exploring the configuration options available, and ensuring the appropriate security measures are in place.
 
-### 1. Adding Actuator dependency
+### 1. Adding Spring Boot Actuator Dependency
 
-Enabling Actuator in a Spring boot project is easy as adding a dependency to a project :). You can add it during the creation of you springBoot App or add it in an existing project Depending on wich package management you are using you can set add it in `pom.xml` if you are using Maven or `build.gradle` if you are using Gradle.
+Enabling Actuator in a Spring boot project is easy as adding a dependency to a project :). You can add it during the creation of you springBoot App or add it in an existing project Depending on wich package management you are using you can add it in `pom.xml` if you are using Maven or `build.gradle` if you are using Gradle.
 
-#### add Actuator from spring boot Initializer
-    from https://start.spring.io/, add dependency: 
+#### Add Spring Boot Actuator From Spring Boot Initializer
+from https://start.spring.io/, add dependency: 
+![Add Actuator dependency from spring initializr](images/initializr-add-actuator) . (Tips: you can use the search bar to easily find it).
+At the end you should have "Spring Boot Actuator" in your dependencies as shown on it image below. 
+![spring actuator added](images/initializr-actuator-added.png)
 
-    ![Add Actuator dependency from spring initializr](images/initializr-add-actuator). (Tips: you can use the search bar to easily find it).
-    At the end you should have "Spring Boot Actuator" in your dependencies as shown on it image below. 
-
-    ![spring actuator added](iùages/initializr-actuator-added.png)
-
-### add in existing Project
+### Add Spring Boot Actuator in existing Project
 
 Depending of you package manager (Maven or Gradle), set you `pom.xml`or `build.gradle` as follow:
 
