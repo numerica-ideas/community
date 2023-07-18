@@ -17,7 +17,6 @@ Throughout the article, we will cover essential topics such as:
 - **Health Monitoring and Readiness Checks**
 - **Custom Endpoints and Metrics**
 - **Security and Production Best Practices**
-- **Integration with Monitoring Systems, Case of New Relic**
 
 let's dive into the world of Spring Boot Actuator and unlock the enhanced monitoring and management capabilities it brings to the Spring Boot ecosystem.
 
