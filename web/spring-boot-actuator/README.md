@@ -56,8 +56,11 @@ Enabling Actuator in a Spring boot project is easy as adding a dependency to a p
 
 #### Add Spring Boot Actuator From Spring Boot Initializer
 from https://start.spring.io/, add dependency: 
-![Add Actuator dependency from spring initializr](images/initializr-add-actuator) . (Tips: you can use the search bar to easily find it).
+![Add Actuator dependency from spring initializr](images/initializr-add-actuator.png) . 
+*(Tips: you can use the search bar to easily find it).*
+
 At the end you should have "Spring Boot Actuator" in your dependencies as shown on it image below. 
+
 ![spring actuator added](images/initializr-actuator-added.png)
 
 ### Add Spring Boot Actuator in existing Project
