@@ -8,6 +8,7 @@ Here are some accepted solutions from our challenges:
 - [Letter Combinations of a Phone Number](./letter-combinations-phone-number.md)
 - [Maximum Subarray](./maximum-subarray.md)
 - [Combinations](./combinations.md)
+- [Remove Duplicates from Sorted List II](./remove-duplicate-list.md)
 
 ### Contribution
 
