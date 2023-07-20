@@ -51,6 +51,6 @@ var deleteDuplicates = function(head) {
 };
 ```
 
-Runtime: 73ms
+Runtime: 72 ms
 
 By [Noel Foka](https://github.com/noelfoka)
