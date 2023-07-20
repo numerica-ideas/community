@@ -54,4 +54,6 @@ var generateCombinations = function (result, currentCombination, currentIndex, n
 };
 ```
 
+Runtime: 85 ms
+
 By [Noel Foka](https://github.com/noelfoka)

@@ -39,7 +39,7 @@ A 2-Tier architecture, also known as a two-tier architecture, is a model of IT i
 
 ## Infrastructure Provisioning
 
-The overall architecture looks like the following image in which the **AWS Cloud Services** are highlighted:
+The overall **AWS WordPress Architecture** looks like the following image in which the **AWS Cloud Services** are highlighted:
 
 [![ArchitectureDiagram](images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
@@ -662,9 +662,9 @@ The **WordPress** installation is available via the generated Load Balancer doma
 
 ![wordpress](./images/wordpress.png)
 
-**Important**: Let's note that we can link it to a custom domain along with an HTTP certificate by using AWS ACM service.
+**Important**: Let's note that we can link it to a custom domain along with an HTTP certificate by using the AWS ACM service.
 
-**Congratulations! You have successfully deployed your WordPress application on a 2-tier AWS architecture using Terraform**. You can now access your WordPress website and start customizing it to suit your needs.
+**Congratulations! You have successfully deployed your 2-tier AWS WordPress Architecture using Terraform**. You can now access your WordPress website and start customizing it to suit your needs.
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/deploy-wordpress-2tier-aws-architecture-with-terraform).
 
