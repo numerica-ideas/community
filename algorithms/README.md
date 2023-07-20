@@ -16,4 +16,6 @@ Before raising a pull-request, please read our [contribution guide](./guide.md).
 
 Click [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) to subscribe to our **YouTube channels (En & Fr)** and be notified about future Workshops and Events.
 
+Runtime: 73ms
+
 By [NumericaIdeas Network](https://numericaideas.com)
