@@ -115,7 +115,8 @@ services:
     ports:
       - 8090:8090
     depends_on:
-      - mysqldb
+      mysqldb:
+        condition: service_healthy
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/${MYSQL_DATABASE}
       - SPRING_DATASOURCE_USERNAME=root
@@ -133,6 +134,10 @@ services:
       - mysql-data:/var/lib/mysql
     networks:
       - springboot-mysql-network
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 30s
+      retries: 10
 volumes:
   mysql-data:
 networks:
@@ -140,13 +145,13 @@ networks:
     name: springboot-mysql-network
 ```
 
-This Docker Compose configuration defines two services: `app` for the **Spring Boot Application** and `mysqldb` for the **MySQL database**. The `app` service builds the image based on the [Dockerfile](./Dockerfile) in the project's root directory. The `mysqldb` service uses the official **MySQL** image and sets the environment variables for the database configuration. The `depends_on` attribute ensures that the Spring Boot application starts after the MySQL database, in order to guarantee dependency ordering.
+This Docker Compose configuration defines two services: `app` for the **Spring Boot Application** and `mysqldb` for the **MySQL database**. The `app` service builds the image based on the [Dockerfile](./Dockerfile) in the project's root directory. The `mysqldb` service uses the official **MySQL** image and sets the environment variables for the database configuration. The `depends_on` attribute ensures that the Spring Boot application starts after the MySQL database in order to guarantee dependency ordering. Finally, the `healthcheck` makes sure the MySQL service is ready to accept connections before running the App.
 
 For the App to connect itself to the MySQL database, as an enhanced security measure, we provided the database credentials as environment variables via the services' environment attributes so these are textually hidden from the project source code:
 - **MYSQL_DATABASE**: The database name.
 - **MYSQL_PASSWORD**: The database root's password, we use the root user account for simplicity only.
 
-## Running the Dockerized Application
+## Run the Dockerized Application
 To run the App via **Docker Compose**, open a terminal, navigate to the project's root directory, and execute the following command in which we provide the **environment variables** directly:
 
 ```bash
