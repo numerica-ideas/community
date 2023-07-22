@@ -8,7 +8,7 @@ Docker has revolutionized application deployment by enabling developers to packa
 [FEATURED_IMAGE]
 
 ## What is Docker?
-**Docker** is an open-source platform that simplifies application deployment by packaging applications and their dependencies into containers. Containers provide a lightweight, isolated environment that can run consistently across different environments which greatly improve the development and deployment experiences.
+**Docker** is an open-source platform that simplifies application deployment by packaging applications and their dependencies into containers. Containers provide a lightweight, isolated environment that can run consistently across different environments which greatly improves the development and deployment experiences.
 
 ## Why Dockerize a Spring Boot Application with MySQL?
 Dockerizing a Spring Boot application with MySQL offers several advantages:
@@ -26,20 +26,20 @@ To follow this guide, ensure you have the following prerequisites:
 ## Create a Spring Boot Application
 Before proceeding, let's create a basic Spring Boot App with the latest stable release at the time of writing, which is version **3.1.2**.
 
-It involves accessing the initializer service at [https://start.spring.io](https://start.spring.io/), provide some basic details in regard to the App, select the required dependencies then hit on the **GENERATE** button to have the basic structure of the project as follow:
+It involves accessing the initializer service at [https://start.spring.io](https://start.spring.io/), providing some basic details in regard to the App, selecting the required dependencies then hitting on the **GENERATE** button to have the basic structure of the project as follows:
 
 ![spring-boot-initializer](./images/spring-boot-initializer.png)
 
-You can quickly determined the following dependencies that come packaged in the **Maven** project:
+You can quickly determine the following dependencies that come packaged in the **Maven** project:
 - **Spring Data JPA**: Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate.
 - **Spring Web**: Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
 - **MySQL Driver**: MySQL JDBC driver.
 
-Open the generated project in your favorite IDE or editor (I'm mainly using IntelliJ IDEA and VsCode), from there you can tweak it a bit to have some entities, controllers, and logics.
+Open the generated project in your favorite IDE or editor (I'm mainly using IntelliJ IDEA and VsCode), from there you can tweak it a bit to have some entities, controllers, and business logic.
 
-Hosted on GitHub, here's the [source code](https://github.com/numerica-ideas/community/tree/master/docker/dockerize-springboot-mysql) of the Spring Boot application that we'll be using to to setup Docker on along with a MySQL database.
+Hosted on GitHub, here's the [source code](https://github.com/numerica-ideas/community/tree/master/docker/dockerize-springboot-mysql) of the Spring Boot application that we'll be using to setup Docker along with a MySQL database.
 
-The **application.properties** file holds some App configurations, it's not uncomon to see sensitive credentials in it, here's its content:
+The **application.properties** file holds some App configurations, it's not uncommon to see sensitive credentials in it, here's its content:
 
 ```
 # Server port
@@ -67,7 +67,7 @@ Let's build the App to make sure it compiles as expected, this command is useful
 ./mvnw clean install -DskipTests
 ```
 
-At the end of the execution, **Maven** build output should look like this:
+At the end of the execution, the **Maven** build output should look like this:
 
 ![maven-build](./images/maven-build.png)
 
@@ -147,7 +147,7 @@ networks:
     name: springboot-mysql-network
 ```
 
-This Docker Compose configuration defines two services: `app` for the **Spring Boot Application** and `mysql` for the **MySQL database**. The `app` service builds the image based on the [Dockerfile](./Dockerfile) in the project's root directory. The `mysql` service uses the official **MySQL** image and sets the environment variables for the database configuration. The `depends_on` attribute ensures that the Spring Boot application starts after the MySQL database, in order to guarantee dependency ordering.
+This Docker Compose configuration defines two services: `app` for the **Spring Boot Application** and `mysqldb` for the **MySQL database**. The `app` service builds the image based on the [Dockerfile](./Dockerfile) in the project's root directory. The `mysqldb` service uses the official **MySQL** image and sets the environment variables for the database configuration. The `depends_on` attribute ensures that the Spring Boot application starts after the MySQL database, in order to guarantee dependency ordering.
 
 For the App to connect itself to the MySQL database, as an enhanced security measure, we provided the database credentials as environment variables via the services' environment attributes so these are textually hidden from the project source code:
 - **MYSQL_DATABASE**: The database name.
