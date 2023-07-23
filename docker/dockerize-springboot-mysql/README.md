@@ -5,7 +5,7 @@
 ## Introduction
 Docker has revolutionized application deployment by enabling developers to package applications and their dependencies into portable containers. In this comprehensive guide, we'll explore how to dockerize a **Spring Boot** application with **MySQL**, leveraging the power of **Docker** and **Docker Compose**. By containerizing your Spring Boot application, you can achieve easy deployment, improved portability, scalability, and version control.
 
-[FEATURED_IMAGE]
+![featured-image](./images/Dockerize-Spring-Boot-Application-with-MySQL.png)
 
 ## What is Docker?
 **Docker** is an open-source platform that simplifies application deployment by packaging applications and their dependencies into containers. Containers provide a lightweight, isolated environment that can run consistently across different environments which greatly improves the development and deployment experiences.
