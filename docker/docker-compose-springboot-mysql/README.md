@@ -61,7 +61,7 @@ logging.level.org.hibernate.SQL=DEBUG
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
 ```
 
-Let's build the App to make sure it compiles as expected, this command is useful for that:
+Let's build the App to make sure it compiles as expected, the following command must be ran from the project root folder:
 
 ```
 ./mvnw clean install -DskipTests
@@ -95,6 +95,8 @@ EXPOSE 8090
 # Run the App
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 ```
+
+It's straightforward, the `Dockerfile` uses an image based on **Java 17**, it copies into the image the executable **JAR** file that resulted from the build in the previous step, exposes the **port** the App is running on, then provides the **entry point** which is the bash command to run at the end to start the container.
 
 By building your image with the command `docker build .`, a successful output should be similar to the next image:
 
