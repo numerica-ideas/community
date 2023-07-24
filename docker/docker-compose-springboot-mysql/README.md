@@ -1,11 +1,11 @@
-# Dockerize Spring Boot and MySQL with Docker Compose
+# Dockerize Spring Boot and MySQL with Docker Compose&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fdocker%2Fdocker-compose-springboot-mysql&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
 
 **This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/docker-compose-springboot-mysql
 
 ## Introduction
 Docker has revolutionized application deployment by enabling developers to package applications and their dependencies into portable containers. In this comprehensive guide, we'll explore how to dockerize a **Spring Boot** application with **MySQL**, leveraging the power of **Docker** and **Docker Compose**. By containerizing your Spring Boot application, you can achieve easy deployment, improved portability, scalability, and version control.
 
-![featured-image](./images/Dockerize-Spring-Boot-Application-with-MySQL.png)
+[![FeaturedImage](./images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
 
 ## What is Docker?
 **Docker** is an open-source platform that simplifies application deployment by packaging applications and their dependencies into containers. Containers provide a lightweight, isolated environment that can run consistently across different environments which greatly improves the development and deployment experiences.
@@ -211,3 +211,5 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 ## Conclusion
 Dockerizing a Spring Boot application with MySQL using Docker and Docker Compose simplifies the deployment process, improves portability, and enables scalability. By following the steps outlined in this guide, you can package your Spring Boot application and MySQL database into separate containers and deploy them as a cohesive application stack. With Docker, you can achieve consistent application execution across different environments, easily scale your application, and simplify version control. Docker Compose streamlines the management of multi-container applications, allowing you to define, configure, and deploy complex systems effortlessly.
+
+Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
