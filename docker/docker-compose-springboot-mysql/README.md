@@ -20,7 +20,7 @@ Dockerizing a Spring Boot application with MySQL offers several advantages:
 ## Prerequisites
 To follow this guide, ensure you have the following prerequisites:
 - Docker installed on your machine, [this guide](https://docs.docker.com/get-docker/) could help.
-- Java Development Kit (JDK) installed.
+- Java Development Kit (JDK) 17 installed, recent versions could work.
 - Maven or Gradle build tool installed.
 
 ## Create a Spring Boot Application
@@ -154,6 +154,18 @@ For the App to connect itself to the MySQL database, as an enhanced security mea
 - **MYSQL_DATABASE**: The database name.
 - **MYSQL_PASSWORD**: The database root's password, we use the root user account for simplicity only.
 
+The environment attributes present in the **app** service are provided as environment variables to the App container at run time, we are talking about:
+- SPRING_DATASOURCE_URL
+- SPRING_DATASOURCE_USERNAME
+- SPRING_DATASOURCE_PASSWORD
+
+Spring Boot automatically assigns these variables to the related **application.properties** configurations listed below:
+- spring.datasource.url
+- spring.datasource.username
+- spring.datasource.password
+
+Meaning we don't have to provide these manually into the **application.properties** file, [read more here](https://docs.spring.io/spring-cloud-skipper/docs/1.0.0.BUILD-SNAPSHOT/reference/html/skipper-database-configuration.html).
+
 ## Run the Dockerized Application
 To run the App via **Docker Compose**, open a terminal, navigate to the project's root directory, and execute the following command in which we provide the **environment variables** directly:
 
@@ -171,7 +183,9 @@ docker-compose up
 
 Docker Compose will build the Spring Boot and MySQL images, create the containers, and start them. You'll see logs from both the application and the database. To stop the containers, press Ctrl+C.
 
-**Note**: It's possible to provide the environment variables into a **.env** file assuming it's hidden from git (.gitignore).
+Using **Docker Desktop** enables you to view a nice summary of your Docker state in which we can see our running containers as illustrated below:
+
+![running-containers](./images/docker-desktop-running-containers.png)
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/docker/docker-compose-springboot-mysql).
 
