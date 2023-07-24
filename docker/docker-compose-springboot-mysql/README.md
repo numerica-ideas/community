@@ -189,17 +189,17 @@ Using **Docker Desktop** enables you to view a nice summary of your Docker state
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/docker/docker-compose-springboot-mysql).
 
-Open POSTMAN and create a POST request to the url - localhost:8090/api/users with a random user object to be persisted in DB:
+Open POSTMAN and **create** a POST request to the url - `localhost:8090/api/users` with a random user object to be persisted in the DB:
 
-[TEST_APP_ENDPOINTS_IMAGES]
+![create-user](./images/test-api-create-user.png)
 
-List all the users:
+Let's **list all users** which includes the one we just created:
 
-[TEST_APP_ENDPOINTS_IMAGES]
+![list-users](./images/test-api-list-users.png)
 
-A ping endpoint is also available:
+A **ping** endpoint is also available:
 
-[TEST_APP_ENDPOINTS_IMAGES]
+![ping](./images/test-api-ping.png)
 
 ———————
 
