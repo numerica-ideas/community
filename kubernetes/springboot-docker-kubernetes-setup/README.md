@@ -24,7 +24,7 @@ Once the Dockerfile is created, you can build the container image using the `doc
 
 ## Kubernetes
 
-[Kubernetes](https://kubernetes.io/) aka **k8s** is an open-source container orchestration tool, it allows you to manage containers' clusters using concepts such as pods, replicasets, and deployments. **Pods** are groups of containers that work together to run an application, while **Replicasets** ensure that the number of running pods matches the number specified in the configuration, in the other hand **Deployments** manage application updates by defining scaling and rollback policies. Kubernetes also provides high availability, load balancing, and monitoring capabilities.
+[Kubernetes](https://kubernetes.io/) aka **k8s** is an open-source container orchestration tool, it allows you to manage containers' clusters using concepts such as pods, replicasets, and deployments. **Pods** are groups of containers that work together to run an application, while **Replicasets** ensure that the number of running pods matches the number specified in the configuration, on the other hand, **Deployments** manage application updates by defining scaling and rollback policies. Kubernetes also provides high availability, load balancing, and monitoring capabilities.
 
 Kubernetes has several advantages for managing application containers, including:
 - **Scalability**: makes it easier to scale applications by increasing or decreasing the number of running pods in regard to the application's usage, also refers to as horizontal scaling.
