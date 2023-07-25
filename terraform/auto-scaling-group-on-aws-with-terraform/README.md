@@ -8,6 +8,8 @@ In today's digital landscape, building `highly available` and `scalable` infrast
 
 [![FeaturedImage](./images/Auto-Scaling-Group-on-AWS-with-Terraform.png)](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
 
+The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+
 ## Auto Scaling Group (ASG)
 
 Before we dive into the deployment of our infrastructure, let's take a moment to understand the concept of an **Auto Scaling Group (ASG)** and its role in ensuring the availability and scalability of our applications.
@@ -420,6 +422,10 @@ Then wait a few minutes and you'll get the results below, of a new instance crea
 ![result](./images/scale-instance.png)
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/auto-scaling-group-on-aws-with-terraform).
+
+In case you aren't familiar with this IaC tool yet, there is an [Introduction to Terraform video tutorial](https://youtu.be/tJ6L1332WU4) along with a demo available on YouTube:
+
+[![TerraformWorkflow](images/terraform-introduction.png)](https://youtu.be/tJ6L1332WU4)
 
 ———————
 
