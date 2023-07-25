@@ -8,6 +8,8 @@
 
 [![FeaturedImage](./RxJS-Observables-Difference.png)](https://blog.numericaideas.com/difference-between-rxjs-observable-subject-and-behaviorsubject)
 
+The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+
 ## Observable
 
 An **Observable** is a function that creates an observer and attaches it to the source where events are excepted. It performs this by calling a `subscribe()` method where you can access the published event. With Observable, we can only consume events but not emit them, which implies that we can have many consumers but only one producer. One thing to notice is that the producer will run as many times for each observer.

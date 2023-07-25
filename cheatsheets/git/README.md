@@ -8,6 +8,8 @@ Click here to access the [PDF format](./git-cheat-sheet.pdf).
 
 ![GitCheatSheetThumbnail](./thumbnail.png)
 
+The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+
 ## Setup
 Configuring user information used across all repositories:
 - `git config --global user.name "[firstname lastname]"`: Sets a name that is identifiable for credit or ownership of change within the version history
