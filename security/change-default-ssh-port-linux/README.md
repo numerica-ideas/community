@@ -18,7 +18,23 @@ By default, SSH listens on port **22**, but changing the default port to a non-s
 In this section is unveiled a step-by-step guide to change the SSH port for Linux systems.
 
 ### Step 1: Accessing the Terminal
-To begin the process, you need to access the terminal on your Linux system. You can do this by opening the Terminal application or by using a remote terminal via an existing SSH connection.
+To begin the process, you need to access the terminal on your Linux system. You can do this by opening the Terminal application if you're logged in already, or by using a remote terminal via an existing SSH connection as below.
+
+For the sake of the example, we spinned up an Ubuntu virtual server instance, then we successfully connected ourself via the command:
+
+```bash
+ssh username@your_server_ip
+
+or
+
+ssh -i server-key-pair.pem username@your_server_ip
+```
+
+In this command, **server-key-pair.pem** represents the server SSH keypair (if necessary), **username** is the username of the account to use, and **your_server_ip** the server's public IP address over the internet.
+
+As output, here's the terminal session:
+
+![TerminalSession01](./images/ssh-logged-in.png)
 
 ### Step 2: Switch to Superuser (Root) or Use Sudo
 Changing the SSH port requires administrative privileges. Depending on your setup, you can either switch to the superuser (root) using the `su` command and enter the root password, or you can use the `sudo` command before each relevant command throughout the process.
@@ -70,11 +86,15 @@ sudo systemctl restart sshd
 ```
 
 ### Step 7: Firewall Configuration (Optional)
-If you have a firewall running on your system, you need to update the rules to allow the new SSH port. For example, if you are using UFW (Uncomplicated Firewall), use the following command:
+If you have a firewall running on your system, you need to update the rules to allow the new SSH port. For example, if you are using **UFW (Uncomplicated Firewall)**, use the following command:
 
 ```bash
 sudo ufw allow 48329/tcp
 ```
+
+For our case, that service is disabled:
+
+![DisabledUFW](./images/disabled-ufw-firewall-service.png)
 
 **Note**: If you skip doing this, you'll be locked out of your own server, and without any admin panel to reset the firewall configuration, you won't be able to sign in via SSH again.
 
@@ -82,10 +102,16 @@ sudo ufw allow 48329/tcp
 To ensure everything is working correctly, let's verify that the new SSH port is active by attempting to connect to the Linux system:
 
 ```bash
-ssh username@your_server_ip -p 48329
+ssh -p 48329 username@your_server_ip
+
+or
+
+ssh -i server-key-pair.pem -p 48329 username@your_server_ip [with keypair]
 ```
 
-Replace `username` with your actual username and `your_server_ip` with your server's IP address.
+The addition is the option `-p` to pass in the SSH port for the connection request, here's an example in the following screenshot:
+
+![TerminalSession02](./images/connection-different-port.png)
 
 ———————
 
@@ -96,6 +122,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ———————
 
 ## Conclusion
-Congratulations! You have successfully changed the SSH port on your Linux system, which enhances security by reducing the risk of automated attacks. Always remember the new port number and use it to establish SSH connections to your server in the future. By following these steps and implementing best security practices, you can bolster the defense of your Linux system against potential threats.
+Congratulations! You have successfully changed the SSH port on your Linux system, which enhances security by reducing the risk of automated attacks. Always remember the new port number and use it to establish SSH connections to your server in the future. By following these steps and implementing best security practices, you can strengthen the defense of your Linux system against potential threats.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
