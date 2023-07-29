@@ -22,10 +22,6 @@ To containerize an application with Docker, you must first create a file called 
 
 Once the Dockerfile is created, you can build the container image using the `docker build` command, which uses the instructions in the Dockerfile to create an image that can be used to start a container.
 
-In case you are interested in a related content, take a look at the following which explains how to Dockerize a Spring Boot Application with MySQL:
-
-[![DockerizeSpringBootApplicationWithMySQL](../../docker/docker-compose-springboot-mysql/images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
-
 ## Kubernetes
 
 [Kubernetes](https://kubernetes.io/) aka **k8s** is an open-source container orchestration tool, it allows you to manage containers' clusters using concepts such as pods, replicasets, and deployments. **Pods** are groups of containers that work together to run an application, while **Replicasets** ensure that the number of running pods matches the number specified in the configuration, on the other hand, **Deployments** manage application updates by defining scaling and rollback policies. Kubernetes also provides high availability, load balancing, and monitoring capabilities.
@@ -236,6 +232,10 @@ spring.datasource.password=${DB_PASSWORD}
 For a production grade application, the way to provide these variables could differ but the general idea remains passing them to the App.
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/kubernetes/springboot-docker-kubernetes-setup).
+
+If you are interested in a related content, take a look at the following which explains how to Dockerize a [Spring Boot Application with MySQL](https://blog.numericaideas.com/docker-compose-springboot-mysql):
+
+[![DockerizeSpringBootApplicationWithMySQL](../../docker/docker-compose-springboot-mysql/images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
 
 ———————
 

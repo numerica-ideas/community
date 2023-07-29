@@ -186,7 +186,7 @@ The generated Dockerfiles and Docker Compose file provide a basic setup to conta
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/docker/quickly-dockerizing-nodejs).
 
-## Run The Application
+## Run the Application
 
 Let's test the final result by running the App with the command `docker compose up` whose output is below:
 
@@ -197,6 +197,10 @@ The API is accessible at http://localhost:3000:
 ![test-nestjs-api](./images/test-nestjs-api.png)
 
 **Congratulations! You have successfully dockerized your NodeJS/NestJS App with no effort while following best practices.**
+
+If you are interested in a related content, take a look at the following which explains how to [Dockerize a Spring Boot Application with MySQL](https://blog.numericaideas.com/docker-compose-springboot-mysql):
+
+[![DockerizeSpringBootApplicationWithMySQL](../../docker/docker-compose-springboot-mysql/images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
 
 ———————
 

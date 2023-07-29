@@ -203,6 +203,10 @@ A **ping** endpoint is also available:
 
 ![ping](./images/test-api-ping.png)
 
+If you are interested in a related content, take a look at the following which explains how to Quickly [Dockerizing NodeJS Application](https://blog.numericaideas.com/quickly-dockerizing-nodejs) effortlessly:
+
+[![QuicklyDockerizingNodeJSApplication](../../docker/quickly-dockerizing-nodejs/images/quickly-dockerizing-nodejs.png)](https://blog.numericaideas.com/quickly-dockerizing-nodejs)
+
 ———————
 
 We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
