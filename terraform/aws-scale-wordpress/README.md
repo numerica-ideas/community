@@ -6,7 +6,7 @@ In today's article, we will explore the **scalability** possibilities of deployi
 
 ![architecture diagram](./images/Deploy%20WordPress%20on%20a%202-Tier%20AWS%20Architecture%20with%20Terraform.png)
 
-If you haven't read the previous article, **Deploying WordPress on a 2-Tier AWS Architecture with Terraform**, we highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
+If you haven't read the previous article, **Deploying WordPress on a 2-Tier AWS Architecture with Terraform**, I highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
 [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 
@@ -15,27 +15,52 @@ If you haven't read the previous article, **Deploying WordPress on a 2-Tier AWS 
 Before we proceed with scaling our WordPress deployment on AWS, make sure you have the following prerequisites in place
 - An `AWS account` with appropriate permissions to create resources.
 - Basic knowledge of `Terraform` and its concepts.
-- Familiarity with `WordPress` and its deployment on AWS, as discussed in our previous article.
+- Read the previous article: [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ## Using Auto Scaling Group for Scalability
 
 **Auto Scaling Group (ASG)** is a powerful AWS feature that allows you to automatically adjust the number of instances in your application fleet based on demand. By using ASG, we can ensure our WordPress deployment can **scale horizontally** to handle varying loads.
 
-In this section, we will explain the modifications made to the existing Terraform files to incorporate ASG into our WordPress deployment.
+In this section, I will explain the modifications made to the existing Terraform files to incorporate ASG into our WordPress deployment.
 
 If you would like to delve deeper into the concept of Auto Scaling Group and its benefits, I have a dedicated article that covers it in detail. It provides valuable insights into how ASG works, and its configuration options.
 [**Auto Scaling Group in AWS**](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
 
+
 ### Step 1: Modifying main.tf
 
-In the `main.tf` file, we need to remove our 2 aws_instance resources and add some new resources : **aws_launch_template** to define the configuration for our EC2 instances The template specifies the AMI, instance type, security groups, and other parameters. 
+In this step, we will make important changes to the `main.tf` file and introduce a new file called `install_script.tpl` that automates the installation of necessary tools for our WordPress website to work properly.
+
+First, let's take a look at the `install_script.tpl` file:
+
+`install_script.tpl`
+```bash
+#!/bin/bash
+
+sudo yum update -y
+sudo yum install docker -y
+wget https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)
+sudo mv docker-compose-$(uname -s)-$(uname -m) /usr/local/bin/docker-compose
+sudo chmod -v +x /usr/local/bin/docker-compose
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+sudo yum -y install amazon-efs-utils
+sudo mkdir -p ${mount_directory}
+sudo mount -t efs -o tls ${efs_volume_id}:/ ${mount_directory}
+sudo docker run --restart=always --name wordpress-docker -e WORDPRESS_DB_USER=${dbuser} -e WORDPRESS_DB_HOST=${dbendpoint} -e WORDPRESS_DB_PASSWORD=${dbpassword}  -e WORDPRESS_DB_NAME=${db_name} -v ${mount_directory}:${mount_directory} -p 80:80 -d wordpress
+```
+
+The `install_script.tpl` file is a Bash script that will be used as the user data for our EC2 instances. It installs Docker, sets up Amazon EFS, and runs a WordPress container to deploy our website. The script is designed to work with the variables passed to it when called.
+
+Next, we will modify the `main.tf` file to incorporate the changes. We will remove the two `aws_instance` resources and introduce the `aws_launch_template` resource, which defines the configuration for our EC2 instances.
 
 ```terraform
 resource "aws_launch_template" "instances_configuration" {
   name_prefix            = "asg-instance"
   image_id               = var.ami
-  key_name               = aws_key_pair.aws_ec2_access_key.id
+  key_name               = var.key_name
   instance_type          = var.instance_type
+  user_data              = base64encode(templatefile("install_script.tpl", { efs_volume_id = aws_efs_file_system.efs_volume.id, db_name = aws_db_instance.rds_master.db_name, mount_directory = var.mount_directory, dbuser = aws_db_instance.rds_master.username, dbendpoint = aws_db_instance.rds_master.endpoint, dbpassword = aws_db_instance.rds_master.password }))
   vpc_security_group_ids = [aws_security_group.production-instance-sg.id]
 
   iam_instance_profile {
@@ -49,21 +74,20 @@ resource "aws_launch_template" "instances_configuration" {
   tags = {
     Name = "asg-instance"
   }
-
 }
 ```
 
-In the same `main.tf` file, we will create the Autoscaling Group `aws_autoscaling_group` resource. The ASG will be responsible for managing the number of instances and ensuring they match the desired capacity.
+In the same `main.tf` file, I will create the Autoscaling Group `aws_autoscaling_group` resource. The ASG will be responsible for managing the number of instances and ensuring they match the desired capacity.
 
 ```terraform
 resource "aws_autoscaling_group" "asg" {
   name                      = "asg"
-  min_size                  = 2
-  max_size                  = 4
-  desired_capacity          = 2
+  min_size                  = 3
+  max_size                  = 6
+  desired_capacity          = 3
   health_check_grace_period = 150
   health_check_type         = "ELB"
-  vpc_zone_identifier       = [aws_subnet.ec2_1_public_subnet.id, aws_subnet.ec2_2_public_subnet.id]
+  vpc_zone_identifier       = [aws_subnet.ec2_1_public_subnet.id, aws_subnet.ec2_2_public_subnet.id, aws_subnet.ec2_3_public_subnet.id]
   launch_template {
     id      = aws_launch_template.instances_configuration.id
     version = "$Latest"
@@ -81,7 +105,7 @@ resource "aws_autoscaling_group" "asg" {
 }
 ```
 
-Next, we'll define an Auto Scaling policy that adjusts the number of instances based on CPU utilization.
+Next, we will define an Auto Scaling policy that dynamically adjusts the number of instances in our Auto Scaling Group based on CPU utilization. Additionally, we will use the `aws_autoscaling_attachment` resource to link our **Auto Scaling Group** to the **Application Load Balancer (ALB)**.
 
 `main.tf`
 
@@ -108,7 +132,7 @@ resource "aws_autoscaling_attachment" "asg_attachment" {
 
 ### Step 2: Modifying loadbalancer.tf
 
-we modified the `loadbalancer.tf` to ensure that the ALB is properly configured to handle incoming HTTP traffic on port 80 and forward it to the instances registered with the ASG. The ALB acts as the entry point for client requests and distributes the traffic evenly across the instances in the ASG.
+I modified the `loadbalancer.tf` to ensure that the ALB is properly configured to handle incoming HTTP traffic on port 80 and forward it to the instances registered with the ASG. The ALB acts as the entry point for client requests and distributes the traffic evenly across the instances in the ASG.
 
 ```terraform
 resource "aws_lb" "alb" {
@@ -116,7 +140,7 @@ resource "aws_lb" "alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb_sg.id]
-  subnets            = [aws_subnet.ec2_1_public_subnet.id, aws_subnet.ec2_2_public_subnet.id]
+  subnets            = [aws_subnet.ec2_1_public_subnet.id, aws_subnet.ec2_2_public_subnet.id, aws_subnet.ec2_3_public_subnet.id]
 }
 
 resource "aws_lb_listener" "alb_listener" {
@@ -165,67 +189,41 @@ resource "aws_security_group" "alb_sg" {
 
 ### Step 3: Modifying efs.tf
 
-In this step, we make several modifications to the `efs.tf` file.
+In this step, I make several modifications to the `efs.tf` file.
 
-Firstly, we update the installation script to use the latest version of WordPress. This update is necessary because the **WP Offload Media Lite for Amazon S3** plugin, which we will be using, requires the latest version of WordPress. Here is the modified installation script
+We will remove the `key_pair` resource and the `null_resource` since they are no longer needed, and then proceed with the new content for our `efs.tf` file.
 
 ```terraform
-resource "null_resource" "install_script" {
-  count = 2
-
-  depends_on = [
-    aws_db_instance.rds_master,
-    local_file.private_key,
-    aws_efs_mount_target.efs_mount_target_1,
-    aws_efs_mount_target.efs_mount_target_2,
-    aws_autoscaling_group.asg
-  ]
-
-  connection {
-    type        = "ssh"
-    host        = data.aws_instances.production_instances.public_ips[count.index]
-    user        = "ec2-user"
-    private_key = file(var.private_key_location)
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "sudo yum update -y",
-      "sudo yum install docker -y",
-      "wget https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)",
-      "sudo mv docker-compose-$(uname -s)-$(uname -m) /usr/local/bin/docker-compose",
-      "sudo chmod -v +x /usr/local/bin/docker-compose",
-      "sudo systemctl enable docker.service",
-      "sudo systemctl start docker.service",
-      "sudo yum -y install amazon-efs-utils",
-      "sudo mkdir -p ${var.mount_directory}",
-      "sudo mount -t efs -o tls ${aws_efs_file_system.efs_volume.id}:/ ${var.mount_directory}",
-      "sudo docker run --restart=always --name wordpress-docker -e WORDPRESS_DB_USER=${aws_db_instance.rds_master.username} -e WORDPRESS_DB_HOST=${aws_db_instance.rds_master.endpoint} -e WORDPRESS_DB_PASSWORD=${aws_db_instance.rds_master.password} -e WORDPRESS_DB_NAME=${aws_db_instance.rds_master.db_name} -v ${var.mount_directory}:${var.mount_directory} -p 80:80 -d wordpress",
-    ]
-  }
+resource "aws_efs_file_system" "efs_volume" {
+  creation_token = "efs_volume"
 }
-```
 
-Additionally, we replace the reference to the previous EC2 instances with the Auto Scaling Group in the following data block
+resource "aws_efs_mount_target" "efs_mount_target_1" {
+  file_system_id  = aws_efs_file_system.efs_volume.id
+  subnet_id       = aws_subnet.ec2_1_public_subnet.id
+  security_groups = [aws_security_group.efs_sg.id]
+}
 
-```terraform
-data "aws_instances" "production_instances" {
-  instance_tags = {
-    "Name" = "production-instance"
-  }
-  depends_on = [
-    aws_autoscaling_group.asg
-  ]
+resource "aws_efs_mount_target" "efs_mount_target_2" {
+  file_system_id  = aws_efs_file_system.efs_volume.id
+  subnet_id       = aws_subnet.ec2_2_public_subnet.id
+  security_groups = [aws_security_group.efs_sg.id]
+}
+
+resource "aws_efs_mount_target" "efs_mount_target_3" {
+  file_system_id  = aws_efs_file_system.efs_volume.id
+  subnet_id       = aws_subnet.ec2_3_public_subnet.id
+  security_groups = [aws_security_group.efs_sg.id]
 }
 ```
 
 ## Creating IAM Role for EC2 Instances
 
-In this section, we will create an **IAM role** to allow our WordPress application running on EC2 instances to securely access the S3 bucket. This **IAM role** will have the necessary permissions to perform actions such as `Get`, `List`, `GetObject`, and `PutObject` on all S3 resources.
+In this section, we will create an IAM role that allows our WordPress application running on EC2 instances to securely access the S3 bucket. This IAM role will have the necessary permissions to perform actions such as `ListAllMyBuckets`, `GetObject`, and `PutObject` on specific S3 resources.
 
 ### Step 1: Creating IAM Policy for S3 Access
 
-First, we define an **IAM policy** resource to specify the permissions required for the EC2 instances to interact with the S3 bucket securely
+First, let's modify the **IAM policy** resource to specify the more specific permissions required for the EC2 instances to interact with the S3 bucket securely.
 
 ```terraform
 resource "aws_iam_policy" "ec2_wordpress_policy" {
@@ -234,20 +232,37 @@ resource "aws_iam_policy" "ec2_wordpress_policy" {
     Version = "2012-10-17"
     Statement = [
       {
-        Effect = "Allow"
-        Action = "*"
+        Effect   = "Allow"
+        Action   = "s3:ListAllMyBuckets"
         Resource = "*"
-      }
+      },
+      {
+        Effect   = "Allow"
+        Action   = "s3:*"
+        Resource = "arn:aws:s3:::${var.bucket_name}"
+      },
+      {
+        Effect   = "Allow"
+        Action   = "s3:*"
+        Resource = "arn:aws:s3:::${var.bucket_name}/*"
+      },
     ]
   })
 }
 ```
 
-In this resource, we specify a policy document that allows the listed actions on all S3 resources `Resource = "*"` to enable read and write access. This policy includes permissions for `GetObject` to read objects and `PutObject` to upload objects, as well as more generalized `Get*` and `List*` actions for various S3 operations.
+In this IAM policy, we have specified three statements:
+
+1. The first statement allows the EC2 instances to list all S3 buckets (`s3:ListAllMyBuckets`) on any resource (`Resource = "*"`).
+
+2. The second statement allows the EC2 instances to perform any S3 action (`s3:*`) on the specific S3 bucket with the ARN `arn:aws:s3:::${var.bucket_name}`. The variable `var.bucket_name` refers to the name of the S3 bucket you have specified in your Terraform configuration.
+
+3. The third statement allows the EC2 instances to perform any S3 action (`s3:*`) on any object within the specified S3 bucket (`Resource = "arn:aws:s3:::${var.bucket_name}/*"`).
+
 
 ### Step 2: Creating IAM Role for EC2 Instances
 
-Next, we create the IAM role that will be associated with the EC2 instances
+Next, let's create the IAM role that will be associated with the EC2 instances.
 
 ```terraform
 resource "aws_iam_role" "ec2_wordpress_role" {
@@ -268,11 +283,11 @@ resource "aws_iam_role" "ec2_wordpress_role" {
 }
 ```
 
-In this resource, we define an IAM role named `ec2_wordpress_role` with the `assume_role_policy`, which grants permission to EC2 instances to assume this role. The policy allows EC2 instances to act as the role for the purpose of accessing other AWS resources.
+In this updated IAM role resource, we have added specific permissions to the assume role policy, which grants permission to EC2 instances to assume this role. The policy allows EC2 instances to act as the role for the purpose of accessing other AWS resources.
 
 ### Step 3: Attaching IAM Policy to IAM Role
 
-Now, we attach the previously created IAM policy to the IAM role
+Now, let's attach the previously created IAM policy to the IAM role.
 
 ```terraform
 resource "aws_iam_role_policy_attachment" "ec2_wordpress_policy_attachment" {
@@ -281,11 +296,11 @@ resource "aws_iam_role_policy_attachment" "ec2_wordpress_policy_attachment" {
 }
 ```
 
-In this resource, we specify that the IAM policy with ARN `aws_iam_policy.ec2_wordpress_policy.arn` is attached to the IAM role `aws_iam_role.ec2_wordpress_role.name`. This attachment associates the permissions defined in the IAM policy with the IAM role.
+In this step, we associate the IAM policy with ARN `aws_iam_policy.ec2_wordpress_policy.arn` to the IAM role named `aws_iam_role.ec2_wordpress_role.name`. This attachment ensures that the permissions defined in the IAM policy are now associated with the IAM role.
 
 ### Step 4: Creating IAM Instance Profile for EC2 Instances
 
-Finally, we create an IAM instance profile, which allows us to associate the IAM role with EC2 instances
+Finally, let's create an IAM instance profile, which allows us to associate the IAM role with EC2 instances.
 
 ```terraform
 resource "aws_iam_instance_profile" "ec2_wordpress_instance_profile" {
@@ -294,9 +309,13 @@ resource "aws_iam_instance_profile" "ec2_wordpress_instance_profile" {
 }
 ```
 
+In this step, we create an instance profile named `ec2_wordpress_instance_profile` and associate it with the IAM role `aws_iam_role.ec2_wordpress_role.name`. This instance profile allows our EC2 instances to assume the IAM role, granting them the necessary permissions to interact securely with the S3 bucket.
+
+With these changes, our EC2 instances will now have the required permissions to access the specified S3 bucket securely, ensuring smooth functioning of our WordPress application.
+
 ## Creating S3 Bucket and CloudFront distribution
 
-In this section, we will create an **S3 bucket** to store the media files of the WordPress application and set up a **CloudFront distribution** to cache and serve these assets globally, providing improved performance and reduced latency for users.
+In this section, I will create an **S3 bucket** to store the media files of the WordPress application and set up a **CloudFront distribution** to cache and serve these assets globally, providing improved performance and reduced latency for users.
 
 Before starting add these two variables in your `variables.tf` file
 
@@ -314,7 +333,7 @@ variable "s3_origin_id" {
 
 ### Step 1: Creating the S3 Bucket
 
-First, we define an S3 bucket resource using Terraform to store the media files of the WordPress application:
+First, I define an S3 bucket resource using Terraform to store the media files of the WordPress application:
 
 ```terraform
 resource "aws_s3_bucket" "wordpress_files_bucket" {
@@ -325,11 +344,11 @@ resource "aws_s3_bucket" "wordpress_files_bucket" {
 }
 ```
 
-In this resource, we specify the desired bucket name as the value of the variable `var.bucket_name`. We also add a tag to the bucket for better identification.
+In this resource, I specify the desired bucket name as the value of the variable `var.bucket_name`. I also add a tag to the bucket for better identification.
 
 ### Step 2: Configuring CloudFront Origin Access Control
 
-Next, we configure the **CloudFront Origin Access Control (OAC)** to manage access to the S3 bucket:
+Next, I configure the **CloudFront Origin Access Control (OAC)** to manage access to the S3 bucket:
 
 ```terraform
 locals {
@@ -345,11 +364,11 @@ resource "aws_cloudfront_origin_access_control" "my_origin" {
 }
 ```
 
-The `aws_cloudfront_origin_access_control` resource defines access control settings for the S3 bucket as an origin. We set the `signing_behavior` and `signing_protocol` to **always** and **sigv4,** respectively, to enforce the use of AWS Signature Version 4 for all requests made to the CloudFront distribution.
+The `aws_cloudfront_origin_access_control` resource defines access control settings for the S3 bucket as an origin. I set the `signing_behavior` and `signing_protocol` to **always** and **sigv4,** respectively, to enforce the use of AWS Signature Version 4 for all requests made to the CloudFront distribution.
 
 ### Step 3: Creating CloudFront Distribution
 
-Now, we create the CloudFront distribution that will cache and serve the media files stored in the S3 bucket:
+Now, I create the CloudFront distribution that will cache and serve the media files stored in the S3 bucket:
 
 ```terraform
 data "aws_cloudfront_cache_policy" "cache-optimized" {
@@ -361,6 +380,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     domain_name              = aws_s3_bucket.wordpress_files_bucket.bucket_regional_domain_name
     origin_access_control_id = aws_cloudfront_origin_access_control.my_origin.id
     origin_id                = local.s3_origin_id
+
   }
 
   enabled         = true
@@ -393,15 +413,15 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 }
 ```
 
-In this resource, we define the CloudFront distribution and specify the S3 bucket as the origin to be associated with the distribution. The `cache_policy_id` refers to the managed caching policy named **Managed-CachingOptimized,** which optimizes cache behavior for better performance.
+In this resource, I define the CloudFront distribution and specify the S3 bucket as the origin to be associated with the distribution. The `cache_policy_id` refers to the managed caching policy named **Managed-CachingOptimized,** which optimizes cache behavior for better performance.
 
-We also set the `default_cache_behavior` to cache the allowed HTTP methods and define caching TTLs (time-to-live) for the assets. The `viewer_protocol_policy` is set to **allow-all** to allow both HTTP and HTTPS access.
+I also set the `default_cache_behavior` to cache the allowed HTTP methods and define caching TTLs (time-to-live) for the assets. The `viewer_protocol_policy` is set to **allow-all** to allow both HTTP and HTTPS access.
 
-Additionally, we specify the CloudFront distribution to use the default SSL/TLS certificate provided by AWS (`cloudfront_default_certificate = true`) for secure connections.
+Additionally, I specify the CloudFront distribution to use the default SSL/TLS certificate provided by AWS (`cloudfront_default_certificate = true`) for secure connections.
 
 ### Step 4: Configuring S3 Bucket Policy for CloudFront Access
 
-Finally, we create an **S3 bucket policy to allow CloudFront access to the bucket**
+Finally, I create an **S3 bucket policy to allow CloudFront access to the bucket**
 
 ```terraform
 data "aws_iam_policy_document" "s3_policy" {
@@ -427,7 +447,7 @@ resource "aws_s3_bucket_policy" "mybucket" {
 }
 ```
 
-In this step, we define an IAM policy document that allows CloudFront service principal (`cloudfront.amazonaws.com`) to access the S3 bucket's objects. The policy uses the `aws_s3_bucket.wordpress_files_bucket.arn` and the `aws_cloudfront_distribution.s3_distribution.arn` as resources to specify the S3 bucket and CloudFront distribution as the allowed sources.
+In this step, I define an IAM policy document that allows CloudFront service principal (`cloudfront.amazonaws.com`) to access the S3 bucket's objects. The policy uses the `aws_s3_bucket.wordpress_files_bucket.arn` and the `aws_cloudfront_distribution.s3_distribution.arn` as resources to specify the S3 bucket and CloudFront distribution as the allowed sources.
 
 Finally, we apply the defined S3 bucket policy using the `aws_s3_bucket_policy` resource.
 
@@ -454,17 +474,11 @@ terraform apply --auto-approve
 
 ## Configuring WordPress to Use IAM Role for S3 Access
 
-In this section, we will configure the `wp-config.php` file of our WordPress installation to utilize the IAM role we previously created. This will allow WordPress to securely access the S3 bucket. 
+In this section, I will configure the `wp-config.php` file of our WordPress installation to utilize the IAM role I previously created. This will allow WordPress to securely access the S3 bucket. 
 
 ### Step 1: Connect to EC2 Instance via SSH
 
-To configure the `wp-config.php` file, we will first connect to one of the EC2 instances created by the Auto Scaling Group using SSH. After having deployed your infrastructure you'll see `aws_access_key.pem` in your terraform directory you'll use it as private key for the SSH connection
-
-![private-key](./images/private-key.png)
-
-```bash
-ssh -i /path/to/aws_access_key.pem ec2-user@<Public-IP-of-EC2>
-```
+To configure the `wp-config.php` file, you can use one of the available methods to connect to one of the EC2 instances created by the Auto Scaling Group using SSH. One common method is using an SSH client that I will use
 
 ![ssh-connection](./images/ssh-connection.png)
 
@@ -498,7 +512,7 @@ Save the changes and exit the file.
 
 ### Step 1: Accessing WordPress via Load Balancer URL
 
-Now that we have configured the `wp-config.php` file, access your WordPress website using the URL provided by the **Load Balancer**. This URL should point to your WordPress application hosted on the EC2 instances.
+Now that I have configured the `wp-config.php` file, access your WordPress website using the URL provided by the **Load Balancer**. This URL should point to your WordPress application hosted on the EC2 instances.
 
 ![application](./images/application.png)
 

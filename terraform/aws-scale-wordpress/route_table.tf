@@ -21,3 +21,9 @@ resource "aws_route_table_association" "route-ec2-2-subnet-to-igw" {
   subnet_id      = aws_subnet.ec2_2_public_subnet.id
   route_table_id = aws_route_table.infrastructure_route_table.id
 }
+
+# attach ec2 3 subnet to an internet gateway
+resource "aws_route_table_association" "route-ec2-3-subnet-to-igw" {
+  subnet_id      = aws_subnet.ec2_3_public_subnet.id
+  route_table_id = aws_route_table.infrastructure_route_table.id
+}

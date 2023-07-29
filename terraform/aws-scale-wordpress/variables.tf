@@ -21,17 +21,17 @@ variable "db_password" {
 
 variable "instance_type" {
   type    = string
-  default = "t2.micro"
+  default = "t3.micro"
 }
 
 variable "ami" {
   type    = string
-  default = "ami-0cbfa6bba4589dcbb"
+  default = "ami-053482eb0c86d0d7c"
 }
 
 variable "availability_zone" {
   type    = list(string)
-  default = ["ca-central-1a", "ca-central-1b", "ca-central-1d"]
+  default = ["eu-north-1a", "eu-north-1b", "eu-north-1c"]
 }
 
 variable "vpc_cidr" {
@@ -50,10 +50,9 @@ variable "target_application_port" {
   default = "80"
 }
 
-variable "private_key_location" {
-  description = "Location of the private key"
-  type        = string
-  default     = "aws_access_key.pem"
+variable "key_name" {
+  type    = string
+  default = "kemane"
 }
 
 variable "mount_directory" {

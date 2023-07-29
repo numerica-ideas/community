@@ -1,8 +1,9 @@
 resource "aws_launch_template" "instances_configuration" {
   name_prefix            = "asg-instance"
   image_id               = var.ami
-  key_name               = aws_key_pair.aws_ec2_access_key.id
+  key_name               = var.key_name
   instance_type          = var.instance_type
+  user_data              = base64encode(templatefile("install_script.tpl", { efs_volume_id = aws_efs_file_system.efs_volume.id, db_name = aws_db_instance.rds_master.db_name, mount_directory = var.mount_directory, dbuser = aws_db_instance.rds_master.username, dbendpoint = aws_db_instance.rds_master.endpoint, dbpassword = aws_db_instance.rds_master.password }))
   vpc_security_group_ids = [aws_security_group.production-instance-sg.id]
 
   iam_instance_profile {
@@ -21,12 +22,12 @@ resource "aws_launch_template" "instances_configuration" {
 
 resource "aws_autoscaling_group" "asg" {
   name                      = "asg"
-  min_size                  = 2
-  max_size                  = 4
-  desired_capacity          = 2
+  min_size                  = 3
+  max_size                  = 6
+  desired_capacity          = 3
   health_check_grace_period = 150
   health_check_type         = "ELB"
-  vpc_zone_identifier       = [aws_subnet.ec2_1_public_subnet.id, aws_subnet.ec2_2_public_subnet.id]
+  vpc_zone_identifier       = [aws_subnet.ec2_1_public_subnet.id, aws_subnet.ec2_2_public_subnet.id, aws_subnet.ec2_3_public_subnet.id]
   launch_template {
     id      = aws_launch_template.instances_configuration.id
     version = "$Latest"
@@ -90,20 +91,20 @@ resource "aws_db_instance" "rds_master" {
   }
 }
 
-resource "aws_db_instance" "rds_replica" {
-  replicate_source_db    = aws_db_instance.rds_master.identifier
-  instance_class         = "db.t3.micro"
-  identifier             = "replica-rds-instance"
-  allocated_storage      = 10
-  skip_final_snapshot    = true
-  multi_az               = false
-  availability_zone      = var.availability_zone[0]
-  vpc_security_group_ids = [aws_security_group.database-sg.id]
-  storage_encrypted      = true
+# resource "aws_db_instance" "rds_replica" {
+#   replicate_source_db    = aws_db_instance.rds_master.identifier
+#   instance_class         = "db.t3.micro"
+#   identifier             = "replica-rds-instance"
+#   allocated_storage      = 10
+#   skip_final_snapshot    = true
+#   multi_az               = false
+#   availability_zone      = var.availability_zone[0]
+#   vpc_security_group_ids = [aws_security_group.database-sg.id]
+#   storage_encrypted      = true
 
-  tags = {
-    Name = "my-rds-replica"
-  }
-
-}
+#   tags = {
+#     Name = "my-rds-replica"
+#   }
+# 
+# }
 
