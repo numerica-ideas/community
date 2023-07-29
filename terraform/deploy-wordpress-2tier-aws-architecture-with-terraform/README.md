@@ -10,6 +10,8 @@ By following this guide, you'll establish a reliable infrastructure that optimiz
 
 [![FeaturedImage](./images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
+The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+
 ## What is Terraform?
 
 [**Terraform**](https://youtu.be/tJ6L1332WU4) is an open-source tool by [**HashiCorp**](https://www.hashicorp.com/) for automated IT infrastructure management. It enables you to create, modify, and delete cloud resources declaratively. With **Terraform**, infrastructure is described in configuration files, simplifying its management as code. It supports multiple cloud providers and offers automation and flexibility for deploying and managing your cloud infrastructure.
@@ -20,7 +22,7 @@ Here are some **advantages** of Terraform:
 - **Modularity**: Terraform allows the definition of reusable infrastructure modules, facilitating the creation of complex and scalable architectures and promoting best practice sharing.
 - **Dependency Management**: Terraform handles dependencies between resources, ensuring consistent updates and simplifying the management of interconnected infrastructures.
 
-In case you aren't familiar with Terraform yet, we have an introduction [video tutorial](https://youtu.be/tJ6L1332WU4) along with a demo available on YouTube:
+In case you aren't familiar with this IaC tool yet, there is an [Introduction to Terraform video tutorial](https://youtu.be/tJ6L1332WU4) along with a demo available on YouTube:
 
 [![TerraformWorkflow](images/terraform-introduction.png)](https://youtu.be/tJ6L1332WU4)
 
@@ -682,4 +684,5 @@ To conclude, deploying WordPress on a 2-Tier AWS architecture with Terraform off
 
 However, it is important to emphasize the significance of conducting thorough research and due diligence when selecting the appropriate AWS services and configurations for your specific requirements. Ensuring high availability, fault tolerance, and security should be prioritized during the deployment process.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+

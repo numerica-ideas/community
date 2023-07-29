@@ -7,6 +7,8 @@ A scalable system is one that has the ability to adapt itself by providing more 
 
 [![FeaturedImage](./images/scalability-types.png)](https://blog.numericaideas.com/scalability-types)
 
+The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+
 ## Scalability Types
 There’s no single way to make a system scale, sometimes it’s done by offloading some tasks to other threads, but in this section, we’ll focus on the main **Scalability Types** applied to IT systems, which are the **vertical** and the **horizontal** approaches, respectively referred to as scaling **UP** and scaling **OUT**.
 
@@ -58,4 +60,5 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ## Conclusion
 This article highlighted the different types of **Scalability Types**, and their particularities as well as pointing out what the possibilities are in terms of services while using public Clouds like Amazon Web Services, Microsoft Azure, or Google Cloud Platform.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+

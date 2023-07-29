@@ -99,4 +99,5 @@ If the **Cloud** is of interest to you this [video](https://youtu.be/0II0ikOZEYE
 ## Conclusion
 Configuring **AWS CLI** is an essential step for interacting with AWS services using the command-line interface. By following the steps outlined in this article, you can successfully configure AWS CLI for many accounts on your machine and start using it to interact with AWS services.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+

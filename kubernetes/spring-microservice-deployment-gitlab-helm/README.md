@@ -9,6 +9,8 @@ In today's fast-paced software development environment, it is essential to deplo
 
 [![FeaturedImage](./images/SpringBoot_Microservices_App_Deployment_to_kubernetes_with_Helm_via_GitLab_CI.png)](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci)
 
+The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+
 ## Prerequisites
 To perform this demo, you will need to have the following prerequisites:
 - **A Kubernetes cluster** : You can use an existing Kubernetes cluster or create a new one on a cloud provider such as Google Cloud, Amazon Web Services or Microsoft Azure.
@@ -290,4 +292,5 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 To sum up, we discussed the benefits of using **Helm** with **Kubernetes** to automate the deployment of **microservices**. It provides steps to set up a **CI/CD** pipeline using **GitLab CI** and Helm, allowing for efficient deployment of applications and increased productivity. By utilizing these technologies, developers can focus on coding, and automation can handle the rest, resulting in a reliable and scalable solution for deploying microservices in a modern software development environment.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+
