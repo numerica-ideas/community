@@ -214,4 +214,5 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ## Conclusion
 Dockerizing a Spring Boot application with MySQL using Docker and Docker Compose simplifies the deployment process, improves portability, and enables scalability. By following the steps outlined in this guide, you can package your Spring Boot application and MySQL database into separate containers and deploy them as a cohesive application stack. With Docker, you can achieve consistent application execution across different environments, easily scale your application, and simplify version control. Docker Compose streamlines the management of multi-container applications, allowing you to define, configure, and deploy complex systems effortlessly.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+
