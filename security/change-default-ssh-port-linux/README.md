@@ -15,12 +15,12 @@ The internet is a big open space with plenty of possibilities, not only for good
 By default, SSH listens on port **22**, but changing the default port to a non-standard one can enhance security by making it harder for malicious actors to target the SSH service by brute-forcing or any other method.
 
 ## How to Change SSH Port on Linux
-In this section is unveiled a step-by-step guide to change the SSH port for Linux systems.
+In this section is unveiled a step-by-step guide to changing the SSH port for Linux systems.
 
 ### Step 1: Accessing the Terminal
 To begin the process, you need to access the terminal on your Linux system. You can do this by opening the Terminal application if you're logged in already, or by using a remote terminal via an existing SSH connection as below.
 
-For the sake of the example, we spinned up an Ubuntu virtual server instance, then we successfully connected ourself via the command:
+For the sake of the example, we spun up an Ubuntu virtual server instance, then we successfully connected ourselves via the command:
 
 ```bash
 ssh username@your_server_ip
@@ -49,7 +49,7 @@ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
 ```
 
 ### Step 4: Edit the SSH Configuration File
-Next, you'll need to modify the SSH configuration file to specify the new port. Open the file using a text editor like nano or vim:
+Next, you'll need to modify the SSH configuration file to specify the new port. Open the file using a text editor like Nano or Vim:
 
 ```bash
 sudo nano /etc/ssh/sshd_config
@@ -70,7 +70,7 @@ Port 48329
 Replace **48329** with your preferred port number, don't put in something trivial like 22222.
 
 ### Step 5: Save and Exit
-After making the changes, save the file and exit the text editor. In nano, you can do this by pressing `CTRL + O` followed by `ENTER` to save, and then `CTRL + X` to exit.
+After making the changes, save the file and exit the text editor. In Nano, you can do this by pressing `CTRL + O` followed by `ENTER` to save, and then `CTRL + X` to exit.
 
 ### Step 6: Restart the SSH Service
 To apply the changes, you need to restart the SSH service:
