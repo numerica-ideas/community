@@ -2,6 +2,7 @@
 
 - [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](../kubernetes/springboot-docker-kubernetes-setup)
 - [Dockerize Spring Boot and MySQL with Docker Compose](./docker-compose-springboot-mysql)
+- [Docker Init: Quickly Dockerizing NodeJS Application](./quickly-dockerizing-nodejs)
 
 Click [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) to subscribe to our **YouTube channels (En & Fr)** and be notified about future Workshops and Events.
 
