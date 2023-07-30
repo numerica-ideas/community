@@ -233,7 +233,7 @@ For a production grade application, the way to provide these variables could dif
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/kubernetes/springboot-docker-kubernetes-setup).
 
-If you are interested in a related content, take a look at the following which explains how to Dockerize a [Spring Boot Application with MySQL](https://blog.numericaideas.com/docker-compose-springboot-mysql):
+If you are interested in related content, take a look at the following which explains how to Dockerize a [Spring Boot Application with MySQL](https://blog.numericaideas.com/docker-compose-springboot-mysql):
 
 [![DockerizeSpringBootApplicationWithMySQL](../../docker/docker-compose-springboot-mysql/images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
 
