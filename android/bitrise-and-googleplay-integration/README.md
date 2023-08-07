@@ -21,8 +21,6 @@ Applications use Service Accounts to make authorized API calls by authenticating
 6. Select **Browser** as the role for the Service Account.
 ![Service Account Select Role](./images/service_account_select_role.png)
 7. Keep the 3rd step as it is and click **Done** to finish creating the service account.
-
-
 ### Create Private Key for Service Account 
 After creating the Service Account, you will be redirected to the [list](https://console.cloud.google.com/iam-admin/serviceaccounts) of all Service Accounts.
 
@@ -32,7 +30,41 @@ After creating the Service Account, you will be redirected to the [list](https:/
 Keep this file safe as it will be needed later when configuring **Bitrise** settings.
 ## Setting up Google Play Console
 
+### Add an app in Playstore
+*If you already have an android app setup on Google Play Store, you may skip this step.*
+
+Before we connect our **Service Account**, we need to create and setup our Android app.
+1. Create and fill in a **Play Store listing**.
+2. Declare **Privacy Policy** and **App Content**.
+3. Generate and upload Signed APK bundle.
+
+### Connect Google Play to Service Account
+
+1. Go to [API Access](https://play.google.com/console/u/developers/api-access) page.
+2. Scroll down to **Service Accounts** section. Click on **Manage Play Console Permissions** button for your Service Account.
+![Manage Google Play Service Accounts](./images/google_play_manage_service_account.png)
+3. In the Invite user window, the Email address field is pre-filled. Do not change it.
+4. Make sure the second option **View app information and download bulk reports (read-only)** is checked under API Access.
+5. Click **Invite User** button at the bottom-right.
+![Google Play Invite User](./images/google_play_invite_service_account_user.png)
+You have successfully prepared your Google Play Console project. A services credential account has been created which is authorized to manage your releases.
+
+
 ## Setting up Bitrise Workflow
+
+### Managing Release Notes
+Before we can publish a release to **Google Play Store**, we need to provide **Release Notes** for the new update. **Bitrise** provides utility step just for that. 
+1. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard) and select your Android app.
+2. Click on **Edit workflow**. 
+3. Add **Release notes extractor** step after **Git Clone Repository** step. 
+![Bitrise Add Release Notes Step](./images/bitrise_release_notes_step.png)
+4. Specify the changelog file path. We will be using the default path and name i.e *CHANGELOG.md*
+![Configure Release Notes Step](./images/bitrise_configure_release_notes_extractor.png)
+5. Now we need to add *CHANGELOG.md* to our root project directory.
+![Android Studio Add Changelog File](./images/android_studio_Add_changelog_file.png)
+6. The format of  *CHANGELOG.md* should match the standards from [KeepaChangeLog](keepachangelog.com). You can find the format explanation in the following demo file.
+![Android Studio Change Log Guide](./images/android_studio_change_log_guide.png)
+7. Finally push all the changes to Git Remote for Bitrise to read *CHANGELOG.md*.
 ### Adding Service Account JSON
 1. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard) and select your Android app.
 2. Click on **Edit workflow**. 
