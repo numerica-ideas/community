@@ -4,11 +4,48 @@
 
 In today's article, we will explore the **scalability** possibilities of deploying WordPress on AWS. Building upon our previous article on **deploying WordPress on a 2-Tier AWS architecture with Terraform**, we will focus on utilizing the `Auto Scaling Group (ASG)` feature, along with leveraging `Amazon S3` for media storage and `CloudFront` for **caching**. These enhancements will enable us to scale our WordPress deployment effectively and handle increasing traffic demands. So let's dive in!
 
-![architecture diagram](./images/Deploy%20WordPress%20on%20a%202-Tier%20AWS%20Architecture%20with%20Terraform.png)
+![architecture diagram](./images/AWS%20Scale%20WordPress%20on%20a%202-Tier%20AWS%20Architecture%20with%20Terraform.png)
 
 If you haven't read the previous article, **Deploying WordPress on a 2-Tier AWS Architecture with Terraform**, I highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
 [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
+
+## Scalability Architecture
+
+When architecting a scalable WordPress deployment on AWS, there are several techniques we can leverage
+
+![architecture diagram](./images/AWS%20Scale%20WordPress%20on%20a%202-Tier%20AWS%20Architecture.png)
+
+
+### Horizontal Scaling with Auto Scaling Groups
+
+**Auto Scaling Groups** allow us to `automatically scale the number of EC2 instances` powering our WordPress site up or down based on demand. This enables horizontal scaling to handle varying traffic loads.
+
+By defining automatic **scaling policies**, we can ensure that the capacity of our WordPress fleet **grows** or **shrinks** based on metrics like `CPU utilization`. This results in high availability and cost savings compared to fixed EC2 capacity.
+
+Auto Scaling Groups also provide automated health checks and instance replacement, adding self-healing capabilities.
+
+### Optimized Media Delivery with S3 and CloudFront 
+
+Offloading static media assets like images, videos, and files to an S3 bucket can reduce load and storage pressure on the WordPress application servers.
+
+Serving these objects through a global CDN like CloudFront lowers latency by caching content at edge locations closer to end users. CloudFront also reduces origin requests to S3.
+
+This optimized media delivery architecture decreases costs and improves performance.
+
+### Shared Storage with EFS
+
+Using Elastic File System (EFS) allows WordPress instances in the Auto Scaling Group to share files and data. 
+
+EFS provides a scalable, high performance NFS file system that can be concurrently accessed from multiple EC2 instances.
+
+This shared file storage is critical for scaling WordPress horizontally, ensuring common files like plugins, themes, and uploads are available across the fleet.
+
+### Read Replicas for RDS
+
+We can provision Read Replicas for our RDS database to reduce load on the primary instance. Queries like read-heavy reporting can be directed to the replicas.
+
+Read Replicas enable horizontally scaling database reads for high availability. 
 
 ## Prerequisites
 
@@ -21,7 +58,7 @@ Before we proceed with scaling our WordPress deployment on AWS, make sure you ha
 
 **Auto Scaling Group (ASG)** is a powerful AWS feature that allows you to automatically adjust the number of instances in your application fleet based on demand. By using ASG, we can ensure our WordPress deployment can **scale horizontally** to handle varying loads.
 
-In this section, I will explain the modifications made to the existing Terraform files to incorporate ASG into our WordPress deployment.
+In this section, we'll explain the modifications made to the existing Terraform files to incorporate ASG into our WordPress deployment.
 
 If you would like to delve deeper into the concept of Auto Scaling Group and its benefits, I have a dedicated article that covers it in detail. It provides valuable insights into how ASG works, and its configuration options.
 [**Auto Scaling Group in AWS**](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
@@ -77,7 +114,7 @@ resource "aws_launch_template" "instances_configuration" {
 }
 ```
 
-In the same `main.tf` file, I will create the Autoscaling Group `aws_autoscaling_group` resource. The ASG will be responsible for managing the number of instances and ensuring they match the desired capacity.
+In the same `main.tf` file, we'll create the Autoscaling Group `aws_autoscaling_group` resource. The ASG will be responsible for managing the number of instances and ensuring they match the desired capacity.
 
 ```terraform
 resource "aws_autoscaling_group" "asg" {
@@ -315,7 +352,7 @@ With these changes, our EC2 instances will now have the required permissions to 
 
 ## Creating S3 Bucket and CloudFront distribution
 
-In this section, I will create an **S3 bucket** to store the media files of the WordPress application and set up a **CloudFront distribution** to cache and serve these assets globally, providing improved performance and reduced latency for users.
+In this section, we'll create an **S3 bucket** to store the media files of the WordPress application and set up a **CloudFront distribution** to cache and serve these assets globally, providing improved performance and reduced latency for users.
 
 Before starting add these two variables in your `variables.tf` file
 
@@ -474,11 +511,11 @@ terraform apply --auto-approve
 
 ## Configuring WordPress to Use IAM Role for S3 Access
 
-In this section, I will configure the `wp-config.php` file of our WordPress installation to utilize the IAM role I previously created. This will allow WordPress to securely access the S3 bucket. 
+In this section, we'll configure the `wp-config.php` file of our WordPress installation to utilize the IAM role I previously created. This will allow WordPress to securely access the S3 bucket. 
 
 ### Step 1: Connect to EC2 Instance via SSH
 
-To configure the `wp-config.php` file, you can use one of the available methods to connect to one of the EC2 instances created by the Auto Scaling Group using SSH. One common method is using an SSH client that I will use
+To configure the `wp-config.php` file, you can use one of the available methods to connect to one of the EC2 instances created by the Auto Scaling Group using SSH. One common method is using an SSH client that we'll use
 
 ![ssh-connection](./images/ssh-connection.png)
 
