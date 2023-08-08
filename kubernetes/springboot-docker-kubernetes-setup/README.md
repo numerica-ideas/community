@@ -1,13 +1,13 @@
 # Deploying a Spring Boot App with Docker in a Kubernetes Cluster&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fkubernetes%2Fspringboot-docker-kubernetes-setup&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
 
-**The article**: https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes
+**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes
 
 ## Introduction
 In the modern application ecosystem, it is becoming increasingly common to use technologies like **Docker** and **Kubernetes** to deploy applications in an efficient and scalable manner. By using Docker to **containerize** applications and Kubernetes to **orchestrate** them, developers can easily manage and deploy applications at scale.
 
 The following lines will clearly differentiate between **containerized and orchestration** terms in a beginner-friendly way along with a practical sample using **Java** programming language.
 
-[![DockerImage](./Dockerized-Spring-Boot-Deployment-in-K8s-Cluster.png)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
+[![DockerImage](./images/Dockerized-Spring-Boot-Deployment-in-K8s-Cluster.png)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
 
 Moving to the following sections, we assume that you have **Java (OpenJDK 11), Docker, and Kubernetes** properly installed on your computer.
 
@@ -24,7 +24,7 @@ Once the Dockerfile is created, you can build the container image using the `doc
 
 ## Kubernetes
 
-[Kubernetes](https://kubernetes.io/) aka **k8s** is an open-source container orchestration tool, it allows you to manage containers' clusters using concepts such as pods, replicasets, and deployments. **Pods** are groups of containers that work together to run an application, while **Replicasets** ensure that the number of running pods matches the number specified in the configuration, in the other hand **Deployments** manage application updates by defining scaling and rollback policies. Kubernetes also provides high availability, load balancing, and monitoring capabilities.
+[Kubernetes](https://kubernetes.io/) aka **k8s** is an open-source container orchestration tool, it allows you to manage containers' clusters using concepts such as pods, replicasets, and deployments. **Pods** are groups of containers that work together to run an application, while **Replicasets** ensure that the number of running pods matches the number specified in the configuration, on the other hand, **Deployments** manage application updates by defining scaling and rollback policies. Kubernetes also provides high availability, load balancing, and monitoring capabilities.
 
 Kubernetes has several advantages for managing application containers, including:
 - **Scalability**: makes it easier to scale applications by increasing or decreasing the number of running pods in regard to the application's usage, also refers to as horizontal scaling.
@@ -231,14 +231,22 @@ spring.datasource.password=${DB_PASSWORD}
 
 For a production grade application, the way to provide these variables could differ but the general idea remains passing them to the App.
 
+The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/kubernetes/springboot-docker-kubernetes-setup).
+
+If you are interested in related content, take a look at the following which explains how to Dockerize a [Spring Boot Application with MySQL](https://blog.numericaideas.com/docker-compose-springboot-mysql):
+
+[![DockerizeSpringBootApplicationWithMySQL](../../docker/docker-compose-springboot-mysql/images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
+
 ———————
 
 We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
-Does this speak to you? If YES, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
 ———————
 
 ## Conclusion
 To summarize, Docker and Kubernetes are incredibly powerful and flexible tools for deploying containerized applications in clusters. Using these two tools together makes it possible to deploy applications efficiently, reliably, and in a productive manner by taking advantage of Docker's isolation and Kubernetes' clusters management. Having a good understanding of both in terms of features/concepts is a must to put them in a perfect symbiose.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+

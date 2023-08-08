@@ -1,0 +1,19 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservice-ecommerce?createDatabaseIfNotExist=true
+    username: root
+    password: kemane
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+

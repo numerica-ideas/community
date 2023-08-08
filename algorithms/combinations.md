@@ -6,6 +6,7 @@ This challenge comes from Leetcode, it's about finding all possible letter combi
 **Solution**: 
 The code provided below is a JavaScript implementation of the "combine" function, which generates all possible combinations of numbers from `1` to `n` with length `k`.
 
+
 **Sample Code**:
 ```javascript
 /**

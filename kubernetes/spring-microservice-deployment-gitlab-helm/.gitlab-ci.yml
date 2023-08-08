@@ -1,0 +1,54 @@
+variables:
+  GATEWAY_IMAGE_NAME: lugar2020/api-gateway
+  CONFIG_IMAGE_NAME: lugar2020/config-server
+  ORDER_IMAGE_NAME: lugar2020/order-service
+  PRODUCT_IMAGE_NAME: lugar2020/product-service
+  SALE_IMAGE_NAME: lugar2020/sale-service
+  REGISTRY_IMAGE_NAME: lugar2020/registry-service
+  USER_IMAGE_NAME: lugar2020/user-service
+ 
+stages:
+  - build_push_image
+  - deploy
+
+build_push_microservice_image:
+  stage: build_push_image
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_LOGIN --password-stdin
+  script: 
+    - docker build -t $GATEWAY_IMAGE_NAME ecommerce-api-gateway/.
+    - docker push $GATEWAY_IMAGE_NAME
+    - docker build -t $CONFIG_IMAGE_NAME ecommerce-config-server/.
+    - docker push $CONFIG_IMAGE_NAME
+    - docker build -t $ORDER_IMAGE_NAME ecommerce-product-service/.
+    - docker push $ORDER_IMAGE_NAME
+    - docker build -t $PRODUCT_IMAGE_NAME ecommerce-product-service/.
+    - docker push $PRODUCT_IMAGE_NAME
+    - docker build -t $SALE_IMAGE_NAME ecommerce-sale-service/.
+    - docker push $SALE_IMAGE_NAME
+    - docker build -t $REGISTRY_IMAGE_NAME ecommerce-service-registry/.
+    - docker push $REGISTRY_IMAGE_NAME
+    - docker build -t $USER_IMAGE_NAME ecommerce-user-service/.
+    - docker push $USER_IMAGE_NAME
+
+deploy_application:
+  stage: deploy
+  image: devth/helm:latest
+  before_script:
+    - cd helm/
+    - kubectl config get-contexts
+    - kubectl config use-context kemanedonfack/spring-microservice-deployment:k8s-cluster
+  script: 
+    - helm install mysqldb mysql
+    - helm install --set-string GIT_URL_CONFIG=$GIT_URL_CONFIG config config-server
+    - helm install --set-string SERVICE_REGISTRY=$SERVICE_REGISTRY registry registry-service
+    - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER gateway api-gateway
+    - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER order order-service
+    - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER product product-service
+    - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER sale sale-service
+    - helm install --set-string CONFIG_SERVER=$CONFIG_SERVER user user-service

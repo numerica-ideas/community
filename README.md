@@ -1,16 +1,29 @@
+<p align="center">
+  <a href="https://numericaideas.com">
+    <img src="https://s3.amazonaws.com/ni-ghost/2021/05/logo_numerica_ideas-1.png" width="318px" alt="NumericaIdeas Logo" />
+  </a>
+</p>
+
+<h3 align="center">TECH TOPICS TO SHARPEN YOUR CLOUD AND SOFTWARE ARCHITECTURE SKILLS</h3>
+<p align="center">No hour of life is wasted that is spent gaining invaluable skills</p>
+<p align="center">"DISCOVER, LEARN, BUILD, & SHARE" 🚀</p>
+<p align="center"><a href="https://blog.numericaideas.com">Blog</a> · <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1">YouTube</a> · <a href="https://discord.numericaideas.com">Discord</a></p>
+<br/>
+
 # Ni Community Activities&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com)
 
-[NumericaIdeas](https://numericaideas.com) is a technical community that creates opportunities for IT professionals, where you’ll secure your dream job, and indeed the group through which you can develop your hard and soft skills at your own pace. Our motto is **"Discover, Learn, Build, & Share"**.🚀
+[NumericaIdeas](https://numericaideas.com) is a technical community that creates opportunities for IT professionals, where you’ll secure your dream job, and indeed the group through which you can develop your hard and soft skills at your own pace.
 
 Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
 ## Social Media
 Multilingual (English & Français) presence on social media with the following accounts :eight_spoked_asterisk:
-- [Discord (EN | FR)](https://discord.numericaideas.com)
-- [YouTube (EN | FR)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
 - Twitter  : [EN](https://twitter.com/numericaideas) | [FR](https://twitter.com/NumericaIdeasFr)
 - Facebook : [EN](https://facebook.com/numericaideas) | [FR](https://facebook.com/NumericaIdeasFr)
 - LinkedIn : [EN](https://www.linkedin.com/company/numericaideas) | [FR](https://www.linkedin.com/company/numericaideas-fr)
+- [Discord (EN | FR)](https://discord.numericaideas.com)
+- [YouTube (EN | FR)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
+- [Newsletter (EN | FR)](https://blog.numericaideas.com/recap)
 
 ## Contribute
 There are a lot of **activities** that you can contribute to within the community, the idea is to help others grow while sharpening your hard and soft skills at the same time:
@@ -34,12 +47,15 @@ Your contributions are **precious** and some are [awarded](https://github.com/nu
 ## Tech Projects
 The articles, workshops, and other events **projects** are centralized in this repository:
 - [algorithms](./algorithms)
+- [android](./android)
 - [architecture](./architecture)
 - [aws](./aws)
 - [azure](./azure)
+- [cheatsheets](./cheatsheets)
 - [design](./design)
 - [docker](./docker)
 - [gcp](./gcp)
+- [ios](./ios)
 - [kubernetes](./kubernetes)
 - [security](./security)
 - [terraform](./terraform)
