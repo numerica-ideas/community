@@ -12,40 +12,40 @@ If you haven't read the previous article, **Deploying WordPress on a 2-Tier AWS 
 
 ## Scalability Architecture
 
-When architecting a scalable WordPress deployment on AWS, there are several techniques we can leverage
+When it comes to architecting a scalable WordPress deployment on AWS, there are several strategies at our disposal.
 
 ![architecture diagram](./images/AWS%20Scale%20WordPress%20on%20a%202-Tier%20AWS%20Architecture.png)
 
 
 ### Horizontal Scaling with Auto Scaling Groups
 
-**Auto Scaling Groups** allow us to `automatically scale the number of EC2 instances` powering our WordPress site up or down based on demand. This enables horizontal scaling to handle varying traffic loads.
+**Auto Scaling Groups** provide us with the means to dynamically adjust the number of EC2 instances that power our WordPress site in response to changing demand. This dynamic capability enables horizontal scaling, allowing us to efficiently manage varying traffic loads.
 
-By defining automatic **scaling policies**, we can ensure that the capacity of our WordPress fleet **grows** or **shrinks** based on metrics like `CPU utilization`. This results in high availability and cost savings compared to fixed EC2 capacity.
+By establishing automatic **scaling policies**, we ensure that the capacity of our WordPress fleet can automatically expand or contract based on performance metrics, such as `CPU utilization`. This approach leads to `high availability` and `cost efficiency`, as opposed to **maintaining a fixed number of EC2 instances**.
 
-Auto Scaling Groups also provide automated health checks and instance replacement, adding self-healing capabilities.
+Furthermore, Auto Scaling Groups offer built-in **health checks** and automatic instance replacement, contributing to a self-healing infrastructure.
 
 ### Optimized Media Delivery with S3 and CloudFront 
 
-Offloading static media assets like images, videos, and files to an S3 bucket can reduce load and storage pressure on the WordPress application servers.
+Transferring static media assets, such as images, videos, and files, to an **S3 bucket** not only relieves the load and storage pressure on the WordPress application servers but also enhances performance.
 
-Serving these objects through a global CDN like CloudFront lowers latency by caching content at edge locations closer to end users. CloudFront also reduces origin requests to S3.
+By leveraging a global **Content Delivery Network (CDN)** like `CloudFront`, we can minimize latency by **caching content closer** to end users at **edge locations**. This, in turn, reduces origin requests to the S3 bucket.
 
-This optimized media delivery architecture decreases costs and improves performance.
+This optimized media delivery setup results in lower costs and improved overall performance.
 
 ### Shared Storage with EFS
 
-Using Elastic File System (EFS) allows WordPress instances in the Auto Scaling Group to share files and data. 
+Employing **Elastic File System (EFS)** enables the WordPress instances within the Auto Scaling Group to seamlessly share files and data.
 
-EFS provides a scalable, high performance NFS file system that can be concurrently accessed from multiple EC2 instances.
+EFS offers a `scalable` and `high-performance Network File System (NFS)` that can be accessed concurrently by multiple EC2 instances.
 
-This shared file storage is critical for scaling WordPress horizontally, ensuring common files like plugins, themes, and uploads are available across the fleet.
+This shared file storage is pivotal for horizontal scaling of WordPress, ensuring that essential files such as `plugins`, `themes`, and uploads are consistently accessible across the entire fleet.
 
 ### Read Replicas for RDS
 
-We can provision Read Replicas for our RDS database to reduce load on the primary instance. Queries like read-heavy reporting can be directed to the replicas.
+We can take advantage of **Read Replicas** for our **RDS database** to alleviate the load on the primary instance. This is particularly useful for queries that involve extensive **reading**, such as `reporting tasks`.
 
-Read Replicas enable horizontally scaling database reads for high availability. 
+**Read Replicas** not only contribute to horizontally scaling database reads but also enhance overall database availability.
 
 ## Prerequisites
 
