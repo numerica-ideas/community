@@ -8,8 +8,8 @@ The source codes of the articles in this category are present in this [folder](.
 ## Related Articles
 - [Introduction to Terraform](./introduction)
 <!-- TAG-POSTS-LIST:START -->
-- [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](./deploy-wordpress-2tier-aws-architecture-with-terraform)
-- [Auto Scaling Group on AWS with Terraform](./auto-scaling-group-on-aws-with-terraform)
+- [Auto Scaling Group on AWS with Terraform](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform/)
+- [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
