@@ -7,7 +7,11 @@ All the community videos published on YouTube in **English** and **French** are 
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Videos in English      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
+- [Lift And Shift Cloud Migration of Spring Boot App Using AWS ElasticBeanstalk | Part 2 | Scalability](https://www.youtube.com/watch?v=KHOxmHL5USI)
+- [Lift And Shift Cloud Migration of Spring Boot App Using AWS ElasticBeanstalk | Part 1 | Deployment](https://www.youtube.com/watch?v=tWQFavEJQ7c)
 - [Important Cloud Computing Concepts in 8 minutes](https://www.youtube.com/watch?v=0II0ikOZEYE)
+- [Something new to be released soon!](https://www.youtube.com/watch?v=iTpM3Ue7qR8)
+- [Introduction to Terraform for Infrastructure Provisioning](https://www.youtube.com/watch?v=tJ6L1332WU4)
 <!-- ENGLISH-YOUTUBE-VIDEOS:END -->
  
 </td><td valign="top" width="50%">
