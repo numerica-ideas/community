@@ -88,6 +88,7 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [azure](./azure)
 - [cheatsheets](./cheatsheets)
 - [design](./design)
+- [devops](./devops)
 - [docker](./docker)
 - [gcp](./gcp)
 - [ios](./ios)
