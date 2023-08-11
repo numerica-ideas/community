@@ -14,6 +14,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
 - [Accelerate Android App Delivery via Bitrise CI/CD Pipelines](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines/)
 - [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform/)
+- [Lift And Shift Cloud Migration Manual for AWS ElasticBeanstalk](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk/)
 - [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes/)
 - [Jenkins VS GitLab: DevOps Comparison](https://blog.numericaideas.com/jenkins-vs-gitlab-devops-comparison/)
 - [Easiest GitLab CI/CD Lambda Pipeline](https://blog.numericaideas.com/easiest-gitlab-cicd-lambda-pipeline/)
