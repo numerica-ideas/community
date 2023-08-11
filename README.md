@@ -59,13 +59,13 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 Subscribe to the monthly activities newsletter at: [news.numericaideas.com](https://news.numericaideas.com) ✅
 
-## Social Media
+## 👥 Social Media
 Multilingual (English & Français) presence on social media with the following accounts :eight_spoked_asterisk:
-- Twitter  : [EN](https://twitter.com/numericaideas) | [FR](https://twitter.com/NumericaIdeasFr)
-- Facebook : [EN](https://facebook.com/numericaideas) | [FR](https://facebook.com/NumericaIdeasFr)
-- LinkedIn : [EN](https://www.linkedin.com/company/numericaideas) | [FR](https://www.linkedin.com/company/numericaideas-fr)
-- [Discord (EN | FR)](https://discord.numericaideas.com)
-- [YouTube (EN | FR)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
+- <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="gautamkrishnar" height="20" width="20" /> Twitter  : [EN](https://twitter.com/numericaideas) | [FR](https://twitter.com/NumericaIdeasFr)
+- <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="gautamkrishnar" height="20" width="20" /> Facebook : [EN](https://facebook.com/numericaideas) | [FR](https://facebook.com/NumericaIdeasFr)
+- <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="gautamkrishnar" height="20" width="20" /> LinkedIn : [EN](https://www.linkedin.com/company/numericaideas) | [FR](https://www.linkedin.com/company/numericaideas-fr)
+- <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="gautamkrishnar" height="20" width="20" /> [Discord (EN | FR)](https://discord.numericaideas.com)
+- <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="gautamkrishnar" height="20" width="20" /> [YouTube (EN | FR)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)
 
 ## Contribute
 There are a lot of **activities** that you can contribute to within the community, the idea is to help others grow while sharpening your hard and soft skills at the same time:
