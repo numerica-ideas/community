@@ -1,7 +1,7 @@
 name: Latest YouTube videos workflow
 on:
   schedule: # Run workflow automatically
-    - cron: '0 12 * * *' # Runs every day at noon
+    - cron: '0 * * * *' # Runs every hour, on the hour
   workflow_dispatch:
 permissions:
   contents: write # To write the generated contents to the readme
