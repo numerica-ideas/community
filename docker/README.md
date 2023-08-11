@@ -7,9 +7,10 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](../kubernetes/springboot-docker-kubernetes-setup)
-- [Dockerize Spring Boot and MySQL with Docker Compose](./docker-compose-springboot-mysql)
-- [Docker Init: Quickly Dockerizing NodeJS Application](./quickly-dockerizing-nodejs)
+- [Docker Init: Quickly Dockerizing NodeJS Application](https://blog.numericaideas.com/quickly-dockerizing-nodejs/)
+- [Dockerize Spring Boot and MySQL with Docker Compose](https://blog.numericaideas.com/docker-compose-springboot-mysql/)
+- [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
+- [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
