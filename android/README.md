@@ -7,7 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- [Accelerate Android App Delivery via Bitrise CI/CD Pipelines](./configure-bitrise-for-android-apps)
+- [Accelerate Android App Delivery via Bitrise CI/CD Pipelines](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
