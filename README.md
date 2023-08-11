@@ -52,7 +52,7 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ## 💡 Newsletter
 <!-- NI-NEWS-LIST:START -->
 - [Monthly Activities #1](https://news.numericaideas.com/monthly-recap-1/)
-- [Monthly Activities #0](https://news.numericaideas.com/monthly-recap-0)
+- [Monthly Activities #0](https://news.numericaideas.com/monthly-recap-0/)
 <!-- NI-NEWS-LIST:END -->
 
 Subscribe to the monthly activities newsletter at: [news.numericaideas.com](https://news.numericaideas.com) ✅
