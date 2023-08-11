@@ -1,0 +1,21 @@
+name: Latest newsletter post workflow
+on:
+  schedule: # Run workflow automatically
+    - cron: '0 * * * *' # Runs every hour, on the hour
+  workflow_dispatch: # Run workflow manually (without waiting for the cron to be called), through the GitHub Actions Workflow page directly
+permissions:
+  contents: write # To write the generated contents to the readme
+
+jobs:
+  update-readme-with-news:
+    name: Update this repo's README with the latest info published via the Newsletter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Pull in news.numericaideas.com archive
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          max_post_count: 5
+          comment_tag_name: "NI-NEWS-LIST"
+          feed_list: "https://news.numericaideas.com/feed.xml"

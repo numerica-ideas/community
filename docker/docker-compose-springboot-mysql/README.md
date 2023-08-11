@@ -39,7 +39,7 @@ You can quickly determine the following dependencies that come packaged in the *
 
 Open the generated project in your favorite IDE or editor (I'm mainly using IntelliJ IDEA and VsCode), from there you can tweak it a bit to have some entities, controllers, and business logic.
 
-Hosted on GitHub, here's the [source code](https://github.com/numerica-ideas/community/tree/master/docker/docker-compose-springboot-mysql) of the Spring Boot application that we'll be using to setup Docker along with a MySQL database.
+Hosted on GitHub, here's the [source code](https://github.com/numerica-ideas/community/tree/master/docker/docker-compose-springboot-mysql) of the Spring Boot application that we'll be using to set up Docker along with a MySQL database.
 
 The **application.properties** file holds some App configurations, it's not uncommon to see sensitive credentials in it, here's its content:
 
@@ -63,7 +63,7 @@ logging.level.org.hibernate.SQL=DEBUG
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
 ```
 
-Let's build the App to make sure it compiles as expected, the following command must be ran from the project root folder:
+Let's build the App to make sure it compiles as expected, the following command must be run from the project root folder:
 
 ```
 ./mvnw clean install -DskipTests
@@ -191,7 +191,7 @@ Using **Docker Desktop** enables you to view a nice summary of your Docker state
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/docker/docker-compose-springboot-mysql).
 
-Open POSTMAN and **create** a POST request to the url `localhost:8090/api/users` with a random user object to be persisted in the DB:
+Open POSTMAN and **create** a POST request to the URL `localhost:8090/api/users` with a random user object to be persisted in the DB:
 
 ![create-user](./images/test-api-create-user.png)
 
@@ -203,7 +203,7 @@ A **ping** endpoint is also available:
 
 ![ping](./images/test-api-ping.png)
 
-If you are interested in related content, take a look at the following which explains how to [Quickly Dockerizing NodeJS Application](https://blog.numericaideas.com/quickly-dockerizing-nodejs) effortlessly:
+If you are interested in related content, take a look at the following which explains how to [Quickly Dockerizing NodeJS Application using docker init command](https://blog.numericaideas.com/quickly-dockerizing-nodejs) effortlessly:
 
 [![QuicklyDockerizingNodeJSApplication](../../docker/quickly-dockerizing-nodejs/images/quickly-dockerizing-nodejs.png)](https://blog.numericaideas.com/quickly-dockerizing-nodejs)
 
@@ -219,4 +219,3 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 Dockerizing a Spring Boot application with MySQL using Docker and Docker Compose simplifies the deployment process, improves portability, and enables scalability. By following the steps outlined in this guide, you can package your Spring Boot application and MySQL database into separate containers and deploy them as a cohesive application stack. With Docker, you can achieve consistent application execution across different environments, easily scale your application, and simplify version control. Docker Compose streamlines the management of multi-container applications, allowing you to define, configure, and deploy complex systems effortlessly.
 
 Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
-
