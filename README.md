@@ -95,6 +95,7 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [kubernetes](./kubernetes)
 - [security](./security)
 - [terraform](./terraform)
+- [videos](./videos)
 - [web](./web)
 - [meetups](https://github.com/numerica-ideas/meetups)
 - [open source](https://github.com/numerica-ideas)
