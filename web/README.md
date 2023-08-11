@@ -7,8 +7,11 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- [Custom State Management Architecture using RxJS](https://github.com/numerica-ideas/custom-angular-store)
-- [Difference between Observable, Subject, and BehaviorSubject in RxJS](./difference-between-observable-subject-behaviorsubject-in-rxjs)
+- [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
+- [Difference between RxJS Observable, Subject, and BehaviorSubject](https://blog.numericaideas.com/difference-between-rxjs-observable-subject-and-behaviorsubject/)
+- [Lift And Shift Cloud Migration Manual for AWS ElasticBeanstalk](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk/)
+- [Git Cheat Sheet](https://blog.numericaideas.com/git-cheat-sheet/)
+- [Custom State Management Architecture using RxJS](https://blog.numericaideas.com/custom-rxjs-store-architecture/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
