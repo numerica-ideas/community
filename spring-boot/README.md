@@ -7,7 +7,11 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- ...
+- [Dockerize Spring Boot and MySQL with Docker Compose](https://blog.numericaideas.com/docker-compose-springboot-mysql/)
+- [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
+- [Lift And Shift Cloud Migration Manual for AWS ElasticBeanstalk](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk/)
+- [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes/)
+- [Lambda Performance Improvement with SnapStart](https://blog.numericaideas.com/lambda-performance-improvement-with-snapstart/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
