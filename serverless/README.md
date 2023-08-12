@@ -7,7 +7,11 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- ...
+- [Build a Serverless App with AWS Lambda, S3, DynamoDB, and Python](https://blog.numericaideas.com/aws-serverless-web-application/)
+- [Lambda Cold Starts Optimization Strategies](https://blog.numericaideas.com/lambda-cold-starts-optimization-strategies/)
+- [Serverless Visual Design with AWS Application Composer](https://blog.numericaideas.com/aws-application-composer/)
+- [Easiest GitLab CI/CD Lambda Pipeline](https://blog.numericaideas.com/easiest-gitlab-cicd-lambda-pipeline/)
+- [Lambda Performance Improvement with SnapStart](https://blog.numericaideas.com/lambda-performance-improvement-with-snapstart/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
