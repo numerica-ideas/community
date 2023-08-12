@@ -6,9 +6,9 @@ All the community articles published on our tech blog are listed below:
 The source codes of all the articles are present [here](../).
 
 ## Related Articles
-<!-- TECH-ARTICLES-LIST:START -->
+<!-- ALL-POSTS-LIST:START -->
 - ...
-<!-- TECH-ARTICLES-LIST:END -->
+<!-- ALL-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
 
