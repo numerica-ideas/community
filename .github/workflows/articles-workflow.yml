@@ -17,5 +17,6 @@ jobs:
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           max_post_count: 500
+          readme_path: './articles/README.md'
           comment_tag_name: "ALL-POSTS-LIST"
           feed_list: "http://blog.numericaideas.com/rss.xml"
