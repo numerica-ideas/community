@@ -13,7 +13,7 @@ The **YouTube Channels** in both English (En) and French (Fr) are now accessible
 Efficiently managing API requests is vital to prevent overwhelming servers and deliver a seamless user experience. Throttling and debouncing are techniques that allow us to control how often a function is executed, particularly useful when functions are tied to user-triggered events.
 
 Let's dirty our hands.
-The following code presents a text field that triggers an API call when its value is changed.
+The following code showcases a text field that triggers an API call when its value is changed.
 
 ```
 import { useEffect, useState } from "react";
@@ -105,6 +105,26 @@ The result :
 
 [![FeaturedImage](./search-input-throttle.gif)]
 
+Now, let's have a look on how the throttle options work :
+
+#### 1. { leading: true, trailing: true }
+
+#### 2. { leading: true, trailing: false }
+
+#### 3. { leading: false, trailing: true }
+
+#### 4. { leading: true, trailing: true }
+
 ### Debouncing: Delayed Execution for Enhanced Efficiency
 
 Debouncing delays the execution of a function until after a specified period has passed since the last invocation. This is particularly useful when responding to user actions that trigger multiple function calls in quick succession.
+
+Now, let's have a look on how the debounce options work :
+
+#### 1. { leading: true, trailing: true }
+
+#### 2. { leading: true, trailing: false }
+
+#### 3. { leading: false, trailing: true }
+
+#### 4. { leading: true, trailing: true }
