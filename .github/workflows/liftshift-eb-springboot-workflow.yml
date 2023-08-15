@@ -1,0 +1,43 @@
+name: Lift And Shift Cloud Migration CICD workflow
+on:
+  schedule: # Run workflow automatically
+    - cron: '0 * * * *' # Runs every hour, on the hour
+  workflow_dispatch: # Run workflow manually (without waiting for the cron to be called), through the GitHub Actions Workflow page directly
+  push:
+    branches:
+      - feature/lift-shift-cicd
+permissions:
+  contents: write # To write the generated contents to the readme
+
+jobs:
+  build-deploy-to-aws:
+    name: Build and deploy a Spring-Boot App to AWS using AWS ElasticBeanstalk
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./aws/springboot-migration-elasticbeanstalk
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Java 17 on the runner
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Build the project
+        run: ./build.sh
+      - name: Generate deployment package
+        run: zip -r deploy.zip . -i 'runnable.jar'
+      - name: Deploy to AWS ElasticBeanstalk
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+          region: us-east-1
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: springboot-migration-elasticbeanstalk
+          environment_name: spring-cloud-migration
+          version_label: ${{ github.run_number }}
+          use_existing_version_if_available: true
+          deployment_package: ./aws/springboot-migration-elasticbeanstalk/deploy.zip
+      - run: echo "🍏 This job's status is ${{ job.status }}."
