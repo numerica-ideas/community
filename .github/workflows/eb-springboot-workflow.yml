@@ -1,31 +1,27 @@
-name: Lift And Shift Cloud Migration CICD workflow
+name: Continuous Deployment of Spring Boot to AWS Elastic Beanstalk workflow
 on:
-  schedule: # Run workflow automatically
-    - cron: '0 * * * *' # Runs every hour, on the hour
-  workflow_dispatch: # Run workflow manually (without waiting for the cron to be called), through the GitHub Actions Workflow page directly
-  push:
+  workflow_dispatch:      # Enable to run workflow manually through the GitHub Actions Workflow page directly
+  push:                   # Let's specify the target branch that triggers the action on new commits
     branches:
       - feature/lift-shift-cicd
-permissions:
-  contents: write # To write the generated contents to the readme
 
 jobs:
-  build-deploy-to-aws:
-    name: Build and deploy a Spring-Boot App to AWS using AWS ElasticBeanstalk
+  build-deploy-to-aws-eb:
+    name: Build and deploy a Spring-Boot App to AWS ElasticBeanstalk
     runs-on: ubuntu-latest
-    defaults:
+    defaults:             # Remove this section if your App is at the root of your repository
       run:
         shell: bash
         working-directory: ./aws/springboot-migration-elasticbeanstalk
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Java 17 on the runner
+      - name: Install and set up Java 17 on the runner
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Build the project
+      - name: Build the project using a custom script
         run: ./build.sh
       - name: Generate deployment package
         run: zip -r deploy.zip . -i 'runnable.jar'
