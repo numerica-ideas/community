@@ -34,4 +34,4 @@ build/
 
 # custom
 .java-version
-runnable.jar
+!runnable.jar
