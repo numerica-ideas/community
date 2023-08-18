@@ -17,7 +17,7 @@ This article covers the **Part 3** of the [Lift and Shift Cloud Migration Series
 ## Step 1: Prepare Your AWS Elastic Beanstalk Environment
 Prior to configuring GitHub Actions, it is essential to ensure the presence of a fully operational Spring Boot application that has been deployed on AWS Elastic Beanstalk. This entails the creation of an environment within Elastic Beanstalk, the establishment of requisite AWS resources, and the verification of seamless functionality of your application within the AWS ecosystem.
 
-In case you are first looking to deploy your Spring Boot App to AWS using ElasticBeanstalk service, we do recommend you to take a look at this related article, [Spring Boot Lift And Shift Cloud Migration via AWS ElasticBeanstalk](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk).
+In case you are first looking to deploy your Spring Boot App to AWS using Elastic Beanstalk service, we do recommend you to take a look at this related article, [Spring Boot Lift And Shift Cloud Migration via AWS ](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk).
 
 Do you prefer the video format? Here you are, don't forget to subscribe to our [YouTube Channels](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1):
 
@@ -32,14 +32,14 @@ git clone https://github.com/numerica-ideas/community
 cd aws/springboot-migration-elasticbeanstalk
 ```
 
-The App has a [configuration file](https://github.com/numerica-ideas/community/blob/master/aws/springboot-migration-elasticbeanstalk/.elasticbeanstalk/config.yml) necessary to setup our ElasticBeanstalk environment for the provisioning of our AWS infrastructure, as the following:
+The App has a [configuration file](https://github.com/numerica-ideas/community/blob/master/aws/springboot-migration-elasticbeanstalk/.elasticbeanstalk/config.yml) necessary to set up our Elastic Beanstalk environment for the provisioning of our AWS infrastructure, as the following:
 - **Application name**: springboot-migration-elasticbeanstalk
 - **Environment name**: spring-cloud-migration
 - **The platform** to use: Java 17 - Corretto
 - **AWS region**: us-east-1
 - **The artifact (JAR file) location**: runnable.jar
 
-Next, from the project root folder, create the **ElasticBeanstalk environment** with the following command, assuming you successfully installed [EB CLI](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk#migration-steps):
+Next, from the project root folder, create the **Elastic Beanstalk environment** with the following command, assuming you successfully installed [EB CLI](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk#migration-steps):
 
 ```bash
 eb create spring-cloud-migration --sample --single --timeout 30 --instance_type t2.micro --database.username SpringBootAdmin --database.password Strange_Pwd --envvars PORT=9090 --tags tag1=val1,tag2=val2
@@ -59,7 +59,7 @@ Finally, let's deploy the Spring Boot App into our EB Environment along with a M
 eb deploy
 ```
 
-**Note**: In order to implement your modifications, you need to commit them initially for ElasticBeanstalk to take them into account. Nevertheless, during your development or debugging process, you might prefer not to push changes that haven't been verified as functional. You can bypass the need to commit your alterations by staging them and utilizing the command `eb deploy --staged`, which conducts a regular deployment.
+**Note**: In order to implement your modifications, you need to commit them initially for Elastic Beanstalk to take them into account. Nevertheless, during your development or debugging process, you might prefer not to push changes that haven't been verified as functional. You can bypass the need to commit your alterations by staging them and utilizing the command `eb deploy --staged`, which conducts a regular deployment.
 
 ![EbDeployCommand](./images/eb-deploy-command.png)
 
@@ -91,7 +91,7 @@ on:
 
 jobs:
   build-deploy-to-aws-eb:
-    name: Build and deploy a Spring-Boot App to AWS ElasticBeanstalk
+    name: Build and deploy a Spring-Boot App to AWS Elastic Beanstalk
     runs-on: ubuntu-latest
     defaults:             # Remove this section if your App is at the root of your repository
       run:
