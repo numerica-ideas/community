@@ -6,16 +6,13 @@ In today's article, we will explore the **scalability** possibilities of deployi
 
 ![architecture diagram](./images/AWS%20Scale%20WordPress%20on%20a%202-Tier%20AWS%20Architecture%20with%20Terraform.png)
 
-If you haven't read the previous article, **Deploying WordPress on a 2-Tier AWS Architecture with Terraform**, I highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
+If you haven't read the previous article, **Deploying WordPress on a 2-Tier AWS Architecture with Terraform**, we highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
 [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 
 ## Scalability Architecture
 
-When it comes to architecting a scalable WordPress deployment on AWS, there are several strategies at our disposal.
-
-![architecture diagram](./images/AWS%20Scale%20WordPress%20on%20a%202-Tier%20AWS%20Architecture.png)
-
+To make the deployment of WordPress scalable on AWS, we used several strategies among which we have:
 
 ### Horizontal Scaling with Auto Scaling Groups
 
@@ -56,17 +53,17 @@ Before we proceed with scaling our WordPress deployment on AWS, make sure you ha
 
 ## Using Auto Scaling Group for Scalability
 
-**Auto Scaling Group (ASG)** is a powerful AWS feature that allows you to automatically adjust the number of instances in your application fleet based on demand. By using ASG, we can ensure our WordPress deployment can **scale horizontally** to handle varying loads.
+By using ASG, we can ensure our WordPress deployment can **scale horizontally** to handle varying loads.
 
 In this section, we'll explain the modifications made to the existing Terraform files to incorporate ASG into our WordPress deployment.
 
-If you would like to delve deeper into the concept of Auto Scaling Group and its benefits, I have a dedicated article that covers it in detail. It provides valuable insights into how ASG works, and its configuration options.
+If you would like to delve deeper into the concept of Auto Scaling Group and its benefits, we have a dedicated article that covers it in detail. It provides valuable insights into how ASG works, and its configuration options.
 [**Auto Scaling Group in AWS**](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
 
 
-### Step 1: Modifying main.tf
+### Step 1: Modify main.tf
 
-In this step, we will make important changes to the `main.tf` file and introduce a new file called `install_script.tpl` that automates the installation of necessary tools for our WordPress website to work properly.
+In this step, we are going to make significant changes to the `main.tf` file and introduce a new file called `install_script.tpl` in our current directory, which will automate the installation of the tools needed to keep our WordPress website running smoothly.
 
 First, let's take a look at the `install_script.tpl` file:
 
@@ -141,8 +138,7 @@ resource "aws_autoscaling_group" "asg" {
   ]
 }
 ```
-
-Next, we will define an Auto Scaling policy that dynamically adjusts the number of instances in our Auto Scaling Group based on CPU utilization. Additionally, we will use the `aws_autoscaling_attachment` resource to link our **Auto Scaling Group** to the **Application Load Balancer (ALB)**.
+Next, we'll define an Auto Scaling policy that will dynamically adjust the number of instances in our Auto Scaling group based on CPU utilization. In addition, thanks to the `aws_autoscaling_attachment`resource we will link our **Auto Scaling Group** to the **Application Load Balancer (ALB)**.
 
 `main.tf`
 
@@ -167,9 +163,9 @@ resource "aws_autoscaling_attachment" "asg_attachment" {
 }
 ```
 
-### Step 2: Modifying loadbalancer.tf
+### Step 2: Modify loadbalancer.tf
 
-I modified the `loadbalancer.tf` to ensure that the ALB is properly configured to handle incoming HTTP traffic on port 80 and forward it to the instances registered with the ASG. The ALB acts as the entry point for client requests and distributes the traffic evenly across the instances in the ASG.
+To ensure that the ALB for handling incoming HTTP traffic on port 80 and distributes it evenly across the instances in the ASG, we modified the `loadbalancer.tf` file as follows:
 
 ```terraform
 resource "aws_lb" "alb" {
@@ -199,9 +195,9 @@ resource "aws_lb_target_group" "alb_target_group" {
 }
 ```
 
+we have also created a security group for the ALB
 `security_group.tf`
 
-we have also created a security group for the ALB
 
 ```terraform
 resource "aws_security_group" "alb_sg" {
@@ -226,7 +222,7 @@ resource "aws_security_group" "alb_sg" {
 
 ### Step 3: Modifying efs.tf
 
-In this step, I make several modifications to the `efs.tf` file.
+In this step, we will make significant changes to the `efs.tf` file.
 
 We will remove the `key_pair` resource and the `null_resource` since they are no longer needed, and then proceed with the new content for our `efs.tf` file.
 
@@ -370,7 +366,7 @@ variable "s3_origin_id" {
 
 ### Step 1: Creating the S3 Bucket
 
-First, I define an S3 bucket resource using Terraform to store the media files of the WordPress application:
+First, we define an S3 bucket resource using Terraform to store the media files of the WordPress application:
 
 ```terraform
 resource "aws_s3_bucket" "wordpress_files_bucket" {
@@ -381,11 +377,11 @@ resource "aws_s3_bucket" "wordpress_files_bucket" {
 }
 ```
 
-In this resource, I specify the desired bucket name as the value of the variable `var.bucket_name`. I also add a tag to the bucket for better identification.
+In this resource, we specify the desired bucket name as the value of the variable `var.bucket_name`. we also add a tag to the bucket for better identification.
 
 ### Step 2: Configuring CloudFront Origin Access Control
 
-Next, I configure the **CloudFront Origin Access Control (OAC)** to manage access to the S3 bucket:
+Next, we configure the **CloudFront Origin Access Control (OAC)** to manage access to the S3 bucket:
 
 ```terraform
 locals {
@@ -401,11 +397,11 @@ resource "aws_cloudfront_origin_access_control" "my_origin" {
 }
 ```
 
-The `aws_cloudfront_origin_access_control` resource defines access control settings for the S3 bucket as an origin. I set the `signing_behavior` and `signing_protocol` to **always** and **sigv4,** respectively, to enforce the use of AWS Signature Version 4 for all requests made to the CloudFront distribution.
+The `aws_cloudfront_origin_access_control` resource defines access control settings for the S3 bucket as an origin. we set the `signing_behavior` and `signing_protocol` to **always** and **sigv4,** respectively, to enforce the use of AWS Signature Version 4 for all requests made to the CloudFront distribution.
 
 ### Step 3: Creating CloudFront Distribution
 
-Now, I create the CloudFront distribution that will cache and serve the media files stored in the S3 bucket:
+Now, we create the CloudFront distribution that will cache and serve the media files stored in the S3 bucket:
 
 ```terraform
 data "aws_cloudfront_cache_policy" "cache-optimized" {
@@ -450,15 +446,15 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 }
 ```
 
-In this resource, I define the CloudFront distribution and specify the S3 bucket as the origin to be associated with the distribution. The `cache_policy_id` refers to the managed caching policy named **Managed-CachingOptimized,** which optimizes cache behavior for better performance.
+In this resource, we define the CloudFront distribution and specify the S3 bucket as the origin to be associated with the distribution. The `cache_policy_id` refers to the managed caching policy named **Managed-CachingOptimized,** which optimizes cache behavior for better performance.
 
-I also set the `default_cache_behavior` to cache the allowed HTTP methods and define caching TTLs (time-to-live) for the assets. The `viewer_protocol_policy` is set to **allow-all** to allow both HTTP and HTTPS access.
+we also set the `default_cache_behavior` to cache the allowed HTTP methods and define caching TTLs (time-to-live) for the assets. The `viewer_protocol_policy` is set to **allow-all** to allow both HTTP and HTTPS access.
 
-Additionally, I specify the CloudFront distribution to use the default SSL/TLS certificate provided by AWS (`cloudfront_default_certificate = true`) for secure connections.
+Additionally, we specify the CloudFront distribution to use the default SSL/TLS certificate provided by AWS (`cloudfront_default_certificate = true`) for secure connections.
 
 ### Step 4: Configuring S3 Bucket Policy for CloudFront Access
 
-Finally, I create an **S3 bucket policy to allow CloudFront access to the bucket**
+Finally, we create an **S3 bucket policy to allow CloudFront access to the bucket**
 
 ```terraform
 data "aws_iam_policy_document" "s3_policy" {
@@ -484,7 +480,7 @@ resource "aws_s3_bucket_policy" "mybucket" {
 }
 ```
 
-In this step, I define an IAM policy document that allows CloudFront service principal (`cloudfront.amazonaws.com`) to access the S3 bucket's objects. The policy uses the `aws_s3_bucket.wordpress_files_bucket.arn` and the `aws_cloudfront_distribution.s3_distribution.arn` as resources to specify the S3 bucket and CloudFront distribution as the allowed sources.
+In this step, we define an IAM policy document that allows CloudFront service principal (`cloudfront.amazonaws.com`) to access the S3 bucket's objects. The policy uses the `aws_s3_bucket.wordpress_files_bucket.arn` and the `aws_cloudfront_distribution.s3_distribution.arn` as resources to specify the S3 bucket and CloudFront distribution as the allowed sources.
 
 Finally, we apply the defined S3 bucket policy using the `aws_s3_bucket_policy` resource.
 
@@ -511,7 +507,7 @@ terraform apply --auto-approve
 
 ## Configuring WordPress to Use IAM Role for S3 Access
 
-In this section, we'll configure the `wp-config.php` file of our WordPress installation to utilize the IAM role I previously created. This will allow WordPress to securely access the S3 bucket. 
+In this section, we'll configure the `wp-config.php` file of our WordPress installation to utilize the IAM role we previously created. This will allow WordPress to securely access the S3 bucket. 
 
 ### Step 1: Connect to EC2 Instance via SSH
 
@@ -549,7 +545,7 @@ Save the changes and exit the file.
 
 ### Step 1: Accessing WordPress via Load Balancer URL
 
-Now that I have configured the `wp-config.php` file, access your WordPress website using the URL provided by the **Load Balancer**. This URL should point to your WordPress application hosted on the EC2 instances.
+Now that we have configured the `wp-config.php` file, access your WordPress website using the URL provided by the **Load Balancer**. This URL should point to your WordPress application hosted on the EC2 instances.
 
 ![application](./images/application.png)
 
