@@ -13,6 +13,8 @@ This first [video](https://youtu.be/tWQFavEJQ7c) is part of a [series](https://g
 - **Step 4**: Linking the Package with the Environment
 - **Step 5**: Deployment (`eb deploy --staged`)
 
+**Note**: In order to implement your modifications, you need to commit them initially for ElasticBeanstalk to take them into account. Nevertheless, during your development or debugging process, you might prefer not to push changes that haven't been verified as functional. You can bypass the need to commit your alterations by staging them and utilizing the command `eb deploy --staged`, which conducts a regular deployment.
+
 **Bonus**:
 - From the terminal, `eb terminate` will erase everything and free up AWS resources.
 - **Command To Create EB Environment**: `eb create spring-cloud-migration --sample --single --timeout 30 --instance_type t2.micro --database.username SpringBootAdmin --database.password Strange_Pwd --envvars PORT=9090 --tags tag1=val1,tag2=val2`

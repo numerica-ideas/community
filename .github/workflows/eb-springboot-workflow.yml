@@ -1,0 +1,39 @@
+name: Continuous Deployment of Spring Boot to AWS Elastic Beanstalk workflow
+on:
+  workflow_dispatch:      # Enable to run workflow manually through the GitHub Actions Workflow page directly
+  push:                   # Let's specify the target branch that triggers the action on new commits
+    branches:
+      - feature/lift-shift-cicd
+
+jobs:
+  build-deploy-to-aws-eb:
+    name: Build and deploy a Spring-Boot App to AWS ElasticBeanstalk
+    runs-on: ubuntu-latest
+    defaults:             # Remove this section if your App is at the root of your repository
+      run:
+        shell: bash
+        working-directory: ./aws/springboot-migration-elasticbeanstalk
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install and set up Java 17 on the runner
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Build the project using a custom script
+        run: ./build.sh
+      - name: Generate deployment package
+        run: zip -r deploy.zip . -i 'runnable.jar'
+      - name: Deploy to AWS ElasticBeanstalk
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+          region: us-east-1
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: springboot-migration-elasticbeanstalk
+          environment_name: spring-cloud-migration
+          version_label: ${{ github.run_number }}
+          use_existing_version_if_available: true
+          deployment_package: ./aws/springboot-migration-elasticbeanstalk/deploy.zip
+      - run: echo "🍏 This job's status is ${{ job.status }}."

@@ -1,6 +1,6 @@
 branch-defaults:
   default:
-    environment: null
+    environment: spring-cloud-migration
     group_suffix: null
   deploy:
     artifact: runnable.jar
