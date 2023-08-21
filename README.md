@@ -99,6 +99,8 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [DevOps](./devops)
 - [Docker](./docker)
 - [Google Cloud Platform (GCP)](./gcp)
+- [GitHub Actions](./github-actions)
+- [GitLab CI/CD](./gitlab-ci-cd)
 - [iOS](./ios)
 - [Java](./java)
 - [Kubernetes](./kubernetes)
@@ -112,6 +114,8 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [Web Development](./web)
 - [Meetups](https://github.com/numerica-ideas/meetups)
 - [Open Source](https://github.com/numerica-ideas)
+- ...
+- [More topics](https://blog.numericaideas.com/topics)
 
 ## Numies
 **Numies** is the NumericaIdeas Awards conducted each year-end to celebrate a few **top contributors** who worked toward the vision of our professional network while impacting more people and differentiating themselves by their commitments and presence. There are many categories available and some prizes are given away 🎉
