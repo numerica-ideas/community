@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
 - [Easiest GitLab CI/CD Lambda Pipeline](https://blog.numericaideas.com/easiest-gitlab-cicd-lambda-pipeline/)
 <!-- TAG-POSTS-LIST:END -->
 
