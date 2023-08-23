@@ -1,4 +1,4 @@
-# AWS Scale WordpPress
+# How to Scale WordPress on AWS
 
 ## Introduction
 
