@@ -80,7 +80,7 @@ resource "aws_db_instance" "rds_master" {
   password                = var.db_password
   backup_retention_period = 7
   multi_az                = false
-  availability_zone       = var.availability_zone[1]
+  availability_zone       = var.availability_zone[0]
   db_subnet_group_name    = aws_db_subnet_group.database_subnet.id
   skip_final_snapshot     = true
   vpc_security_group_ids  = [aws_security_group.database-sg.id]
@@ -91,20 +91,20 @@ resource "aws_db_instance" "rds_master" {
   }
 }
 
-# resource "aws_db_instance" "rds_replica" {
-#   replicate_source_db    = aws_db_instance.rds_master.identifier
-#   instance_class         = "db.t3.micro"
-#   identifier             = "replica-rds-instance"
-#   allocated_storage      = 10
-#   skip_final_snapshot    = true
-#   multi_az               = false
-#   availability_zone      = var.availability_zone[0]
-#   vpc_security_group_ids = [aws_security_group.database-sg.id]
-#   storage_encrypted      = true
+resource "aws_db_instance" "rds_replica" {
+  replicate_source_db    = aws_db_instance.rds_master.identifier
+  instance_class         = "db.t3.micro"
+  identifier             = "replica-rds-instance"
+  allocated_storage      = 10
+  skip_final_snapshot    = true
+  multi_az               = false
+  availability_zone      = var.availability_zone[2]
+  vpc_security_group_ids = [aws_security_group.database-sg.id]
+  storage_encrypted      = true
 
-#   tags = {
-#     Name = "my-rds-replica"
-#   }
-# 
-# }
+  tags = {
+    Name = "my-rds-replica"
+  }
+
+}
 
