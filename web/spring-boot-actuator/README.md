@@ -16,8 +16,6 @@ Throughout the article, we will cover essential topics such as:
 - **Health Monitoring and Readiness Checks**
 - **Security and Production Best Practices**
 
-Let's dive into the world of Spring Boot Actuator and unlock the enhanced monitoring and management capabilities it brings to the Spring Boot ecosystem.
-
 ## Core Functionalities of Spring Boot Actuator
 
 Spring Boot Actuator provides a rich set of features that empower developers and administrators to monitor, manage, and analyze their applications effectively. It also gives some capabilities and metrics that can help to keep a system Highly available if it's combined with other tools like Alarms and Load Balancers.
@@ -51,7 +49,7 @@ Enabling Actuator in a Spring boot project is as easy as adding a dependency to 
 
 #### Add Spring Boot Actuator From Spring Boot Initializer
 
-From https://start.spring.io/, add the dependency: Add Actuator dependency from spring initializr](images/initializr-add-actuator.png)
+From https://start.spring.io/, add the dependency: Add Actuator dependency from Spring initializr](images/initializr-add-actuator.png)
 _(Tips: you can use the search bar to easily find it)._
 
 At the end, you should have "Spring Boot Actuator" in your dependencies as shown in it image below.
@@ -78,9 +76,9 @@ implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
 By adding this dependency, you bring Actuator's functionality into your application, allowing you to utilize its endpoints, metrics collection, and management capabilities.
 
-After doing this we will be able to see endpoints actually available through: http://localhost:8080/actuator
+Once the dependency is added, assuming you started the App, you will be able to see endpoints actually available through: http://localhost:8080/actuator
 
-You should have this result:
+You should have the following result:
 ![Actuator default exposed endpoints](images/default-actuator-enpoint.png)
 
 ### 2. Configuring Actuator Endpoints
@@ -241,7 +239,7 @@ management:
       enabled: true
 ```
 
-#### Disable/Hide some actuators endpoints
+#### Disable or Hide Certain Actuator Endpoints
 
 Let's say you have many endpoints to expose and just a few to hide, rather than listing them all you can expose all and then just hide endpoints you don't need.
 
@@ -336,8 +334,6 @@ With this configuration, Actuator endpoints will be accessible under the /custom
 Spring Boot Actuator's monitoring capabilities provide developers with a treasure trove of insights into their application's performance and behavior. In this section, we will explore how to leverage Actuator's metrics endpoints to monitor key performance indicators and gain valuable data-driven insights.
 
 ### 1. Accessing Metrics Endpoints
-
-Spring Boot Actuator's monitoring capabilities provide developers with a treasure trove of insights into their application's performance and behavior. In this section, we will explore how to leverage Actuator's metrics endpoints to monitor key performance indicators and gain valuable data-driven insights.
 
 To access the metrics, simply make an HTTP GET request to the **_/actuator/metrics_** endpoint:
 
@@ -558,7 +554,7 @@ In the above configuration, we have explicitly included only the ***health*** an
 ### 2. Define Custom Roles and Users
 By default, Spring Boot Actuator uses Spring Security's basic authentication, which requires a username and password to access the endpoints. However, it's recommended to define custom roles and users for better security control.
 
-You can define custom roles and users in your ***WebSecurityConfigurerAdapter*** configuration class:
+You can define custom roles and users in your ***WebSecurityConfigurerAdapter*** configuration class as follows:
 
 ```java
 @Configuration
@@ -594,6 +590,13 @@ Keep a close eye on access logs for the Actuator endpoints, especially in produc
 
 By adhering to these best practices, you can secure your Actuator endpoints and protect sensitive information from unauthorized access, mitigating potential security risks.
 
+### Need more?
+
+- In this Article, we mainly talked about Actuator HTTP endpoints and metrics, but we can also access them over JMX(Java Management Extensions) which is not enabled by default but we can easily enable it using property ``spring.jmx.enabled=true``
+- Monitoring and metrics work best when they are integrated with other architecture items such as Monitoring systems, Load balancers and Alerts, So we are announcing here 2 upcoming articles ( **how to use Spring boot actuator health checks to configure a Load Balancer** and  **How to integrate Spring Boot Actuator with Monitoring Systems**)
+
+
+The complete source code of the project is available on GitHub.
 
 ## Conclusion
 Spring Boot Actuator is a powerful toolset that unlocks enhanced monitoring and management capabilities for your Spring Boot applications. By leveraging Actuator's metrics, health monitoring, and readiness checks, you can gain valuable insights into your application's performance, proactively manage its health, and ensure optimal functionality in production environments.
@@ -602,7 +605,3 @@ In this article, we explored the core functionalities of Spring Boot Actuator, l
 
 By incorporating Spring Boot Actuator into your development workflow, you can take your application monitoring and management to the next level, ultimately delivering a more robust and reliable experience for your end-users.
 
-### Need more?
-
-- In this Article, we mainly talked about Actuator HTTP endpoints and metrics, but we can also access them over JMX(Java Management Extensions) which is not enabled by default but we can easily enable it using property ``spring.jmx.enabled=true``
-- Monitoring and metrics work best when they are integrated with other architecture items such as Monitoring systems, Load balancers and Alerts, So we are announcing here 2 upcoming articles ( **how to use Spring boot actuator health checks to configure a Load Balancer** and  **How to integrate Spring Boot Actuator with Monitoring Systems**)
