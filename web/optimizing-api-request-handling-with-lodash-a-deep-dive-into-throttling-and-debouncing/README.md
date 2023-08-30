@@ -4,7 +4,7 @@ In the ever-evolving world of web development, tools that streamline processes a
 
 **Note: This article assumes a basic familiarity with React and API interactions.**
 
-[![FeaturedImage](./lodash-optmize-request.png)]
+![CoverImage](./lodash-optmize-request.png)
 
 The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -16,38 +16,30 @@ Let's dirty our hands.
 The following code showcases a text field that triggers an API call when its value is changed.
 
 ```
-import { useEffect, useState } from "react";
+import React from "react";
 
 const getLocations = async (search) => {
-    const response = await fetch("https://fakemyapi.com/api/fake?id=976f9a09-87bc-4d92-8fd7-9860040b9806", {
+    const response = await fetch("https://fakemyapi.com/api/fake?id=8e3e24d8-569a-44d8-9e13-c4b6f7a1a68f", {
         method: "GET",
     });
     return response.json();
 };
 
 const App = () => {
-    const [searchText, setSearchText] = useState("");
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-        if (!!searchText.length) {
-            getLocations(searchText).then((response) => {
-                setCount((c) => c + 1);
-            });
+    const onSearchText = (text) => {
+        if (!!text.length) {
+            getLocations(text);
         }
-    }, [searchText]);
+    };
 
     return (
         <div className="App">
             <input
                 onChange={(e) => {
-                    setSearchText(e.target.value);
+                    onSearchText(e.target.value);
                 }}
-                value={searchText}
-                placeholder={"Location"}
+                style={{ width: 200, height: 50, margin: 20 }}
             />
-
-            <p>API called {count} times </p>
         </div>
     );
 };
@@ -57,14 +49,10 @@ export default App;
 
 Look at the output :
 
-[![FeaturedImage](./search-input.gif)]
+![Default search input](./search-input.gif)
 
-There are two things we can notice:
-
-1. The API was called 8 times when fewer calls would have been sufficient.
-2. The user had to wait for 8 requests to get the result of their search.
-
-Now, imagine if your platform had 10 thousand simultaneous users. Your server would experience unnecessary heavy load. Let's see how Lodash can help us improve this."
+We can notice that the API was called for every key pressed, when fewer calls would have been enough.
+On a small scale it's negligible; but imagine if your platform had 10 thousand simultaneous users doing this search. Your server would experience unnecessary heavy load. Let's see how Lodash can help us improve that.
 
 ### Throttling: Controlled Function Invocation
 
@@ -76,44 +64,58 @@ In this example, the throttle function from Lodash ensures that the handleSearch
 ...
 import { throttle } from "lodash";
 
-...
-
-const searchQuery = (queryParam, doSomething) => {
-    getLocations(queryParam).then(doSomething);
+const getLocations = async () => {
+    const response = await fetch("https://fakemyapi.com/api/fake?id=8e3e24d8-569a-44d8-9e13-c4b6f7a1a68f", {
+        method: "GET",
+    });
+    return response.json();
 };
 
-const search = throttle(searchQuery, 500, { leading: true, trailing: false });
+const search = throttle(getLocations, 500);
 
 const App = () => {
-    ...
-
-    useEffect(() => {
-        if (!!searchText.length) {
-            search(searchText, () => setCount((c) => c + 1));
+    const onSearchText = (text) => {
+        if (!!text.length) {
+            search(text);
         } else {
             search.cancel();
         }
-    }, [searchText]);
+    };
 
-    ....
+    return (
+        ....
+    );
 };
 
 export default App;
+
 ```
 
 The result :
 
-[![FeaturedImage](./search-input-throttle.gif)]
+![Throttled search request](./search-input-throttle.gif)
+
+Now, the API has been call only 3 times.
+
+> Throttle => invokes function at most once per every period of time.
 
 Now, let's have a look on how the throttle options work :
 
+Consider this sequence:
+
+![Input keys sequence](./sequence.png)
+
 #### 1. { leading: true, trailing: true }
+
+![throttle search sequence](./throttle_1.png)
+
+- leading: When set to true, the throttled function will be executed once at the beginning of a series of rapid invocations. This means the first invocation is not delayed, and subsequent invocations within a short period will be skipped until the throttling time window ends.
+
+- trailing: When set to true, the throttled function will be executed once at the end of a series of rapid invocations, after the throttling time window expires. This ensures that the function is executed even if there are remaining invocations after the throttle period.
 
 #### 2. { leading: true, trailing: false }
 
 #### 3. { leading: false, trailing: true }
-
-#### 4. { leading: true, trailing: true }
 
 ### Debouncing: Delayed Execution for Enhanced Efficiency
 
@@ -126,5 +128,3 @@ Now, let's have a look on how the debounce options work :
 #### 2. { leading: true, trailing: false }
 
 #### 3. { leading: false, trailing: true }
-
-#### 4. { leading: true, trailing: true }
