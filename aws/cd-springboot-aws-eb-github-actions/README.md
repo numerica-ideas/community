@@ -23,10 +23,6 @@ Prior to configuring GitHub Actions, it is essential to ensure the presence of a
 
 In case you are first looking to deploy your Spring Boot App to AWS using Elastic Beanstalk service, we do recommend you to take a look at this related article, [Spring Boot Lift And Shift Cloud Migration via AWS ](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk).
 
-Do you prefer the video format? Here you are, don't forget to subscribe to our [YouTube Channels](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1):
-
-[![PresentationImage](../springboot-migration-elasticbeanstalk/aws-elasticbeanstalk-migration.png)](https://youtu.be/tWQFavEJQ7c)
-
 The following is a summary of what should be done before moving to the next step.
 
 First, let's **clone** the Spring Boot GitHub repository:
