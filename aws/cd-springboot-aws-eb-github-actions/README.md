@@ -21,7 +21,7 @@ Do you prefer the Video format instead? Feel free to watch it by following this 
 ## Step 1: Prepare Your AWS Elastic Beanstalk Environment
 Prior to configuring GitHub Actions, it is essential to ensure the presence of a fully operational Spring Boot application that has been deployed on AWS Elastic Beanstalk. This entails the creation of an environment within Elastic Beanstalk, the establishment of requisite AWS resources, and the verification of seamless functionality of your application within the AWS ecosystem.
 
-In case you are first looking to deploy your Spring Boot App to AWS using Elastic Beanstalk service, we do recommend you to take a look at this related article, [Spring Boot Lift And Shift Cloud Migration via AWS ](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk).
+In case you are first looking to deploy your Spring Boot App to AWS using Elastic Beanstalk service, we do recommend you to take a look at this related article, [Spring Boot Lift And Shift Cloud Migration via AWS](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk).
 
 The following is a summary of what should be done before moving to the next step.
 
