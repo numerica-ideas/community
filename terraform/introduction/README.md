@@ -71,7 +71,7 @@ Watch it being done live in this video:
 
 Let's initialize the project using the `terraform init` command, then we create the following files below in the same folder.
 
-The file [varirables.tf](./variables.tf) includes the variables used by our IaC project:
+The file [variables.tf](./variables.tf) includes the variables used by our IaC project:
 ```
 variable "aws_region" {
   type        = string
