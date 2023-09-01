@@ -34,7 +34,7 @@ Angular codebase is not just functional, but also maintainable, adaptable, and r
 
 ---
 
-![Like, Share and Subscribe for more](cta.png)
+![Like, Share and Subscribe for more](images/cta.png)
 
 This document was originally written by "Chris Kouakam" on the blog: https://blog.numericaideas.com/solid-principles-in-angular
 
