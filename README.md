@@ -36,6 +36,7 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 ### <a href="https://blog.numericaideas.com"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [Introduction to Terraform](https://blog.numericaideas.com/introduction-to-terraform/)
 - [Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide](https://blog.numericaideas.com/cd-springboot-aws-eb-github-actions/)
 - [Docker Init: Quickly Dockerizing NodeJS Application](https://blog.numericaideas.com/quickly-dockerizing-nodejs/)
 - [How to Change Default SSH Port on Linux](https://blog.numericaideas.com/change-default-ssh-port-linux/)
@@ -45,7 +46,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 - [Auto Scaling Group on AWS with Terraform](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform/)
 - [Periodic Table of DevOps Tools in 2023](https://blog.numericaideas.com/devops-periodic-table/)
 - [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
-- [Accelerate Android App Delivery via Bitrise CI/CD Pipelines](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
