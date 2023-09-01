@@ -425,7 +425,7 @@ The complete source code of the project is available on [GitHub](https://github.
 
 In case you aren't familiar with this IaC tool yet, there is an [Introduction to Terraform video tutorial](https://youtu.be/tJ6L1332WU4) along with a demo available on YouTube:
 
-[![TerraformWorkflow](images/terraform-introduction.png)](https://youtu.be/tJ6L1332WU4)
+[![TerraformWorkflow](../introduction/images/TerraformWorkflow.png)](https://youtu.be/tJ6L1332WU4)
 
 ———————
 
