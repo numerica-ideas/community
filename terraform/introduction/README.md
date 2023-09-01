@@ -5,7 +5,7 @@
 ## What is Terraform?
 [Terraform](https://developer.hashicorp.com/terraform) is widely defined as a cloud-agnostic tool used to deploy resources no matter the provider involved, but it's more than that, since it works on-premises as well, and a provider can be anything else than cloud environments, like Kubernetes clusters and Docker instances can be automated as well. Terraform is an **Infrastructure as Code (IaC)** tool that allows you to automatically create and manage resources for anything that has an accessible API defined as a provider.
 
-The sample code at the end covers the creation of an **ec2 instance on AWS** associated with a **security group** with **Nginx** installed and serving on port **80**.
+The sample code at the end covers the creation of an **EC2 instance on AWS** associated with a **security group** with **Nginx** installed and serving on port **80**.
 
 Do you prefer the Video format instead? Feel free to watch it by following this [link](https://youtu.be/tJ6L1332WU4):
 [![TerraformIntroVideo](images/introduction-to-terraform.png)](https://youtu.be/tJ6L1332WU4)
@@ -61,7 +61,7 @@ Using Terraform on a daily basis can't be achieved without the following common 
 - `terraform destroy`: destroys previously-created infrastructure, it’s an alias for “terraform apply -destroy”.
 - `terraform help`: displays the documentation of Terraform CLI commands.
 
-## Demo: Create an ec2 Instance on AWS
+## Demo: Create an EC2 Instance on AWS
 For the demo, I’ll assume you have properly installed AWS CLI on your computer and configured it successfully by using the appropriate command: aws configure. You can read more about it from this [guide](https://blog.numericaideas.com/configure-aws-cli).
 
 We are going to create an EC2 server on AWS and then install Nginx on it, we ended up with three files just for illustration purposes.
@@ -144,7 +144,7 @@ resource "aws_security_group" "instance_sg" {
 As said on the top, we could define some outputs to be printed or not in the console, feel free to do so in the [outputs.tf](./outputs.tf) file as below:
 ```
 output "instance_arn" {
-  description = "Created ec2 arn"
+  description = "Created EC2 arn"
   value       = aws_instance.new_instance.arn
 }
 
