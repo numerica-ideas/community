@@ -8,22 +8,27 @@ Use Case: Task Management App
 
 ## 1. Single Responsibility Principle (SRP)
 Each Angular component takes on a single role. For instance, you have separate components for task creation, task listing, and task details. This ensures that components are focused, easier to understand, and more reusable.
+
 ![Single Responsibility Principle (SRP)](images/SRP.png)
 
 ## 2. Open-Closed Principle (OCP)
 You design the app to be open for extension but closed for modification. When adding new task types, you create new classes that inherit from a base `Task` class. This way, you can add features without altering existing code, ensuring stability.
+
 ![Open-Closed Principle (OCP)](images/OCP.png)
 
 ## 3. Liskov Substitution Principle (LSP)
 Suppose you introduce different types of tasks: *"SimpleTask"* and *"ComplexTask."* Applying LSP, you ensure that any component designed for the base `Task` class can seamlessly work with its derived types without causing unexpected behavior.
+
 ![Liskov Substitution Principle (LSP)](images/LSP.png)
 
 ## 4. Interface Segregation Principle (ISP)
 Implement distinct interfaces for different aspects of the app. For example, you create separate interfaces for task creation and task editing. This prevents components from being burdened with unnecessary methods, promoting clarity and maintainability.
+
 ![Interface Segregation Principle (ISP)](images/ISP.png)
 
 ## 5. Dependency Inversion Principle (DIP)
 You use dependency injection extensively. Components depend on abstractions (interfaces) for services like task storage and notifications. This way, you can effortlessly swap out implementations without affecting the components' behavior.
+
 ![Dependency Inversion Principle (DIP)](images/DIP.png)
 
 ## Practical Implementation
