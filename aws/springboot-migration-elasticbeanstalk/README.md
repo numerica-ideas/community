@@ -4,7 +4,7 @@ Migrating a *Spring Boot + MySQL* project to AWS Cloud using **[ElasticBeanstalk
 
 Migrating an App with the **Lift And Shift** approach is often done by updating a few configurations files here and there, taking into consideration the **PAAS** model, in which we are only responsible for the App and its data, with the infrastructure and such being handled by the Cloud provider in use. 
 
-[![PresentationImage](aws-elasticbeanstalk-migration.png)](https://youtu.be/tWQFavEJQ7c)
+[![PresentationImage](./images/aws-elasticbeanstalk-migration.png)](https://youtu.be/tWQFavEJQ7c)
 
 This first [video](https://youtu.be/tWQFavEJQ7c) is part of a [series](https://github.com/numerica-ideas/community/tree/master/aws/springboot-migration-elasticbeanstalk#series), it goes over the definition of the **Lift And Shift (Rehosting)** Cloud migration strategy and demonstrates it in only 5 steps:
 - **Step 1**: Initialize the Project
@@ -25,9 +25,9 @@ This first [video](https://youtu.be/tWQFavEJQ7c) is part of a [series](https://g
 It's part of a **[Cloud Migration Series](https://youtube.com/playlist?list=PLJl2liPyo6s3oQkBT2UWbuSfrwO4aS-9Z)** whose content is below:
 - **Part 1** : [Lift And Shift (rehosting) to ElasticBeanstalk](https://youtu.be/tWQFavEJQ7c)
 - **Part 2** : [Scalability](https://youtu.be/KHOxmHL5USI)
-- **Part 3** : CI / CD
+- **Part 3** : [CI/CD using GitHub Actions](https://youtu.be/TI84hpeiTZE)
 - **Part 4** : Monitoring
-- **Part 5** : Domain Name + HTTPS Setup (R53 + ACM )
+- **Part 5** : Domain Name + HTTPS Setup (R53 + ACM)
 - **Part 6** : Advanced Security Strategies
 
 This video has no intention to highlight the advantages of the Cloud, but directly to migrate an Application to AWS, I’ll assume you have some basic knowledge around, if not, feel free to watch our [previous video](https://youtu.be/0II0ikOZEYE) which covers the most important advantages the Cloud has to offer.
@@ -41,13 +41,20 @@ Once done, here's the command to run to create your **scalable environment (load
 
 Once your *.ebextensions* file is ready with your configurations, feel free to build and deploy the App once more and they'll be picked up by AWS.
 
-[![ScalabilityTypesImage](scalability-types.png)](https://youtu.be/KHOxmHL5USI)
+[![ScalabilityTypesImage](./images/scalability-types.png)](https://youtu.be/KHOxmHL5USI)
 
 **Video**: https://youtu.be/KHOxmHL5USI
 
 **Notes**:
 - Making these changes via the **UI** for an existing deployment is demonstrated in the **Part 2** video, while the **.ebextensions** way works for new and existing environments.
 - There is **order of precedence** for configurations options: https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html#configuration-options-precedence
+
+## CI/CD using GitHub Actions
+This video is about building a Continuous Integration and Continuous Deployment (CI/CD) of a **"Spring Boot + MySQL"** App to AWS Elastic Beanstalk via GitHub Actions with no Cloud experience required.
+
+[![GitHubActionsCICDImage](./images/cicd-github-actions.png)](https://youtu.be/TI84hpeiTZE)
+
+**Video**: https://youtu.be/TI84hpeiTZE
 
 ## Prerequisites
 - Install MySQL and run it.

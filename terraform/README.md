@@ -6,8 +6,8 @@ Terraform is an open-source tool by HashiCorp for automated IT infrastructure ma
 The source codes of the articles in this category are present in this [folder](./).
 
 ## Related Articles
-- [Introduction to Terraform](./introduction)
 <!-- TAG-POSTS-LIST:START -->
+- [Introduction to Terraform](https://blog.numericaideas.com/introduction-to-terraform/)
 - [Auto Scaling Group on AWS with Terraform](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform/)
 - [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform/)
 <!-- TAG-POSTS-LIST:END -->
