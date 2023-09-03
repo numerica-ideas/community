@@ -38,12 +38,6 @@ EFS offers a `scalable` and `high-performance Network File System (NFS)` that ca
 
 This shared file storage is pivotal for horizontal scaling of WordPress, ensuring that essential files such as `plugins`, `themes`, and uploads are consistently accessible across the entire fleet.
 
-### Read Replicas for RDS
-
-We can take advantage of **Read Replicas** for our **RDS database** to alleviate the load on the primary instance. This is particularly useful for queries that involve extensive **reading**, such as `reporting tasks`.
-
-**Read Replicas** not only contribute to horizontally scaling database reads but also enhance overall database availability.
-
 ## Prerequisites
 
 Before we proceed with scaling our WordPress deployment on AWS, make sure you have the following prerequisites in place
@@ -247,6 +241,35 @@ resource "aws_efs_mount_target" "efs_mount_target_3" {
   file_system_id  = aws_efs_file_system.efs_volume.id
   subnet_id       = aws_subnet.ec2_3_public_subnet.id
   security_groups = [aws_security_group.efs_sg.id]
+}
+```
+
+## RDS Multi-AZ Configuration
+
+Instead of using Read Replicas, we will opt for a Multi-AZ configuration for our RDS instance. This configuration ensures high availability for our database by automatically creating a replica in a different availability zone. In case of a primary zone failure, replication will automatically switch to the replica in the backup availability zone, thus ensuring uninterrupted operations.
+
+Here's how to configure our RDS Multi-AZ instance in Terraform `main.tf`:
+
+```terraform
+resource "aws_db_instance" "rds_master" {
+  identifier              = "master-rds-instance"
+  allocated_storage       = 10
+  engine                  = "mysql"
+  engine_version          = "5.7.37"
+  instance_class          = "db.t3.micro"
+  db_name                 = var.db_name
+  username                = var.db_user
+  password                = var.db_password
+  backup_retention_period = 7
+  multi_az                = true
+  db_subnet_group_name    = aws_db_subnet_group.database_subnet.id
+  skip_final_snapshot     = true
+  vpc_security_group_ids  = [aws_security_group.database-sg.id]
+  storage_encrypted       = true
+
+  tags = {
+    Name = "my-rds-master"
+  }
 }
 ```
 
