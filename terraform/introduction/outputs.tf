@@ -1,5 +1,5 @@
 output "instance_arn" {
-  description = "Created ec2 arn"
+  description = "Created EC2 arn"
   value       = aws_instance.new_instance.arn
 }
 
