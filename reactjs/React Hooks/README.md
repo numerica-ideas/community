@@ -1,4 +1,4 @@
-# React Hooks: How to use Hooks to manage component state and lifecycle.
+# React Hooks: How to use Hooks to Manage Component State and Lifecycle.
 
 [React](https://react.dev/learn) is a popular JavaScript library used to create interactive user interfaces. With the release of React 16.8, a new feature called [Hooks](https://react.dev/reference/react) was introduced. Hooks allow developers to manage the state and lifecycle of components in an easier and more efficient way.
 
@@ -126,7 +126,7 @@ function WelcomeMessage(props) {
 
 - `useCallback` is a React hook that allows you to remember a function in memory between renders. This optimizes performance by avoiding recreating the same function each time you render.
 
-Here is an example of using `useCallback`:```
+Here is an example of using `useCallback`:
 
 ```sh
 import React, { useState, useCallback } from 'react';
