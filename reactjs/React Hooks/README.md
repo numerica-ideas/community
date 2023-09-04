@@ -160,6 +160,4 @@ In this example, handleClick is a function created on every render, which can ca
 
 Hooks are a powerful feature of React that allow developers to manage component state and lifecycle in an easier and more efficient way. They offer several advantages over classes, such as reduced code required, better testability, and improved performance. By using Hooks, developers can write more concise and easier to understand components, which makes it easier to maintain and evolve the application.
 
-In conclusion, Hooks are a valuable tool for all React developers and should be used to improve code quality and maintainability.
-
-By [noelfoka](https://github.com/noelfoka)
+In conclusion, Hooks are a valuable tool for all React developers and should be used to improve code quality.
