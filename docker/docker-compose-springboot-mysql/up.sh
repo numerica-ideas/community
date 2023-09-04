@@ -1,0 +1,1 @@
+MYSQL_DATABASE=mydatabase MYSQL_PASSWORD=rootpassword docker-compose up
