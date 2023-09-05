@@ -1,4 +1,6 @@
-# Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator
+# Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fweb%2Fspring-boot-actuator&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/spring-boot-actuator)
+
+**This article was originally written by "Cedrick TAGNE" on the blog**: https://blog.numericaideas.com/spring-boot-actuator
 
 ## Introduction
 
@@ -15,6 +17,9 @@ Throughout the article, we will cover essential topics such as:
 - **Monitoring Application Metrics**
 - **Health Monitoring and Readiness Checks**
 - **Security and Production Best Practices**
+
+
+![Articles Featured image](images/spring-boot-actuator.png)
 
 ## Core Functionalities of Spring Boot Actuator
 
