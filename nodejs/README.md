@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Built-in .env Files Support Starting from Node.js v20.6.0](https://blog.numericaideas.com/nodejs-env-files-support/)
 - [Docker Init: Quickly Dockerizing NodeJS Application](https://blog.numericaideas.com/quickly-dockerizing-nodejs/)
 - [Serverless Visual Design with AWS Application Composer](https://blog.numericaideas.com/aws-application-composer/)
 - [Easiest GitLab CI/CD Lambda Pipeline](https://blog.numericaideas.com/easiest-gitlab-cicd-lambda-pipeline/)
