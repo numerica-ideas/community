@@ -51,7 +51,7 @@ As you can see, it simply prints the content of the `ACCESS_KEY` environment var
 If you are using a version lower than 20.6.0, you'll get the following message since it wasn't included in NodeJS yet:
 `node: bad option: --env-file=.env`
 
-Here's the complete [source code](https://github.com/numerica-ideas/community/tree/master/nodejs/node-support-env-files) of this experimentation.
+Here's the complete [source code](https://github.com/numerica-ideas/community/tree/master/nodejs/node-support-env-files) of this experimentation, and the [release notes](https://nodejs.org/en/blog/release/v20.6.0).
 
 If you are interested in related content, take a look at the following which explains how to [Quickly Dockerizing NodeJS Application using docker init command](https://blog.numericaideas.com/quickly-dockerizing-nodejs) effortlessly:
 
