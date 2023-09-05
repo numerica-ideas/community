@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Apply SOLID Principles in a Real Angular Project](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet/)
 - [Git Cheat Sheet](https://blog.numericaideas.com/git-cheat-sheet/)
 <!-- TAG-POSTS-LIST:END -->
 
