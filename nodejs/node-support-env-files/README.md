@@ -7,7 +7,7 @@
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Introduction
-This is a long-awaited feature amongst NodeJS developers. Finally, starting from **Node.js v20.6.0**, Node.js supports `.env` files for configuring environment variables.
+A long-awaited feature amongst NodeJS developers. Finally, starting from **Node.js v20.6.0**, Node.js supports `.env` files for configuring environment variables.
 
 We used to plug in third-party dependencies for that same need, the most notable one is [dotenv](https://www.npmjs.com/package/dotenv).
 
