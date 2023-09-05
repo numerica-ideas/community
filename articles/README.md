@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Built-in .env Files Support Starting from Node.js v20.6.0](https://blog.numericaideas.com/nodejs-env-files-support/)
 - [Apply SOLID Principles in a Real Angular Project](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet/)
 - [Introduction to Terraform](https://blog.numericaideas.com/introduction-to-terraform/)
 - [Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide](https://blog.numericaideas.com/cd-springboot-aws-eb-github-actions/)
