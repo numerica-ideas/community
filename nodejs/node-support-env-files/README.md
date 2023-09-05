@@ -1,4 +1,4 @@
-# Built-in .env files support starting from Node.js v20.6.0
+# Built-in .env files support starting from Node.js v20.6.0&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fnodejs%2Fnodejs-env-files-support&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/nodejs-env-files-support)
 
 **This document was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/nodejs-env-files-support
 
