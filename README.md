@@ -92,6 +92,7 @@ Your contributions are **precious** and some are [awarded](https://github.com/nu
 The articles, workshops, and other events **projects** are centralized in this repository:
 - [Algorithms](./algorithms)
 - [Android](./android)
+- [Angular](./angular)
 - [Architecture](./architecture)
 - [Articles](./articles)
 - [Amazon Web Services (AWS)](./aws)
