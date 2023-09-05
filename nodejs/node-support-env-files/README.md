@@ -4,10 +4,10 @@
 
 [![NodejsEnvFilesSupportThumbnail](./images/nodejs-env-files-support.png)](https://blog.numericaideas.com/nodejs-env-files-support)
 
-> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Introduction
-This is a long-awaited feature amongts NodeJS developers. Finally out, starting from **Node.js v20.6.0**, Node.js supports `.env` files for configuring environment variables.
+This is a long-awaited feature amongst NodeJS developers. Finally, starting from **Node.js v20.6.0**, Node.js supports `.env` files for configuring environment variables.
 
 We used to plug in third-party dependencies for that same need, the most notable one is [dotenv](https://www.npmjs.com/package/dotenv).
 
@@ -26,7 +26,7 @@ Now, we install NodeJS v20.6.0 using the command `nvm install 20.6.0`:
 ![InstallNodeJS2060](./images/install-node-20-6-0.png)
 
 In case you had it installed already, a simple `nvm use 20.6.0` will do.
-At the end we can confirm the installed version is present by using the first command as illustrated above.
+At the end, we can confirm the installed version is present by using the first command as illustrated above.
 
 We have created a basic env file with a single line as content:
 
@@ -34,13 +34,13 @@ We have created a basic env file with a single line as content:
 ACCESS_KEY=FAKE_ACCESS_KEY
 ```
 
-Along with a minialist index.js JS file runnable by NodeJS, here's its content:
+Along with a minimalist index.js JS file runnable by NodeJS, here's its content:
 
 ```js
 console.log(`The access key is: ${process.env.ACCESS_KEY}`)
 ```
 
-Both files are very basic and are used for illustration purposes only, so we aren't dealing with a full fledged NodeJS project but the concept is the same, since to access environment variables in NodeJS you'll follow the pattern: `process.env.THE_ENVIRONMENT_VAR_KEY`.
+Both files are very basic and are used for illustration purposes only, so we aren't dealing with a full-fledged NodeJS project but the concept is the same since to access environment variables in NodeJS you'll follow the pattern: `process.env.THE_ENVIRONMENT_VAR_KEY`.
 
 Finally, let's run the project now, `node --env-file=.env index.js`:
 
