@@ -1,6 +1,6 @@
 # Quickly Build your React CRUD Application with Refine&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fweb%2Fquickly-build-your-react-crud-app-with-refine&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/)
 
-**This article was originally written by "Ismael Messa" on the blog**: https://blog.numericaideas.com/
+**This article was originally written by "Ismael Messa" on the blog**: https://blog.numericaideas.com/build-react-crud-app-with-refine
 
 ## Introduction
 
@@ -10,11 +10,17 @@ The **YouTube Channels** in both English (En) and French (Fr) are now accessible
 
 ## Set up a Refine Project
 
-To put in place a Refine project, you have the choice between the [browser-based app](https://refine.dev/#playground) and the CLI-based one, we are going to use the Browser-based one throughout this article.
+To put in place a Refine project, you have the choice between the **browser-based** app and the **CLI-based** one. For our article, we are going to use the browser-based app to create our app.
 
-![Project tools](./images/project-tools.png)
+From the Refine [playground](https://refine.dev/#playground) after clicking on the `Start now` button below;
 
-For our app, we chose NextJS, Material UI, Rest API, and Google Auth Provider as tools as shown in the image above.
+![Start playground](./images/start-playground.png)
+
+The next step is to choose which tools your app must have and below that are the tools we selected:
+
+![Project tools](./images/create-project.png)
+
+For our app, we choosen `NextJS`, `Material UI`, `Rest API`, and `Google Auth Provider` as tools as shown in the image above.
 
 ## Authentication
 
@@ -25,24 +31,48 @@ An **AuthProvider** for a Refine application is an object of `type AuthBindings`
 
 ```typescript
 import type { AuthBindings } from "@refinedev/core";
+import { SessionProvider, signIn, signOut, useSession } from "next-auth/react";
 
+function App({ Component, pageProps }: AppProps): JSX.Element {
 ...
-    const authProvider: AuthBindings = {
-        login: async (params: any): AuthActionResponse,
-        check: async (params: any): CheckResponse,
-        logout: async (params: any): AuthActionResponse,
-        onError: async (params: any): OnErrorResponse,
-        register: async (params: any): AuthActionResponse,
-        forgotPassword: async (params: any): AuthActionResponse,
-        updatePassword: async (params: any): AuthActionResponse,
-        getPermissions: async (params: any): unknown,
-        getIdentity: async (params: any): unknown,
-   };
+  const authProvider: AuthBindings = {
+    login: async () => {
+      signIn("google", {
+        callbackUrl: to ? to.toString() : "/",
+        redirect: true,
+      });
 
-   ...
-   return (
-       <Refine authProvider={authProvider} />
-   )
+      return {
+        success: true,
+      };
+    },
+    logout: async () => {
+      signOut({
+        redirect: true,
+        callbackUrl: "/login",
+      });
+
+      return {
+        success: true,
+      };
+    },
+    onError: async (error) => {
+      console.error(error);
+      return {
+        error,
+      };
+    }
+  };
+
+  ...
+  return (
+    <Refine 
+      authProvider={authProvider}
+      ...
+    >
+      {props.children}
+    </Refine>
+  )
 }
 ```
 
@@ -50,6 +80,7 @@ import type { AuthBindings } from "@refinedev/core";
 
 Below we have an example of how to use Refine hooks to perform the login operation.
 
+`/pages/login/index.tsx`
 ```typescript
 import { useLogin } from "@refinedev/core";
 
@@ -82,37 +113,26 @@ import { Refine } from "@refinedev/core";
 import routerProvider from "@refinedev/nextjs-router";
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
-    . . .
-    return (
-        <Refine
-            routerProvider={routerProvider}
-            resources={[
-                {
-                  name: "blog_posts",
-                  list: "/blog-posts",
-                  create: "/blog-posts/create",
-                  edit: "/blog-posts/edit/:id",
-                  show: "/blog-posts/show/:id",
-                  meta: {
-                    canDelete: true,
-                  },
-                },
-                {
-                  name: "categories",
-                  list: "/categories",
-                  create: "/categories/create",
-                  edit: "/categories/edit/:id",
-                  show: "/categories/show/:id",
-                  meta: {
-                    canDelete: true,
-                  },
-                },
-              ]}
-
-        >
-             {props.children}
-        </Refine>
-    );
+  ...
+  return (
+    <Refine
+      routerProvider={routerProvider}
+      resources={[
+        {
+          name: "blog_posts",
+          list: "/blog-posts",
+          create: "/blog-posts/create",
+          edit: "/blog-posts/edit/:id",
+          show: "/blog-posts/show/:id",
+          meta: {
+            canDelete: true,
+          },
+        }
+      ]}
+    >
+      {props.children}
+    </Refine>
+  );
 }
 ```
 
@@ -129,10 +149,17 @@ This is how you can enable data providers in your Refine app:
 import dataProvider from "@refinedev/simple-rest";
 const API_URL = "https://api.fake-rest.refine.dev";
 
-<Refine
-    ...
-    dataProvider={dataProvider(API_URL)}
-/>;
+function App({ Component, pageProps }: AppProps): JSX.Element {
+  ...
+  return (
+    <Refine
+      dataProvider={dataProvider(API_URL)}    
+      ...
+    >;
+      {props.children}
+    </Refine>
+  );
+}
 ```
 
 ### How to use DataProvider methods in the app
