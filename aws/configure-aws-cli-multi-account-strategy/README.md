@@ -7,7 +7,7 @@ The **AWS CLI** is a powerful tool that allows you to interact with various AWS 
 
 [![FeaturedImage](./images/how-to-configure-aws-cli-for-multi-account-strategy.png)](https://blog.numericaideas.com/configure-aws-cli)
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Install AWS CLI
 The first step is to install the **AWS CLI** on your machine. AWS CLI can be installed on Windows, macOS, and Linux systems. You can follow the appropriate steps from the [AWS CLI website](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).

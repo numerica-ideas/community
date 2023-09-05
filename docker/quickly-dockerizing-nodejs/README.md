@@ -8,7 +8,7 @@ Containerization has revolutionized the world of software development and deploy
 
 [![quickly-dockerizing-nodejs](./images/quickly-dockerizing-nodejs.png)](https://blog.numericaideas.com/quickly-dockerizing-nodejs)
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## What is 'docker init'?
 
