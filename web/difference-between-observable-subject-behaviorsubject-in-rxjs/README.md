@@ -8,7 +8,7 @@
 
 [![FeaturedImage](./RxJS-Observables-Difference.png)](https://blog.numericaideas.com/difference-between-rxjs-observable-subject-and-behaviorsubject)
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Observable
 

@@ -8,7 +8,7 @@ In today's digital landscape, building `highly available` and `scalable` infrast
 
 [![FeaturedImage](./images/Auto-Scaling-Group-on-AWS-with-Terraform.png)](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Auto Scaling Group (ASG)
 

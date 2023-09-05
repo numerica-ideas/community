@@ -7,7 +7,7 @@ A scalable system is one that has the ability to adapt itself by providing more 
 
 [![FeaturedImage](./images/scalability-types.png)](https://blog.numericaideas.com/scalability-types)
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Scalability Types
 There’s no single way to make a system scale, sometimes it’s done by offloading some tasks to other threads, but in this section, we’ll focus on the main **Scalability Types** applied to IT systems, which are the **vertical** and the **horizontal** approaches, respectively referred to as scaling **UP** and scaling **OUT**.
