@@ -36,6 +36,7 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 ### <a href="https://blog.numericaideas.com"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [Built-in .env Files Support Starting from Node.js v20.6.0](https://blog.numericaideas.com/nodejs-env-files-support/)
 - [Apply SOLID Principles in a Real Angular Project](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet/)
 - [Introduction to Terraform](https://blog.numericaideas.com/introduction-to-terraform/)
 - [Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide](https://blog.numericaideas.com/cd-springboot-aws-eb-github-actions/)
@@ -45,7 +46,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 - [Scalability Types in Software Architecture](https://blog.numericaideas.com/scalability-types/)
 - [Build a Serverless App with AWS Lambda, S3, DynamoDB, and Python](https://blog.numericaideas.com/aws-serverless-web-application/)
 - [Auto Scaling Group on AWS with Terraform](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform/)
-- [Periodic Table of DevOps Tools in 2023](https://blog.numericaideas.com/devops-periodic-table/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
