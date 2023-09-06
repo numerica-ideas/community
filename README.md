@@ -22,6 +22,7 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Latest YouTube Videos      
  
 <!-- YOUTUBE-VIDEOS-LIST:START -->
+- [Built-in .env Files Support Starting from Node.js v20.6.0](https://www.youtube.com/watch?v=gnVtDbl2gpg)
 - [Lift And Shift Cloud Migration of Spring Boot to AWS ElasticBeanstalk | Part 3: GitHub Actions CI/CD](https://www.youtube.com/watch?v=TI84hpeiTZE)
 - [Meetup 02: Devenez un freelance de 1ère classe &lpar;top 3%&rpar; avec Toptal - Salomon Nghukam](https://www.youtube.com/watch?v=AmhMAQTxcGg)
 - [Lift And Shift Cloud Migration of Spring Boot App Using AWS ElasticBeanstalk | Part 2 | Scalability](https://www.youtube.com/watch?v=KHOxmHL5USI)
