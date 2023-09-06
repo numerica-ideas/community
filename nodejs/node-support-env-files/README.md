@@ -11,6 +11,10 @@ A long-awaited feature amongst NodeJS developers. Finally, starting from **Node.
 
 We used to plug in third-party dependencies for that same need, the most notable one is [dotenv](https://www.npmjs.com/package/dotenv).
 
+Do you prefer the Video format instead? Feel free to watch it by following this [link](https://youtu.be/gnVtDbl2gpg):
+
+[![FeaturedImage](./images/video-thumbnail.png)](https://youtu.be/gnVtDbl2gpg)
+
 ## Built-in Env Files Support
 
 Let's do a very simple test by installing the latest NodeJS version as of today (05th of September 2023) and playing with a basic `.env` file.
