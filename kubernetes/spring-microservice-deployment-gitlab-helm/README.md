@@ -9,7 +9,7 @@ In today's fast-paced software development environment, it is essential to deplo
 
 [![FeaturedImage](./images/SpringBoot_Microservices_App_Deployment_to_kubernetes_with_Helm_via_GitLab_CI.png)](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci)
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Prerequisites
 To perform this demo, you will need to have the following prerequisites:

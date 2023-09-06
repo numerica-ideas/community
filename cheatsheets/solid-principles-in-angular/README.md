@@ -1,10 +1,12 @@
-# Apply SOLID Principles in a Real Angular Project
+# Apply SOLID Principles in a Real Angular Project&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fcheatsheets%2Fsolid-principles-in-angular&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet)
 
-This document was originally written by "Chris Kouakam" on the blog: https://blog.numericaideas.com/solid-principles-in-angular
+**This document was originally written by "Chris Kouakam" on the blog**: https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet
 
-Imagine you're developing a feature-rich task management application using Angular. To ensure a robust and maintainable codebase, let's see how **SOLID Principles** can guide your development journey:
+Imagine you're developing a feature-rich **Task Management Application** using Angular. To ensure a robust and maintainable codebase, let's see how **SOLID Principles** can guide your development journey.
 
-Use Case: Task Management App
+[![SolidAngularCheatSheetThumbnail](./images/solid-principles-in-angular.png)](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet)
+
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## 1. Single Responsibility Principle (SRP)
 Each Angular component takes on a single role. For instance, you have separate components for task creation, task listing, and task details. This ensures that components are focused, easier to understand, and more reusable.

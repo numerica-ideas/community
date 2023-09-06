@@ -7,7 +7,7 @@
 
 [![FeaturedImage](./images/Android-App-Delivery-via-Bitrise.png)](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines)
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Why use Bitrise?
 Using a CI/CD platform like Bitrise for your Android app development has many benefits:
