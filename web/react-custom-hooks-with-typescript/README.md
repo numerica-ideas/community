@@ -2,7 +2,7 @@
 
 This document was originally written by "Chris Kouakam" on the blog: https://blog.numericaideas.com/react-custom-hooks-with-typescript
 
-React is a versatile JavaScript library that has revolutionized the way developers build user interfaces. With its component-based architecture, it provides a modular and reusable way to create web applications. TypeScript, on the other hand, adds static typing to JavaScript, making it safer and more maintainable. Together, React and TypeScript offer a robust platform for building complex applications.
+[React](https://react.dev/) is a versatile JavaScript library that has revolutionized the way developers build user interfaces. With its component-based architecture, it provides a modular and reusable way to create web applications. TypeScript, on the other hand, adds static typing to JavaScript, making it safer and more maintainable. Together, React and [TypeScript](https://www.typescriptlang.org/) offer a robust platform for building complex applications.
 
 One of the standout features of React is hooks. Introduced in React 16.8, hooks allow developers to manage state, side effects, and other React features in functional components. While React provides a set of built-in hooks like `useState`, `useEffect`, and `useContext`, you can also create your own custom hooks to encapsulate and reuse logic across different components. When you combine custom hooks with TypeScript, you get the benefits of type safety and code maintainability.
 
@@ -11,10 +11,14 @@ In this article, we will explore the creation and usage of custom hooks in React
 ## Understanding Custom Hooks
 Custom hooks are JavaScript functions whose names start with the word "use." They can call other hooks if necessary and encapsulate complex logic. Custom hooks allow you to extract and reuse stateful logic from a component, making it more modular and easier to test. 
 The key benefits of using custom hooks include:
-Reusability: Custom hooks enable you to encapsulate logic and share it across multiple components, promoting a DRY (Don't Repeat Yourself) approach to code.
-Simplicity: They make your components cleaner and more readable by abstracting away complex logic into reusable functions.
-Testing: Custom hooks can be tested independently, ensuring the reliability of your code.
-Type Safety: When combined with TypeScript, custom hooks provide type annotations that help catch potential bugs at compile-time rather than runtime.
+1. **Reusability:** Custom hooks enable you to encapsulate logic and share it across multiple components, promoting a DRY (Don't Repeat Yourself) approach to code.
+
+2. **Simplicity:** They make your components cleaner and more readable by abstracting away complex logic into reusable functions.
+
+3. **Testing:** Custom hooks can be tested independently, ensuring the reliability of your code.
+
+4. **Type Safety:** When combined with TypeScript, custom hooks provide type annotations that help catch potential bugs at compile-time rather than runtime.
+
 
 ## Creating a Custom Hook
 Let's create a simple custom hook that manages the state of a counter. This example will illustrate the steps involved in creating and using a custom hook with TypeScript.
