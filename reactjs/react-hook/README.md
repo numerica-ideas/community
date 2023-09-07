@@ -1,4 +1,4 @@
-# react-hooks: How to use Hooks to Manage Component State and Lifecycle
+#  React Hooks to Manage Component State and Lifecycle
 
 ## What is a Hook?
 
@@ -158,8 +158,16 @@ test('Counter increments when button is clicked', () => {
 });
 ```
 
+———————
+
+We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+———————
+
 ## Conclusion
 
-Hooks are a powerful feature of React that allow developers to manage component state and lifecycle in an easier and more efficient way. They offer several advantages over classes, such as reduced code required, better testability, and improved performance. By using Hooks, developers can write more concise and easier to understand components, which makes it easier to maintain and evolve the application.
+To sum up, Hooks are powerful React features that allow developers to manage component state and lifecycle in an easier and more efficient way. They offer several advantages over classes, such as reduced code required, better testability, and improved performance. By using Hooks, developers can write more concise and easier-to-understand components, which makes it easier to maintain and evolve the application.
 
-To summarize, Hooks are powerful React features that allow developers to improve code quality.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas),  [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
