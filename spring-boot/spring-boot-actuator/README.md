@@ -2,6 +2,8 @@
 
 **This article was originally written by "Cedrick TAGNE" on the blog**: https://blog.numericaideas.com/spring-boot-actuator
 
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+
 ## Introduction
 
 In the ever-evolving world of application development, delivering robust, reliable, and scalable software is a constant challenge. As developers, we strive to not only build applications that meet functional requirements but also ensure that they perform optimally and can be effectively monitored and managed. This is where Spring Boot Actuator comes into the picture.
@@ -11,13 +13,11 @@ Spring Boot Actuator (V2.x) is a powerful toolset that provides extensive monito
 In this article, we will embark on a journey to explore the vast array of features and benefits offered by Spring Boot Actuator. We will delve into the core functionalities it brings to the table and highlight how it empowers developers and system administrators to gain insights, diagnose issues, and fine-tune their Spring Boot applications for optimal performance.
 
 Throughout the article, we will cover essential topics such as:
-
 - **Core Functionalities of Spring Boot Actuator**
 - **Setting up Spring Boot Actuator**
 - **Monitoring Application Metrics**
 - **Health Monitoring and Readiness Checks**
 - **Security and Production Best Practices**
-
 
 ![Articles Featured image](images/spring-boot-actuator.png)
 
@@ -96,13 +96,13 @@ Spring Boot Actuator provides several endpoints to expose various information an
 
 For example, to enable all Actuator endpoints, add the following configuration in application.properties:
 
-in **_application.properties_**
+In the **_application.properties_** file:
 
 ```text
 management.endpoints.web.exposure.include=*
 ```
 
-or in **_application.yml_**
+Or in the **_application.yml_** one:
 
 ```
 management:
@@ -203,7 +203,7 @@ Once added you will have all 13 endpoints (except the shutdown endpoint) of Spri
 
 As you can see this exposes all the management and monitoring endpoints and metrics (except the shutdown endpoint) that Actuator provides, and it can be a security issue since it allows to get too much information about the application.
 
-To avoid that we can:
+To avoid that we can choose what endpoints should be exposed, as described in the next section.
 
 #### Expose only some Actuator's endpoints
 
@@ -225,9 +225,9 @@ management:
         include: "health,info"
 ```
 
-or we can also enable its specific endpoint by using its (_management.endpoint.<id>.enabled_) property as follows:
+Or we can also enable its specific endpoint by using its (_management.endpoint.<id>.enabled_) property as follows:
 
-ex: enabling shutdown endpoint
+e.g.: enabling shutdown endpoint
 
 **_application.properties_**
 
@@ -499,6 +499,7 @@ management.endpoints.web.path-mapping.health=/custom-health
 # Custom readiness endpoint path
 management.endpoints.web.path-mapping.readiness=/custom-readiness
 ```
+
 **_application.yml_**
 ```yml
 management:
@@ -508,6 +509,7 @@ management:
         health: /custom-health
         readiness: /custom-readiness
 ```
+
 With these configurations, your health and readiness checks will be accessible at /custom-health and /custom-readiness, respectively.
 
 ### 5. Monitoring Health and Readiness in Production
@@ -529,6 +531,7 @@ Spring Boot Actuator provides production-ready security features that you can ea
 To enable Actuator security, add the following configuration to your **_application.properties_** or **_application.yml_** file:
 
 **_application.properties_**
+
 ```properties
 # Enable Actuator security
 management.endpoints.web.exposure.include=health,info
@@ -537,8 +540,8 @@ management.endpoints.web.base-path=/actuator
 management.endpoint.health.roles=ACTUATOR_ADMIN
 management.endpoint.info.roles=ACTUATOR_ADMIN
 ```
-**_application.yml_**
 
+**_application.yml_**
 ```yml 
 # Enable Actuator security
 management:
@@ -554,6 +557,7 @@ management:
     info:
       roles: ACTUATOR_ADMIN
 ```
+
 In the above configuration, we have explicitly included only the ***health*** and ***info*** endpoints, and we have set their base path to ***/actuator***. We have also restricted access to these endpoints by specifying that only users with the role ***ACTUATOR_ADMIN*** can access them.
 
 ### 2. Define Custom Roles and Users
@@ -582,6 +586,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 }
 ```
+
 In this example, we have defined a custom role ***ACTUATOR_ADMIN*** and a user with the username ***admin*** and password ***adminPassword***. Note that in a production environment, you should use an appropriate password encoder, such as BCryptPasswordEncoder, instead of ***{noop}***.
 
 ### 3. Enable HTTPS
@@ -600,8 +605,15 @@ By adhering to these best practices, you can secure your Actuator endpoints and 
 - In this Article, we mainly talked about Actuator HTTP endpoints and metrics, but we can also access them over JMX(Java Management Extensions) which is not enabled by default but we can easily enable it using property ``spring.jmx.enabled=true``
 - Monitoring and metrics work best when they are integrated with other architecture items such as Monitoring systems, Load balancers and Alerts, So we are announcing here 2 upcoming articles ( **how to use Spring boot actuator health checks to configure a Load Balancer** and  **How to integrate Spring Boot Actuator with Monitoring Systems**)
 
+The complete source code of the project is available [on GitHub](https://github.com/numerica-ideas/community/tree/master/spring-boot/spring-boot-actuator).
 
-The complete source code of the project is available on GitHub.
+———————
+
+We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+———————
 
 ## Conclusion
 Spring Boot Actuator is a powerful toolset that unlocks enhanced monitoring and management capabilities for your Spring Boot applications. By leveraging Actuator's metrics, health monitoring, and readiness checks, you can gain valuable insights into your application's performance, proactively manage its health, and ensure optimal functionality in production environments.
@@ -610,3 +622,4 @@ In this article, we explored the core functionalities of Spring Boot Actuator, l
 
 By incorporating Spring Boot Actuator into your development workflow, you can take your application monitoring and management to the next level, ultimately delivering a more robust and reliable experience for your end-users.
 
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
