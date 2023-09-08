@@ -1,8 +1,8 @@
-#  React Hooks to Manage Component State and Lifecycle
+# React Hooks to Manage Component State and Lifecycle
 
 ## What is a Hook?
 
-A Hook is a special function that allows developers to use state and other React features without having to write a class. Hooks were released with the release of React 16.8 and are also functions that can be used in functional React components. They allow developers to reuse state and lifecycle logic without having to use classes.
+A Hook is a special function that allows developers to use state and other React features without having to write a class. Hooks were released with the release of React 16.8 and are also functions that can be used in functional React components. They facilitate development by providing less code to developers for using React features.
 
 ## React Hook Usages
 
