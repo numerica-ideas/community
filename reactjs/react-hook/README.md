@@ -113,7 +113,7 @@ function MyComponent() {
 }
 ```
 
-In this example, handleClick is a function that is created each time it renders, which can cause performance issues if the component is rendered frequently. On the other hand, memoizedHandleClick is remembered between renders using useCallback, which optimizes performance. Note that useCallback takes a dependency array as an argument, which specifies the values that the stored function depends on. In this example, the function depends on the value of count, so we pass it as a dependency.
+In this example, `handleClick` is a function that is created each time it renders, which can cause performance issues if the component is rendered frequently. On the other hand, `memoizedHandleClick` is remembered between renders using `useCallback`, which optimizes performance. Note that `useCallback` takes a dependency array as an argument, which specifies the values that the stored function depends on. In this example, the function depends on the value of `count`, so we pass it as a dependency.
 
 ## Testing React Hooks
 
@@ -140,7 +140,7 @@ function Counter() {
 export default Counter;
 ```
 
-Now here is the related test code, which uses the Jest library:
+Now here is the related test code, which uses the [Jest](https://jestjs.io/docs/tutorial-react) library:
 
 ```jsx
 import React from 'react';
