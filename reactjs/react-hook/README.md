@@ -6,7 +6,7 @@ A Hook is a special function that allows developers to use state and other React
 
 ## React Hook Usages
 
-Indeed, the appearance of hooks in web development frameworks and libraries, such as React, is due to the need to simplify and make more flexible the management of state and effects in components. Hooks allow developers to manage local state, perform side effects, and reuse logic between components more efficiently. They offer a more functional and declarative approach to state management, which makes it easier to create more modular and maintainable applications.
+Indeed, the appearance of hooks in web development frameworks and libraries, such as React, is due to the need to simplify code by avoiding `Class` and make more flexible the management of state in components. Hooks allow developers to manage local state, perform side effects, and reuse logic between components more efficiently. They offer a more functional and declarative approach to state management, which makes it easier to create more modular and maintainable applications.
 
 For example, instead of using a class and writing methods like `componentDidMount` or `componentWillUnmount` to manage component lifecycle like this:
 
