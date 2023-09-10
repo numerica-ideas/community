@@ -11,7 +11,7 @@ The following lines will clearly differentiate between **containerized and orche
 
 Moving to the following sections, we assume that you have **Java (OpenJDK 11), Docker, and Kubernetes** properly installed on your computer.
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Docker
 [Docker](https://www.docker.com) is an open-source tool for containerizing applications, it encapsulates an application with all the dependencies needed for it to run. Docker containers are lightweight and easy to move around, allowing applications to be deployed quickly and efficiently on any system that supports Docker.

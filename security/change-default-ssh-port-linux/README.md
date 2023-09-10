@@ -7,7 +7,7 @@
 
 [![ChangeDefaultSSHPortLinux](./images/change-default-ssh-port-linux.png)](https://blog.numericaideas.com/change-default-ssh-port-linux)
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Security
 The internet is a big open space with plenty of possibilities, not only for good but also for mal intended persons, they often try to guess what our servers' passwords are by using the default settings, and since the **Linux ports** range from **0 to 65536**, it's a terrific work to find out the specific port a service runs on if your default ports are unavailable. So, there is a big chance they won't compromise your servers.
