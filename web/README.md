@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [React Hooks to Manage Component State and Lifecycle](https://blog.numericaideas.com/react-hooks/)
 - [Apply SOLID Principles in a Real Angular Project](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet/)
 - [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
 - [Difference between RxJS Observable, Subject, and BehaviorSubject](https://blog.numericaideas.com/difference-between-rxjs-observable-subject-and-behaviorsubject/)
