@@ -37,6 +37,7 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 ### <a href="https://blog.numericaideas.com"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [React Hooks to Manage Component State and Lifecycle](https://blog.numericaideas.com/react-hooks/)
 - [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://blog.numericaideas.com/spring-boot-actuator/)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://blog.numericaideas.com/nodejs-env-files-support/)
 - [Apply SOLID Principles in a Real Angular Project](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet/)
@@ -46,7 +47,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 - [How to Change Default SSH Port on Linux](https://blog.numericaideas.com/change-default-ssh-port-linux/)
 - [Dockerize Spring Boot and MySQL with Docker Compose](https://blog.numericaideas.com/docker-compose-springboot-mysql/)
 - [Scalability Types in Software Architecture](https://blog.numericaideas.com/scalability-types/)
-- [Build a Serverless App with AWS Lambda, S3, DynamoDB, and Python](https://blog.numericaideas.com/aws-serverless-web-application/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
