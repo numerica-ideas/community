@@ -38,6 +38,12 @@ EFS offers a `scalable` and `high-performance Network File System (NFS)` that ca
 
 This shared file storage is pivotal for horizontal scaling of WordPress, ensuring that essential files such as `plugins`, `themes`, and uploads are consistently accessible across the entire fleet.
 
+### Read Replicas for RDS
+
+We can take advantage of **Read Replicas** for our **RDS database** to alleviate the load on the primary instance. This is particularly useful for queries that involve extensive **reading**, such as `reporting tasks`.
+
+**Read Replicas** not only contribute to horizontally scaling database reads but also enhance overall database availability.
+
 ## Prerequisites
 
 Before we proceed with scaling our WordPress deployment on AWS, make sure you have the following prerequisites in place
