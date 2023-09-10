@@ -1,18 +1,22 @@
-# How to Scale WordPress on AWS
+# How to Scale WordPress on AWS&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Faws-scale-wordpress&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/aws-scale-wordpress)
+
+**This document was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/aws-scale-wordpress
+
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Introduction
 
 In today's article, we will explore the **scalability** possibilities of deploying WordPress on AWS. Building upon our previous article on **deploying WordPress on a 2-Tier AWS architecture with Terraform**, we will focus on utilizing the `Auto Scaling Group (ASG)` feature, along with leveraging `Amazon S3` for media storage and `CloudFront` for **caching**. These enhancements will enable us to scale our WordPress deployment effectively and handle increasing traffic demands. So let's dive in!
 
-![architecture diagram](./images/AWS%20Scale%20WordPress%20on%20a%202-Tier%20AWS%20Architecture%20with%20Terraform.png)
+If you haven't read the previous article, [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform), we highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
 
-If you haven't read the previous article, **Deploying WordPress on a 2-Tier AWS Architecture with Terraform**, we highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
-[**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+[![previous architecture diagram](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
+## Scalable Architecture
 
-## Scalability Architecture
+To make the deployment of WordPress scalable on AWS, we used several strategies detailed in the illustration and sections below:
 
-To make the deployment of WordPress scalable on AWS, we used several strategies among which we have:
+[![architecture diagram](./images/how-to-scale-wordpress-on-aws.png)](https://blog.numericaideas.com/aws-scale-wordpress)
 
 ### Horizontal Scaling with Auto Scaling Groups
 
@@ -36,7 +40,7 @@ Employing **Elastic File System (EFS)** enables the WordPress instances within t
 
 EFS offers a `scalable` and `high-performance Network File System (NFS)` that can be accessed concurrently by multiple EC2 instances.
 
-This shared file storage is pivotal for horizontal scaling of WordPress, ensuring that essential files such as `plugins`, `themes`, and uploads are consistently accessible across the entire fleet.
+This shared file storage is pivotal for the horizontal scaling of WordPress, ensuring that essential files such as `plugins`, `themes`, and uploads are consistently accessible across the entire fleet.
 
 ### Read Replicas for RDS
 
@@ -165,7 +169,7 @@ resource "aws_autoscaling_attachment" "asg_attachment" {
 
 ### Step 2: Modify loadbalancer.tf
 
-To ensure that the ALB for handling incoming HTTP traffic on port 80 and distributes it evenly across the instances in the ASG, we modified the `loadbalancer.tf` file as follows:
+To ensure that the ALB handles incoming HTTP traffic on port 80 and distributes it evenly across the instances in the ASG, we modified the `loadbalancer.tf` file as follows:
 
 ```terraform
 resource "aws_lb" "alb" {
@@ -195,7 +199,7 @@ resource "aws_lb_target_group" "alb_target_group" {
 }
 ```
 
-we have also created a security group for the ALB
+We have also created a security group for the ALB
 `security_group.tf`
 
 
@@ -373,7 +377,7 @@ resource "aws_iam_instance_profile" "ec2_wordpress_instance_profile" {
 
 In this step, we create an instance profile named `ec2_wordpress_instance_profile` and associate it with the IAM role `aws_iam_role.ec2_wordpress_role.name`. This instance profile allows our EC2 instances to assume the IAM role, granting them the necessary permissions to interact securely with the S3 bucket.
 
-With these changes, our EC2 instances will now have the required permissions to access the specified S3 bucket securely, ensuring smooth functioning of our WordPress application.
+With these changes, our EC2 instances will now have the required permissions to access the specified S3 bucket securely, ensuring the smooth functioning of our WordPress application.
 
 ## Creating S3 Bucket and CloudFront distribution
 
@@ -509,13 +513,13 @@ resource "aws_s3_bucket_policy" "mybucket" {
 }
 ```
 
-In this step, we define an IAM policy document that allows CloudFront service principal (`cloudfront.amazonaws.com`) to access the S3 bucket's objects. The policy uses the `aws_s3_bucket.wordpress_files_bucket.arn` and the `aws_cloudfront_distribution.s3_distribution.arn` as resources to specify the S3 bucket and CloudFront distribution as the allowed sources.
+In this step, we define an IAM policy document that allows the CloudFront service principal (`cloudfront.amazonaws.com`) to access the S3 bucket's objects. The policy uses the `aws_s3_bucket.wordpress_files_bucket.arn` and the `aws_cloudfront_distribution.s3_distribution.arn` as resources to specify the S3 bucket and CloudFront distribution as the allowed sources.
 
 Finally, we apply the defined S3 bucket policy using the `aws_s3_bucket_policy` resource.
 
 With these configurations, the S3 bucket is ready to store WordPress media files, and the CloudFront distribution is set up to cache and serve these assets, providing faster and more reliable content delivery globally.
 
-## Deploying our infrastructure
+## Deploying our Infrastructure
 
 
 ```terraform
@@ -630,10 +634,20 @@ Go to your **S3 bucket** and you'll also see your file
 
 ![upload-file](./images/upload-file2.png)
 
-Congratulations! Your WordPress website is now successfully configured to use IAM role for secure S3 access and WP Offload Media Lite for Amazon S3 plugin to store and serve media files from S3 bucket via CloudFront, enhancing the scalability and performance of your website.
+Congratulations! Your WordPress website is now successfully configured to use the IAM role for secure S3 access and WP Offload Media Lite for Amazon S3 plugin to store and serve media files from the S3 bucket via CloudFront, enhancing the scalability and performance of your website.
 
-The complete source code of the project is available on [GitHub]().
+The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/aws-scale-wordpress).
+
+———————
+
+We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+———————
 
 ## Conclusion
 
 In this article, we learned how to enhance our WordPress deployment on AWS by incorporating scalability features using Auto Scaling Group and optimizing media storage and delivery with S3 and CloudFront. By utilizing these powerful AWS services, you can ensure your WordPress application remains highly available, responsive, and cost-efficient as the traffic fluctuates.
+
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas),  [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
