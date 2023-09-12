@@ -198,6 +198,10 @@ import { useList } from "@refinedev/core";
 const postUseListResult = useList({ resource: "posts" });
 ```
 
+### Demo
+
+The entire demo project is available [here](./demo/).
+
 ## Conclusion
 
 In view of all these different points, using Refine to build your React CRUD app becomes very easy and super fast thanks to the many [pre-built features](https://github.com/refinedev/refine) it offers. Using it will allow you to focus on the critical parts of your application. So what do you think of this awesome React Framework? let us know in the comments.
