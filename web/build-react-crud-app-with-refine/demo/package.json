@@ -1,0 +1,45 @@
+{
+  "name": "demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=--max_old_space_size=4096 refine dev",
+    "build": "refine build",
+    "start": "refine start",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "refine": "refine"
+  },
+  "dependencies": {
+    "@refinedev/cli": "^2.7.4",
+    "@refinedev/core": "^4.28.2",
+    "@refinedev/nextjs-router": "^5.3.2",
+    "@refinedev/inferencer": "^4.3.2",
+    "@refinedev/kbar": "^1.1.2",
+    "next": "^13.0.6",
+    "nookies": "^2.5.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@refinedev/simple-rest": "^4.0.0",
+    "@refinedev/mui": "^5.0.0",
+    "@refinedev/react-hook-form": "^4.1.2",
+    "@mui/icons-material": "^5.8.3",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/lab": "^5.0.0-alpha.85",
+    "@mui/material": "^5.8.6",
+    "@mui/x-data-grid": "^6.6.0",
+    "next-auth": "^4.20.1",
+    "next-i18next": "^8.9.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/node": "^12.20.11",
+    "@typescript-eslint/parser": "5.48.0",
+    "typescript": "^4.7.4",
+    "cross-env": "^7.0.3"
+  },
+  "refine": {
+    "projectId": "NQSeZ7-EhDcKK-fxWyRx"
+  }
+}

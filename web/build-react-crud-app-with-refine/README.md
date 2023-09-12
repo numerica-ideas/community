@@ -31,7 +31,7 @@ An **AuthProvider** for a Refine application is an object of `type AuthBindings`
 
 ```typescript
 import type { AuthBindings } from "@refinedev/core";
-import { SessionProvider, signIn, signOut, useSession } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
 ...
