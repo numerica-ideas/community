@@ -29,6 +29,10 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://www.youtube.com/watch?v=gnVtDbl2gpg)
 - [Lift And Shift Cloud Migration of Spring Boot to AWS ElasticBeanstalk | Part 3: GitHub Actions CI/CD](https://www.youtube.com/watch?v=TI84hpeiTZE)
 - [Lift And Shift Cloud Migration of Spring Boot App Using AWS ElasticBeanstalk | Part 2 | Scalability](https://www.youtube.com/watch?v=KHOxmHL5USI)
+- [Lift And Shift Cloud Migration of Spring Boot App Using AWS ElasticBeanstalk | Part 1 | Deployment](https://www.youtube.com/watch?v=tWQFavEJQ7c)
+- [Important Cloud Computing Concepts in 8 minutes](https://www.youtube.com/watch?v=0II0ikOZEYE)
+- [Something new to be released soon!](https://www.youtube.com/watch?v=iTpM3Ue7qR8)
+- [Introduction to Terraform for Infrastructure Provisioning](https://www.youtube.com/watch?v=tJ6L1332WU4)
 <!-- ENGLISH-YOUTUBE-VIDEOS:END -->
 
 ----------------
