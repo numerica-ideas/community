@@ -15,6 +15,6 @@ jobs:
       - uses: gautamkrishnar/blog-post-workflow@master
         with:
           max_post_count: 500
-          readme_path: 'README.md,./videos/README.md'
+          readme_path: './videos/README.md'
           comment_tag_name: "ENGLISH-YOUTUBE-VIDEOS"
           feed_list: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZF1uBmu-s0H46ZOvUE6-lg"
