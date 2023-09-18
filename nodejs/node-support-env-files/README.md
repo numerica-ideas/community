@@ -70,6 +70,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ———————
 
 ## Conclusion
-In this article, we have seen how **NodeJS +v20.6.0** support `.env` files out of the box without any third-party dependency.
+In this article, we have seen how **NodeJS +v20.6.0** supports `.env` files out of the box without any third-party dependency.
 
 Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
