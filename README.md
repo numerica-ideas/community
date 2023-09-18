@@ -23,18 +23,20 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Latest YouTube Videos      
  
-<!-- YOUTUBE-VIDEOS-LIST:START -->
+<!-- ENGLISH-YOUTUBE-VIDEOS:START -->
 - [NumericaIdeas Community Updates #1](https://www.youtube.com/watch?v=va8SgEa0ssw)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://www.youtube.com/watch?v=gnVtDbl2gpg)
 - [Lift And Shift Cloud Migration of Spring Boot to AWS ElasticBeanstalk | Part 3: GitHub Actions CI/CD](https://www.youtube.com/watch?v=TI84hpeiTZE)
-- [Meetup 02: Devenez un freelance de 1ère classe &lpar;top 3%&rpar; avec Toptal - Salomon Nghukam](https://www.youtube.com/watch?v=AmhMAQTxcGg)
 - [Lift And Shift Cloud Migration of Spring Boot App Using AWS ElasticBeanstalk | Part 2 | Scalability](https://www.youtube.com/watch?v=KHOxmHL5USI)
 - [Lift And Shift Cloud Migration of Spring Boot App Using AWS ElasticBeanstalk | Part 1 | Deployment](https://www.youtube.com/watch?v=tWQFavEJQ7c)
-- [Important Cloud Computing Concepts in 8 minutes](https://www.youtube.com/watch?v=0II0ikOZEYE)
-- [Something new to be released soon!](https://www.youtube.com/watch?v=iTpM3Ue7qR8)
-- [Introduction to Terraform for Infrastructure Provisioning](https://www.youtube.com/watch?v=tJ6L1332WU4)
+<!-- ENGLISH-YOUTUBE-VIDEOS:END -->
+
+----------------
+
+<!-- FRENCH-YOUTUBE-VIDEOS:START -->
+- [Meetup 02: Devenez un freelance de 1ère classe &lpar;top 3%&rpar; avec Toptal - Salomon Nghukam](https://www.youtube.com/watch?v=AmhMAQTxcGg)
 - [Meetup 01: Multi-modules à la Rescousse des Microservices - Valdèse Kamdem](https://www.youtube.com/watch?v=e_LJvcikUCk)
-<!-- YOUTUBE-VIDEOS-LIST:END -->
+<!-- FRENCH-YOUTUBE-VIDEOS:END -->
  
 </td><td valign="top" width="50%">
 

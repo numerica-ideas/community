@@ -1,4 +1,4 @@
-name: Latest YouTube French videos workflow
+name: All YouTube English videos workflow
 on:
   schedule: # Run workflow automatically
     - cron: '0 * * * *' # Runs every hour, on the hour
@@ -8,13 +8,13 @@ permissions:
 
 jobs:
   update-readme-with-youtube:
-    name: Update this repo's README with latest French videos from YouTube
+    name: Update this repo's README with latest English videos from YouTube
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: gautamkrishnar/blog-post-workflow@master
         with:
-          max_post_count: 5
-          readme_path: 'README.md'
-          comment_tag_name: "FRENCH-YOUTUBE-VIDEOS"
-          feed_list: "https://www.youtube.com/feeds/videos.xml?channel_id=UCDQY4e8xNx7zYag0vl9TWfg"
+          max_post_count: 500
+          readme_path: 'README.md,./videos/README.md'
+          comment_tag_name: "ENGLISH-YOUTUBE-VIDEOS"
+          feed_list: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZF1uBmu-s0H46ZOvUE6-lg"
