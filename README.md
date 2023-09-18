@@ -7,14 +7,16 @@
 <h3 align="center">TECH TOPICS TO SHARPEN YOUR CLOUD AND SOFTWARE ARCHITECTURE SKILLS</h3>
 <p align="center">No hour of life is wasted that is spent gaining invaluable skills</p>
 <p align="center">"DISCOVER, LEARN, BUILD, & SHARE" 🚀</p>
-<p align="center"><a href="https://blog.numericaideas.com">Blog</a> · <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1">YouTube</a> · <a href="https://discord.numericaideas.com">Discord</a></p>
+<p align="center"><a href="https://blog.numericaideas.com">Blog</a> · <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1">YouTube</a> · <a href="https://discord.numericaideas.com">Discord</a> · <a href="https://github.com/numerica-ideas/community#tech-projects">Projects</a></p>
 <br/>
 
 # Ni Community Activities&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com)
 
+[![NiPresentation](./ni-presentation.png)](https://youtu.be/6bdCyAZCUTg)
+
 [NumericaIdeas](https://numericaideas.com) is a technical community that creates opportunities for IT professionals, where you’ll secure your dream job, and indeed the group through which you can develop your hard and soft skills at your own pace.
 
-Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Channel](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1), register to the [Newsletter](https://news.numericaideas.com), and join our [Discord Server](https://discord.numericaideas.com) to be kept posted of new content and activities.
 
 ## Recent Content
 <table><tr><td valign="top" width="50%">
