@@ -6,7 +6,9 @@
 
 Click here to access the [PDF format](./git-cheat-sheet.pdf).
 
-![GitCheatSheetThumbnail](./thumbnail.png)
+[![GitCheatSheetThumbnail](./thumbnail.png)](https://blog.numericaideas.com/git-cheat-sheet)
+
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Setup
 Configuring user information used across all repositories:
@@ -58,6 +60,7 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 ———————
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+
 
 By [NumericaIdeas Network](https://numericaideas.com)

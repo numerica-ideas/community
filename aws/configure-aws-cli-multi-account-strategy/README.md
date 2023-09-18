@@ -5,7 +5,9 @@
 ## Introduction
 The **AWS CLI** is a powerful tool that allows you to interact with various AWS services through a command-line interface. In this article, we will go through the steps to configure AWS CLI for multiple accounts on your local machine or any server with Terminal access.
 
-The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
+[![FeaturedImage](./images/how-to-configure-aws-cli-for-multi-account-strategy.png)](https://blog.numericaideas.com/configure-aws-cli)
+
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Install AWS CLI
 The first step is to install the **AWS CLI** on your machine. AWS CLI can be installed on Windows, macOS, and Linux systems. You can follow the appropriate steps from the [AWS CLI website](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
@@ -99,4 +101,5 @@ If the **Cloud** is of interest to you this [video](https://youtu.be/0II0ikOZEYE
 ## Conclusion
 Configuring **AWS CLI** is an essential step for interacting with AWS services using the command-line interface. By following the steps outlined in this article, you can successfully configure AWS CLI for many accounts on your machine and start using it to interact with AWS services.
 
-Thanks for reading this article, recommend and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
+
