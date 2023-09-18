@@ -7,6 +7,7 @@ All the community videos published on YouTube in **English** and **French** are 
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Videos in English      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
+- [What is NumericaIdeas?](https://www.youtube.com/watch?v=6bdCyAZCUTg)
 - [NumericaIdeas Community Updates #1](https://www.youtube.com/watch?v=va8SgEa0ssw)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://www.youtube.com/watch?v=gnVtDbl2gpg)
 - [Lift And Shift Cloud Migration of Spring Boot to AWS ElasticBeanstalk | Part 3: GitHub Actions CI/CD](https://www.youtube.com/watch?v=TI84hpeiTZE)
