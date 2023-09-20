@@ -34,6 +34,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 ----------------
 
 <!-- FRENCH-YOUTUBE-VIDEOS:START -->
+- [Entretien d&#39;embauche Développeur Frontend: HTML + CSS](https://www.youtube.com/watch?v=ILGVVFNeRcY)
 - [Meetup 02: Devenez un freelance de 1ère classe &lpar;top 3%&rpar; avec Toptal - Salomon Nghukam](https://www.youtube.com/watch?v=AmhMAQTxcGg)
 - [Meetup 01: Multi-modules à la Rescousse des Microservices - Valdèse Kamdem](https://www.youtube.com/watch?v=e_LJvcikUCk)
 <!-- FRENCH-YOUTUBE-VIDEOS:END -->
