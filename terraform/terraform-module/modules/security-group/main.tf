@@ -1,4 +1,4 @@
-#Create a security 
+# Create a security 
 resource "aws_security_group" "security" {
   name        = var.security_group_name
   description = var.security_group_description

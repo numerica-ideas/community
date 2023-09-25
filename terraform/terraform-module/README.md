@@ -286,7 +286,7 @@ module "myinstance" {
   ami                       = "ami-08766f81ab52792ce"
   key_name                  = "mykey"
   instance_type             = "t3.micro"
-  ebs_volume_size           = 10
+  ebs_volume_size           = 30
   ec2_sg_id                 = [module.security_group_ec2.security_group_id]
 
 }
@@ -296,9 +296,9 @@ In this example:
 
 - We first define data sources for the VPC and Subnet that your EC2 instance will be associated with.
 
-- Next, we use the `module` block to create an instance of our Security Group module named "security_group_ec2." We specify the necessary parameters such as the `security_group_name`, `security_group_description`, `inbound_port`, and `vpc_id` to customize the Security Group.
+- Next, we use the `module` block to create an instance of our Security Group module named **security_group_ec2.** We specify the necessary parameters such as the `security_group_name`, `security_group_description`, `inbound_port`, and `vpc_id` to customize the Security Group.
 
-- Finally, we provision an EC2 instance using the "myec2" module. We pass in the required parameters like `aws_subnet_id`, `instance_name`, `ami`, `key_name`, `instance_type`, `ebs_volume_size`, and `ec2_sg_id`. The `ec2_sg_id` parameter is set to the `security_group_id` output of the **security_group_ec2** module, ensuring that the EC2 instance is associated with the correct Security Group.
+- Finally, we provision an EC2 instance using the **myec2** module. We pass in the required parameters like `aws_subnet_id`, `instance_name`, `ami`, `key_name`, `instance_type`, `ebs_volume_size`, and `ec2_sg_id`. The `ec2_sg_id` parameter is set to the `security_group_id` output of the **security_group_ec2** module, ensuring that the EC2 instance is associated with the correct Security Group.
 
 By adopting these modules and using this configuration, you can efficiently manage the security and provisioning of your EC2 instances while ensuring consistency and security best practices.
 
