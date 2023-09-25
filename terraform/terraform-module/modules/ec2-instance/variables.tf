@@ -25,4 +25,3 @@ variable "ebs_volume_size" {
 variable "ec2_sg_id" {
   description = "ID of the EC2 Security Group(s) to associate with the EC2 instance"
 }
-

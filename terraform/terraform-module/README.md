@@ -2,7 +2,17 @@
 
 In the world of infrastructure as code (IaC), Terraform has emerged as a leading tool for managing and provisioning resources across various cloud providers. It empowers DevOps teams to define infrastructure in a declarative manner, enabling consistent and reproducible deployments. One of Terraform's key features is **modules**, which play a pivotal role in building scalable and maintainable infrastructure code.
 
-In this comprehensive guide, we'll delve into Terraform modules, demystifying their purpose, functionality, and best practices. Whether you're a seasoned Terraform user or just starting your IaC journey, this guide will provide valuable insights into harnessing the power of modules effectively.
+## Prerequisites
+
+To make the most of this guide and the practical examples, you'll need the following prerequisites:
+
+- **Terraform Installation**: Ensure Terraform is installed in your local environment. You can download it from the [official website](https://www.terraform.io/downloads.html).
+
+- **AWS Account**: You must have an active AWS account. Ensure you have the necessary credentials and API keys configured for Terraform to authenticate and interact with your AWS resources.
+
+- **Basic HCL Knowledge**: Familiarize yourself with HashiCorp Configuration Language (HCL), as it's used for writing Terraform configurations. Find more information about HCL in the [official documentation](https://developer.hashicorp.com/terraform/language).
+
+- **Understanding Cloud Infrastructure**: Have a basic understanding of cloud infrastructure concepts like virtual machines (VMs), virtual private clouds (VPCs), subnets, security groups, and IAM roles. This knowledge will help you effectively utilize Terraform modules for AWS infrastructure provisioning.
 
 ## Introduction to Terraform Modules
 
@@ -24,7 +34,7 @@ Using Terraform modules offers several advantages:
 
 ### How to Create a Terraform Module
 
-Creating a Terraform module is straightforward. You organize your module's configuration files, variables, and outputs into a directory. This directory should contain a `main.tf` file where you define the resources, variables, and outputs specific to your module. Here's a simple folder structure for a Terraform project with a module:
+Creating a Terraform module is a streamlined process. You structure your module by organizing configuration files, variables, and outputs into a dedicated directory. Within this directory, you should include `main.tf`, `outputs.tf`, and `variables.tf` files where you define the resources, variables, and outputs that pertain to your module. Here's an example of a straightforward folder structure for a Terraform project with a module:
 
 ```plaintext
     my-terraform-project/
@@ -70,12 +80,11 @@ Using a Terraform module in your configuration is straightforward. You specify t
 ```hcl
 module "example" {
   source = "./modules/my-module"
-  var1   = "value1"
-  var2   = "value2"
+  instance_count   = 1
 }
 ```
 
-In this example, we're using a module named "example" located in the `./modules/my-module` directory. We're also passing values to the module's variables `var1` and `var2`.
+In this example, we're using a module named **example** located in the `./modules/my-module` directory. We're also passing value to the module's variable `instance_count`.
 
 ## Real-World Module Examples
 
@@ -127,6 +136,7 @@ In `main.tf`, we define the Security Group:
 
 ```hcl
 # Create a security 
+#Create a security 
 resource "aws_security_group" "security" {
   name        = var.security_group_name
   description = var.security_group_description
@@ -150,7 +160,6 @@ resource "aws_security_group" "security" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
 ```
 
 #### Outputs
@@ -205,10 +214,6 @@ variable "instance_type" {
   description = "Type of EC2 instance to launch (e.g., t2.micro, m5.large, etc.)"
 }
 
-variable "iam_instance_profile_name" {
-  description = "Name of the IAM instance profile to associate with the EC2 instance"
-}
-
 variable "ebs_volume_size" {
   description = "Size (in GB) of the EBS volume to attach to the EC2 instance"
 }
@@ -220,7 +225,7 @@ variable "ec2_sg_id" {
 
 #### Resources
 
-In `main.tf`, we create the EC2 instance and associate it with the Security Group:
+In `main.tf`, we create the EC2 instance :
 
 ```hcl
 resource "aws_instance" "instance" {
@@ -240,7 +245,6 @@ resource "aws_instance" "instance" {
     Name = var.instance_name
   }
 }
-
 ```
 
 #### Outputs
@@ -253,8 +257,6 @@ output "instance_ip" {
 }
 ```
 
-By structuring our Terraform code into these two modules, we achieve modularity and reusability. Users can easily provision EC2 instances with the necessary security configurations in a consistent and secure manner by utilizing these modules.
-
 ## Using the Module
 
 Now that we have created our Security Group and EC2 Instance modules, let's explore how to use them in a Terraform configuration.
@@ -262,7 +264,6 @@ Now that we have created our Security Group and EC2 Instance modules, let's expl
 In your Terraform configuration, you can use these modules as shown below:
 
 ```hcl
-# Define the VPC and Subnet data sources
 data "aws_vpc" "myvpc" {
   id = "vpc-0c7a48ffa82b8c7ae"
 }
@@ -271,17 +272,15 @@ data "aws_subnet" "mysubnet" {
   id = "subnet-0c819740100e5e234"
 }
 
-# Create the Security Group for EC2 instances
 module "security_group_ec2" {
   source                     = "./modules/security-group"
   security_group_name        = "myec2-sg"
-  security_group_description = "EC2 Security Group"
+  security_group_description = "EC2 security Group"
   inbound_port               = [8080, 22]
   vpc_id                     = data.aws_vpc.myvpc.id
 }
 
-# Provision an EC2 instance
-module "myec2" {
+module "myinstance" {
   source                    = "./modules/ec2-instance"
   aws_subnet_id             = data.aws_subnet.mysubnet.id
   instance_name             = "EC2"
@@ -290,6 +289,7 @@ module "myec2" {
   instance_type             = "t3.micro"
   ebs_volume_size           = 30
   ec2_sg_id                 = [module.security_group_ec2.security_group_id]
+
 }
 ```
 
