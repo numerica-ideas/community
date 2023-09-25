@@ -12,7 +12,7 @@ To make the most of this guide and the practical examples, you'll need the follo
 
 - **Basic HCL Knowledge**: Familiarize yourself with HashiCorp Configuration Language (HCL), as it's used for writing Terraform configurations. Find more information about HCL in the [official documentation](https://developer.hashicorp.com/terraform/language).
 
-- **Understanding Cloud Infrastructure**: Have a basic understanding of cloud infrastructure concepts like virtual machines (VMs), virtual private clouds (VPCs), subnets, security groups, and IAM roles. This knowledge will help you effectively utilize Terraform modules for AWS infrastructure provisioning.
+- **Understanding Cloud Infrastructure**: Have a basic understanding of cloud infrastructure concepts like virtual private clouds (VPCs), subnets, security groups, and IAM roles. This knowledge will help you effectively utilize Terraform modules for AWS infrastructure provisioning.
 
 ## Introduction to Terraform Modules
 
@@ -67,7 +67,7 @@ In `outputs.tf`, you define outputs like this:
 ```hcl
 output "instance_ips" {
   description = "The public IPs of the instances."
-  value       = aws_instance.example[*].public_ip
+  value       = aws_instance.instances[*].public_ip
 }
 ```
 
@@ -80,7 +80,7 @@ Using a Terraform module in your configuration is straightforward. You specify t
 ```hcl
 module "example" {
   source = "./modules/my-module"
-  instance_count   = 1
+  instance_count   = 2
 }
 ```
 
@@ -136,7 +136,6 @@ In `main.tf`, we define the Security Group:
 
 ```hcl
 # Create a security 
-#Create a security 
 resource "aws_security_group" "security" {
   name        = var.security_group_name
   description = var.security_group_description
@@ -265,11 +264,11 @@ In your Terraform configuration, you can use these modules as shown below:
 
 ```hcl
 data "aws_vpc" "myvpc" {
-  id = "vpc-0c7a48ffa82b8c7ae"
+  id = "vpc-xxxxxx"
 }
 
 data "aws_subnet" "mysubnet" {
-  id = "subnet-0c819740100e5e234"
+  id = "subnet-xxxxxx"
 }
 
 module "security_group_ec2" {
@@ -285,9 +284,9 @@ module "myinstance" {
   aws_subnet_id             = data.aws_subnet.mysubnet.id
   instance_name             = "EC2"
   ami                       = "ami-08766f81ab52792ce"
-  key_name                  = "kemane"
+  key_name                  = "mykey"
   instance_type             = "t3.micro"
-  ebs_volume_size           = 30
+  ebs_volume_size           = 10
   ec2_sg_id                 = [module.security_group_ec2.security_group_id]
 
 }
