@@ -1,4 +1,6 @@
-# Demystifying Terraform Modules: A Comprehensive Guide
+# Demystifying Terraform Modules: A Comprehensive Guide&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fmodule&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/terraform-module)
+
+**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/terraform-module
 
 In the world of Infrastructure as Code (IaC), Terraform is a leading tool for managing and provisioning resources across various cloud providers. It empowers DevOps teams to define infrastructure in a declarative manner, ensuring consistent and reproducible deployments. Key to Terraform's capabilities are **modules**, which play a pivotal role in creating scalable and maintainable infrastructure code.
 
@@ -312,6 +314,17 @@ Once completed, your infrastructure should resemble the image displayed below:
 
 ![Infrastructure](./images/infrastructure.png)
 
+———————
+
+We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+
+Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
+
+———————
+
+
 # Conclusion
 
 Terraform modules are fundamental for creating maintainable and scalable Infrastructure as Code. They allow encapsulation of infrastructure components, promote reusability, and simplify the management of complex resources. Mastering Terraform modules enhances your ability to provision and manage infrastructure efficiently, making you a more effective DevOps engineer.
+
+Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
