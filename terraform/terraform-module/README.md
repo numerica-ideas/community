@@ -304,7 +304,7 @@ By adopting these modules and using this configuration, efficiently manage the s
 
 To deploy your infrastructure, execute the following commands:
 
-```shell
+``` shell
 terraform init
 terraform plan
 terraform apply -auto-approve
@@ -316,7 +316,7 @@ Once completed, your infrastructure should resemble the image displayed below:
 
 ———————
 
-We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
+We have just started our journey to build a network of professionals to grow our free knowledge-sharing community that will allow you to learn exciting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.
 
 Does this speak to you? If **YES**, feel free to [Join our Discord Server](https://discord.numericaideas.com) to stay in touch with the community and be part of independently organized events.
 
