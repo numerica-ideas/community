@@ -8,6 +8,8 @@
 
 In today's article, we will explore the **scalability** possibilities of deploying WordPress on AWS. Building upon our previous article on **deploying WordPress on a 2-Tier AWS architecture with Terraform**, we will focus on utilizing the `Auto Scaling Group (ASG)` feature, along with leveraging `Amazon S3` for media storage and `CloudFront` for **caching**. These enhancements will enable us to scale our WordPress deployment effectively and handle increasing traffic demands. So let's dive in!
 
+[![previous architecture diagram](./images/scale-wp-on-aws.png)](https://blog.numericaideas.com/aws-scale-wordpress)
+
 If you haven't read the previous article, [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform), we highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
 
 [![previous architecture diagram](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
@@ -71,7 +73,6 @@ In this step, we are going to make significant changes to the `main.tf` file and
 
 First, let's take a look at the `install_script.tpl` file:
 
-`install_script.tpl`
 ```bash
 #!/bin/bash
 
@@ -144,8 +145,6 @@ resource "aws_autoscaling_group" "asg" {
 ```
 Next, we'll define an Auto Scaling policy that will dynamically adjust the number of instances in our Auto Scaling group based on CPU utilization. In addition, thanks to the `aws_autoscaling_attachment`resource we will link our **Auto Scaling Group** to the **Application Load Balancer (ALB)**.
 
-`main.tf`
-
 ```terraform
 resource "aws_autoscaling_policy" "avg_cpu_policy_greater" {
   name                   = "avg-cpu-policy-greater"
@@ -199,9 +198,7 @@ resource "aws_lb_target_group" "alb_target_group" {
 }
 ```
 
-We have also created a security group for the ALB
-`security_group.tf`
-
+We have also created a security group for the ALB, `security_group.tf` file, as follows
 
 ```terraform
 resource "aws_security_group" "alb_sg" {
@@ -383,7 +380,7 @@ With these changes, our EC2 instances will now have the required permissions to 
 
 In this section, we'll create an **S3 bucket** to store the media files of the WordPress application and set up a **CloudFront distribution** to cache and serve these assets globally, providing improved performance and reduced latency for users.
 
-Before starting add these two variables in your `variables.tf` file
+Before starting, add these two variables in your `variables.tf` file:
 
 ```terraform
 variable "bucket_name" {
@@ -487,7 +484,7 @@ Additionally, we specify the CloudFront distribution to use the default SSL/TLS 
 
 ### Step 4: Configuring S3 Bucket Policy for CloudFront Access
 
-Finally, we create an **S3 bucket policy to allow CloudFront access to the bucket**
+Finally, we create an **S3 bucket policy to allow CloudFront access to the bucket:**
 
 ```terraform
 data "aws_iam_policy_document" "s3_policy" {
@@ -544,13 +541,13 @@ In this section, we'll configure the `wp-config.php` file of our WordPress insta
 
 ### Step 1: Connect to EC2 Instance via SSH
 
-To configure the `wp-config.php` file, you can use one of the available methods to connect to one of the EC2 instances created by the Auto Scaling Group using SSH. One common method is using an SSH client that we'll use
+To configure the `wp-config.php` file, you can use one of the available methods to connect to one of the EC2 instances created by the Auto Scaling Group using SSH. One common method is by using an SSH client as follows:
 
 ![ssh-connection](./images/ssh-connection.png)
 
 ### Step 2: Edit wp-config.php
 
-Once connected to the EC2 instance, navigate to the WordPress installation directory and edit the `wp-config.php` file
+Once connected to the EC2 instance, navigate to the WordPress installation directory and edit the `wp-config.php` file:
 
 ```bash
 cd /var/www/html
@@ -562,7 +559,7 @@ cd /var/www/html
 sudo vi wp-config.php
 ```
 
-Inside the `wp-config.php` file, locate the database connection settings, and add the following lines after the `DB_COLLATE` definition
+Inside the `wp-config.php` file, locate the database connection settings, and add the following lines after the `DB_COLLATE` definition:
 
 ```php
 define( 'AS3CF_SETTINGS', serialize( array(
@@ -582,7 +579,7 @@ Now that we have configured the `wp-config.php` file, access your WordPress webs
 
 ![application](./images/application.png)
 
-then configure your wordpress website
+Then configure your wordpress website
 
 ![dashboard](./images/dashboard.png)
 
