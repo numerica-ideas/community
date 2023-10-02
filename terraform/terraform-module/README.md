@@ -4,6 +4,8 @@
 
 In the world of Infrastructure as Code (IaC), Terraform is a leading tool for managing and provisioning resources across various cloud providers. It empowers DevOps teams to define infrastructure in a declarative manner, ensuring consistent and reproducible deployments. Key to Terraform's capabilities are **modules**, which play a pivotal role in creating scalable and maintainable infrastructure code.
 
+![FeaturedImage](./images/featureImage.png)
+
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Prerequisites
