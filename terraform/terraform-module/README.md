@@ -1,8 +1,10 @@
-# Demystifying Terraform Modules: A Comprehensive Guide&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fmodule&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/terraform-module)
+# Demystifying Terraform Modules&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fmodule&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/terraform-module)
 
 **This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/terraform-module
 
 In the world of Infrastructure as Code (IaC), Terraform is a leading tool for managing and provisioning resources across various cloud providers. It empowers DevOps teams to define infrastructure in a declarative manner, ensuring consistent and reproducible deployments. Key to Terraform's capabilities are **modules**, which play a pivotal role in creating scalable and maintainable infrastructure code.
+
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Prerequisites
 
@@ -14,7 +16,12 @@ Before delving into Terraform modules, ensure you have the following:
 
 - **Basic HCL Knowledge**: Familiarity with HashiCorp Configuration Language (HCL), used for writing Terraform configurations. Explore HCL in the [official documentation](https://developer.hashicorp.com/terraform/language).
 
-- **Understanding Cloud Infrastructure**: A grasp of cloud infrastructure concepts like VPCs, subnets, and security groups will enhance your use of Terraform modules.
+- **Modularity**: Terraform allows the definition of reusable infrastructure modules, facilitating the creation of complex and scalable architectures and promoting best practice sharing.
+- **Dependency Management**: Terraform handles dependencies between resources, ensuring consistent updates and simplifying the management of interconnected infrastructures.
+
+In case you aren't familiar with this IaC tool yet, there is an [Introduction to Terraform video tutorial](https://youtu.be/tJ6L1332WU4) along with a demo available on YouTube:
+
+[![TerraformWorkflow](../introduction/images/TerraformWorkflow.png)](https://youtu.be/tJ6L1332WU4)
 
 ## Introduction to Terraform Modules
 
@@ -32,9 +39,9 @@ Terraform modules offer several advantages:
 
 - **Versioning**: Modules can be versioned, ensuring consistent configurations throughout your infrastructure.
 
-## Getting Started with Terraform Modules
+## How to Create Terraform Modules?
 
-### Creating a Terraform Module
+### Terraform Module Structure
 
 Creating a Terraform module is straightforward. Structure it by organizing configuration files, variables, and outputs in a dedicated directory. Within this directory, include `main.tf`, `outputs.tf`, and `variables.tf` files to define resources, variables, and outputs specific to your module. Here's an example folder structure for a Terraform project with a module:
 
@@ -86,7 +93,7 @@ module "example" {
 
 In this example, we use a module named **example** located in the `./modules/my-module` directory. We also provide a value for the `instance_count` variable.
 
-## Real-World Module Examples
+## Terraform Module Examples
 
 To grasp the power of Terraform modules, let's dive into real-world examples. We'll create two modules: one for provisioning an EC2 instance and another for creating a Security Group that we'll associate with the instance.
 
@@ -249,7 +256,7 @@ resource "aws_instance" "instance" {
 
 #### Outputs
 
-Our EC2 instance module exposes the instance ID as an output in `outputs.tf`:
+Our EC2 instance module exposes the public IP address of the instance as an output in `outputs.tf`
 
 ```hcl
 output "instance_ip" {
@@ -257,7 +264,7 @@ output "instance_ip" {
 }
 ```
 
-## Using the Module
+## Using the Modules
 
 Now that we have created our Security Group and EC2 Instance modules, let's explore how to use them in a Terraform configuration.
 
@@ -313,6 +320,13 @@ terraform apply -auto-approve
 Once completed, your infrastructure should resemble the image displayed below:
 
 ![Infrastructure](./images/infrastructure.png)
+
+The complete source code of the project is available on [GitHub](/terraform/terraform-module/).
+
+
+In order to better your DevOps skills, learn How To [Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop
+
+![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)
 
 ———————
 
