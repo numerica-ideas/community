@@ -39,7 +39,7 @@ Terraform modules offer several advantages:
 
 - **Versioning**: Modules can be versioned, ensuring consistent configurations throughout your infrastructure.
 
-## How to Create Terraform Modules?
+## How to Create Terraform Modules
 
 ### Terraform Module Structure
 
@@ -326,7 +326,7 @@ The complete source code of the project is available on [GitHub](/terraform/terr
 
 In order to better your DevOps skills, learn How To [Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop
 
-![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)
+![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)
 
 ———————
 
