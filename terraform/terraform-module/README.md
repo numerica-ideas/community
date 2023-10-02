@@ -39,7 +39,11 @@ Terraform modules offer several advantages:
 
 - **Versioning**: Modules can be versioned, ensuring consistent configurations throughout your infrastructure.
 
-## How to Create Terraform Modules
+### What is the Terraform Registry?
+
+The [**Terraform Registry**](https://blog.numericaideas.com/introduction-to-terraform#provider) is a public repository maintained by HashiCorp, the creators of Terraform. It serves as a trusted source for sharing Terraform modules, provider plugins, and other resources. It's the go-to platform for finding and sharing infrastructure code, promoting collaboration, and reducing the need to reinvent the wheel.
+
+## How to Create Terraform Modules?
 
 ### Terraform Module Structure
 
@@ -91,7 +95,35 @@ module "example" {
 }
 ```
 
-In this example, we use a module named **example** located in the `./modules/my-module` directory. We also provide a value for the `instance_count` variable.
+In this example, we use a module named **example** located in the `./modules/my-module` directory. We also provide a value for the `instance_count` variable. 
+
+Now, let's explore how we could have reused or installed that module if it were stored in the Terraform Registry or located in a GitHub repository. 
+
+**Using Modules from Terraform Registry:**
+
+The Terraform Registry is a public repository of Terraform modules provided by HashiCorp and the Terraform community. To use a module from the Terraform Registry, you would specify the source as follows:
+
+```hcl
+module "example" {
+  source = "terraform-aws-modules/ec2-instance/aws"
+  instance_count = 2
+}
+```
+
+[**Using Modules from GitHub:**](https://developer.hashicorp.com/terraform/language/modules/sources#github)
+
+If the module is hosted on GitHub, you can reference it using the `git::` source syntax:
+
+```hcl
+module "example" {
+  source = "git::https://github.com/your-username/your-module.git"
+  instance_count = 2
+}
+```
+
+Here, `https://github.com/your-username/your-module.git` should be replaced with the actual URL of your GitHub repository containing the module.
+
+By specifying the appropriate source, you can easily reuse or install modules from various sources, including the Terraform Registry and GitHub, making your infrastructure management more efficient and flexible.
 
 ## Terraform Module Examples
 
@@ -321,12 +353,12 @@ Once completed, your infrastructure should resemble the image displayed below:
 
 ![Infrastructure](./images/infrastructure.png)
 
-The complete source code of the project is available on [GitHub](/terraform/terraform-module/).
+The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/terraform-module/).
 
 
 In order to better your DevOps skills, learn How To [Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop
 
-![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)
+![FeaturedImage](https://assets.numericaideas.com/2023/06/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform-1.png)
 
 ———————
 
