@@ -138,7 +138,7 @@ Consider this sequence (1000ms as interval):
 
 ![Input keys sequence](./img/sequence.png)
 
-#### _1. { leading: true, trailing: true }_
+#### _`1. { leading: true, trailing: true }`_
 
 ![throttle output with options { leading: true, trailing: true }](./img/throttle_1.png)
 
@@ -150,7 +150,7 @@ _Breakdown:_
 - The throttle will skip the api call with value **DO** and perform the one with **DOUA** at 1000ms (the end of the interval due to the trailing).
 - The throttle will skip the call with **DOUAL** at 1350ms and perform the one with **DOUALA** at 1850ms; end of sequence
 
-#### _2. { leading: true, trailing: false }_
+#### _`2. { leading: true, trailing: false }`_
 
 ![throttle output with options { leading: true, trailing: false }](./img/throttle_2.png)
 
@@ -160,7 +160,7 @@ _Breakdown:_
 - Calls with values **DO**, **DOU** and **DOUA** are skipped
 - The throttle will perform the call with value **DOUAL** at 1350ms and ignore the call with **DOUALA** cause the trailing is false
 
-#### _3. { leading: false, trailing: true }_
+#### _`3. { leading: false, trailing: true }`_
 
 ![throttle output with options { leading: false, trailing: true }](./img/throttle_3.png)
 
@@ -199,7 +199,7 @@ Now, let's have a look on how the debounce works with different options :
 - the debounced function will be invoked after the specified wait time has passed since the last invocation. If there are subsequent invocations within the wait time, the timer will be reset, and the function will be invoked again after the wait time from the last invocation.
 - when set to false, the debounced function will not be invoked if there are subsequent invocations within the wait time. It will only be invoked after the wait time has passed since the last invocation and there are no further invocations during that time.
 
-#### 1. { leading: true, trailing: true }
+#### _`1. { leading: true, trailing: true }`_
 
 ![debounce output with options { leading: true, trailing: true }](./img/debounce_1.png)
 
@@ -209,7 +209,7 @@ _Breakdown:_
 - The calls with values **DO**, **DOU** and **DOUA** are delayed to the next interval (+1000ms)
 - The trailing executes the last call in the interval with the value **DOUALA** and skips all the calls before.
 
-#### 2. { leading: true, trailing: false }
+#### _`2. { leading: true, trailing: false }`_
 
 ![debounce output with options { leading: true, trailing: false }](./img/debounce_2.png)
 
@@ -220,7 +220,7 @@ _Breakdown:_
 - The api is called with the value **DOUAL**
 - Api call with the value **DOUALA** is ignored
 
-#### 3. { leading: false, trailing: true }
+#### _`3. { leading: false, trailing: true }`_
 
 ![debounce output with options { leading: false, trailing: true }](./img/debounce_3.png)
 
@@ -232,6 +232,8 @@ _Breakdown:_
 - The trailing executes the last call in the interval with the value **DOUALA** and skips all the calls before.
 
 ## How to choose between Throttling and Debouncing
+
+`These observations are based on my own experience. So you can have a different opinion.`
 
 Throttling is useful when you want to maintain a steady flow of requests at a controlled rate, like updating a UI component based on user input without overwhelming the server. Use throttle when dealing with continuous events like scrolling or resizing, and you want to limit the number of times a function is called within a specific time interval.
 
