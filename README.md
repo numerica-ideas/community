@@ -12,7 +12,7 @@
 
 # Ni Community Activities&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com)
 
-[![NiPresentation](./ni-presentation.png)](https://youtu.be/6bdCyAZCUTg)
+[![NiPresentation](./ni-presentation-play.png)](https://youtu.be/6bdCyAZCUTg)
 
 [NumericaIdeas](https://numericaideas.com) is a technical community that creates opportunities for IT professionals, where you’ll secure your dream job, and indeed the group through which you can develop your hard and soft skills at your own pace.
 
@@ -24,11 +24,11 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Latest YouTube Videos      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
+- [How I Became a Software Engineer with No University Degree or Experience](https://www.youtube.com/watch?v=UVF_31PmeEQ)
 - [What is NumericaIdeas?](https://www.youtube.com/watch?v=6bdCyAZCUTg)
 - [NumericaIdeas Community Updates #1](https://www.youtube.com/watch?v=va8SgEa0ssw)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://www.youtube.com/watch?v=gnVtDbl2gpg)
 - [Lift And Shift Cloud Migration of Spring Boot to AWS ElasticBeanstalk | Part 3: GitHub Actions CI/CD](https://www.youtube.com/watch?v=TI84hpeiTZE)
-- [Lift And Shift Cloud Migration of Spring Boot App Using AWS ElasticBeanstalk | Part 2 | Scalability](https://www.youtube.com/watch?v=KHOxmHL5USI)
 <!-- ENGLISH-YOUTUBE-VIDEOS:END -->
 
 ----------------
@@ -43,6 +43,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://blog.numericaideas.com"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [How to Scale WordPress on AWS](https://blog.numericaideas.com/aws-scale-wordpress/)
 - [React Hooks to Manage Component State and Lifecycle](https://blog.numericaideas.com/react-hooks/)
 - [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://blog.numericaideas.com/spring-boot-actuator/)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://blog.numericaideas.com/nodejs-env-files-support/)
@@ -52,7 +53,6 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [Docker Init: Quickly Dockerizing NodeJS Application](https://blog.numericaideas.com/quickly-dockerizing-nodejs/)
 - [How to Change Default SSH Port on Linux](https://blog.numericaideas.com/change-default-ssh-port-linux/)
 - [Dockerize Spring Boot and MySQL with Docker Compose](https://blog.numericaideas.com/docker-compose-springboot-mysql/)
-- [Scalability Types in Software Architecture](https://blog.numericaideas.com/scalability-types/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>

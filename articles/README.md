@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [How to Scale WordPress on AWS](https://blog.numericaideas.com/aws-scale-wordpress/)
 - [React Hooks to Manage Component State and Lifecycle](https://blog.numericaideas.com/react-hooks/)
 - [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://blog.numericaideas.com/spring-boot-actuator/)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://blog.numericaideas.com/nodejs-env-files-support/)

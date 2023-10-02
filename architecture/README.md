@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [How to Scale WordPress on AWS](https://blog.numericaideas.com/aws-scale-wordpress/)
 - [Dockerize Spring Boot and MySQL with Docker Compose](https://blog.numericaideas.com/docker-compose-springboot-mysql/)
 - [Scalability Types in Software Architecture](https://blog.numericaideas.com/scalability-types/)
 - [Build a Serverless App with AWS Lambda, S3, DynamoDB, and Python](https://blog.numericaideas.com/aws-serverless-web-application/)

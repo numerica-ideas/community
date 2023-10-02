@@ -670,6 +670,10 @@ The **WordPress** installation is available via the generated Load Balancer doma
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/deploy-wordpress-2tier-aws-architecture-with-terraform).
 
+You might want to read the follow-up article with depth scaling possibilities highlighted:
+
+[![previous architecture diagram](../aws-scale-wordpress/images/scale-wp-on-aws.png)](https://blog.numericaideas.com/aws-scale-wordpress)
+
 ———————
 
 We have just started our journey to build a network of professionals to grow even more our free knowledge-sharing community that’ll give you a chance to learn interesting things about topics like cloud computing, software development, and software architectures while keeping the door open to more opportunities.

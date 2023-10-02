@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [How to Scale WordPress on AWS](https://blog.numericaideas.com/aws-scale-wordpress/)
 - [Accelerate Android App Delivery via Bitrise CI/CD Pipelines](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines/)
 <!-- TAG-POSTS-LIST:END -->
 
