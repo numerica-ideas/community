@@ -233,17 +233,20 @@ _Breakdown:_
 
 ## How to choose between Throttling and Debouncing
 
-`These observations are based on my own experience. So you can have a different opinion.`
+> [!NOTE]
+> These observations are based on my own experience. So you can have a different opinion.
 
 Throttling is useful when you want to maintain a steady flow of requests at a controlled rate, like updating a UI component based on user input without overwhelming the server. Use throttle when dealing with continuous events like scrolling or resizing, and you want to limit the number of times a function is called within a specific time interval.
 
-> **_Use case_**
+**_Use case_**
+
 > For a feature like a timeline update, you can control how many times the api is called and ui refreshed, when the user is scrolling.
 
 Debouncing is particularly useful for scenarios where you want to delay an API request until the user has finished a series of actions (e.g., typing in a search bar), which can reduce unnecessary API calls and optimize performance.
 
-> **_Use case_**
-> For a search input
+**_Use case_**
+
+> For a search input. As the example we used in the article.
 
 ## Conclusion
 
