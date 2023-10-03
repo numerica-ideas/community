@@ -1,10 +1,10 @@
-# Demystifying Terraform Modules&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fmodule&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/terraform-module)
+# Demystifying Terraform Modules&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform-modules&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/terraform-modules)
 
-**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/terraform-module
+**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/terraform-modules
 
 In the world of Infrastructure as Code (IaC), Terraform is a leading tool for managing and provisioning resources across various cloud providers. It empowers DevOps teams to define infrastructure in a declarative manner, ensuring consistent and reproducible deployments. Key to Terraform's capabilities are **modules**, which play a pivotal role in creating scalable and maintainable infrastructure code.
 
-[![FeaturedImage](./images/Terraform-Modules.png)](https://blog.numericaideas.com/terraform-module)
+[![FeaturedImage](./images/Terraform-Modules.png)](https://blog.numericaideas.com/terraform-modules)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -352,8 +352,7 @@ Once completed, your infrastructure should resemble the image displayed below:
 
 ![Infrastructure](./images/infrastructure.png)
 
-The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/terraform-module/).
-
+The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/terraform-modules).
 
 In order to better your DevOps skills, learn [How To Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop:
 
