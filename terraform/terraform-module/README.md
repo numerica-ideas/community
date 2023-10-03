@@ -4,20 +4,16 @@
 
 In the world of Infrastructure as Code (IaC), Terraform is a leading tool for managing and provisioning resources across various cloud providers. It empowers DevOps teams to define infrastructure in a declarative manner, ensuring consistent and reproducible deployments. Key to Terraform's capabilities are **modules**, which play a pivotal role in creating scalable and maintainable infrastructure code.
 
-![FeaturedImage](./images/featureImage.png)
+[![FeaturedImage](./images/Terraform-Modules.png)](https://blog.numericaideas.com/terraform-module)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## Prerequisites
 
 Before delving into Terraform modules, ensure you have the following:
-
 - **Terraform Installation**: Download the latest version from the [official website](https://www.terraform.io/downloads.html).
-
-- **AWS Account**: Active AWS account with configured credentials and API keys for Terraform.
-
-- **Basic HCL Knowledge**: Familiarity with HashiCorp Configuration Language (HCL), used for writing Terraform configurations. Explore HCL in the [official documentation](https://developer.hashicorp.com/terraform/language).
-
+- **AWS Account**: Set up an appropriate AWS account credentials as documented [here](https://blog.numericaideas.com/configure-aws-cli).
+- **Basic HCL Knowledge**: Familiarity with HashiCorp Configuration Language (HCL), used for writing Terraform configurations.
 - **Modularity**: Terraform allows the definition of reusable infrastructure modules, facilitating the creation of complex and scalable architectures and promoting best practice sharing.
 - **Dependency Management**: Terraform handles dependencies between resources, ensuring consistent updates and simplifying the management of interconnected infrastructures.
 
@@ -88,6 +84,7 @@ output "instance_ips" {
 
 ## Using Terraform Modules
 
+### Modules in Configuration
 Using a Terraform module in your configuration is straightforward. Specify the module source in your code, like this:
 
 ```hcl
@@ -101,7 +98,7 @@ In this example, we use a module named **example** located in the `./modules/my-
 
 Now, let's explore how we could have reused or installed that module if it were stored in the Terraform Registry or located in a GitHub repository. 
 
-**Using Modules from Terraform Registry:**
+### Using Modules from the Terraform Registry
 
 The Terraform Registry is a public repository of Terraform modules provided by HashiCorp and the Terraform community. To use a module from the Terraform Registry, you would specify the source as follows:
 
@@ -112,9 +109,9 @@ module "example" {
 }
 ```
 
-[**Using Modules from GitHub:**](https://developer.hashicorp.com/terraform/language/modules/sources#github)
+### Using Modules from GitHub
 
-If the module is hosted on GitHub, you can reference it using the `git::` source syntax:
+If the module is hosted on GitHub, you can reference it using the `git::` source syntax as demonstrated below:
 
 ```hcl
 module "example" {
@@ -298,7 +295,7 @@ output "instance_ip" {
 }
 ```
 
-## Using the Modules
+### Using the Modules
 
 Now that we have created our Security Group and EC2 Instance modules, let's explore how to use them in a Terraform configuration.
 
@@ -358,9 +355,9 @@ Once completed, your infrastructure should resemble the image displayed below:
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/terraform-module/).
 
 
-In order to better your DevOps skills, learn How To [Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop
+In order to better your DevOps skills, learn [How To Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop:
 
-![FeaturedImage](https://assets.numericaideas.com/2023/06/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform-1.png)
+[![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ———————
 
