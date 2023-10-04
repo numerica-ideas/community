@@ -61,6 +61,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ## 💡 Newsletter
 <!-- NI-NEWS-LIST:START -->
+- [Monthly Activities #3](https://news.numericaideas.com/monthly-recap-3/)
 - [Community Updates #1](https://news.numericaideas.com/community-updates-1/)
 - [Monthly Activities #2](https://news.numericaideas.com/monthly-recap-2/)
 - [Monthly Activities #1](https://news.numericaideas.com/monthly-recap-1/)
