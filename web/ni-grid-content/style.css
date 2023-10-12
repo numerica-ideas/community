@@ -1,0 +1,71 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+.popular-section h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 22%;
+    border: 1px solid #cdcdcd;
+    padding: 2px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: white;
+    position: relative;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.06);
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 0px 10px 10px 10px;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.card-title, .card-description {
+    text-align: justify;
+}
+
+.card-badge {
+    position: absolute;
+    right: 2px;
+    padding: 10px 20px;
+    background: #8f2c8a;
+    color: white;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .card {
+        width: 90%;
+    }
+}
