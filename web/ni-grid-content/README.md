@@ -1,4 +1,4 @@
-# NI GRID CONTENT: HTML + CSS
+# NI GRID CONTENT: HTML + CSS&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fweb%2Fni-grid-content&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://youtu.be/IfFZK8nc-0c)
 This is the implementation of a responsive GRID layout like the one used by [NumericaIdeas](https://numericaideas.com) as of **10 October 2023**.
 
 Nowadays, front-end frameworks simplify the creation of Grids but it remains a good thing to know in case you may need to do some customizations or to quickly understand what these frameworks do, plus this can be put on the table during job interviews.
