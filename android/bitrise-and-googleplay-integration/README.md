@@ -73,12 +73,14 @@ Keep this file safe because it will be needed when configuring **Bitrise** setti
 
 ### Connect Google Play to Service Account
 
-1. Go to [API Access](https://play.google.com/console/u/developers/api-access) page.
-2. Scroll down to **Service Accounts** section. Click on **Manage Play Console Permissions** button for your Service Account.
+1. Go to [Google Play Console](https://play.google.com/console).
+2. Click on **API Access** from the menu on the left side.
+![](./images/google_play_console_api_access_button.png)
+3. Scroll down to **Service Accounts** section. Click on **Manage Play Console Permissions** button for your Service Account.
 ![Manage Google Play Service Accounts](./images/google_play_manage_service_account.png)
-3. The Email address field is pre-filled in the Invite user window. Do not change it.
-4. Confirm the second option **View app information and download bulk reports (read-only)** is checked under API Access.
-5. Click **Invite User** button at the bottom-right.
+4. The Email address field is pre-filled in the Invite user window. Do not change it.
+5. Confirm the second option **View app information and download bulk reports (read-only)** is checked under API Access.
+6. Click **Invite User** button at the bottom-right.
 ![Google Play Invite User](./images/google_play_invite_service_account_user.png)
 You have successfully prepared your Google Play Console project. A services credential account has been created which is authorized to manage your releases.
 
@@ -89,6 +91,7 @@ You have successfully prepared your Google Play Console project. A services cred
 Before we can publish a release to **Google Play Store**, we need to provide **Release Notes** for the new update. **Bitrise** provides a utility step just for that. 
 1. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard) and select your Android app.
 2. Click on **Edit workflow**. 
+![Edit Workflow button](./images/bitrise_edit_workflow.png) 
 3. Add **Release notes extractor** step after **Git Clone Repository** step. 
 ![Bitrise Add Release Notes Step](./images/bitrise_release_notes_step.png)
 4. Specify the changelog file path. We will be using the default path and name i.e *CHANGELOG.md*
@@ -101,6 +104,7 @@ Before we can publish a release to **Google Play Store**, we need to provide **R
 ### Adding Service Account JSON
 1. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard) and select your Android app.
 2. Click on **Edit workflow**. 
+![Edit Workflow button](./images/bitrise_edit_workflow.png) 
 3. Go to the **Code Signing & Files** tab, drag and drop your **Service Account** JSON file to **GENERIC FILE STORAGE**.
 4. Enter an ID for the **Service Account** JSON file and upload it using the button below.
 ![Bitrise Upload Service Account JSON](./images/bitrise_upload_json.png)
