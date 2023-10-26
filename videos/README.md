@@ -27,6 +27,7 @@ All the community videos published on YouTube in **English** and **French** are 
 ### <a href="https://www.youtube.com/@NumericaIdeasFr/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Vidéos en Français      
 
 <!-- FRENCH-YOUTUBE-VIDEOS:START -->
+- [Entretien Technique #02 : Développeur Spring Boot Junior](https://www.youtube.com/watch?v=V0NHhdOOvY0)
 - [Entretien Technique #01: Développeur Frontend HTML + CSS](https://www.youtube.com/watch?v=ILGVVFNeRcY)
 - [Meetup 02: Devenez un freelance de 1ère classe &lpar;top 3%&rpar; avec Toptal - Salomon Nghukam](https://www.youtube.com/watch?v=AmhMAQTxcGg)
 - [Meetup 01: Multi-modules à la Rescousse des Microservices - Valdèse Kamdem](https://www.youtube.com/watch?v=e_LJvcikUCk)
