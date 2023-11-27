@@ -7,7 +7,7 @@
 <h3 align="center">TECH TOPICS TO SHARPEN YOUR CLOUD AND SOFTWARE ARCHITECTURE SKILLS</h3>
 <p align="center">No hour of life is wasted that is spent gaining invaluable skills</p>
 <p align="center">"DISCOVER, LEARN, BUILD, & SHARE" 🚀</p>
-<p align="center"><a href="https://blog.numericaideas.com">Blog</a> · <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1">YouTube</a> · <a href="https://discord.numericaideas.com">Discord</a> · <a href="https://github.com/numerica-ideas/community#tech-projects">Projects</a></p>
+<p align="center"><a href="https://numericaideas.com/blog/">Blog</a> · <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1">YouTube</a> · <a href="https://discord.numericaideas.com">Discord</a> · <a href="https://github.com/numerica-ideas/community#tech-projects">Projects</a></p>
 <br/>
 
 # Ni Community Activities&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com)
@@ -16,7 +16,7 @@
 
 [NumericaIdeas](https://numericaideas.com) is a technical community that creates opportunities for IT professionals, where you’ll secure your dream job, and indeed the group through which you can develop your hard and soft skills at your own pace.
 
-Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Channel](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1), register to the [Newsletter](https://news.numericaideas.com), and join our [Discord Server](https://discord.numericaideas.com) to be kept posted of new content and activities.
+Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Channel](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1), register to the [Newsletter](https://numericaideas.com/blog/category/news), and join our [Discord Server](https://discord.numericaideas.com) to be kept posted of new content and activities.
 
 ## Recent Content
 <table><tr><td valign="top" width="50%">
@@ -58,7 +58,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 </td></tr></table>
 
-**More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).**
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).**
 
 ## 💡 Newsletter
 <!-- NI-NEWS-LIST:START -->
@@ -69,7 +69,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [Monthly Activities #0](https://news.numericaideas.com/monthly-recap-0/)
 <!-- NI-NEWS-LIST:END -->
 
-Subscribe to the monthly activities newsletter at: [news.numericaideas.com](https://news.numericaideas.com) ✅
+Subscribe to the monthly activities newsletter at: [https://numericaideas.com/blog/category/news](https://numericaideas.com/blog/category/news) ✅
 
 ## 👥 Social Media
 Multilingual (English & Français) presence on social media with the following accounts :eight_spoked_asterisk:
@@ -82,7 +82,7 @@ Multilingual (English & Français) presence on social media with the following a
 ## Contribute
 There are a lot of **activities** that you can contribute to within the community, the idea is to help others grow while sharpening your hard and soft skills at the same time:
 - Publicly shared [TODO list](https://github.com/numerica-ideas/community/issues).
-- Become an **author** and be featured in the [Blog](https://blog.numericaideas.com).
+- Become an **author** and be featured in the [Blog](https://numericaideas.com/blog/).
 - **Speak** at organized [Meetups](https://github.com/numerica-ideas/meetups) events.
 - Be part of [Workshops](https://discord.numericaideas.com) to **host or attend** tech topics discussions.
 - Do pre-recorded **videos** uploaded to our [YouTube (English & Français)](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) channels.
@@ -129,11 +129,11 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [Meetups](https://github.com/numerica-ideas/meetups)
 - [Open Source](https://github.com/numerica-ideas)
 - ...
-- [More topics](https://blog.numericaideas.com/topics)
+- [More topics](https://numericaideas.com/blog/)
 
 ## Numies
 **Numies** is the NumericaIdeas Awards conducted each year-end to celebrate a few **top contributors** who worked toward the vision of our professional network while impacting more people and differentiating themselves by their commitments and presence. There are many categories available and some prizes are given away 🎉
 
-The [contribution opportunities](https://github.com/numerica-ideas/community#contribute) are available on the top, the **2022** winners are now public on the [Award](https://numericaideas.com/award) page.
+The [contribution opportunities](https://github.com/numerica-ideas/community#contribute) are available on the top, the **2022** winners are now public on the [Award](https://numericaideas.com/numies/) page.
 
 By [NumericaIdeas Network](https://numericaideas.com) :fire:

@@ -35,6 +35,6 @@ All the community videos published on YouTube in **English** and **French** are 
 
 </td></tr></table>
 
-**More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
 
 By [NumericaIdeas Network](https://numericaideas.com)
