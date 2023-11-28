@@ -1,8 +1,4 @@
-<p align="center">
-  <a href="https://numericaideas.com">
-    <img src="https://s3.amazonaws.com/ni-ghost/2021/05/logo_numerica_ideas-1.png" width="318px" alt="NumericaIdeas Logo" />
-  </a>
-</p>
+<a href="https://numericaideas.com" target="blank"><img align="center" src="ni-github-banner.png" alt="numericaideas" /></a>
 
 <h3 align="center">TECH TOPICS TO SHARPEN YOUR CLOUD AND SOFTWARE ARCHITECTURE SKILLS</h3>
 <p align="center">No hour of life is wasted that is spent gaining invaluable skills</p>
