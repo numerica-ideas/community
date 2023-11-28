@@ -7,7 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- [React Hooks to Manage Component State and Lifecycle](https://blog.numericaideas.com/react-hooks/)
+- [React Hooks to Manage Component State and Lifecycle](https://numericaideas.com/blog/react-hooks/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
