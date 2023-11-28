@@ -7,8 +7,8 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
-- [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes/)
+- [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://numericaideas.com/blog/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
+- [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](https://numericaideas.com/blog/deploying-springboot-app-with-docker-and-kubernetes/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
