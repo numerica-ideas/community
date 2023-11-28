@@ -7,11 +7,11 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- [Demystifying Terraform Modules](https://blog.numericaideas.com/terraform-modules/)
-- [How to Scale WordPress on AWS](https://blog.numericaideas.com/aws-scale-wordpress/)
-- [Introduction to Terraform](https://blog.numericaideas.com/introduction-to-terraform/)
-- [Auto Scaling Group on AWS with Terraform](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform/)
-- [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform/)
+- [Demystifying Terraform Modules](https://numericaideas.com/blog/terraform-modules/)
+- [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
+- [Introduction to Terraform](https://numericaideas.com/blog/introduction-to-terraform/)
+- [Auto Scaling Group on AWS with Terraform](https://numericaideas.com/blog/auto-scaling-group-on-aws-with-terraform/)
+- [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
