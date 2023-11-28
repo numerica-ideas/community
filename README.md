@@ -44,16 +44,16 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://blog.numericaideas.com"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
-- [Demystifying Terraform Modules](https://blog.numericaideas.com/terraform-modules/)
-- [How to Scale WordPress on AWS](https://blog.numericaideas.com/aws-scale-wordpress/)
-- [React Hooks to Manage Component State and Lifecycle](https://blog.numericaideas.com/react-hooks/)
-- [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://blog.numericaideas.com/spring-boot-actuator/)
-- [Built-in .env Files Support Starting from Node.js v20.6.0](https://blog.numericaideas.com/nodejs-env-files-support/)
-- [Apply SOLID Principles in a Real Angular Project](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet/)
-- [Introduction to Terraform](https://blog.numericaideas.com/introduction-to-terraform/)
-- [Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide](https://blog.numericaideas.com/cd-springboot-aws-eb-github-actions/)
-- [Docker Init: Quickly Dockerizing NodeJS Application](https://blog.numericaideas.com/quickly-dockerizing-nodejs/)
-- [How to Change Default SSH Port on Linux](https://blog.numericaideas.com/change-default-ssh-port-linux/)
+- [Développeur Spring Boot Junior](https://numericaideas.com/blog/developpeur-spring-boot-junior-2/)
+- [Monthly Activities #3](https://numericaideas.com/blog/monthly-recap-3/)
+- [Demystifying Terraform Modules](https://numericaideas.com/blog/terraform-modules/)
+- [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
+- [Développeur Frontend &lpar;HTML + CSS&rpar; Junior](https://numericaideas.com/blog/developpeur-frontend-html-css-junior-1/)
+- [Community Updates #1](https://numericaideas.com/blog/community-updates-1/)
+- [React Hooks to Manage Component State and Lifecycle](https://numericaideas.com/blog/react-hooks/)
+- [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://numericaideas.com/blog/spring-boot-actuator/)
+- [Built-in .env Files Support Starting from Node.js v20.6.0](https://numericaideas.com/blog/nodejs-env-files-support/)
+- [Apply SOLID Principles in a Real Angular Project](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
