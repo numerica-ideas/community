@@ -103,6 +103,7 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [Articles](./articles)
 - [Amazon Web Services (AWS)](./aws)
 - [Microsoft Azure](./azure)
+- [Career](./career)
 - [Cheat Sheets](./cheatsheets)
 - [Design (UI & UX)](./design)
 - [DevOps](./devops)
