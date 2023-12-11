@@ -4,7 +4,7 @@ A collection of career recommendations produced by the community from their expe
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
-- [How I Became a Software Engineer with No University Degree or Experience](https://youtu.be/UVF_31PmeEQ)
+- [How I Became a Software Engineer with No University Degree or Experience](https://numericaideas.com/blog/software-engineer-no-university-degree-or-experience/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
