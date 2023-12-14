@@ -4,6 +4,7 @@ A collection of career recommendations produced by the community from their expe
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Choosing the Right Specialization Timing for Your Tech Career: Sooner or Later?](https://numericaideas.com/blog/career-specialization-timing/)
 - [How I Became a Software Engineer with No University Degree or Experience](https://numericaideas.com/blog/software-engineer-no-university-degree-or-experience/)
 <!-- TAG-POSTS-LIST:END -->
 
