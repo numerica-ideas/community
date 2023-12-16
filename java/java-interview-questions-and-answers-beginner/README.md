@@ -234,6 +234,19 @@ public void foo() {
 **15. What are wrapper classes in Java**  
     
   Wrapper classes convert the Java primitives into reference types (objects). Every primitive data type has a class dedicated to it. These are known as wrapper classes because they “wrap” the primitive data type into an object of that class.  
+  
+  The table below shows the Java primitives data type and their wrapper classes
+
+  | Primitives data type   | Wrapper classes  |
+  |------------------------|------------------|
+  |          byte          |       Byte       |
+  |          short         |       Short      |
+  |          int           |       Integer    |
+  |          long          |       Long       |
+  |          float         |       Float      |
+  |          double        |       Double     |
+  |          boolean       |       Boolean    |
+  |          char          |       Character  |
 
 **16. What are constructors in Java?**  
     
