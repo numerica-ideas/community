@@ -13,10 +13,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Pull in blog.numericaideas.com posts
+      - name: Pull Ni posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           max_post_count: 500
           readme_path: './architecture/README.md'
           comment_tag_name: "TAG-POSTS-LIST"
-          feed_list: "http://blog.numericaideas.com/feed/software-architecture.xml,http://blog.numericaideas.com/feed/solutions-architecture.xml"
+          feed_list: "https://numericaideas.com/blog/category/tech/architecture/feed"

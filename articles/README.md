@@ -1,4 +1,4 @@
-# Tech Articles&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Farticles&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](http://blog.numericaideas.com)
+# Tech Articles&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Farticles&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog)
 
 All the community articles published on our tech blog are listed below:
 
@@ -7,37 +7,18 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
-- [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://blog.numericaideas.com/spring-boot-actuator/)
-- [Built-in .env Files Support Starting from Node.js v20.6.0](https://blog.numericaideas.com/nodejs-env-files-support/)
-- [Apply SOLID Principles in a Real Angular Project](https://blog.numericaideas.com/solid-principles-in-angular-cheat-sheet/)
-- [Introduction to Terraform](https://blog.numericaideas.com/introduction-to-terraform/)
-- [Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide](https://blog.numericaideas.com/cd-springboot-aws-eb-github-actions/)
-- [Docker Init: Quickly Dockerizing NodeJS Application](https://blog.numericaideas.com/quickly-dockerizing-nodejs/)
-- [How to Change Default SSH Port on Linux](https://blog.numericaideas.com/change-default-ssh-port-linux/)
-- [Dockerize Spring Boot and MySQL with Docker Compose](https://blog.numericaideas.com/docker-compose-springboot-mysql/)
-- [Scalability Types in Software Architecture](https://blog.numericaideas.com/scalability-types/)
-- [Build a Serverless App with AWS Lambda, S3, DynamoDB, and Python](https://blog.numericaideas.com/aws-serverless-web-application/)
-- [Auto Scaling Group on AWS with Terraform](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform/)
-- [Periodic Table of DevOps Tools in 2023](https://blog.numericaideas.com/devops-periodic-table/)
-- [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
-- [Accelerate Android App Delivery via Bitrise CI/CD Pipelines](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines/)
-- [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform/)
-- [Difference between RxJS Observable, Subject, and BehaviorSubject](https://blog.numericaideas.com/difference-between-rxjs-observable-subject-and-behaviorsubject/)
-- [Lift And Shift Cloud Migration Manual for AWS ElasticBeanstalk](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk/)
-- [Git Cheat Sheet](https://blog.numericaideas.com/git-cheat-sheet/)
-- [How to Configure AWS CLI for Multi-Account Strategy](https://blog.numericaideas.com/configure-aws-cli/)
-- [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes/)
-- [Lambda Cold Starts Optimization Strategies](https://blog.numericaideas.com/lambda-cold-starts-optimization-strategies/)
-- [Jenkins VS GitLab: DevOps Comparison](https://blog.numericaideas.com/jenkins-vs-gitlab-devops-comparison/)
-- [Serverless Visual Design with AWS Application Composer](https://blog.numericaideas.com/aws-application-composer/)
-- [Easiest GitLab CI/CD Lambda Pipeline](https://blog.numericaideas.com/easiest-gitlab-cicd-lambda-pipeline/)
-- [Lambda Performance Improvement with SnapStart](https://blog.numericaideas.com/lambda-performance-improvement-with-snapstart/)
-- [Multipurpose Cloud Migration Strategy for NodeJS Projects](https://blog.numericaideas.com/multipurpose-cloud-migration-nodejs/)
-- [Custom State Management Architecture using RxJS](https://blog.numericaideas.com/custom-rxjs-store-architecture/)
-- [Fastest Blog Architecture](https://blog.numericaideas.com/fastest-blog-architecture/)
-- [Ghost as Choice over Traditional CMS](https://blog.numericaideas.com/ghost-as-choice-over-traditional-cms/)
+- [Choosing the Right Specialization Timing for Your Tech Career: Sooner or Later?](https://numericaideas.com/blog/career-specialization-timing/)
+- [How I Became a Software Engineer with No University Degree or Experience](https://numericaideas.com/blog/software-engineer-no-university-degree-or-experience/)
+- [Monthly Activities #5](https://numericaideas.com/blog/monthly-recap-5/)
+- [Monthly Activities #4](https://numericaideas.com/blog/monthly-recap-4/)
+- [Développeur Spring Boot Junior](https://numericaideas.com/blog/developpeur-spring-boot-junior-2/)
+- [Monthly Activities #3](https://numericaideas.com/blog/monthly-recap-3/)
+- [Demystifying Terraform Modules](https://numericaideas.com/blog/terraform-modules/)
+- [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
+- [Développeur Frontend &lpar;HTML + CSS&rpar; Junior](https://numericaideas.com/blog/developpeur-frontend-html-css-junior-1/)
+- [Community Updates #1](https://numericaideas.com/blog/community-updates-1/)
 <!-- ALL-POSTS-LIST:END -->
 
-**More tech content is available on [the blog](https://blog.numericaideas.com) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://news.numericaideas.com) to be kept posted ✅
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
 
 By [NumericaIdeas Network](https://numericaideas.com)

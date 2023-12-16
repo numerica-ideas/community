@@ -1,8 +1,14 @@
-# React Hooks to Manage Component State and Lifecycle
+# React Hooks to Manage Component State and Lifecycle&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Freactjs%2Freact-hooks&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/react-hooks)
+
+**This document was originally written by "Noël Foka" on the blog**: https://blog.numericaideas.com/react-hooks
+
+[![ReactHooksThumbnail](./images/react-hooks.png)](https://blog.numericaideas.com/react-hooks)
+
+> The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
 ## What is a Hook?
 
-A Hook is a special function that allows developers to use state and other React features without having to write a class. Hooks were released with the release of React 16.8 and are also functions that can be used in functional React components. They facilitate development by providing less code to developers for using React features.
+A **Hook** is a special function that allows developers to use state and other React features without having to write a class. Hooks were released with the release of **React 16.8** and are also functions that can be used in functional React components. They facilitate development by providing less code to developers for using React features.
 
 ## React Hook Usages
 
@@ -40,7 +46,7 @@ class MyComponent extends Component {
 }
 ```
 
-you can use the `useEffect` Hook like this:
+You can use the `useEffect` Hook like this:
 
 ```jsx
 import React, { useState, useEffect } from 'react';
