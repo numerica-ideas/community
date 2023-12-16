@@ -1,29 +1,29 @@
 # JAVA INTERVIEW QUESTIONS AND ANSWERS FOR BEGINNER&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fios&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/)
 
-Java is without a doubt one of the most powerful and used programming languages around the world. In this article, we are going to describe some java specificities by answering 30 questions.
+Java is without a doubt one of the most powerful and used programming languages around the world. In this article, we are going to describe some Java specifics by answering 30 questions.
 
 **Who could read this article?**
 
-* Beginner developer: As a beginner developer, you can find this article useful to let you know more about Java and success your interview;
+* Beginner developer: As a beginner developer, you can find this article useful to let you know more about Java and succeed in your interview;
   
-* Advanced developer: We all know that memory is few reliable, so It is not strange to forget about something you learned a long time ago. You can find here a memory reminder.
+* Advanced developer: We all know that our brain is sometimes not reliable in memorizing, so It is not strange to forget about something you learned a long time ago. You can find here a memory reminder.
 
 Feel free to write some comments that can help us to improve our articles.
 
-**1.  What is Java ?**
+**1.  What is Java?**
    
-   Java is a high level, class based, object oriented programming language and computing platform. It was first released by Sun Microsystems in 1995. Since January 2010, Oracle become the new owner of Java.
+   Java is a high-level, class based, object oriented programming language and computing platform. It was first released by Sun Microsystems in 1995. Since January 2010, Oracle acquired Sun Microsystems and became the new owner of Java.
 
-**2.  The features of Java programming language**
+**2.  The features of the Java programming language**
    
   * **Simple**: 
 
-    Java is a simple programming language and easy to understand because it does not contain complexities that exist in prior programming languages. Simplicity was the design aim of Javasoft people because it has to work on electronic devices where less memory/resources are available. Java contains the same syntax as C and C++, so the programmers who are switching to Java will not face any problems in terms of syntax. Secondly, the concept of pointers has been completely removed from Java which leads to confusion for a programmer and pointers are also vulnerable to security.
+    Java is a simple programming language and easy to understand because it does not contain complexities that existed in prior programming languages when It comes to managing computer resources like memory. Simplicity was the design aim of Javasoft people because it has to work on electronic devices where less memory/resources are available. Java contains the same syntax as C and C++, so the programmers who are switching to Java will not face any problems in terms of syntax. Furthermore, the concept of pointers has been completely removed from Java which leads to confusion for a programmer and pointers are also vulnerable to security.
 
 
   * **Object Oriented**:
-    
-    Java follows the object-oriented paradigm which allows us to maintain our code as a combination of different types of objects that incorporates both data and behavior.
+
+    Object oriented programming is a computer programming model that organizes software design around objects rather than functions and logic. It focuses on the objects that developers want to manipulate rather than the logic required to manipulate them. Objects are modeled with classes that allow to creation of several objects of the same type but with different configurations. Java follows that paradigm as well as you can't create a Java application without at least one class.
     
 
   * **Platform independent**:
@@ -32,15 +32,15 @@ Feel free to write some comments that can help us to improve our articles.
 
   * **Portable**:
     
-    The WORA (Write Once Run Anywhere) concept and platform-independent feature make Java portable. Now using the Java programming language, developers can yield the same result on any machine, by writing code only once. The reason behind this is JVM and bytecode. Suppose you wrote any code in Java, then that code is first converted to equivalent bytecode which is only readable by JVM. We have different versions of JVM for different platforms. Windows machines have their version of JVM, Linux has its own and macOS has its version of JVM. So if you distribute your bytecode to any machine, the JVM of that machine would translate the bytecode into the respective machine code. In this way portability lets the programmers focus on development and productivity rather than writing different code for different platforms. 
+    The WORA (Write Once Run Anywhere) concept and platform-independent feature make Java portable. Now using the Java programming language, developers can yield the same result on any machine, by writing code only once. The reason behind this is the JVM and usage of bytecode. Suppose you wrote any code in Java, then that code is first converted to equivalent bytecode which is only readable by the JVM. We have different versions of JVM for different platforms. Windows machines have their version of JVM, Linux has its own and macOS has its version of JVM. So if you distribute your bytecode to any machine, the JVM of that machine would translate the bytecode into the respective machine code. In this way portability lets the programmers focus on development and productivity rather than writing different code for different platforms. 
 
   * **Robust**:
     
-    The Java Programming language is robust, which means it is capable of handling unexpected termination of a program. There are 2 reasons behind this, first, it has a most important and helpful feature called Exception Handling. If an exception occurs in java code then no harm will happen whereas, in other low-level languages, the program will crash. Another reason why Java is strong lies in its memory management features. Unlike other low-level languages, Java provides a runtime Garbage collector offered by JVM, which collects all the unused variables.
+    The Java Programming language is robust, which means it is capable of handling unexpected termination of a program. There are 2 reasons behind this, first, it has a most important and helpful feature called Exception Handling. If an exception occurs in Java code then no harm will happen. Another strength of Java lies in its memory management features. Unlike low-level languages, Java provides a runtime Garbage collector offered by JVM, which collects all the unused variables.
     
   * **Secure**:
     
-    Java provides a strong Exception Handling mechanism which makes it more secure as it does not allow you to run the program until you rectify the error. Java also provides security features to the programmers. Security problems like virus threats, tampering, eavesdropping, and impersonation can be handled or minimized using Java. Encryption and Decryption features to secure your data from eavesdropping and tampering over the internet.
+    Java provides a strong Exception Handling mechanism which makes it more secure as it does not allow you to run the program until you rectify the error. Java also provides security features to the programmers. Security problems like virus threats, tampering, eavesdropping, and impersonation can be handled or minimized using Java. Encryption and Decryption features to secure your data from alteration and illicit use over the internet.
     
   * Interpreted:
     
@@ -82,14 +82,14 @@ Feel free to write some comments that can help us to improve our articles.
   Java Stack stores frames. It holds local variables and partial results and plays a part in method invocation and return. Each thread has a private JVM stack, created at the same time as the thread. A new frame is created each time a method is invoked. A frame is destroyed when its method invocation completes.
 
   * **Program Counter Register**:  
-  program counter register contains the address of the Java virtual machine instruction currently being executed.
+  The program counter register contains the address of the Java virtual machine instruction currently being executed.
 
   * **Native Method Stack**:  
   It contains all the native methods used in the application.
 
 **6. Difference between Heap and Stack Memory in Java**   
    
-   **Java Heap space** is used by java runtime to allocate memory to Objects and JRE classes. Whenever we create an object, it’s always created in the Heap space. Garbage Collection runs on the heap memory to free the memory used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere in the application.  
+   **Java Heap space** is used by Java runtime to allocate memory to Objects and JRE classes. Whenever we create an object, it’s always created in the Heap space. Garbage Collection runs on the heap memory to free the memory used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere in the application.  
 
    **Java Stack memory** is used for the execution of a thread. It contains method-specific values that are short-lived and references to other objects in the heap that are getting referred from the method. Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method. As soon as the method ends, the block becomes unused and becomes available for the next method. Stack memory size is much less compared to Heap memory.  
 
@@ -120,29 +120,29 @@ public class PersonBuilder {
 ```  
 If we run the code above, the *main* method will start the execution. Hence It will be loaded into the stack.
 
-The first local variable *id* will be directly stored in the stack since It is a primitive variable. The reference of *name* and *person* variables will be stored in the stack since they are object.  
+The first local variable *id* will be directly stored in the stack since It is a primitive variable. The reference of *name* and *person* variables will be stored in the stack since they are objects.  
 
-A string *"Name"* will be added in heap memory. 
+A string *"Name"* will be added to the heap memory. 
 
 The *buildPerson* method is called by the *main* method, then the *main* will stop execution and the *buildPerson* will be loaded into the stack.  
 
-*id* and *name* are stored in stack as a local variable, *person* reference is also stored in stack as a return type. 
+*id* and *name* are stored in the stack as a local variable, *person* reference is also stored in the stack as a return type. 
 
-The the Person class constructor is loaded into the stack. Since It is called by *buildPerson* and all Its intance variables are stored in the stack.
+The Person class constructor is loaded into the stack. Since It is called by *buildPerson* and all Its instance variables are stored in the stack.
 
 ![Heap and Stack Illustration](heap-stack.png)
 
 **7. What is Java Classloader?**
    
-  The Java ClassLoader is a part of the Java Runtime Environment that dynamically loads Java classes into the Java Virtual Machine. The Java run time system does not need to know about files and file systems because of classloaders. Java classes aren’t loaded into memory all at once, but when required by an application. At this point, the Java ClassLoader is called by the JRE, and these ClassLoaders load classes into memory dynamically.  
+  The Java ClassLoader is a part of the Java Runtime Environment that dynamically loads Java classes into the Java Virtual Machine. The Java run time system does not need to know about files and file systems because of Classloaders. Java classes aren’t loaded into memory all at once, but when required by an application. At this point, the Java ClassLoader is called by the JRE, and these ClassLoaders load classes into memory dynamically.  
    
-  Not all classes are loaded by a single ClassLoader. Depending on the type of class and the path of class, the ClassLoader that loads that particular class is decided. All classes are loaded based on their names and if any of these classes are not found then it returns a NoClassDefFoundError or ClassNotFoundException. A Java Classloader is of three types:
+  Not all classes are loaded by a single ClassLoader. Depending on the type of class and the path of the class, the ClassLoader that loads that particular class is decided. All classes are loaded based on their names and if any of these classes are not found then it returns a NoClassDefFoundError or ClassNotFoundException. A Java Classloader is of three types:
 
-  *  **Bootstrap ClassLoader**: This is the first classloader which is the superclass of Extension classloader. It loads the rt.jar file which contains all class files of Java Standard Edition like java. lang package classes, java.net package classes, java.util package classes, java.io package classes, java.sql package classes, etc.
+  *  **The Bootstrap ClassLoader**: This is the first Classloader which is the superclass of the Extension Classloader. It loads the rt.jar file which contains all class files of Java Standard Edition like java. lang package classes, java.net package classes, java.util package classes, java.io package classes, java.sql package classes, etc.
   
-  *  **Extension ClassLoader**: The Extension ClassLoader is a child of Bootstrap ClassLoader and loads the extensions of core java classes from the respective JDK Extension library. It loads files from jre/lib/ext directory or any other directory pointed by the system property java.ext.dirs.
+  *  **The Extension ClassLoader**: The Extension ClassLoader is a child of Bootstrap ClassLoader and loads the extensions of core Java classes from the respective JDK Extension library. It loads files from jre/lib/ext directory or any other directory pointed by the system property java.ext.dirs.
   
-  *  **System/Application ClassLoader**: This is the child classloader of Extension classloader. It loads the class files from the classpath. By default, the classpath is set to the current directory. You can change the classpath using "-cp" or "-classpath" switch. It is also known as Application classloader.
+  *  **The System/Application ClassLoader**: This is the child Classloader of the Extension Classloader. It loads the class files from the classpath. By default, the classpath is set to the current directory. You can change the classpath using "-cp" or "-classpath" switch. It is also known as the Application Classloader.
   
 
 **8. What is JIT**
@@ -159,13 +159,13 @@ The the Person class constructor is loaded into the stack. Since It is called by
   
   * Once the above step is done, the JVM executes the optimized code directly instead of interpreting the code again. This increases the performance and speed of the execution.
 
-**9.  What are the various access modifier in Java** 
+**9.  What are the various access modifiers in Java** 
     
   In Java, access modifiers are used to set the accessibility (visibility) of classes, interfaces, variables, methods, constructors, and data members. Java provides access control through three keywords - private, protected, and public. We are not required to use these access modifiers always, so we have another one namely “default access”, “package-private” or “no modifier”.
 
   * **Java Access Modifiers - public keyword**  
   
-    If a class member is “public” then it can be accessed from anywhere. The member variable or method is accessed globally. This is the simplest way to provide access to class members. However, we should take care of using this keyword with class variables otherwise anybody can change the values. Usually, class variables are kept as private, and getter-setter methods are provided to work with them.
+    If a class member is “public” then it can be accessed from anywhere. The member variable or method is accessed globally. This is the simplest way to provide access to class members. However, we should take care of using this keyword with class variables otherwise anybody can change the values. Usually, class variables are kept private, and getter-setter methods are provided to work with them.
 
   * **Java Access Modifiers - private keyword**  
   
@@ -173,7 +173,7 @@ The the Person class constructor is loaded into the stack. Since It is called by
 
   * **Java Access Modifiers - protected keyword**  
   
-    If class member is “protected” then it will be accessible only to the classes in the same package and to the subclasses. This modifier is less restricted from private but more restricted from public access. Usually, we use this keyword to make sure the class variables are accessible only to the subclasses.
+    If a class member is “protected” then it will be accessible only to the classes in the same package and to the subclasses. This modifier is less restricted from private but more restricted from public access. Usually, we use this keyword to make sure the class variables are accessible only to the subclasses.
 
   * **Java Access Modifiers - default access**  
   
@@ -185,11 +185,11 @@ The the Person class constructor is loaded into the stack. Since It is called by
 
 **11. Main concepts of OOP**
     
-  1.  **Encapsulation**: It is the process of wrapping a code and behavior in a class and preventing from misuse. It exposes only parts of an object that are safe to be exposed and the remaining part of the object is kept secure.   
+  1.  **Encapsulation**: It is the process of wrapping a code and behavior in a class and preventing It from misuse. It exposes only parts of an object that are safe to be exposed and the remaining part of the object is kept secure.   
    
   2.  **Inheritance**: It is the process of acquiring the features of others. for example, a child acquires the features of their parents.
    
-  3.  **Polymorphism**: It is a combination of two greek words which mean many forms. In polymorphism, actual type of object involved in method call determines which method to call rather type or reference variable.
+  3.  **Polymorphism**: It is a combination of two greek words which mean many forms. In polymorphism, the actual type of object involved in the method call determines which method to call rather type or reference variable.
     
 **12. Difference between instance and local variables**
 
@@ -225,11 +225,11 @@ public void foo() {
   
 * ***main***: It is the name of the method that is searched by JVM as a starting point for an application with a particular signature only. It is the method where the main execution occurs.  
   
-* ***String args[]***: It is the parameter passed to the main method.
+* ***String[] args***: It is the parameter passed to the main method.
 
-**14. Is empty .java file name a valid source file name?**  
+**14. Is an empty .java file name a valid source file name?**  
     
-  Yes, Java allows us to save our java file by .java only, we need to compile it by javac .java and run it by java classname.  
+  Yes, Java allows us to save our Java file by .java only, we need to compile it by javac .java and run it by java class name.  
 
 **15. What are wrapper classes in Java**  
     
@@ -241,13 +241,13 @@ public void foo() {
 
   There are two types of constructors:  
 
-  1. *Default Constructor*: In Java, a default constructor is the one that does not take any inputs. In other words, default constructors are the no-argument constructors that will be created by default in case you have no other constructor defined by the user. Its main purpose is to initialize the instance variables with the default values. Also, it is mainly used for object creation.  
+  1. *Default Constructor*: In Java, a default constructor does not take any inputs. In other words, default constructors are the no-argument constructors that will be created by default in case you have no other constructor defined by the user. Its main purpose is to initialize the instance variables with the default values. Also, it is mainly used for object creation.  
    
-  2. *Parameterized Constructor*: The parameterized constructor in Java is the constructor which is capable of initializing the instance variables with the provided values. In other words, the constructors which take the arguments are called parameterized constructors.  
+  2. *Parameterized Constructor*: The parameterized constructor in Java is the constructor that is capable of initializing the instance variables with the provided values. In other words, the constructors which take the arguments are called parameterized constructors.  
     
-**17. What are different between constructors and methods**  
+**17. What are the differences between constructors and methods**  
     
-  Constructor is used for initializing the object state whereas the method is used for exposing the object's behavior. Constructors have no return type but methods should have a return type. Even if It does not return anything, the return type is void. If the constructor is not defined, then a default constructor is provided by the java compiler. The constructor name should be equal to the class name. A constructor cannot be marked as final because whenever a class is inherited, the constructors are not inherited. A method can be defined as final but it cannot be overridden in its subclasses.  
+  Constructor is used for initializing the object state whereas the method is used for exposing the object's behavior. Constructors have no return type but methods should have a return type. Even if It does not return anything, the return type is void. If the constructor is not defined, then a default constructor is provided by the Java compiler. The constructor name should be equal to the class name. A constructor cannot be marked as final because whenever a class is inherited, the constructors are not inherited. A method can be defined as final but it cannot be overridden in its subclasses.  
 
 **18. Difference between method overloading and overriding**
     
@@ -295,15 +295,15 @@ public void foo() {
       }
     }
   ```
-  You can see that in test2 "Hello Father!" is still printed. With method overring, the call is made from the subclasse. But in method hiding, the call is made from reference type (**Father**).
+  You can see that in test2 "Hello Father!" is still printed. With method overring, the call is made from the subclass. But in method hiding, the call is made from the reference type (**Father**).
 
 **21. What is inheritance?**
     
-  Inheritance is one of the important features of object-oriented language. Inheriting is the process of acquiring the features of others. For example, a child acquires the features of their parents. In Java inheritance is the process of inheriting member of existing classes by extending their functionality. The original class is called base class, parent class, or super class. The new class derived from parent is called the child class, sub class, and derived class. We use the extends keyword in Java to extend a class. In Java, the super class of all classes is **Object** class from **java.lang** package.
+  Inheritance is one of the important features of object-oriented language. Inheriting is the process of acquiring the features of others. For example, a child acquires the features of their parents. In Java inheritance is the process of inheriting member of existing classes by extending their functionality. The original class is called base class, parent class, or superclass. The new class derived from a parent is called the child class, subclass, and derived class. We use the extends keyword in Java to extend a class. In Java, the superclass of all classes is **Object** class from **java.lang** package.
 
-**22. Why is multiple inheritance not supported in Java** 
+**22. Why is multiple inheritance by class not supported in Java** 
     
-  Multiple Inheritance is a type of inheritance in which a class extends two or more classes. Consider a scenario where A, B, and C are three classes. The C class inherits A and B classes. If A and B classes have the same method and you call it from child class object, there will be ambiguity to call the method of A or B class. This problem is termed as **Diamond Problem**. Since compile-time errors are better than runtime errors, Java renders compile-time error if you inherit 2 classes. So whether you have same method or different, there will be a compile time error.
+  Multiple Inheritance is a type of inheritance in which a class extends two or more classes. Consider a scenario where A, B, and C are three classes. The C class inherits A and B classes. If A and B classes have the same method and you call it from the child class object, there will be ambiguity to call the method of A or B class. This problem is termed as **Diamond Problem**. Since compile-time errors are better than runtime errors, Java renders compile-time errors if you inherit 2 classes. So whether you have the same methods or not, there will be a compile-time error.
 
   ```java
     class A {
@@ -331,23 +331,23 @@ public void foo() {
     }
   ```
   This will result in a compilation error.  
-  However, "*Multiple Inheritance*" can be achieved by implementing multiple interfaces since interface forces the method overriding.
+  However, "*Multiple Inheritance*" can be achieved by implementing multiple interfaces since the interface forces the method overriding.
 
 **23. Difference between interface and abstract classes**
     
-  An interface can only contain abstract methods whereas an abstract class can contain abstract and concrete methods. All methods in the interface must be public, but in the abstract class, except private, methods can have all other access specifiers. An interface can have variables, but they must be public static final. An abstract class cannot only have private variables. To inherit interface features, classes use the implements keyword. But they use the extends keyword for abstract class. A class can implement many interfaces but can just extend one abstract class.
+   All methods in the interface must be public, but in the abstract class, except private, methods can have all other access specifiers. An interface can have variables, but they must be public static final. An abstract class cannot only have private variables. To inherit interface features, classes use the implements keyword. But they use the extends keyword for abstract class. A class can implement many interfaces but can just extend one abstract class. Before Java 8, the Interface could just contain abstract methods, but now, It is possible to add default and static (concrete) methods; the abstract class has always been able to have abstract and concrete methods.
 
-**24. Explain the use of final keyword** 
+**24. Explain the use of the final keyword** 
     
-  Final access modifier can be used for class, method and variables. The main advantage of final access modifier is security, no one can modify our classes, variables, and methods. The main disadvantage of final access modifier is we cannot implement object oriented programming concepts.
+  The final access modifier can be used for class, method and variables. The main advantage of the final access modifier is security, no one can modify our classes, variables, and methods. The main disadvantage of the final access modifier is we cannot implement object oriented programming concepts.
 
-  * *Final class*: A final class cannot be extended. inheritance can be prevented by marking a class as final. The method of final class can be accessed by composition. String class is a built-in final class in Java.
+  * *Final class*: A final class cannot be extended. inheritance can be prevented by marking a class as final. The method of the final class can be accessed by composition. String class is a built-in final class in Java.
   
-  * *Final methods*: Method overriding is one of the important features of Java. But there are situations where we may not want to use this feature. To prevent a method from being overridden, we use final access modifier for methods.
+  * *Final methods*: Method overriding is one of the important features of Java. But there are situations where we may not want to use this feature. To prevent a method from being overridden, we use the final access modifier for methods.
   
   * *Final variable*: If a variable is declared as final, it behaves like a constant. We cannot modify its value. any attempt to modify the final variable will result in a compilation error.
   
-**25. Composition vs aggregation** 
+**25. Composition vs Aggregation** 
     
   Composition, and Aggregation help to build (Has - A - Relationship) between classes and objects. But both are not the same in the end. Let’s understand with the help of an example. 
 
@@ -360,10 +360,8 @@ public void foo() {
   Polymorphism in Java is the phenomenon by which an object can acquire the ability to operate from different perspectives.
 
   ```java
-    class Computer {
-      void run() {
-        System.out.println("A computer is running");
-      }
+    interface Computer {
+      void run();
     }
 
     class Laptop implements Computer {
@@ -401,9 +399,9 @@ public void foo() {
   ```
   We can see that a computer can be a laptop, desktop, smartphone, and so on. Then it can behave differently according to the implementation.
     
-**27. What are compile-Time Polymorphism and run-Time Polymorphism**
+**27. What are compile-time Polymorphism and run-time Polymorphism**
     
-  Compile-time polymorphism is also known as static polymorphism or early binding. Compile-time polymorphism is a polymorphism that is resolved during the compilation process. Overloading of methods is called through the reference variable of a class. Compile-time polymorphism is achieved by method overloading and operator overloading.
+  Compile-time polymorphism is also known as static polymorphism or early binding. Compile-time polymorphism is a polymorphism that is resolved during the compilation process. Overloading of methods is called through the reference variable of a class. Compile-time polymorphism is achieved by method overloading in Java.
 
   ```java
     class A {
@@ -419,7 +417,7 @@ public void foo() {
 
     class Main {
 
-      public static vois main(String args[]) {
+      public static void main(String args[]) {
         A a = new A();
         a.sayHello(); // Hello World!
         a.sayHello("Man"); // Hello Man
@@ -460,15 +458,20 @@ public void foo() {
   ```
 **28. What is exception?**
     
-  In Java, an exception is an object. Exceptions are created when abnormal situations are arisen in our program. Exceptions can be created by JVM or by our application code. Exception can be considered as a runtime error.
+  In Java, an exception is an object. Exceptions are created when abnormal situations have arisen in our program. Exceptions can be created by JVM or by our application code. Exception can be considered as a runtime error. Java has two ways to check exceptions.
+
+  * At the compilation: When your program calls a method that could throw a certain type of exception, Java will prevent a successful compilation until you handle that exception or specify that the caller method could throw an exception. This kind of exception is called a **checked exception**. For example: IOException
+
+
+  * At the runtime: there is a type of exception for which Java does not warn at the compilation. For that exception, you are free to handle it or not. But during the use of your application, that exception could be thrown. This kind of exception is called an **unchecked exception**. For example: NullPointerException 
 
 **29. Automatic garbage collection**
     
-  Automatic garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not, and deleting the unused objects. An in use object, or a referenced object, means that some part of your program still maintains a pointer to that object. An unused object, or unreferenced object, is no longer referenced by any part of your program. So the memory used by an unreferenced object can be reclaimed.  
+  Automatic garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not, and deleting the unused objects. An in-use object, or a referenced object, means that some part of your program still maintains a pointer to that object. An unused object, or unreferenced object, is no longer referenced by any part of your program. So the memory used by an unreferenced object can be reclaimed.  
 
   In a programming language like C, allocating and deallocating memory is a manual process. In Java, the process of deallocating memory is handled automatically by the garbage collector.
 
-**30. Possible ways to making object eligible for garbage
+**30. Possible ways to make objects eligible for garbage
 collection**  
 
 Even though the programmer is not responsible for destroying useless objects it is highly recommended to make an object unreachable(thus eligible for Garbage Collector) if it is no longer required.  
