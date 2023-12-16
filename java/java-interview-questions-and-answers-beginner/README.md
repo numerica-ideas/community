@@ -60,11 +60,33 @@ Feel free to write some comments that can help us to improve our articles.
     
 **3. Explain JDK, JRE and JVM?**  
    
-| JDK                                                                       | JRE                                                                          | JVM                                                                                                                            |
-|---------------------------------------------------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| It stands for Java Development Kit.                                       | It stands for Java Runtime Environment.                                      |  It stands for Java Virtual Machine.                                                                                           |
-| It is the tool necessary to compile, document and package Java programs.  | JRE refers to a runtime environment in which Java bytecode can be executed.  |  It is an abstract machine. It is a specification that provides a run-time environment in which Java bytecode can be executed. |
-| It contains JRE + development tools.                                      | It’s an implementation of the JVM which physically exists.                   |  JVM follows three notations: Specification, Implementation, and Runtime Instance.                                             |
+
+<table style='width: 100%'>
+  <thead>
+    <tr>
+      <th>JDK</th>
+      <th>JRE</th>
+      <th>JVM</th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td>It stands for Java Development Kit.</td>
+      <td>It stands for Java Runtime Environment.</td>
+      <td>It stands for Java Virtual Machine.</td>
+    </tr>
+    <tr>
+      <td>It is the tool necessary to compile, document and package Java programs.</td>
+      <td>JRE refers to a runtime environment in which Java bytecode can be executed.</td>
+      <td>It is an abstract machine. It is a specification that provides a run-time environment in which Java bytecode can be executed.</td>
+    </tr>
+    <tr>
+      <td>It contains JRE + development tools.</td>
+      <td>It’s an implementation of the JVM which physically exists.</td>
+      <td>JVM follows three notations: Specification, Implementation, and Runtime Instance.</td>
+    </tr>
+  </tbody>
+</table>                                             |
      
 **4. Why is Java not a pure object oriented language?**  
    
@@ -235,18 +257,51 @@ public void foo() {
     
   Wrapper classes convert the Java primitives into reference types (objects). Every primitive data type has a class dedicated to it. These are known as wrapper classes because they “wrap” the primitive data type into an object of that class.  
   
-  The table below shows the Java primitives data type and their wrapper classes
-
-  | Primitives data type   | Wrapper classes  |
-  |------------------------|------------------|
-  |          byte          |       Byte       |
-  |          short         |       Short      |
-  |          int           |       Integer    |
-  |          long          |       Long       |
-  |          float         |       Float      |
-  |          double        |       Double     |
-  |          boolean       |       Boolean    |
-  |          char          |       Character  |
+  <table style="width: 100%">
+    <caption>
+      <h4>Java primitives data type and their wrapper classes</h4>
+    </caption>
+    <thead>
+      <tr>
+          <th>Primitives data type</th>
+          <th>Wrapper classes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>byte</td>
+          <td>Byte</td>
+      </tr>
+      <tr>
+          <td>short</td>
+          <td>Short</td>
+      </tr>
+      <tr>
+          <td>int</td>
+          <td>Integer</td>
+      </tr>
+      <tr>
+          <td>long</td>
+          <td>Long</td>
+      </tr>
+      <tr>
+          <td>float</td>
+          <td>Float</td>
+      </tr>
+      <tr>
+          <td>double</td>
+          <td>Double</td>
+      </tr>
+      <tr>
+          <td>boolean</td>
+          <td>Boolean</td>
+      </tr>
+      <tr>
+          <td>char</td>
+          <td>Character</td>
+      </tr>
+    </body>
+</table>
 
 **16. What are constructors in Java?**  
     
