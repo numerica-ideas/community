@@ -40,6 +40,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://blog.numericaideas.com"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [Publish Your Android App on Google Play Using Bitrise](https://numericaideas.com/blog/publish-android-app-on-google-play-using-bitrise/)
 - [Choosing the Right Specialization Timing for Your Tech Career: Sooner or Later?](https://numericaideas.com/blog/career-specialization-timing/)
 - [How I Became a Software Engineer with No University Degree or Experience](https://numericaideas.com/blog/software-engineer-no-university-degree-or-experience/)
 - [Monthly Activities #5](https://numericaideas.com/blog/monthly-recap-5/)
@@ -49,7 +50,6 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [Demystifying Terraform Modules](https://numericaideas.com/blog/terraform-modules/)
 - [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
 - [Développeur Frontend &lpar;HTML + CSS&rpar; Junior](https://numericaideas.com/blog/developpeur-frontend-html-css-junior-1/)
-- [Community Updates #1](https://numericaideas.com/blog/community-updates-1/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
