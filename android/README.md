@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Publish Your Android App on Google Play Using Bitrise](https://numericaideas.com/blog/publish-android-app-on-google-play-using-bitrise/)
 - [Accelerate Android App Delivery via Bitrise CI/CD Pipelines](https://numericaideas.com/blog/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines/)
 <!-- TAG-POSTS-LIST:END -->
 
