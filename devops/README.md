@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Publish Your Android App on Google Play Using Bitrise](https://numericaideas.com/blog/publish-android-app-on-google-play-using-bitrise/)
 - [Demystifying Terraform Modules](https://numericaideas.com/blog/terraform-modules/)
 - [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
 - [Introduction to Terraform](https://numericaideas.com/blog/introduction-to-terraform/)
@@ -16,7 +17,6 @@ The source codes of the articles in this category are present in this [folder](.
 - [Build a Serverless App with AWS Lambda, S3, DynamoDB, and Python](https://numericaideas.com/blog/aws-serverless-web-application/)
 - [Auto Scaling Group on AWS with Terraform](https://numericaideas.com/blog/auto-scaling-group-on-aws-with-terraform/)
 - [Periodic Table of DevOps Tools in 2023](https://numericaideas.com/blog/devops-periodic-table/)
-- [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://numericaideas.com/blog/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
