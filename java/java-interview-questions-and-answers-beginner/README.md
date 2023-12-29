@@ -6,7 +6,7 @@ Java is without a doubt one of the most powerful and used programming languages 
 
 * Beginner developer: As a beginner developer, you can find this article useful to let you know more about Java and succeed in your interview;
   
-* Advanced developer: We all know that our brain is sometimes not reliable in memorizing, so It is not strange to forget about something you learned a long time ago. You can find here a memory reminder.
+* Advanced developer: We all know that our brain is sometimes not reliable in memorizing, so it is not strange to forget about something you learned a long time ago. You can find here a memory reminder.
 
 Feel free to write some comments that can help us to improve our articles.
 
@@ -18,7 +18,7 @@ Feel free to write some comments that can help us to improve our articles.
    
   * **Simple**: 
 
-    Java is a simple programming language and easy to understand because it does not contain complexities that existed in prior programming languages when It comes to managing computer resources like memory. Simplicity was the design aim of Javasoft people because it has to work on electronic devices where less memory/resources are available. Java contains the same syntax as C and C++, so the programmers who are switching to Java will not face any problems in terms of syntax. Furthermore, the concept of pointers has been completely removed from Java which leads to confusion for a programmer and pointers are also vulnerable to security.
+    Java is a simple programming language and easy to understand because it does not contain complexities that existed in prior programming languages when it comes to managing computer resources like memory. Simplicity was the design aim of Javasoft people because it has to work on electronic devices where less memory/resources are available. Java contains the same syntax as C and C++, so the programmers who are switching to Java will not face any problems in terms of syntax. Furthermore, the concept of pointers has been completely removed from Java which leads to confusion for a programmer and pointers are also vulnerable to security.
 
 
   * **Object Oriented**:
@@ -142,7 +142,7 @@ public class PersonBuilder {
 ```  
 If we run the code above, the *main* method will start the execution. Hence It will be loaded into the stack.
 
-The first local variable *id* will be directly stored in the stack since It is a primitive variable. The reference of *name* and *person* variables will be stored in the stack since they are objects.  
+The first local variable *id* will be directly stored in the stack since it is a primitive variable. The reference of *name* and *person* variables will be stored in the stack since they are objects.  
 
 A string *"Name"* will be added to the heap memory. 
 
@@ -150,7 +150,7 @@ The *buildPerson* method is called by the *main* method, then the *main* will st
 
 *id* and *name* are stored in the stack as a local variable, *person* reference is also stored in the stack as a return type. 
 
-The Person class constructor is loaded into the stack. Since It is called by *buildPerson* and all Its instance variables are stored in the stack.
+The Person class constructor is loaded into the stack. Since it is called by *buildPerson* and all its instance variables are stored in the stack.
 
 ![Heap and Stack Illustration](heap-stack.png)
 
@@ -207,7 +207,7 @@ The Person class constructor is loaded into the stack. Since It is called by *bu
 
 **11. Main concepts of OOP**
     
-  1.  **Encapsulation**: It is the process of wrapping a code and behavior in a class and preventing It from misuse. It exposes only parts of an object that are safe to be exposed and the remaining part of the object is kept secure.   
+  1.  **Encapsulation**: It is the process of wrapping a code and behavior in a class and preventing it from misuse. It exposes only parts of an object that are safe to be exposed and the remaining part of the object is kept secure.   
    
   2.  **Inheritance**: It is the process of acquiring the features of others. for example, a child acquires the features of their parents.
    
@@ -403,7 +403,7 @@ public void foo() {
 
 **23. Difference between interface and abstract classes**
     
-   All methods in the interface must be public, but in the abstract class, except private, methods can have all other access specifiers. An interface can have variables, but they must be public static final. An abstract class cannot only have private variables. To inherit interface features, classes use the implements keyword. But they use the extends keyword for abstract class. A class can implement many interfaces but can just extend one abstract class. Before Java 8, the Interface could just contain abstract methods, but now, It is possible to add default and static (concrete) methods; the abstract class has always been able to have abstract and concrete methods.
+   All methods in the interface must be public, but in the abstract class, except private, methods can have all other access specifiers. An interface can have variables, but they must be public static final. An abstract class cannot only have private variables. To inherit interface features, classes use the implements keyword. But they use the extends keyword for abstract class. A class can implement many interfaces but can just extend one abstract class. Before Java 8, the Interface could just contain abstract methods, but now, it is possible to add default and static (concrete) methods; the abstract class has always been able to have abstract and concrete methods.
 
 **24. Explain the use of the final keyword** 
     
@@ -528,10 +528,10 @@ public void foo() {
     
   In Java, an exception is an object. Exceptions are created when abnormal situations have arisen in our program. Exceptions can be created by JVM or by our application code. Exception can be considered as a runtime error. Java has two ways to check exceptions.
 
-  * At the compilation: When your program calls a method that could throw a certain type of exception, Java will prevent a successful compilation until you handle that exception or specify that the caller method could throw an exception. This kind of exception is called a **checked exception**. For example: IOException
+  * At compilation: When your program calls a method that could throw a certain type of exception, Java will prevent a successful compilation until you handle that exception or specify that the caller method could throw an exception. This kind of exception is called a **checked exception**. For example: IOException
 
 
-  * At the runtime: there is a type of exception for which Java does not warn at the compilation. For that exception, you are free to handle it or not. But during the use of your application, that exception could be thrown. This kind of exception is called an **unchecked exception**. For example: NullPointerException 
+  * At runtime: there is a type of exception for which Java does not warn at the compilation. For that exception, you are free to handle it or not. But during the use of your application, that exception could be thrown. This kind of exception is called an **unchecked exception**. For example: NullPointerException 
 
 **29. Automatic garbage collection**
     
