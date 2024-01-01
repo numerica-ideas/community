@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [How I Published my First NPM Package in 1h](https://numericaideas.com/blog/how-i-published-my-first-npm-package-in-1h/)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://numericaideas.com/blog/nodejs-env-files-support/)
 - [Docker Init: Quickly Dockerizing NodeJS Application](https://numericaideas.com/blog/quickly-dockerizing-nodejs/)
 - [Serverless Visual Design with AWS Application Composer](https://numericaideas.com/blog/aws-application-composer/)
