@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [How I Published my First NPM Package in 1h](https://numericaideas.com/blog/how-i-published-my-first-npm-package-in-1h/)
 - [Difference between RxJS Observable, Subject, and BehaviorSubject](https://numericaideas.com/blog/difference-between-rxjs-observable-subject-and-behaviorsubject/)
 <!-- TAG-POSTS-LIST:END -->
 
