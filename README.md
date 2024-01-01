@@ -113,6 +113,7 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [GitLab CI/CD](./gitlab-ci-cd)
 - [iOS](./ios)
 - [Java](./java)
+- [JavaScript](./javascript)
 - [Kubernetes](./kubernetes)
 - [NodeJS](./nodejs)
 - [Python](./python)
