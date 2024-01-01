@@ -17,7 +17,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 ## Recent Content
 <table><tr><td valign="top" width="50%">
 
-### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Latest YouTube Videos      
+### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Latest YouTube Videos      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
 - [Unlocking Career Opportunities, some key elements to successfully start your tech career!](https://www.youtube.com/watch?v=bcY7Qth-s9w)
