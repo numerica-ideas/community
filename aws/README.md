@@ -18,6 +18,11 @@ The source codes of the articles in this category are present in this [folder](.
 - [Lift And Shift Cloud Migration Manual for AWS ElasticBeanstalk](https://numericaideas.com/blog/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk/)
 - [How to Configure AWS CLI for Multi-Account Strategy](https://numericaideas.com/blog/configure-aws-cli/)
 - [Lambda Cold Starts Optimization Strategies](https://numericaideas.com/blog/lambda-cold-starts-optimization-strategies/)
+- [Serverless Visual Design with AWS Application Composer](https://numericaideas.com/blog/aws-application-composer/)
+- [Easiest GitLab CI/CD Lambda Pipeline](https://numericaideas.com/blog/easiest-gitlab-cicd-lambda-pipeline/)
+- [Lambda Performance Improvement with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
+- [Multipurpose Cloud Migration Strategy for NodeJS Projects](https://numericaideas.com/blog/multipurpose-cloud-migration-nodejs/)
+- [Fastest Blog Architecture](https://numericaideas.com/blog/fastest-blog-architecture/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
