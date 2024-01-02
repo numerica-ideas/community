@@ -4,7 +4,7 @@ All the community videos published on YouTube in **English** and **French** are 
 
 <table><tr><td valign="top" width="50%">
 
-### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Videos in English      
+### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Videos in English      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
 - [Unlocking Career Opportunities, some key elements to successfully start your tech career!](https://www.youtube.com/watch?v=bcY7Qth-s9w)
@@ -24,7 +24,7 @@ All the community videos published on YouTube in **English** and **French** are 
  
 </td><td valign="top" width="50%">
 
-### <a href="https://www.youtube.com/@NumericaIdeasFr/channels?sub_confirmation=1"><img src="https://cdn.worldvectorlogo.com/logos/youtube-icon.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Vidéos en Français      
+### <a href="https://www.youtube.com/@NumericaIdeasFr/channels?sub_confirmation=1"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Vidéos en Français      
 
 <!-- FRENCH-YOUTUBE-VIDEOS:START -->
 - [Entretien Technique #02 : Développeur Spring Boot Junior](https://www.youtube.com/watch?v=V0NHhdOOvY0)
