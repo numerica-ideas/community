@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Monthly Activities #6](https://numericaideas.com/blog/monthly-activities-6/)
 - [Java Interview Questions and Answers for Beginners [2024]](https://numericaideas.com/blog/java-interview-questions-for-beginners/)
 - [How I Published my First NPM Package in 1h](https://numericaideas.com/blog/how-i-published-my-first-npm-package-in-1h/)
 - [Publish Your Android App on Google Play Using Bitrise](https://numericaideas.com/blog/publish-android-app-on-google-play-using-bitrise/)
