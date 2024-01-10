@@ -7,6 +7,7 @@ All the community videos published on YouTube in **English** and **French** are 
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Videos in English      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
+- [The revamped Website: Enhanced Experience and Tighter Security](https://www.youtube.com/watch?v=L4LAw3MYsxA)
 - [Unlocking Career Opportunities, some key elements to successfully start your tech career!](https://www.youtube.com/watch?v=bcY7Qth-s9w)
 - [Responsive Grid Layout - HTML &amp; CSS &lpar;FlexBox&rpar;](https://www.youtube.com/watch?v=ocGuOcyi0eg)
 - [Responsive Grid Layout using FlexBox, HTML &amp; CSS](https://www.youtube.com/watch?v=IfFZK8nc-0c)
