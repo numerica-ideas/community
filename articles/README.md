@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Summary of Platform Migration from Ghost to WordPress](https://numericaideas.com/blog/platform-migration-from-ghost-to-wordpress/)
 - [Monthly Activities #6](https://numericaideas.com/blog/monthly-activities-6/)
 - [Java Interview Questions and Answers for Beginners [2024]](https://numericaideas.com/blog/java-interview-questions-for-beginners/)
 - [How I Published my First NPM Package in 1h](https://numericaideas.com/blog/how-i-published-my-first-npm-package-in-1h/)
