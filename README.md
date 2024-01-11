@@ -40,6 +40,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://blog.numericaideas.com"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [Summary of Platform Migration from Ghost to WordPress](https://numericaideas.com/blog/platform-migration-from-ghost-to-wordpress/)
 - [Monthly Activities #6](https://numericaideas.com/blog/monthly-activities-6/)
 - [Java Interview Questions and Answers for Beginners [2024]](https://numericaideas.com/blog/java-interview-questions-for-beginners/)
 - [How I Published my First NPM Package in 1h](https://numericaideas.com/blog/how-i-published-my-first-npm-package-in-1h/)
@@ -49,7 +50,6 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [Monthly Activities #5](https://numericaideas.com/blog/monthly-recap-5/)
 - [Monthly Activities #4](https://numericaideas.com/blog/monthly-recap-4/)
 - [Développeur Spring Boot Junior](https://numericaideas.com/blog/developpeur-spring-boot-junior-2/)
-- [Monthly Activities #3](https://numericaideas.com/blog/monthly-recap-3/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
