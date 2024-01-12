@@ -1,8 +1,8 @@
-# Built-in .env Files Support Starting from Node.js v20.6.0&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fnodejs%2Fnodejs-env-files-support&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/nodejs-env-files-support)
+# Built-in .env Files Support Starting from Node.js v20.6.0&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fnodejs%2Fnodejs-env-files-support&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/nodejs-env-files-support)
 
-**This document was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/nodejs-env-files-support
+**This document was originally written by "Orleando Dassi" on the blog**: https://numericaideas.com/blog/nodejs-env-files-support
 
-[![NodejsEnvFilesSupportThumbnail](./images/nodejs-env-files-support.png)](https://blog.numericaideas.com/nodejs-env-files-support)
+[![NodejsEnvFilesSupportThumbnail](./images/nodejs-env-files-support.png)](https://numericaideas.com/blog/nodejs-env-files-support)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -57,9 +57,9 @@ If you are using a version lower than 20.6.0, you'll get the following message s
 
 Here's the complete [source code](https://github.com/numerica-ideas/community/tree/master/nodejs/node-support-env-files) of this experimentation, and the [release notes](https://nodejs.org/en/blog/release/v20.6.0).
 
-If you are interested in related content, take a look at the following which explains how to [Quickly Dockerizing NodeJS Application using docker init command](https://blog.numericaideas.com/quickly-dockerizing-nodejs) effortlessly:
+If you are interested in related content, take a look at the following which explains how to [Quickly Dockerizing NodeJS Application using docker init command](https://numericaideas.com/blog/quickly-dockerizing-nodejs) effortlessly:
 
-[![QuicklyDockerizingNodeJSApplication](../../docker/quickly-dockerizing-nodejs/images/quickly-dockerizing-nodejs.png)](https://blog.numericaideas.com/quickly-dockerizing-nodejs)
+[![QuicklyDockerizingNodeJSApplication](../../docker/quickly-dockerizing-nodejs/images/quickly-dockerizing-nodejs.png)](https://numericaideas.com/blog/quickly-dockerizing-nodejs)
 
 ———————
 

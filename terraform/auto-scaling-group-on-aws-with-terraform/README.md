@@ -1,12 +1,12 @@
-# Auto Scaling Group on AWS with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fauto-scaling-group-on-aws-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
+# Auto Scaling Group on AWS with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fauto-scaling-group-on-aws-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/auto-scaling-group-on-aws-with-terraform)
 
-**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform
+**This article was originally written by "Kemane Donfack" on the blog**: https://numericaideas.com/blog/auto-scaling-group-on-aws-with-terraform
 
 ## Introduction
 
 In today's digital landscape, building `highly available` and `scalable` infrastructures is crucial for ensuring the `reliability` and `performance` of applications. **Amazon Web Services (AWS)** provides a comprehensive suite of cloud services that enable organizations to build `resilient` and `elastic` environments. In this article, we will explore how to set up a highly available infrastructure on AWS using **Terraform**, a popular infrastructure-as-code tool.
 
-[![FeaturedImage](./images/Auto-Scaling-Group-on-AWS-with-Terraform.png)](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
+[![FeaturedImage](./images/Auto-Scaling-Group-on-AWS-with-Terraform.png)](https://numericaideas.com/blog/auto-scaling-group-on-aws-with-terraform)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -51,7 +51,7 @@ Before we begin, make sure you have the following prerequisites in place:
 - **An AWS account** with appropriate permissions to create and manage resources.
 - **Terraform installed** on your local machine. You can download it from the official Terraform website and follow the installation instructions for your operating system.
 
-**Important** : In this article, we will focus on the auto scaling group, so if you want to learn more about the `vpc.tf`, `variables.tf`, `security_group.tf`, `route_table.tf`, `provider.tf`, `outputs.tf`, loadbalancer.tf files, which will be created below, please refer to my previous article on [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform), where I explain the role of all these files in more detail. 
+**Important** : In this article, we will focus on the auto scaling group, so if you want to learn more about the `vpc.tf`, `variables.tf`, `security_group.tf`, `route_table.tf`, `provider.tf`, `outputs.tf`, loadbalancer.tf files, which will be created below, please refer to my previous article on [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform), where I explain the role of all these files in more detail. 
 
 ### Step 1: Provider Configuration
 

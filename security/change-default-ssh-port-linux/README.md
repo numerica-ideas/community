@@ -1,11 +1,11 @@
-# How to Change Default SSH Port on Linux&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fsecurity%2Fchange-default-ssh-port-linux&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/change-default-ssh-port-linux)
+# How to Change Default SSH Port on Linux&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fsecurity%2Fchange-default-ssh-port-linux&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/change-default-ssh-port-linux)
 
-**This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/change-default-ssh-port-linux
+**This article was originally written by "Orleando Dassi" on the blog**: https://numericaideas.com/blog/change-default-ssh-port-linux
 
 ## Introduction
 **SSH stands for Secure Shell**, it's a widely used network protocol for securely accessing and managing remote computers or servers over the internet. It provides a secure encrypted connection between the client and the server, ensuring that data transmitted between them remains confidential and protected from unauthorized access. In this article, we will walk you through the process of changing the default SSH port on Linux systems, ensuring a safer and more secure remote access experience.
 
-[![ChangeDefaultSSHPortLinux](./images/change-default-ssh-port-linux.png)](https://blog.numericaideas.com/change-default-ssh-port-linux)
+[![ChangeDefaultSSHPortLinux](./images/change-default-ssh-port-linux.png)](https://numericaideas.com/blog/change-default-ssh-port-linux)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 

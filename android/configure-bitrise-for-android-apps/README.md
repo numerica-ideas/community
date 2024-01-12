@@ -1,11 +1,11 @@
-# Accelerate Android App Delivery via Bitrise CI/CD Pipelines&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fandroid%2Fconfigure-bitrise-for-android-apps&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines)
+# Accelerate Android App Delivery via Bitrise CI/CD Pipelines&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fandroid%2Fconfigure-bitrise-for-android-apps&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines)
 
-**This article was originally written by "Waheed Abbas" on the blog**: https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines
+**This article was originally written by "Waheed Abbas" on the blog**: https://numericaideas.com/blog/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines
 
 ## Introduction
 **Bitrise** is a Continuous Integration and Delivery (CI/CD) Platform as a Service (PaaS) with a main focus on mobile app development (iOS, Android, React Native, Flutter, and so on). It's a collection of tools and services that we'll be use during the following lines to automate an Android App delivery.
 
-[![FeaturedImage](./images/Android-App-Delivery-via-Bitrise.png)](https://blog.numericaideas.com/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines)
+[![FeaturedImage](./images/Android-App-Delivery-via-Bitrise.png)](https://numericaideas.com/blog/accelerate-android-app-delivery-via-bitrise-ci-cd-pipelines)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 

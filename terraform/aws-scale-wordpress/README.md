@@ -1,6 +1,6 @@
-# How to Scale WordPress on AWS&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Faws-scale-wordpress&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/aws-scale-wordpress)
+# How to Scale WordPress on AWS&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Faws-scale-wordpress&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/aws-scale-wordpress)
 
-**This document was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/aws-scale-wordpress
+**This document was originally written by "Kemane Donfack" on the blog**: https://numericaideas.com/blog/aws-scale-wordpress
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -8,17 +8,17 @@
 
 In today's article, we will explore the **scalability** possibilities of deploying WordPress on AWS. Building upon our previous article on **deploying WordPress on a 2-Tier AWS architecture with Terraform**, we will focus on utilizing the `Auto Scaling Group (ASG)` feature, along with leveraging `Amazon S3` for media storage and `CloudFront` for **caching**. These enhancements will enable us to scale our WordPress deployment effectively and handle increasing traffic demands. So let's dive in!
 
-[![previous architecture diagram](./images/scale-wp-on-aws.png)](https://blog.numericaideas.com/aws-scale-wordpress)
+[![previous architecture diagram](./images/scale-wp-on-aws.png)](https://numericaideas.com/blog/aws-scale-wordpress)
 
-If you haven't read the previous article, [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform), we highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
+If you haven't read the previous article, [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform), we highly recommend checking it out first. It provides a comprehensive guide on setting up the initial 2-Tier architecture, which forms the foundation for this scalability enhancement.
 
-[![previous architecture diagram](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+[![previous architecture diagram](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ## Scalable Architecture
 
 To make the deployment of WordPress scalable on AWS, we used several strategies detailed in the illustration and sections below:
 
-[![architecture diagram](./images/how-to-scale-wordpress-on-aws.png)](https://blog.numericaideas.com/aws-scale-wordpress)
+[![architecture diagram](./images/how-to-scale-wordpress-on-aws.png)](https://numericaideas.com/blog/aws-scale-wordpress)
 
 ### Horizontal Scaling with Auto Scaling Groups
 
@@ -55,7 +55,7 @@ We can take advantage of **Read Replicas** for our **RDS database** to alleviate
 Before we proceed with scaling our WordPress deployment on AWS, make sure you have the following prerequisites in place
 - An `AWS account` with appropriate permissions to create resources.
 - Basic knowledge of `Terraform` and its concepts.
-- Read the previous article: [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+- Read the previous article: [**Deploying WordPress on a 2-Tier AWS Architecture with Terraform**](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ## Using Auto Scaling Group for Scalability
 
@@ -64,7 +64,7 @@ By using ASG, we can ensure our WordPress deployment can **scale horizontally** 
 In this section, we'll explain the modifications made to the existing Terraform files to incorporate ASG into our WordPress deployment.
 
 If you would like to delve deeper into the concept of Auto Scaling Group and its benefits, we have a dedicated article that covers it in detail. It provides valuable insights into how ASG works, and its configuration options.
-[**Auto Scaling Group in AWS**](https://blog.numericaideas.com/auto-scaling-group-on-aws-with-terraform)
+[**Auto Scaling Group in AWS**](https://numericaideas.com/blog/auto-scaling-group-on-aws-with-terraform)
 
 
 ### Step 1: Modify main.tf

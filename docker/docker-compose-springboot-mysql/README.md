@@ -1,11 +1,11 @@
-# Dockerize Spring Boot and MySQL with Docker Compose&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fdocker%2Fdocker-compose-springboot-mysql&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
+# Dockerize Spring Boot and MySQL with Docker Compose&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fdocker%2Fdocker-compose-springboot-mysql&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/docker-compose-springboot-mysql)
 
-**This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/docker-compose-springboot-mysql
+**This article was originally written by "Orleando Dassi" on the blog**: https://numericaideas.com/blog/docker-compose-springboot-mysql
 
 ## Introduction
 Docker has revolutionized application deployment by enabling developers to package applications and their dependencies into portable containers. In this comprehensive guide, we'll explore how to dockerize a **Spring Boot** application with **MySQL**, leveraging the power of **Docker** and **Docker Compose**. By containerizing your Spring Boot application, you can achieve easy deployment, improved portability, scalability, and version control.
 
-[![FeaturedImage](./images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
+[![FeaturedImage](./images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://numericaideas.com/blog/docker-compose-springboot-mysql)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -203,9 +203,9 @@ A **ping** endpoint is also available:
 
 ![ping](./images/test-api-ping.png)
 
-If you are interested in related content, take a look at the following which explains how to [Quickly Dockerizing NodeJS Application using docker init command](https://blog.numericaideas.com/quickly-dockerizing-nodejs) effortlessly:
+If you are interested in related content, take a look at the following which explains how to [Quickly Dockerizing NodeJS Application using docker init command](https://numericaideas.com/blog/quickly-dockerizing-nodejs) effortlessly:
 
-[![QuicklyDockerizingNodeJSApplication](../../docker/quickly-dockerizing-nodejs/images/quickly-dockerizing-nodejs.png)](https://blog.numericaideas.com/quickly-dockerizing-nodejs)
+[![QuicklyDockerizingNodeJSApplication](../../docker/quickly-dockerizing-nodejs/images/quickly-dockerizing-nodejs.png)](https://numericaideas.com/blog/quickly-dockerizing-nodejs)
 
 ———————
 

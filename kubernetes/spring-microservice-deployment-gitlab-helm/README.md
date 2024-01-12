@@ -1,13 +1,13 @@
-# Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fkubernetes%2Fspring-microservice-deployment-gitlab-helm&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci)
+# Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fkubernetes%2Fspring-microservice-deployment-gitlab-helm&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/springboot-microservices-deployment-kubernetes-helm-gitlabci)
 
-**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci
+**This article was originally written by "Kemane Donfack" on the blog**: https://numericaideas.com/blog/springboot-microservices-deployment-kubernetes-helm-gitlabci
 
 ## Introduction
 In today's fast-paced software development environment, it is essential to deploy applications quickly and efficiently. **Microservices** architecture is becoming increasingly popular for its ability to create highly scalable and flexible applications. **Kubernetes**, a popular open-source container orchestration system, has also become the go-to solution for microservices deployment. In this article, we will walk through the process of deploying applications from microservices to a Kubernetes cluster with **Helm** via **GitLab CI**.
 
 [GitLab CI](https://docs.gitlab.com/ee/ci/) is an integral part of the [GitLab](https://about.gitlab.com) platform and provides a robust continuous integration and deployment (CI/CD) pipeline. It allows developers to automate the building, testing and deployment of their applications. [Helm](https://helm.sh/) is a package manager for Kubernetes that allows users to install, upgrade and manage applications in a Kubernetes cluster.
 
-[![FeaturedImage](./images/SpringBoot_Microservices_App_Deployment_to_kubernetes_with_Helm_via_GitLab_CI.png)](https://blog.numericaideas.com/springboot-microservices-deployment-kubernetes-helm-gitlabci)
+[![FeaturedImage](./images/SpringBoot_Microservices_App_Deployment_to_kubernetes_with_Helm_via_GitLab_CI.png)](https://numericaideas.com/blog/springboot-microservices-deployment-kubernetes-helm-gitlabci)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -17,9 +17,9 @@ To perform this demo, you will need to have the following prerequisites:
 - **A GitLab account** : You will need a GitLab account to set up the CI/CD pipeline.
 - **Docker Hub account** : You will need a Docker Hub account to store Docker images.
 
-In case you would like to grab more technical concepts, another published article illustrates how to [Deploy a Spring Boot App with Docker in a Kubernetes Cluster](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes):
+In case you would like to grab more technical concepts, another published article illustrates how to [Deploy a Spring Boot App with Docker in a Kubernetes Cluster](https://numericaideas.com/blog/deploying-springboot-app-with-docker-and-kubernetes):
 
-[![DockerizedSpringBootInK8sCluster](../springboot-docker-kubernetes-setup/images/Dockerized-Spring-Boot-Deployment-in-K8s-Cluster.png)](https://blog.numericaideas.com/deploying-springboot-app-with-docker-and-kubernetes)
+[![DockerizedSpringBootInK8sCluster](../springboot-docker-kubernetes-setup/images/Dockerized-Spring-Boot-Deployment-in-K8s-Cluster.png)](https://numericaideas.com/blog/deploying-springboot-app-with-docker-and-kubernetes)
 
 ## What is Helm ?
 [Helm](https://helm.sh/) is a package manager for Kubernetes that allows you to easily install and manage applications on a Kubernetes cluster. Helm uses charts to define the structure and configuration of an application, which can be versioned and shared between teams.

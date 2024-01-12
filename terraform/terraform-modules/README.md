@@ -1,10 +1,10 @@
-# Demystifying Terraform Modules&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform-modules&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/terraform-modules)
+# Demystifying Terraform Modules&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform-modules&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/terraform-modules)
 
-**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/terraform-modules
+**This article was originally written by "Kemane Donfack" on the blog**: https://numericaideas.com/blog/terraform-modules
 
 In the world of Infrastructure as Code (IaC), Terraform is a leading tool for managing and provisioning resources across various cloud providers. It empowers DevOps teams to define infrastructure in a declarative manner, ensuring consistent and reproducible deployments. Key to Terraform's capabilities are **modules**, which play a pivotal role in creating scalable and maintainable infrastructure code.
 
-[![FeaturedImage](./images/Terraform-Modules.png)](https://blog.numericaideas.com/terraform-modules)
+[![FeaturedImage](./images/Terraform-Modules.png)](https://numericaideas.com/blog/terraform-modules)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -12,7 +12,7 @@ In the world of Infrastructure as Code (IaC), Terraform is a leading tool for ma
 
 Before delving into Terraform modules, ensure you have the following:
 - **Terraform Installation**: Download the latest version from the [official website](https://www.terraform.io/downloads.html).
-- **AWS Account**: Set up an appropriate AWS account credentials as documented [here](https://blog.numericaideas.com/configure-aws-cli).
+- **AWS Account**: Set up an appropriate AWS account credentials as documented [here](https://numericaideas.com/blog/configure-aws-cli).
 - **Basic HCL Knowledge**: Familiarity with HashiCorp Configuration Language (HCL), used for writing Terraform configurations.
 - **Modularity**: Terraform allows the definition of reusable infrastructure modules, facilitating the creation of complex and scalable architectures and promoting best practice sharing.
 - **Dependency Management**: Terraform handles dependencies between resources, ensuring consistent updates and simplifying the management of interconnected infrastructures.
@@ -39,7 +39,7 @@ Terraform modules offer several advantages:
 
 ### What is the Terraform Registry?
 
-The [**Terraform Registry**](https://blog.numericaideas.com/introduction-to-terraform#provider) is a public repository maintained by HashiCorp, the creators of Terraform. It serves as a trusted source for sharing Terraform modules, provider plugins, and other resources. It's the go-to platform for finding and sharing infrastructure code, promoting collaboration, and reducing the need to reinvent the wheel.
+The [**Terraform Registry**](https://numericaideas.com/blog/introduction-to-terraform#provider) is a public repository maintained by HashiCorp, the creators of Terraform. It serves as a trusted source for sharing Terraform modules, provider plugins, and other resources. It's the go-to platform for finding and sharing infrastructure code, promoting collaboration, and reducing the need to reinvent the wheel.
 
 ## How to Create Terraform Modules?
 
@@ -354,9 +354,9 @@ Once completed, your infrastructure should resemble the image displayed below:
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/terraform-modules).
 
-In order to better your DevOps skills, learn [How To Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop:
+In order to better your DevOps skills, learn [How To Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop:
 
-[![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+[![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ———————
 

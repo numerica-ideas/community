@@ -1,8 +1,8 @@
-# React Hooks to Manage Component State and Lifecycle&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Freactjs%2Freact-hooks&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/react-hooks)
+# React Hooks to Manage Component State and Lifecycle&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Freactjs%2Freact-hooks&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/react-hooks)
 
-**This document was originally written by "Noël Foka" on the blog**: https://blog.numericaideas.com/react-hooks
+**This document was originally written by "Noël Foka" on the blog**: https://numericaideas.com/blog/react-hooks
 
-[![ReactHooksThumbnail](./images/react-hooks.png)](https://blog.numericaideas.com/react-hooks)
+[![ReactHooksThumbnail](./images/react-hooks.png)](https://numericaideas.com/blog/react-hooks)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 

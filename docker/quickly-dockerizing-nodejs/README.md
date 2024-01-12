@@ -1,12 +1,12 @@
-# Docker Init: Quickly Dockerizing NodeJS Application&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fdocker%2Fquickly-dockerizing-nodejs&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/quickly-dockerizing-nodejs)
+# Docker Init: Quickly Dockerizing NodeJS Application&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fdocker%2Fquickly-dockerizing-nodejs&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/quickly-dockerizing-nodejs)
 
-**This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/quickly-dockerizing-nodejs
+**This article was originally written by "Orleando Dassi" on the blog**: https://numericaideas.com/blog/quickly-dockerizing-nodejs
 
 ## Introduction
 
 Containerization has revolutionized the world of software development and deployment. Docker, one of the leading containerization platforms, offers developers the ability to package their applications and dependencies into lightweight containers, ensuring consistent performance across various environments. With Docker, the process of creating Dockerfiles and Docker Compose files can be simplified using the `docker init` command. In this article, we will explore how `docker init` can speed up the containerization of a **NodeJS/NestJS** App.
 
-[![quickly-dockerizing-nodejs](./images/quickly-dockerizing-nodejs.png)](https://blog.numericaideas.com/quickly-dockerizing-nodejs)
+[![quickly-dockerizing-nodejs](./images/quickly-dockerizing-nodejs.png)](https://numericaideas.com/blog/quickly-dockerizing-nodejs)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -198,9 +198,9 @@ The API is accessible at http://localhost:3000:
 
 **Congratulations! You have successfully dockerized your NodeJS/NestJS App with no effort while following best practices.**
 
-If you are interested in related content, take a look at the following which explains how to [Dockerize a Spring Boot Application with MySQL](https://blog.numericaideas.com/docker-compose-springboot-mysql):
+If you are interested in related content, take a look at the following which explains how to [Dockerize a Spring Boot Application with MySQL](https://numericaideas.com/blog/docker-compose-springboot-mysql):
 
-[![DockerizeSpringBootApplicationWithMySQL](../../docker/docker-compose-springboot-mysql/images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://blog.numericaideas.com/docker-compose-springboot-mysql)
+[![DockerizeSpringBootApplicationWithMySQL](../../docker/docker-compose-springboot-mysql/images/Dockerize-Spring-Boot-Application-with-MySQL.png)](https://numericaideas.com/blog/docker-compose-springboot-mysql)
 
 ———————
 

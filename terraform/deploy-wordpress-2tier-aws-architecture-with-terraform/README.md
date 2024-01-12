@@ -1,6 +1,6 @@
-# Deploy WordPress on a 2-Tier AWS Architecture with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fdeploy-wordpress-2tier-aws-architecture-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+# Deploy WordPress on a 2-Tier AWS Architecture with Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fdeploy-wordpress-2tier-aws-architecture-with-terraform&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
-**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform
+**This article was originally written by "Kemane Donfack" on the blog**: https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform
 
 ## Introduction
 
@@ -8,7 +8,7 @@ Deploying WordPress on a **two-tier AWS architecture with Terraform** offers a r
 
 By following this guide, you'll establish a reliable infrastructure that optimizes performance and allows for future growth.
 
-[![FeaturedImage](./images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+[![FeaturedImage](./images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -43,14 +43,14 @@ A 2-Tier architecture, also known as a two-tier architecture, is a model of IT i
 
 The overall **AWS WordPress Architecture** looks like the following image in which the **AWS Cloud Services** are highlighted:
 
-[![ArchitectureDiagram](images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+[![ArchitectureDiagram](images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-Diagram.png)](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ### Prerequisites
 
 Before starting the deployment process, make sure you have the following prerequisites in place:
 
 - Basic knowledge of [Terraform](https://youtu.be/tJ6L1332WU4) & AWS
-- Installed AWS CLI, as documented [here](https://blog.numericaideas.com/configure-aws-cli)
+- Installed AWS CLI, as documented [here](https://numericaideas.com/blog/configure-aws-cli)
 - Installed Terraform CLI
 
 Now, let’s start configuring our project
@@ -672,7 +672,7 @@ The complete source code of the project is available on [GitHub](https://github.
 
 You might want to read the follow-up article with depth scaling possibilities highlighted:
 
-[![previous architecture diagram](../aws-scale-wordpress/images/scale-wp-on-aws.png)](https://blog.numericaideas.com/aws-scale-wordpress)
+[![previous architecture diagram](../aws-scale-wordpress/images/scale-wp-on-aws.png)](https://numericaideas.com/blog/aws-scale-wordpress)
 
 ———————
 
