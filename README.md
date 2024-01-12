@@ -118,6 +118,7 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [NodeJS](./nodejs)
 - [Python](./python)
 - [ReactJS](./reactjs)
+- [Salesforce](./salesforce)
 - [Security](./security)
 - [Serverless](./serverless)
 - [Spring Boot](./spring-boot)
