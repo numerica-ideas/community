@@ -1,11 +1,11 @@
-# Scalability Types in Software Architecture&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Farchitecture%2Fscalability-types-in-software-architecture&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/scalability-types)
+# Scalability Types in Software Architecture&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Farchitecture%2Fscalability-types-in-software-architecture&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/scalability-types)
 
-**This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/scalability-types
+**This article was originally written by "Orleando Dassi" on the blog**: https://numericaideas.com/blog/scalability-types
 
 ## Introduction
 A scalable system is one that has the ability to adapt itself by providing more or less resources in order to meet demands. Nowadays, with the unpredictability of monoliths and microservices systems, it’s important to always build a system to be scalable (or to be ready to) no matter if we are dealing with computing, storage, database, and any other components.
 
-[![FeaturedImage](./images/scalability-types.png)](https://blog.numericaideas.com/scalability-types)
+[![FeaturedImage](./images/scalability-types.png)](https://numericaideas.com/blog/scalability-types)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 

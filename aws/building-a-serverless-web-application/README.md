@@ -1,6 +1,6 @@
-# Build a Serverless App with AWS Lambda, S3, DynamoDB and Python&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fbuilding-a-serverless-web-application&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/aws-serverless-web-application)
+# Build a Serverless App with AWS Lambda, S3, DynamoDB and Python&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fbuilding-a-serverless-web-application&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/aws-serverless-web-application)
 
-**This article was originally written by "Kemane Donfack" on the blog**: https://blog.numericaideas.com/aws-serverless-web-application
+**This article was originally written by "Kemane Donfack" on the blog**: https://numericaideas.com/blog/aws-serverless-web-application
 
 ## Introduction
 Serverless architecture has revolutionized the way we build and deploy web applications. By abstracting away server management and scaling, it allows developers to focus on writing code and delivering value to users. In this article, we will explore the world of **serverless web applications** using a powerful combination of AWS services. We will leverage **AWS S3** for hosting, **Lambda functions** for data retrieval and storage, **DynamoDB** as a scalable database, **API Gateway** for creating RESTful APIs, **CloudFront** for global content delivery, and **AWS WAF** to secure against SQL injections. Join us on this journey as we dive into the implementation details, best practices, and benefits of building a serverless web application using AWS services.
@@ -12,7 +12,7 @@ Serverless architecture is a cloud computing paradigm that eliminates the need f
 
 The architecture of the whole infrastructure looks like the following image whose description is provided down:
 
-[![FeaturedImage](./images/diagram.png)](https://blog.numericaideas.com/aws-serverless-web-application)
+[![FeaturedImage](./images/diagram.png)](https://numericaideas.com/blog/aws-serverless-web-application)
 
 To build our serverless web application, we used the different AWS services below:
 - [**Amazon S3 (Simple Storage Service)**](https://aws.amazon.com/s3/): is a highly scalable and durable cloud storage service. It allows you to store and retrieve large amounts of data, such as files, images, videos, and backups, in a secure and cost-effective manner.

@@ -1,6 +1,6 @@
-# Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fweb%2Fspring-boot-actuator&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/spring-boot-actuator)
+# Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fweb%2Fspring-boot-actuator&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/spring-boot-actuator)
 
-**This article was originally written by "Cedrick TAGNE" on the blog**: https://blog.numericaideas.com/spring-boot-actuator
+**This article was originally written by "Cedrick TAGNE" on the blog**: https://numericaideas.com/blog/spring-boot-actuator
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, Feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 

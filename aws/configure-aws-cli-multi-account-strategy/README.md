@@ -1,11 +1,11 @@
-# How to Configure AWS CLI for Multi-Account Strategy&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fconfigure-aws-cli-multi-account-strategy&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/configure-aws-cli)
+# How to Configure AWS CLI for Multi-Account Strategy&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fconfigure-aws-cli-multi-account-strategy&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/configure-aws-cli)
 
-**This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/configure-aws-cli
+**This article was originally written by "Orleando Dassi" on the blog**: https://numericaideas.com/blog/configure-aws-cli
 
 ## Introduction
 The **AWS CLI** is a powerful tool that allows you to interact with various AWS services through a command-line interface. In this article, we will go through the steps to configure AWS CLI for multiple accounts on your local machine or any server with Terminal access.
 
-[![FeaturedImage](./images/how-to-configure-aws-cli-for-multi-account-strategy.png)](https://blog.numericaideas.com/configure-aws-cli)
+[![FeaturedImage](./images/how-to-configure-aws-cli-for-multi-account-strategy.png)](https://numericaideas.com/blog/configure-aws-cli)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
@@ -19,11 +19,11 @@ To use AWS CLI, you must have an **Access Key** and **Secret Access Key**. You c
 3. In the **"Access keys"** section, click on **"Create Access Key"**.
 4. The access key and secret access key will be generated. **Download** the CSV file containing the keys and keep it safe.
 
-[![AWSConsoleCreateAccessKey](./images/ni-aws-cli-create-access-keys.png)](https://blog.numericaideas.com/configure-aws-cli)
+[![AWSConsoleCreateAccessKey](./images/ni-aws-cli-create-access-keys.png)](https://numericaideas.com/blog/configure-aws-cli)
 
 Let's note that once you left that area, the Access Key won't be available anymore, so it's your only chance to copy and keep it safe somewhere else.
 
-[![CreatedAccessKeyWarning](./images/ni-aws-cli-access-keys-created.png)](https://blog.numericaideas.com/configure-aws-cli)
+[![CreatedAccessKeyWarning](./images/ni-aws-cli-access-keys-created.png)](https://numericaideas.com/blog/configure-aws-cli)
 
 ## Configure AWS CLI with Access Key
 After installing AWS CLI and creating the Access Key, the next step is to configure AWS CLI with that access key. Follow the steps below:
@@ -57,7 +57,7 @@ After successfully configuring AWS CLI, you can now use it to interact with AWS 
 
 This will list all the S3 buckets in your AWS account as follow:
 
-[![AWSCLITestS3](./images/ni-aws-cli-test-s3.png)](https://blog.numericaideas.com/configure-aws-cli)
+[![AWSCLITestS3](./images/ni-aws-cli-test-s3.png)](https://numericaideas.com/blog/configure-aws-cli)
 
 ## Multi-Account Setup: The Profile Option
 The `--profile` option allows you to specify different AWS CLI profiles, each with its own set of access keys, regions, and output formats. This is useful when you have multiple AWS accounts or need to access AWS services in different regions.
@@ -70,7 +70,7 @@ Let's reply to the same questions again (access key, region and output format). 
 
 You can create as many profiles as you want, at the end we will have something close to this for the `~/.aws/config` and `~/.aws/credentials` files (default and master-account profiles):
 
-[![AWSCLIMultipleProfiles](./images/ni-aws-cli-multiple-profiles.png)](https://blog.numericaideas.com/configure-aws-cli)
+[![AWSCLIMultipleProfiles](./images/ni-aws-cli-multiple-profiles.png)](https://numericaideas.com/blog/configure-aws-cli)
 
 Here are some examples of using the `--profile` option:
 

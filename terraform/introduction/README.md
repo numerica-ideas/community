@@ -1,6 +1,6 @@
-# Introduction to Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fintroduction&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/introduction-to-terraform)
+# Introduction to Terraform&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fterraform%2Fintroduction&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/introduction-to-terraform)
 
-**This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/introduction-to-terraform
+**This article was originally written by "Orleando Dassi" on the blog**: https://numericaideas.com/blog/introduction-to-terraform
 
 ## What is Terraform?
 [Terraform](https://developer.hashicorp.com/terraform) is widely defined as a cloud-agnostic tool used to deploy resources no matter the provider involved, but it's more than that, since it works on-premises as well, and a provider can be anything else than cloud environments, like Kubernetes clusters and Docker instances can be automated as well. Terraform is an **Infrastructure as Code (IaC)** tool that allows you to automatically create and manage resources for anything that has an accessible API defined as a provider.
@@ -62,7 +62,7 @@ Using Terraform on a daily basis can't be achieved without the following common 
 - `terraform help`: displays the documentation of Terraform CLI commands.
 
 ## Demo: Create an EC2 Instance on AWS
-For the demo, I’ll assume you have properly installed AWS CLI on your computer and configured it successfully by using the appropriate command: aws configure. You can read more about it from this [guide](https://blog.numericaideas.com/configure-aws-cli).
+For the demo, I’ll assume you have properly installed AWS CLI on your computer and configured it successfully by using the appropriate command: aws configure. You can read more about it from this [guide](https://numericaideas.com/blog/configure-aws-cli).
 
 We are going to create an EC2 server on AWS and then install Nginx on it, we ended up with three files just for illustration purposes.
 
@@ -176,9 +176,9 @@ The benefits of using Terraform as an infrastructure provisioning tool are:
 
 The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/terraform/introduction).
 
-In order to better your DevOps skills, learn [How To Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop:
+In order to better your DevOps skills, learn [How To Deploy WordPress on a 2-Tier AWS Architecture using Terraform](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform) by following this practical workshop:
 
-[![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://blog.numericaideas.com/deploy-wordpress-2-tier-aws-architecture-with-terraform)
+[![FeaturedImage](../deploy-wordpress-2tier-aws-architecture-with-terraform/images/Deploying-WordPress-on-a-2-Tier-AWS-Architecture-with-Terraform.png)](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform)
 
 ———————
 
@@ -189,6 +189,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 ———————
 
 ## Conclusion
-To sum up, in this article, we looped over the essential knowledge you need to have in order to use Terraform as an IaC tool, some related articles are published on [the blog](https://blog.numericaideas.com/tag/terraform).
+To sum up, in this article, we looped over the essential knowledge you need to have in order to use Terraform as an IaC tool, some related articles are published on [the blog](https://numericaideas.com/blog/tag/terraform).
 
 Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.

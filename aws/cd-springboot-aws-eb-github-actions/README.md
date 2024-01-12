@@ -1,11 +1,11 @@
-# Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fcd-springboot-aws-eb-github-actions&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://blog.numericaideas.com/cd-springboot-aws-eb-github-actions)
+# Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Faws%2Fcd-springboot-aws-eb-github-actions&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/cd-springboot-aws-eb-github-actions)
 
-**This article was originally written by "Orleando Dassi" on the blog**: https://blog.numericaideas.com/cd-springboot-aws-eb-github-actions
+**This article was originally written by "Orleando Dassi" on the blog**: https://numericaideas.com/blog/cd-springboot-aws-eb-github-actions
 
 ## Introduction
 The ability to deploy updates swiftly and reliably is paramount, it enables companies to be even more agile. Spring Boot, a widely adopted Java framework, seamlessly integrates with AWS Elastic Beanstalk, a platform-as-a-service solution. When coupled with the automation capabilities of GitHub Actions, the process of continuous deployment becomes a breeze. In this comprehensive guide, we'll walk you through the process of setting up continuous deployment for your Spring Boot application on AWS Elastic Beanstalk using GitHub Actions.
 
-[![FeaturedImage](./images/cd-springboot-aws-eb-github-actions.png)](https://blog.numericaideas.com/cd-springboot-aws-eb-github-actions)
+[![FeaturedImage](./images/cd-springboot-aws-eb-github-actions.png)](https://numericaideas.com/blog/cd-springboot-aws-eb-github-actions)
 
 This article covers the **Part 3** of the [Lift and Shift Cloud Migration Series](https://youtube.com/playlist?list=PLJl2liPyo6s3oQkBT2UWbuSfrwO4aS-9Z) that we started on YouTube, please [SUBSCRIBE HERE](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1) to be kept posted of the next chapters.
 
@@ -15,13 +15,13 @@ Do you prefer the Video format instead? Feel free to watch it by following this 
 
 ## Prerequisites
 1. **Spring Boot Application on GitHub:** Begin with a Spring Boot application hosted on GitHub, here's our [demo App](https://github.com/numerica-ideas/community/tree/master/aws/springboot-migration-elasticbeanstalk).
-2. **AWS Elastic Beanstalk Environment:** Ensure you have an existing AWS account with an Elastic Beanstalk environment configured, here's [the guide](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk#migration-steps).
+2. **AWS Elastic Beanstalk Environment:** Ensure you have an existing AWS account with an Elastic Beanstalk environment configured, here's [the guide](https://numericaideas.com/blog/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk#migration-steps).
 3. **Familiarity with Tools:** Familiarize yourself with AWS Elastic Beanstalk, Spring Boot, GitHub, and GitHub Actions.
 
 ## Step 1: Prepare Your AWS Elastic Beanstalk Environment
 Prior to configuring GitHub Actions, it is essential to ensure the presence of a fully operational Spring Boot application that has been deployed on AWS Elastic Beanstalk. This entails the creation of an environment within Elastic Beanstalk, the establishment of requisite AWS resources, and the verification of seamless functionality of your application within the AWS ecosystem.
 
-In case you are first looking to deploy your Spring Boot App to AWS using Elastic Beanstalk service, we do recommend you to take a look at this related article, [Spring Boot Lift And Shift Cloud Migration via AWS](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk).
+In case you are first looking to deploy your Spring Boot App to AWS using Elastic Beanstalk service, we do recommend you to take a look at this related article, [Spring Boot Lift And Shift Cloud Migration via AWS](https://numericaideas.com/blog/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk).
 
 The following is a summary of what should be done before moving to the next step.
 
@@ -39,7 +39,7 @@ The App has a [configuration file](https://github.com/numerica-ideas/community/b
 - **AWS region**: us-east-1
 - **The artifact (JAR file) location**: runnable.jar
 
-Next, from the project root folder, create the **Elastic Beanstalk environment** with the following command, assuming you successfully installed [EB CLI](https://blog.numericaideas.com/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk#migration-steps):
+Next, from the project root folder, create the **Elastic Beanstalk environment** with the following command, assuming you successfully installed [EB CLI](https://numericaideas.com/blog/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk#migration-steps):
 
 ```bash
 eb create spring-cloud-migration --sample --single --timeout 30 --instance_type t2.micro --database.username SpringBootAdmin --database.password Strange_Pwd --envvars PORT=9090 --tags tag1=val1,tag2=val2
