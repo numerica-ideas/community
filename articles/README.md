@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Understanding DevOps Roles and Technologies](https://numericaideas.com/blog/understanding-devops-roles-and-technologies/)
 - [Summary of Platform Migration from Ghost to WordPress](https://numericaideas.com/blog/platform-migration-from-ghost-to-wordpress/)
 - [Monthly Activities #6](https://numericaideas.com/blog/monthly-activities-6/)
 - [Java Interview Questions and Answers for Beginners [2024]](https://numericaideas.com/blog/java-interview-questions-for-beginners/)
