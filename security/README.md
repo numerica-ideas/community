@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Understanding DevOps Roles and Technologies](https://numericaideas.com/blog/understanding-devops-roles-and-technologies/)
 - [How to Change Default SSH Port on Linux](https://numericaideas.com/blog/change-default-ssh-port-linux/)
 - [Periodic Table of DevOps Tools in 2023](https://numericaideas.com/blog/devops-periodic-table/)
 <!-- TAG-POSTS-LIST:END -->
