@@ -48,7 +48,7 @@ The source codes of all the articles are present [here](../).
 - [Git Cheat Sheet](https://numericaideas.com/blog/git-cheat-sheet/)
 - [How to Configure AWS CLI for Multi-Account Strategy](https://numericaideas.com/blog/configure-aws-cli/)
 - [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](https://numericaideas.com/blog/deploying-springboot-app-with-docker-and-kubernetes/)
-- [Lambda Cold Starts Optimization Strategies](https://numericaideas.com/blog/lambda-cold-starts-optimization-strategies/)
+- [Lambda Performance Optimization Strategies](https://numericaideas.com/blog/lambda-cold-starts-optimization-strategies/)
 - [Jenkins VS GitLab: DevOps Comparison](https://numericaideas.com/blog/jenkins-vs-gitlab-devops-comparison/)
 - [NUMIES 2022: NUMERICAIDEAS’S TOP CONTRIBUTORS AWARDS](https://numericaideas.com/blog/numies-2022/)
 - [Serverless Visual Design with AWS Application Composer](https://numericaideas.com/blog/aws-application-composer/)
