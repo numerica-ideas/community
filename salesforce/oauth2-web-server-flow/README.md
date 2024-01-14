@@ -10,7 +10,7 @@ Provide your **Salesforce** credentials as environment variables in the `.env` f
 
 ## Deployment
 
-For the redirect URI to work, you have to deploy it online and not relying on localhost unless you are tunneling your local/test environment using [Ngrok](https://ngrok.com/docs/getting-started/).
+For the implementation to be secured, you have to deploy your backend online under an SSL certificate and not relying on localhost unless you are tunneling your local/test environment using [Ngrok](https://ngrok.com/docs/getting-started/) for testing purposes.
 Once deployed, you should change your **APP_DOMAIN** environment variable accordingly since it represents the root endpoint where the App is deployed.
 
 ## Run
