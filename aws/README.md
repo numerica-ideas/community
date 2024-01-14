@@ -17,7 +17,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform/)
 - [Lift And Shift Cloud Migration Manual for AWS ElasticBeanstalk](https://numericaideas.com/blog/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk/)
 - [How to Configure AWS CLI for Multi-Account Strategy](https://numericaideas.com/blog/configure-aws-cli/)
-- [Lambda Cold Starts Optimization Strategies](https://numericaideas.com/blog/lambda-cold-starts-optimization-strategies/)
+- [Lambda Performance Optimization Strategies](https://numericaideas.com/blog/lambda-cold-starts-optimization-strategies/)
 - [Serverless Visual Design with AWS Application Composer](https://numericaideas.com/blog/aws-application-composer/)
 - [Easiest GitLab CI/CD Lambda Pipeline](https://numericaideas.com/blog/easiest-gitlab-cicd-lambda-pipeline/)
 - [Lambda Performance Improvement with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
