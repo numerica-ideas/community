@@ -27,7 +27,7 @@ The source codes of all the articles are present [here](../).
 - [React Hooks to Manage Component State and Lifecycle](https://numericaideas.com/blog/react-hooks/)
 - [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://numericaideas.com/blog/spring-boot-actuator/)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://numericaideas.com/blog/nodejs-env-files-support/)
-- [Apply SOLID Principles in a Real Angular Project](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
+- [Apply SOLID Principles in Angular Projects](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
 - [Monthly Activities #2](https://numericaideas.com/blog/monthly-recap-2/)
 - [Introduction to Terraform](https://numericaideas.com/blog/introduction-to-terraform/)
 - [English Interviews are coming soon](https://numericaideas.com/blog/english-interviews-are-coming-soon/)
