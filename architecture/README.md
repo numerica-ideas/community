@@ -8,7 +8,7 @@ The source codes of the articles in this category are present in this [folder](.
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
 - [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
-- [Apply SOLID Principles in a Real Angular Project](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
+- [Apply SOLID Principles in Angular Projects](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
 - [Scalability Types in Software Architecture](https://numericaideas.com/blog/scalability-types/)
 - [Build a Serverless App with AWS Lambda, S3, DynamoDB, and Python](https://numericaideas.com/blog/aws-serverless-web-application/)
 - [Auto Scaling Group on AWS with Terraform](https://numericaideas.com/blog/auto-scaling-group-on-aws-with-terraform/)
