@@ -54,7 +54,7 @@ The source codes of all the articles are present [here](../).
 - [NUMIES 2022: NUMERICAIDEAS’S TOP CONTRIBUTORS AWARDS](https://numericaideas.com/blog/numies-2022/)
 - [Serverless Visual Design with AWS Application Composer](https://numericaideas.com/blog/aws-application-composer/)
 - [Easiest GitLab CI/CD Lambda Pipeline](https://numericaideas.com/blog/easiest-gitlab-cicd-lambda-pipeline/)
-- [Lambda Performance Improvement with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
+- [Lambda Performance Optimization with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
 - [Multipurpose Cloud Migration Strategy for NodeJS Projects](https://numericaideas.com/blog/multipurpose-cloud-migration-nodejs/)
 - [Custom State Management Architecture using RxJS](https://numericaideas.com/blog/custom-rxjs-store-architecture/)
 - [Fastest Blog Architecture](https://numericaideas.com/blog/fastest-blog-architecture/)
