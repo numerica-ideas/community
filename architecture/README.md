@@ -14,7 +14,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Auto Scaling Group on AWS with Terraform](https://numericaideas.com/blog/auto-scaling-group-on-aws-with-terraform/)
 - [Periodic Table of DevOps Tools in 2023](https://numericaideas.com/blog/devops-periodic-table/)
 - [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://numericaideas.com/blog/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
-- [Lambda Performance Improvement with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
+- [Lambda Performance Optimization with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
 - [Multipurpose Cloud Migration Strategy for NodeJS Projects](https://numericaideas.com/blog/multipurpose-cloud-migration-nodejs/)
 - [Custom State Management Architecture using RxJS](https://numericaideas.com/blog/custom-rxjs-store-architecture/)
 - [Fastest Blog Architecture](https://numericaideas.com/blog/fastest-blog-architecture/)
