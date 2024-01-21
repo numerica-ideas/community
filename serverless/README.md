@@ -11,7 +11,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Lambda Performance Optimization Strategies](https://numericaideas.com/blog/lambda-cold-starts-optimization-strategies/)
 - [Serverless Visual Design with AWS Application Composer](https://numericaideas.com/blog/aws-application-composer/)
 - [Easiest GitLab CI/CD Lambda Pipeline](https://numericaideas.com/blog/easiest-gitlab-cicd-lambda-pipeline/)
-- [Lambda Performance Improvement with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
+- [Lambda Performance Optimization with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
