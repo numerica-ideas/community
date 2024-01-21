@@ -1,13 +1,3 @@
----
-title: A Beginner's Guide to Maven
-category: article
-tags:
-  - java
-  - maven
-  - java-build-tools
-date: 11-01-2024
-slug:
----
 # A Beginner's Guide to Apache Maven
 ![fearuredImage](./images/maven.png)
 
@@ -35,7 +25,7 @@ I decided not to include a setup guide as it would make this article rather leng
 To see if we installed Maven correctly, run the following command in your terminal:
 
 ```
-mavn -v
+mvn -v
 ```
 
 If it displays the Maven version like this ⬇️, then you're good to go.
@@ -49,29 +39,40 @@ To create a Maven project, navigate to any directory of your choice and run the 
 mvn archetype:generate -Dfilter=org.apache.maven.archetypes:
 ```
 
-After running it, you will be prompted to provide some values. You can just provide the `groupId:` and `artifactId:`, and leave the rest as default. Once your project has been created, navigate to the project directory and you should see a folder structure like this: 
+Let's understand what this command does before moving on. 
+- `mvn archetype:generate` is used to create a new Maven project based on an archetype. But what is an archetype? Think of it as a template for creating Maven projects with a specific folder structure. We have archetypes for creating simple Java applications, Web applications, and Maven plugins, just to name a few. We could also create our own archetypes or use ones created by other developers.
+- `-Dfilter=org.apache.maven.archetypes:` is a flag specifying the package where the archetypes would be gotten from. In this case, it is the **org.apache.maven.archetypes** package, the one officially provided by Maven.
 
-![display maven project structure](./images/2_mvn_project_dir.png)
+To learn more about Maven archetypes, you can [checkout the official docs.](https://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
+
+After running the command, some dependencies will be installed, then you will be prompted to provide some values. You can just provide the `groupId:` and `artifactId:`, and leave the rest as default. 
+
+> As a best practice, it's important for the default **package name** to have the same value as the **groupId**. This is to maintain a consistent project structure and avoid conflicts in package names. That's how Maven sets it up by default.
+
+Once your project has been created, navigate to the project directory and you should see a folder structure like this: 
+
+![display maven project structure](./images/2_maven_project_structure.png)
 
 It contains a `pom.xml` file and a `/src` directory.
 
 - 📄 `pom.xml` : This is the file where we configure our maven project. It contains meta-data about our project, project dependencies, plugins, and so on. It is similar to the `package.json` file used in JavaScript projects. POM stands for **Project Object Model**.
 
-- 📁 `/src` : This directory is where all the code and tests will be.
+- 📁 `/src` : This directory is where all the code and tests is stored.
 
 ### Compiling and Packaging Our Maven Project
+
 Before we compile or package our project, we need to first understand Maven's lifecycle and its commands. Maven has 8 lifecycle commands, and they are: Validate, Compile, Test, Package, Integration Test, Verify, Install and Deploy.
 
-- `validate` : This command checks the `pom.xml` file and verifies if it  has been configured properly.
-- `compile` : Compile will turn the `.java` source files into `.class` that can be executed by the JVM.
+- `validate` : Checks the `pom.xml` file and verifies if it  has been configured properly.
+- `compile` : Converts the `.java` source files into `.class` that can be executed by the JVM.
 - `test` : Runs the unit tests.
-- `package` : Packages the project into a portable JAR or WAR artifact.
+- `package` : Uses the compiled code and packages it into a portable format like JAR.
 - `integration-test` : Runs the integration tests.
-- `verify` : Verifies all checks and tests pass.
-- `install` : Adds the package to the local Maven repository.
-- `deploy` : Pushes the package to a remote maven repository.
+- `verify` :  Run any checks on the results of integration tests to ensure quality criteria are met.
+- `install` : Adds the package to the local Maven repository to be used as a dependency in other projects locally.
+- `deploy` : Copies the final package to the remote repository for sharing with other developers and projects.
 
-It is important to note each command you run will also run the preceding commands. For example, if you run `test` behind the scenes it runs `compile` and `validate` too. This is an example of how to run any of the commands with Maven, in this case I'm running the `package` command:
+It is important to note that each command could execute one or more others as part of their operations. For example, if you run `test` behind the scenes it runs `compile` and `validate` too. This is an example of how to run any of the commands with Maven, in this case we're running the `package` command:
 
 ```
 mvn package
@@ -94,7 +95,7 @@ With that out of the way, now let's compile and package the project we created e
 mvn compile
 ```
 
-Notice a new directory was created called `/target`.
+Did you notice a new directory was created called `/target`? it's the default folder in which Maven stores compiled files.
 
 ![project structure after compilation](./images/4_compiled_project.png)
 
@@ -115,11 +116,13 @@ Sadly though, there isn't a direct way to run our code and see the output with M
 
 ## Maven Dependencies
 
+Dependencies are external pieces of code, or libraries we use in projects to perform specific tasks with ease. Maven offers a streamlined way of working with dependencies where we don't have to go out and download external libraries and manually import them into our project. We only tell Maven what dependencies we need, and it handles the rest, fetching the dependencies and making them available in the project.
+
 All dependencies are managed in the **POM** file, inside an attribute called `<dependencies> </dependencies>`. If you open the **POM** file, you'd notice there is a dependency that comes by default and that is **junit**. JUnit is a unit testing library for Java.
 
 ![maven default dependencies](./images/6_pom_dependencies.png)
 
-Let's add a dependency for a cool library called **cowsay**. All it does is print a cow on the terminal saying something. Copy this code and add it to the dependencies in your POM file.
+Let's add a dependency of a cool library called **cowsay**. All it does is print a cow on the terminal saying something. Copy this code and add it to the dependencies in your POM file.
 
 ```xml
 <dependency>
@@ -133,6 +136,8 @@ Let's add a dependency for a cool library called **cowsay**. All it does is prin
 This is how it should look like after adding it.
 
 ![cowsay dependency in pom file](./images/7_adding_dependency.png)
+
+> This dependency is fetched from the [Maven central repository](https://mvnrepository.com/artifact/com.github.ricksbrown/cowsay), which is the default, publicly available repository for getting Maven dependencies. We also have the option of working with other pulbic repositories like [JCenter](https://bintray.com/bintray/jcenter) and [JBoss](https://developer.jboss.org/wiki/MavenRepository) or even with a private repository within an organization.
 
 Also, let's modify the code in our main class to use the **cowsay** library. In `/src/main/.../App.java`, replace the code with the one below. 
 
@@ -196,11 +201,13 @@ Or you can run it all in one go :
 mvn clean package exec:java
 ```
 
-`exec:java` is what calls our plugin. 
+`exec:java` is what runs our project. 
 
 If you get an output similar to this, then your code ran successfully🎉.
 
 ![final project output](./images/8_final_output.png)
+
+The complete source code of the project is available on [GitHub](https://github.com/numerica-ideas/community/tree/master/java/maven-for-beginners)
 
 ———————
 
@@ -212,6 +219,6 @@ Does this speak to you? If **YES**, feel free to [Join our Discord Server](https
 
 
 ## Conclusion
-In this article, we went over what Maven is about and saw some of its commands for compiling and packaging projects, etc. We also how to manage dependencies and plugins with Maven all working on a fun little project. If you went through the whole article, I hope you learned some new things and are now confident to start using Maven in your own projects.
+In this article, we went over what Maven is about and saw some of its commands for compiling and packaging projects, etc. We also explained how to manage dependencies and plugins with Maven while working on a little fun project. If you went through the whole article, I hope you learned something new and are now confident to start using Maven in your own projects.
 
 Thanks for reading this article. Like, recommend, and share if you enjoyed it. Follow us on [Facebook](https://www.facebook.com/numericaideas), [Twitter](https://twitter.com/numericaideas), and [LinkedIn](https://www.linkedin.com/company/numericaideas) for more content.
