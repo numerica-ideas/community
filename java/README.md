@@ -13,7 +13,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Spring Boot Microservices Deployment to Kubernetes with Helm via GitLab CI](https://numericaideas.com/blog/springboot-microservices-deployment-kubernetes-helm-gitlabci/)
 - [Lift And Shift Cloud Migration Manual for AWS ElasticBeanstalk](https://numericaideas.com/blog/lift-and-shift-cloud-migration-manual-aws-elasticbeanstalk/)
 - [Deploying a Spring Boot App with Docker in a Kubernetes Cluster](https://numericaideas.com/blog/deploying-springboot-app-with-docker-and-kubernetes/)
-- [Lambda Performance Improvement with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
+- [Lambda Performance Optimization with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
