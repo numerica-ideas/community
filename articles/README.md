@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [How to Install Apache Superset using Docker Compose](https://numericaideas.com/blog/install-apache-superset-via-docker-compose/)
 - [Salesforce OAuth 2.0 Web Server Flow in NodeJS](https://numericaideas.com/blog/salesforce-oauth2-web-server-flow/)
 - [Understanding DevOps Roles and Technologies](https://numericaideas.com/blog/understanding-devops-roles-and-technologies/)
 - [Summary of Platform Migration from Ghost to WordPress](https://numericaideas.com/blog/platform-migration-from-ghost-to-wordpress/)
