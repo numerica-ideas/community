@@ -40,6 +40,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://numericaideas.com/blog"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [How to Install Apache Superset using Docker Compose](https://numericaideas.com/blog/install-apache-superset-via-docker-compose/)
 - [Salesforce OAuth 2.0 Web Server Flow in NodeJS](https://numericaideas.com/blog/salesforce-oauth2-web-server-flow/)
 - [Understanding DevOps Roles and Technologies](https://numericaideas.com/blog/understanding-devops-roles-and-technologies/)
 - [Summary of Platform Migration from Ghost to WordPress](https://numericaideas.com/blog/platform-migration-from-ghost-to-wordpress/)
@@ -49,7 +50,6 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [Publish Your Android App on Google Play Using Bitrise](https://numericaideas.com/blog/publish-android-app-on-google-play-using-bitrise/)
 - [Choosing the Right Specialization Timing for Your Tech Career: Sooner or Later?](https://numericaideas.com/blog/career-specialization-timing/)
 - [How I Became a Software Engineer with No University Degree or Experience](https://numericaideas.com/blog/software-engineer-no-university-degree-or-experience/)
-- [Monthly Activities #5](https://numericaideas.com/blog/monthly-recap-5/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
