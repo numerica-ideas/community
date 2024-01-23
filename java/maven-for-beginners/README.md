@@ -1,5 +1,5 @@
 # A Beginner's Guide to Apache Maven
-![fearuredImage](./images/maven.png)
+![featuredImage](./images/maven.png)
 
 Maven is a build tool primarily used in Java projects to compile, test, and package code into JAR or WAR artifacts. It also provides a streamlined way to manage dependencies, generate documentation, and a host of other features.
 
@@ -61,7 +61,7 @@ It contains a `pom.xml` file and a `/src` directory.
 
 ### Compiling and Packaging Our Maven Project
 
-Before we compile or package our project, we need to first understand Maven's lifecycle and its commands. Maven has 8 lifecycle commands, and they are: Validate, Compile, Test, Package, Integration Test, Verify, Install and Deploy.
+Before we compile or package our project, we need to first understand Maven's lifecycle and its commands. The default Maven lifecycle has 8 major phases, and they are: Validate, Compile, Test, Package, Integration Test, Verify, Install and Deploy.
 
 - `validate` : Checks the `pom.xml` file and verifies if it  has been configured properly.
 - `compile` : Converts the `.java` source files into `.class` that can be executed by the JVM.
@@ -137,7 +137,7 @@ This is how it should look like after adding it.
 
 ![cowsay dependency in pom file](./images/7_adding_dependency.png)
 
-> This dependency is fetched from the [Maven central repository](https://mvnrepository.com/artifact/com.github.ricksbrown/cowsay), which is the default, publicly available repository for getting Maven dependencies. We also have the option of working with other pulbic repositories like [JCenter](https://bintray.com/bintray/jcenter) and [JBoss](https://developer.jboss.org/wiki/MavenRepository) or even with a private repository within an organization.
+> This dependency is fetched from the [Maven central repository](https://mvnrepository.com/artifact/com.github.ricksbrown/cowsay), which is the default, publicly available repository for getting Maven dependencies. We also have the option of working with other public repositories like [JFrog](https://jfrog.com/artifactory/), [AWS CodeArtifact](https://aws.amazon.com/codeartifact/), [JitPack](https://jitpack.io/) or even with a private repository within an organization.
 
 Also, let's modify the code in our main class to use the **cowsay** library. In `/src/main/.../App.java`, replace the code with the one below. 
 
@@ -166,7 +166,7 @@ This is a simple program that will print a cow on the console with the message "
 
 Plugins are basically third-party utilities written by other developers to extend the capabilities of Maven. They are very powerful and can be helpful in many cases, like in our case where we need a way to run our code with Maven. It is possible to run the code from an IDE or Text Editor easily, however, we're just doing this to learn how plugins work in Maven.
 
-In the POM file, declared plugins can be found inside the `<plugins>` attribute, which is nested under the `<pluginMangement>` attribute that is also nested under the `<build>` attribute. You should find many other plugins that came with this installation like the **maven-clean-plugin**, **maven-compiler-plugin**, etc.
+In the POM file, declared plugins can be found inside the `<plugins>` attribute, which is nested under the `<pluginManagement>` attribute that is also nested under the `<build>` attribute. You should find many other plugins that came with this installation like the **maven-clean-plugin**, **maven-compiler-plugin**, etc.
 
 The plugin we will use to run our code is called **exec-maven-plugin**. You can add the following code to your POM file, inside the `<plugins>` attribute. Make sure you replace `(groupId)` with your actual group ID.
 
