@@ -13,6 +13,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ### English
 <!-- TAG-POSTS-LIST-EN:START -->
+- [English Interviews are coming soon](https://numericaideas.com/blog/english-interviews-are-coming-soon/)
 <!-- TAG-POSTS-LIST-EN:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
