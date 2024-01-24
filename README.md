@@ -143,6 +143,6 @@ The articles, workshops, and other events **projects** are centralized in this r
 ## Numies
 **Numies** is the NumericaIdeas Awards conducted each year-end to celebrate a few **top contributors** who worked toward the vision of our professional network while impacting more people and differentiating themselves by their commitments and presence. There are many categories available and some prizes are given away 🎉
 
-The [contribution opportunities](https://github.com/numerica-ideas/community#contribute) are available on the top, the **2022** winners are now public on the [Award](https://numericaideas.com/numies/) page.
+The [contribution opportunities](https://numericaideas.com/#activities) are available, the **Top Contributors** winners are now public on the [Award](https://numericaideas.com/numies/) page.
 
 By [NumericaIdeas Network](https://numericaideas.com) :fire:
