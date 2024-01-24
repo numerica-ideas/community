@@ -94,15 +94,13 @@ Your contributions are **precious** and some are [awarded](https://github.com/nu
 
 **Note**: Feel free to **suggest** new ideas/enhancement to work on by [creating an issue](https://github.com/numerica-ideas/community/issues) :bulb:
 
-## Tech Projects
+## Tech Projects, Tutorials, and Workshops
 The articles, workshops, and other events **projects** are centralized in this repository:
+
+### Categories
 - [Algorithms](./algorithms)
-- [Android](./android)
-- [Angular](./angular)
 - [Architecture](./architecture)
 - [Articles](./articles)
-- [Amazon Web Services (AWS)](./aws)
-- [Microsoft Azure](./azure)
 - [Backend](./backend)
 - [Career](./career)
 - [Cheat Sheets](./cheatsheets)
@@ -112,33 +110,41 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [Data Engineering](./data-engineering)
 - [Design (UI & UX)](./design)
 - [DevOps](./devops)
-- [Docker](./docker)
 - [Frontend](./frontend)
 - [Full Stack](./full-stack)
+- [Mobile](./mobile)
+- [Monitoring](./monitoring)
+- [Observability](./observability)
+- [Security](./security)
+- [Serverless](./serverless)
+- [Tech Interviews](./tech-interviews)
+- [Videos](./videos)
+- [Meetups](https://github.com/numerica-ideas/meetups)
+
+### Stacks
+- [Android](./android)
+- [Angular](./angular)
+- [Amazon Web Services (AWS)](./aws)
+- [Microsoft Azure](./azure)
+- [Docker](./docker)
 - [Google Cloud Platform (GCP)](./gcp)
+- [Git](./git)
 - [GitHub Actions](./github-actions)
 - [GitLab CI/CD](./gitlab-ci-cd)
 - [iOS](./ios)
 - [Java](./java)
 - [JavaScript](./javascript)
 - [Kubernetes](./kubernetes)
-- [Mobile](./mobile)
-- [Monitoring](./monitoring)
 - [NodeJS](./nodejs)
-- [Observability](./observability)
 - [Python](./python)
 - [ReactJS](./reactjs)
+- [RxJS](./rxjs)
 - [Salesforce](./salesforce)
-- [Security](./security)
-- [Serverless](./serverless)
 - [Spring Boot](./spring-boot)
 - [Terraform](./terraform)
-- [Videos](./videos)
 - [Web Development](./web)
-- [Meetups](https://github.com/numerica-ideas/meetups)
-- [Open Source](https://github.com/numerica-ideas)
-- ...
-- [More topics](https://numericaideas.com/blog/)
+
+[More topics](https://numericaideas.com/blog/)
 
 ## Numies
 **Numies** is the NumericaIdeas Awards conducted each year-end to celebrate a few **top contributors** who worked toward the vision of our professional network while impacting more people and differentiating themselves by their commitments and presence. There are many categories available and some prizes are given away 🎉
