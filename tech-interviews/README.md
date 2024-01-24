@@ -9,6 +9,8 @@ The source codes of the articles in this category are present in this [folder](.
 
 ### Français
 <!-- TAG-POSTS-LIST-FR:START -->
+- [Développeur Spring Boot Junior](https://numericaideas.com/blog/developpeur-spring-boot-junior-2/)
+- [Développeur Frontend &lpar;HTML + CSS&rpar; Junior](https://numericaideas.com/blog/developpeur-frontend-html-css-junior-1/)
 <!-- TAG-POSTS-LIST-FR:END -->
 
 ### English
