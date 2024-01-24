@@ -7,6 +7,8 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Fastest Blog Architecture](https://numericaideas.com/blog/fastest-blog-architecture/)
+- [Ghost as Choice over Traditional CMS](https://numericaideas.com/blog/ghost-as-choice-over-traditional-cms/)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
