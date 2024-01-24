@@ -22,4 +22,6 @@ The source codes of the articles in this category are present in this [folder](.
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
 
+Click [here](https://numericaideas.com/#activities) to contribute to the community, we have many activites going on.
+
 By [NumericaIdeas Network](https://numericaideas.com)
