@@ -20,11 +20,11 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Latest YouTube Videos      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
+- [Tech Career: Should You Specialize Sooner or Later?](https://www.youtube.com/watch?v=tADeuqlCylI)
 - [The 5-Step Tech Jobs Application Framework to Apply in 2024](https://www.youtube.com/watch?v=jU_8xL9ywfA)
 - [Migration: SEO and 301 Redirects](https://www.youtube.com/watch?v=YonptTEEqWk)
 - [Migration: Speed VS Design and Time Saving](https://www.youtube.com/watch?v=zV_ocd33-ZQ)
 - [Ni Platform Migration from Ghost to WordPress](https://www.youtube.com/watch?v=bqD0Pp_qDbk)
-- [The revamped Website: Enhanced Experience and Tighter Security](https://www.youtube.com/watch?v=L4LAw3MYsxA)
 <!-- ENGLISH-YOUTUBE-VIDEOS:END -->
 
 ----------------
@@ -40,6 +40,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://numericaideas.com/blog"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [Understanding the Difference Between Observable and Subject in RxJS](https://numericaideas.com/blog/difference-between-observable-and-subject-in-rxjs/)
 - [How to Install Apache Superset using Docker Compose](https://numericaideas.com/blog/install-apache-superset-via-docker-compose/)
 - [Salesforce OAuth 2.0 Web Server Flow in NodeJS](https://numericaideas.com/blog/salesforce-oauth2-web-server-flow/)
 - [Understanding DevOps Roles and Technologies](https://numericaideas.com/blog/understanding-devops-roles-and-technologies/)
@@ -49,7 +50,6 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [How I Published my First NPM Package in 1h](https://numericaideas.com/blog/how-i-published-my-first-npm-package-in-1h/)
 - [Publish Your Android App on Google Play Using Bitrise](https://numericaideas.com/blog/publish-android-app-on-google-play-using-bitrise/)
 - [Choosing the Right Specialization Timing for Your Tech Career: Sooner or Later?](https://numericaideas.com/blog/career-specialization-timing/)
-- [How I Became a Software Engineer with No University Degree or Experience](https://numericaideas.com/blog/software-engineer-no-university-degree-or-experience/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
@@ -94,21 +94,41 @@ Your contributions are **precious** and some are [awarded](https://github.com/nu
 
 **Note**: Feel free to **suggest** new ideas/enhancement to work on by [creating an issue](https://github.com/numerica-ideas/community/issues) :bulb:
 
-## Tech Projects
+## Tech Projects, Tutorials, and Workshops
 The articles, workshops, and other events **projects** are centralized in this repository:
+
+### Categories
 - [Algorithms](./algorithms)
-- [Android](./android)
-- [Angular](./angular)
 - [Architecture](./architecture)
 - [Articles](./articles)
-- [Amazon Web Services (AWS)](./aws)
-- [Microsoft Azure](./azure)
+- [Backend](./backend)
 - [Career](./career)
 - [Cheat Sheets](./cheatsheets)
+- [Cloud](./cloud)
+- [CMS](./cms)
+- [CRM](./crm)
+- [Data Engineering](./data-engineering)
 - [Design (UI & UX)](./design)
 - [DevOps](./devops)
+- [Frontend](./frontend)
+- [Full Stack](./full-stack)
+- [Mobile](./mobile)
+- [Monitoring](./monitoring)
+- [Observability](./observability)
+- [Security](./security)
+- [Serverless](./serverless)
+- [Tech Interviews](./tech-interviews)
+- [Videos](./videos)
+- [Meetups](https://github.com/numerica-ideas/meetups)
+
+### Stacks
+- [Android](./android)
+- [Angular](./angular)
+- [Amazon Web Services (AWS)](./aws)
+- [Microsoft Azure](./azure)
 - [Docker](./docker)
 - [Google Cloud Platform (GCP)](./gcp)
+- [Git](./git)
 - [GitHub Actions](./github-actions)
 - [GitLab CI/CD](./gitlab-ci-cd)
 - [iOS](./ios)
@@ -118,21 +138,17 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [NodeJS](./nodejs)
 - [Python](./python)
 - [ReactJS](./reactjs)
+- [RxJS](./rxjs)
 - [Salesforce](./salesforce)
-- [Security](./security)
-- [Serverless](./serverless)
 - [Spring Boot](./spring-boot)
 - [Terraform](./terraform)
-- [Videos](./videos)
 - [Web Development](./web)
-- [Meetups](https://github.com/numerica-ideas/meetups)
-- [Open Source](https://github.com/numerica-ideas)
-- ...
-- [More topics](https://numericaideas.com/blog/)
+
+[More topics](https://numericaideas.com/blog/)
 
 ## Numies
 **Numies** is the NumericaIdeas Awards conducted each year-end to celebrate a few **top contributors** who worked toward the vision of our professional network while impacting more people and differentiating themselves by their commitments and presence. There are many categories available and some prizes are given away 🎉
 
-The [contribution opportunities](https://github.com/numerica-ideas/community#contribute) are available on the top, the **2022** winners are now public on the [Award](https://numericaideas.com/numies/) page.
+The [contribution opportunities](https://numericaideas.com/#activities) are available, the **Top Contributors** winners are now public on the [Award](https://numericaideas.com/numies/) page.
 
 By [NumericaIdeas Network](https://numericaideas.com) :fire:

@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Understanding the Difference Between Observable and Subject in RxJS](https://numericaideas.com/blog/difference-between-observable-and-subject-in-rxjs/)
 - [How to Install Apache Superset using Docker Compose](https://numericaideas.com/blog/install-apache-superset-via-docker-compose/)
 - [Salesforce OAuth 2.0 Web Server Flow in NodeJS](https://numericaideas.com/blog/salesforce-oauth2-web-server-flow/)
 - [Understanding DevOps Roles and Technologies](https://numericaideas.com/blog/understanding-devops-roles-and-technologies/)
@@ -63,5 +64,7 @@ The source codes of all the articles are present [here](../).
 <!-- ALL-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
+
+Click [here](https://numericaideas.com/#activities) to contribute to the community, we have many activites going on.
 
 By [NumericaIdeas Network](https://numericaideas.com)
