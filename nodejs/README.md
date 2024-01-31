@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
 - [Salesforce OAuth 2.0 Web Server Flow in NodeJS](https://numericaideas.com/blog/salesforce-oauth2-web-server-flow/)
 - [How I Published my First NPM Package in 1h](https://numericaideas.com/blog/how-i-published-my-first-npm-package-in-1h/)
 - [Built-in .env Files Support Starting from Node.js v20.6.0](https://numericaideas.com/blog/nodejs-env-files-support/)
