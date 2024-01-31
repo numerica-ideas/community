@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
 - [Understanding DevOps Roles and Technologies](https://numericaideas.com/blog/understanding-devops-roles-and-technologies/)
 - [Publish Your Android App on Google Play Using Bitrise](https://numericaideas.com/blog/publish-android-app-on-google-play-using-bitrise/)
 - [Demystifying Terraform Modules](https://numericaideas.com/blog/terraform-modules/)
