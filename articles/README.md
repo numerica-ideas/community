@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Monthly Activities #7](https://numericaideas.com/blog/monthly-activities-7/)
 - [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
 - [Beginner’s Guide to Apache Maven](https://numericaideas.com/blog/maven-for-beginners/)
 - [Understanding the Difference Between Observable and Subject in RxJS](https://numericaideas.com/blog/difference-between-observable-and-subject-in-rxjs/)
