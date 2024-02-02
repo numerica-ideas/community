@@ -58,11 +58,11 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ## 💡 Newsletter
 <!-- NI-NEWS-LIST:START -->
+- [Monthly Activities #7](https://numericaideas.com/blog/monthly-activities-7/)
 - [Monthly Activities #6](https://numericaideas.com/blog/monthly-activities-6/)
 - [Monthly Activities #5](https://numericaideas.com/blog/monthly-recap-5/)
 - [Monthly Activities #4](https://numericaideas.com/blog/monthly-recap-4/)
 - [Monthly Activities #3](https://numericaideas.com/blog/monthly-recap-3/)
-- [Community Updates #1](https://numericaideas.com/blog/community-updates-1/)
 <!-- NI-NEWS-LIST:END -->
 
 Subscribe to the monthly activities newsletter at: [https://numericaideas.com/blog/category/news](https://numericaideas.com/blog/category/news) ✅
