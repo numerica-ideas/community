@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Migrating Resources to AWS CDK Using “CDK Migrate” Command](https://numericaideas.com/blog/aws-cdk-migrate/)
 - [Numerica Ideas’s Tech Writers Leaderboard](https://numericaideas.com/blog/tech-writers-leaderboard/)
 - [Monthly Activities #7](https://numericaideas.com/blog/monthly-activities-7/)
 - [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
