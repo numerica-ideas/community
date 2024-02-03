@@ -107,6 +107,7 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [Cloud](./cloud)
 - [CMS](./cms)
 - [CRM](./crm)
+- [Community](./community)
 - [Data Engineering](./data-engineering)
 - [Design (UI & UX)](./design)
 - [DevOps](./devops)
