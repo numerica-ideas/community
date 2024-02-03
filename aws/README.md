@@ -8,6 +8,7 @@ The source codes of the articles in this category are present in this [folder](.
 ## Related Articles
 - [Important Cloud Concepts](./important-cloud-concepts)
 <!-- TAG-POSTS-LIST:START -->
+- [Migrating Resources to AWS CDK Using “CDK Migrate” Command](https://numericaideas.com/blog/aws-cdk-migrate/)
 - [Demystifying Terraform Modules](https://numericaideas.com/blog/terraform-modules/)
 - [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
 - [Introduction to Terraform](https://numericaideas.com/blog/introduction-to-terraform/)
