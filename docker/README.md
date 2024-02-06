@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Introduction to Docker Compose](https://numericaideas.com/blog/introduction-to-docker-compose/)
 - [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
 - [Docker Init: Quickly Dockerizing NodeJS Application](https://numericaideas.com/blog/quickly-dockerizing-nodejs/)
 - [Dockerize Spring Boot and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-springboot-mysql/)
