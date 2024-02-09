@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [What is Salesforce?](https://numericaideas.com/blog/what-is-salesforce/)
 - [Introduction to Docker Compose](https://numericaideas.com/blog/introduction-to-docker-compose/)
 - [Migrating Resources to AWS CDK Using “CDK Migrate” Command](https://numericaideas.com/blog/aws-cdk-migrate/)
 - [Numerica Ideas’s Tech Writers Leaderboard](https://numericaideas.com/blog/tech-writers-leaderboard/)
