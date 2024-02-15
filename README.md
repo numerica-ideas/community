@@ -20,11 +20,11 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Latest YouTube Videos      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
+- [Types of Cloud Computing](https://www.youtube.com/watch?v=jMs1UjOASsA)
 - [An Introduction to Strapi Headless CMS](https://www.youtube.com/watch?v=84bRnaJ9QWQ)
 - [Tech Career: Should You Specialize Sooner or Later?](https://www.youtube.com/watch?v=tADeuqlCylI)
 - [The 5-Step Tech Jobs Application Framework to Apply in 2024](https://www.youtube.com/watch?v=jU_8xL9ywfA)
 - [Migration: SEO and 301 Redirects](https://www.youtube.com/watch?v=YonptTEEqWk)
-- [Migration: Speed VS Design and Time Saving](https://www.youtube.com/watch?v=zV_ocd33-ZQ)
 <!-- ENGLISH-YOUTUBE-VIDEOS:END -->
 
 ----------------
