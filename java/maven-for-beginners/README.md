@@ -8,7 +8,7 @@ Maven is a build tool primarily used in Java projects to compile, test, and pack
 
 In this article, we'll look at some of the core Maven concepts you should know as a beginner; like commands to create, compile, and package Maven projects, and also how dependencies and plugins work in Maven. Additionally, we will build a little project to tie everything together as we progress through the article. I hope you are excited about this, let's get right into the prerequisites.
 
-![featuredImage](./images/maven.png)
+[![featuredImage](./images/maven.png)](https://numericaideas.com/blog/maven-for-beginners)
 
 > The **YouTube Channels** in both English (En) and French (Fr) are now accessible, feel free to subscribe by clicking [here](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1).
 
