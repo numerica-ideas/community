@@ -1,6 +1,6 @@
 # Design Patterns Hits&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Farchitecture%2FDesign-Patterns&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/design-patterns)
 
-## **This article was originally written by "Faouzi EL Mansour" on the blog**: https://numericaideas.com/blog/design-patterns 
+**This article was originally written by "Faouzi EL Mansour" on the blog**: https://numericaideas.com/blog/design-patterns 
 
 # Introduction
 In IT, one of the golden rules is not to reinvent the wheel. Because this allows us to save time and use a solution (like design patterns) that has already proven itself to solve a well-defined problem. Today, a developer who does not know design patterns and how to apply them in a very specific context is not a complete developer, or even a junior developer. This article provides an introduction to design patterns. We will give a definition of the design pattern and we will then make a classification of the different patterns and finally present the advantages and disadvantages of the latter.
