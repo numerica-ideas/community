@@ -19,4 +19,4 @@ jobs:
           max_post_count: 500
           readme_path: './best-practices/README.md'
           comment_tag_name: "TAG-POSTS-LIST"
-          feed_list: "https://numericaideas.com/blog/tag/best-practices/feed"
+          feed_list: "https://numericaideas.com/blog/category/tech/best-practices/feed"
