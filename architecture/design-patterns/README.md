@@ -1,4 +1,4 @@
-# Design Patterns Hits&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Farchitecture%2FDesign-FPatterns Hits&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/design-patterns)
+# Design Patterns Hits&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Farchitecture%2FDesign-Patterns Hits&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/design-patterns)
 
 # **This article was originally written by "Faouzi EL Mansour" on the blog**: https://numericaideas.com/blog/design-patterns 
 
