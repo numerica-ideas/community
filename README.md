@@ -102,6 +102,7 @@ The articles, workshops, and other events **projects** are centralized in this r
 - [Architecture](./architecture)
 - [Articles](./articles)
 - [Backend](./backend)
+- [Best Practices](./best-practices)
 - [Career](./career)
 - [Cheat Sheets](./cheatsheets)
 - [Cloud](./cloud)
