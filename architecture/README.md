@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
 - [Apply SOLID Principles in Angular Projects](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
 - [Scalability Types in Software Architecture](https://numericaideas.com/blog/scalability-types/)
