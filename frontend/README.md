@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [Understanding the Difference Between Observable and Subject in RxJS](https://numericaideas.com/blog/difference-between-observable-and-subject-in-rxjs/)
 - [React Hooks to Manage Component State and Lifecycle](https://numericaideas.com/blog/react-hooks/)
 - [Apply SOLID Principles in Angular Projects](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
