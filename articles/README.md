@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Monthly Activities #8](https://numericaideas.com/blog/monthly-activities-8/)
 - [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [NUMIES 2023: NUMERICAIDEAS’S TOP CONTRIBUTORS AWARDS](https://numericaideas.com/blog/numies-2023/)
 - [What is Salesforce?](https://numericaideas.com/blog/what-is-salesforce/)
