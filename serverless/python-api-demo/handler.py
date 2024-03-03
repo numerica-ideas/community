@@ -1,6 +1,12 @@
+import json
 
 
 def hello(event, context):
-    response = {"statusCode": 200, "body": {"message": "Hello Serverless Framework!"}}
+    body = {
+        "message": "Hello Serverless Framework!",
+        "input": event,
+    }
 
-    return response
+    response = {"statusCode": 200, "body": body}
+
+    return json.dumps(response)
