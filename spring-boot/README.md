@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
 - [Introduction to Docker Compose](https://numericaideas.com/blog/introduction-to-docker-compose/)
 - [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://numericaideas.com/blog/spring-boot-actuator/)
 - [Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide](https://numericaideas.com/blog/cd-springboot-aws-eb-github-actions/)
