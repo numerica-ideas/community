@@ -1,9 +1,9 @@
-# Python API Demo
+# Python Serverless API Demo&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fserverless%2Fpython-api-demo&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/)
 
-This project is a demo for building a serverless application with Python as detailed in the article on NumericaIdeas blog. For a more comprehensive guide and additional context, please visit [here](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework).
+This project is a demo for building a serverless application with Python as detailed in the article on NumericaIdeas blog. For a more comprehensive guide and additional context, please visit [here](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/).
 
 ## Deploying the app
-To deploy this python lambda function using serverless framework, run the following command:
+To deploy this Python Lambda Function using Serverless Framework, run the following command:
 ```bash
 serverless deploy
 ```
