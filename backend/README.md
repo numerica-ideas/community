@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
 - [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
 - [Beginner’s Guide to Apache Maven](https://numericaideas.com/blog/maven-for-beginners/)
