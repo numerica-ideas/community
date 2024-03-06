@@ -40,6 +40,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://numericaideas.com/blog"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [How To Build Python Lambda Functions Using Serverless Framework](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/)
 - [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
 - [Monthly Activities #8](https://numericaideas.com/blog/monthly-activities-8/)
 - [Design Patterns](https://numericaideas.com/blog/design-patterns/)
@@ -49,7 +50,6 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [Migrating Resources to AWS CDK Using “CDK Migrate” Command](https://numericaideas.com/blog/aws-cdk-migrate/)
 - [Numerica Ideas’s Tech Writers Leaderboard](https://numericaideas.com/blog/tech-writers-leaderboard/)
 - [Monthly Activities #7](https://numericaideas.com/blog/monthly-activities-7/)
-- [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
