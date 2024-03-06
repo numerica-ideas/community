@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [How To Build Python Lambda Functions Using Serverless Framework](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/)
 - [Build a Serverless App with AWS Lambda, S3, DynamoDB, and Python](https://numericaideas.com/blog/aws-serverless-web-application/)
 <!-- TAG-POSTS-LIST:END -->
 
