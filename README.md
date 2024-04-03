@@ -43,13 +43,13 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [How To Design REST APIs: A Comprehensive Guide](https://numericaideas.com/blog/how-to-design-rest-apis-a-comprehensive-guide/)
 - [How To Build Python Lambda Functions Using Serverless Framework](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/)
 - [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
-- [Monthly Activities #8](https://numericaideas.com/blog/monthly-activities-8/)
 - [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [NUMIES 2023: NUMERICAIDEAS’S TOP CONTRIBUTORS AWARDS](https://numericaideas.com/blog/numies-2023/)
 - [What is Salesforce?](https://numericaideas.com/blog/what-is-salesforce/)
 - [Introduction to Docker Compose](https://numericaideas.com/blog/introduction-to-docker-compose/)
 - [Migrating Resources to AWS CDK Using “CDK Migrate” Command](https://numericaideas.com/blog/aws-cdk-migrate/)
 - [Numerica Ideas’s Tech Writers Leaderboard](https://numericaideas.com/blog/tech-writers-leaderboard/)
+- [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
