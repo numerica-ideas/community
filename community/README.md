@@ -9,8 +9,6 @@ Numerica Ideas's Community activities info and announcements.
 - [Numerica Ideas’s Tech Writers Leaderboard](https://numericaideas.com/blog/tech-writers-leaderboard/)
 - [Summary of Platform Migration from Ghost to WordPress](https://numericaideas.com/blog/platform-migration-from-ghost-to-wordpress/)
 - [Summary of Platform Migration from Ghost to WordPress](https://numericaideas.com/blog/platform-migration-from-ghost-to-wordpress/)
-- [Community Updates #1](https://numericaideas.com/blog/community-updates-1/)
-- [Community Updates #1](https://numericaideas.com/blog/community-updates-1/)
 - [NUMIES 2022: NUMERICAIDEAS’S TOP CONTRIBUTORS AWARDS](https://numericaideas.com/blog/numies-2022/)
 <!-- TAG-POSTS-LIST:END -->
 
