@@ -13,7 +13,7 @@ Here are some accepted solutions from our challenges:
 
 Before raising a pull-request, please read our [contribution guide](./guide.md).
 
-**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/news/) to be kept posted ✅
 
 Click [here](https://numericaideas.com/#activities) to contribute to the community, we have many activites going on.
 

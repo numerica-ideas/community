@@ -12,7 +12,7 @@
 
 [NumericaIdeas](https://numericaideas.com) is a technical community that creates opportunities for IT professionals, where you’ll secure your dream job, and indeed the group through which you can develop your hard and soft skills at your own pace.
 
-Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Channel](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1), register to the [Newsletter](https://numericaideas.com/blog/category/news), and join our [Discord Server](https://discord.numericaideas.com) to be kept posted of new content and activities.
+Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Channel](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1), register to the [Newsletter](https://numericaideas.com/news), and join our [Discord Server](https://discord.numericaideas.com) to be kept posted of new content and activities.
 
 ## Recent Content
 <table><tr><td valign="top" width="50%">
@@ -20,11 +20,11 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 ### <a href="https://www.youtube.com/@numericaideas/channels?sub_confirmation=1"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" title="NumericaIdeas YouTube Channel" alt="NumericaIdeas YouTube Channel" width="30"/> </a>   Latest YouTube Videos      
  
 <!-- ENGLISH-YOUTUBE-VIDEOS:START -->
+- [Ngrok Tunneling: Open your Localhost to The World](https://www.youtube.com/watch?v=ZuRjFGtIrJk)
 - [Types of Cloud Computing](https://www.youtube.com/watch?v=jMs1UjOASsA)
 - [An Introduction to Strapi Headless CMS](https://www.youtube.com/watch?v=84bRnaJ9QWQ)
 - [Tech Career: Should You Specialize Sooner or Later?](https://www.youtube.com/watch?v=tADeuqlCylI)
 - [The 5-Step Tech Jobs Application Framework to Apply in 2024](https://www.youtube.com/watch?v=jU_8xL9ywfA)
-- [Migration: SEO and 301 Redirects](https://www.youtube.com/watch?v=YonptTEEqWk)
 <!-- ENGLISH-YOUTUBE-VIDEOS:END -->
 
 ----------------
@@ -40,16 +40,16 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://numericaideas.com/blog"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [How To Design REST APIs: A Comprehensive Guide](https://numericaideas.com/blog/how-to-design-rest-apis-a-comprehensive-guide/)
+- [How To Build Python Lambda Functions Using Serverless Framework](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/)
+- [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
+- [Design Patterns](https://numericaideas.com/blog/design-patterns/)
+- [NUMIES 2023: NUMERICAIDEAS’S TOP CONTRIBUTORS AWARDS](https://numericaideas.com/blog/numies-2023/)
 - [What is Salesforce?](https://numericaideas.com/blog/what-is-salesforce/)
 - [Introduction to Docker Compose](https://numericaideas.com/blog/introduction-to-docker-compose/)
 - [Migrating Resources to AWS CDK Using “CDK Migrate” Command](https://numericaideas.com/blog/aws-cdk-migrate/)
 - [Numerica Ideas’s Tech Writers Leaderboard](https://numericaideas.com/blog/tech-writers-leaderboard/)
-- [Monthly Activities #7](https://numericaideas.com/blog/monthly-activities-7/)
 - [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
-- [Beginner’s Guide to Apache Maven](https://numericaideas.com/blog/maven-for-beginners/)
-- [Understanding the Difference Between Observable and Subject in RxJS](https://numericaideas.com/blog/difference-between-observable-and-subject-in-rxjs/)
-- [How to Install Apache Superset using Docker Compose](https://numericaideas.com/blog/install-apache-superset-via-docker-compose/)
-- [Salesforce OAuth 2.0 Web Server Flow in NodeJS](https://numericaideas.com/blog/salesforce-oauth2-web-server-flow/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
@@ -58,14 +58,14 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ## 💡 Newsletter
 <!-- NI-NEWS-LIST:START -->
-- [Monthly Activities #7](https://numericaideas.com/blog/monthly-activities-7/)
-- [Monthly Activities #6](https://numericaideas.com/blog/monthly-activities-6/)
-- [Monthly Activities #5](https://numericaideas.com/blog/monthly-recap-5/)
-- [Monthly Activities #4](https://numericaideas.com/blog/monthly-recap-4/)
-- [Monthly Activities #3](https://numericaideas.com/blog/monthly-recap-3/)
+- [Monthly Recap #9](https://numericaideas.com/news/monthly-recap-9/)
+- [Monthly Recap #8](https://numericaideas.com/news/monthly-recap-8/)
+- [Monthly Recap #7](https://numericaideas.com/news/monthly-recap-7/)
+- [Monthly Recap #6](https://numericaideas.com/news/monthly-recap-6/)
+- [Monthly Recap #5](https://numericaideas.com/news/monthly-recap-5/)
 <!-- NI-NEWS-LIST:END -->
 
-Subscribe to the monthly activities newsletter at: [https://numericaideas.com/blog/category/news](https://numericaideas.com/blog/category/news) ✅
+Subscribe to the monthly activities newsletter at: [https://numericaideas.com/news](https://numericaideas.com/news) ✅
 
 ## 👥 Social Media
 Multilingual (English & Français) presence on social media with the following accounts :eight_spoked_asterisk:
@@ -98,10 +98,12 @@ Your contributions are **precious** and some are [awarded](https://github.com/nu
 The articles, workshops, and other events **projects** are centralized in this repository:
 
 ### Categories
+- [AI](./ai)
 - [Algorithms](./algorithms)
 - [Architecture](./architecture)
 - [Articles](./articles)
 - [Backend](./backend)
+- [Best Practices](./best-practices)
 - [Career](./career)
 - [Cheat Sheets](./cheatsheets)
 - [Cloud](./cloud)

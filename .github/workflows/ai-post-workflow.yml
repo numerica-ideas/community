@@ -1,4 +1,4 @@
-name: Latest newsletter post workflow
+name: Latest AI post workflow
 on:
   schedule: # Run workflow automatically
     - cron: '0 * * * *' # Runs every hour, on the hour
@@ -7,8 +7,8 @@ permissions:
   contents: write # To write the generated contents to the readme
 
 jobs:
-  update-readme-with-news:
-    name: Update this repo's README with the latest info published via the Newsletter
+  update-readme-with-blog:
+    name: Update this repo's README with the latest AI posts
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,6 +16,7 @@ jobs:
       - name: Pull Ni posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          max_post_count: 5
-          comment_tag_name: "NI-NEWS-LIST"
-          feed_list: "https://numericaideas.com/news/feed"
+          max_post_count: 500
+          readme_path: './ai/README.md'
+          comment_tag_name: "TAG-POSTS-LIST"
+          feed_list: "https://numericaideas.com/blog/category/tech/ai/feed"

@@ -7,6 +7,8 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
+- [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
 - [Apply SOLID Principles in Angular Projects](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
 - [Scalability Types in Software Architecture](https://numericaideas.com/blog/scalability-types/)
@@ -20,7 +22,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Fastest Blog Architecture](https://numericaideas.com/blog/fastest-blog-architecture/)
 <!-- TAG-POSTS-LIST:END -->
 
-**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/news/) to be kept posted ✅
 
 Click [here](https://numericaideas.com/#activities) to contribute to the community, we have many activites going on.
 

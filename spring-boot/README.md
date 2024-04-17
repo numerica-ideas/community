@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
 - [Introduction to Docker Compose](https://numericaideas.com/blog/introduction-to-docker-compose/)
 - [Spring Boot Production-Ready: Enhanced Monitoring and Management using Actuator](https://numericaideas.com/blog/spring-boot-actuator/)
 - [Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide](https://numericaideas.com/blog/cd-springboot-aws-eb-github-actions/)
@@ -17,7 +18,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Lambda Performance Optimization with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
 <!-- TAG-POSTS-LIST:END -->
 
-**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/news/) to be kept posted ✅
 
 Click [here](https://numericaideas.com/#activities) to contribute to the community, we have many activites going on.
 

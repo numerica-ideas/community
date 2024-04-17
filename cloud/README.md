@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [How To Build Python Lambda Functions Using Serverless Framework](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/)
 - [Migrating Resources to AWS CDK Using “CDK Migrate” Command](https://numericaideas.com/blog/aws-cdk-migrate/)
 - [Understanding DevOps Roles and Technologies](https://numericaideas.com/blog/understanding-devops-roles-and-technologies/)
 - [Introduction to Terraform](https://numericaideas.com/blog/introduction-to-terraform/)
@@ -22,7 +23,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Lambda Performance Optimization with SnapStart](https://numericaideas.com/blog/lambda-performance-improvement-with-snapstart/)
 <!-- TAG-POSTS-LIST:END -->
 
-**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/news/) to be kept posted ✅
 
 Click [here](https://numericaideas.com/#activities) to contribute to the community, we have many activites going on.
 

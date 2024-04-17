@@ -7,6 +7,9 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [How To Design REST APIs: A Comprehensive Guide](https://numericaideas.com/blog/how-to-design-rest-apis-a-comprehensive-guide/)
+- [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
+- [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [Dockerize NodeJS and MySQL with Docker Compose](https://numericaideas.com/blog/docker-compose-nodejs-mysql/)
 - [Beginner’s Guide to Apache Maven](https://numericaideas.com/blog/maven-for-beginners/)
 - [Java Interview Questions and Answers for Beginners [2024]](https://numericaideas.com/blog/java-interview-questions-for-beginners/)
@@ -16,7 +19,7 @@ The source codes of the articles in this category are present in this [folder](.
 - [Multipurpose Cloud Migration Strategy for NodeJS Projects](https://numericaideas.com/blog/multipurpose-cloud-migration-nodejs/)
 <!-- TAG-POSTS-LIST:END -->
 
-**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/news/) to be kept posted ✅
 
 Click [here](https://numericaideas.com/#activities) to contribute to the community, we have many activites going on.
 

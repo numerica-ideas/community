@@ -11,7 +11,7 @@ A collection of career recommendations produced by the community from their expe
 - [Développeur Frontend &lpar;HTML + CSS&rpar; Junior](https://numericaideas.com/blog/developpeur-frontend-html-css-junior-1/)
 <!-- TAG-POSTS-LIST:END -->
 
-**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/blog/category/news/) to be kept posted ✅
+**More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/news/) to be kept posted ✅
 
 Click [here](https://numericaideas.com/#activities) to contribute to the community, we have many activites going on.
 
