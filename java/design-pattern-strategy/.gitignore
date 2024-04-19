@@ -1,0 +1,5 @@
+# General
+.vscode
+
+# bin
+.bin*
