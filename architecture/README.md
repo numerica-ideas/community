@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Design Pattern Strategy](https://numericaideas.com/blog/design-pattern-strategy/)
 - [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
 - [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
