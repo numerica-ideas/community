@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Design Pattern Strategy](https://numericaideas.com/blog/design-pattern-strategy/)
 - [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [Understanding the Difference Between Observable and Subject in RxJS](https://numericaideas.com/blog/difference-between-observable-and-subject-in-rxjs/)
 - [Continuous Deployment of Spring Boot to AWS Elastic Beanstalk via GitHub Actions: A Step-by-Step Guide](https://numericaideas.com/blog/cd-springboot-aws-eb-github-actions/)
