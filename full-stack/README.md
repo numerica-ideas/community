@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [What is Spring Cloud?](https://numericaideas.com/blog/what-is-spring-cloud/)
 - [Design Pattern Strategy](https://numericaideas.com/blog/design-pattern-strategy/)
 - [Design Patterns](https://numericaideas.com/blog/design-patterns/)
 - [Understanding the Difference Between Observable and Subject in RxJS](https://numericaideas.com/blog/difference-between-observable-and-subject-in-rxjs/)
