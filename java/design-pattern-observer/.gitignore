@@ -3,4 +3,5 @@
 
 # bin, lib
 .bin*
+#######
 .lib*
