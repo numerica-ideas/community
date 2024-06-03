@@ -1,6 +1,6 @@
-# Local Chatbot with Streamlit GUI
+# Build your Own Local Chatbot (ChatGPT)&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fai%2Flocal-chatbot&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/build-your-own-chatgpt)
 
-Code for writing your own local chatbot as described in the article [The surprisingly simple way to build your own local "ChatGPT"](article link to be added). 
+Code for writing your own local chatbot as described in the article [The surprisingly simple way to build your own local "ChatGPT"](https://numericaideas.com/blog/build-your-own-chatgpt) written by **Armel Aymdji, PhD**; here's the [original repo](https://github.com/ayimdji/local-chatbot).
 
 The article introduces Large Language Models (LLMs) and breaks down the steps to build a local chatbot using [Python](https://www.python.org/), [LangChain](https://www.langchain.com/), [Ollama](https://ollama.com/), an open LLM (e.g., [llama3](https://llama.meta.com/code-llama), [gemma](https://ai.google.dev/gemma)), and [Streamlit](https://streamlit.io/) for the user interface.
 
@@ -24,7 +24,7 @@ The following is a screenshot of your local chatbot in action.
 
 The following are the steps you will need to make it run on your **Unix-based computer (Mac, Linux)**. If you are using **Windows**, try to adapt. Unfortunately, I don't have a Windows computer to describe how to do that.
 
-How to set the environment up is described in details in the [article](article link to be added).
+How to set the environment up is described in details in [this article](https://numericaideas.com/blog/build-your-own-chatgpt).
 
 1. Clone the repository.
 
