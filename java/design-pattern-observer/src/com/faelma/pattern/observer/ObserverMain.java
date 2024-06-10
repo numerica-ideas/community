@@ -4,16 +4,16 @@ public class ObserverMain {
 
     public static void main(String[] args) {
 		
-		Eleve eleve = new Eleve();
+		Student student = new Student();
 		
-		new NotesObserver(eleve);
+		new GradesObserver(student);
 		
-		eleve.ajouterNote(15.0f);
-		System.out.println(eleve.getMoyenne());
+		student.addGrades(15.0f);
+		System.out.println(student.getAverage());
 		eleve.ajouterNote(5.0f);
-		System.out.println(eleve.getMoyenne());
+		System.out.println(student.getAverage());
 		eleve.ajouterNote(13.0f);
-		System.out.println(eleve.getMoyenne());
+		System.out.println(student.getAverage());
 		
 	}
 }
