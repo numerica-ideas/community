@@ -12,9 +12,9 @@ The case study, we will take as an example is a small application that manages n
 
 In this structure, it is possible to classify it into three distinct parts:
 
-1. Subject: Eleve
-2. Observe: Observe
-3. ConcreteObserver: NotesObserver.
+1. Subject: Student
+2. Observe: Observer
+3. ConcreteObserver: GradesObserver.
 
 ## Run
 

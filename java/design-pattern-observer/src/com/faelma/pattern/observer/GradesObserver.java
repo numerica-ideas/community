@@ -20,7 +20,7 @@ public class GradesObserver extends Observer{
             
             average /= student.getGrades().size();
             
-            eleve.setAverage(average);
+            student.setAverage(average);
         }
     
     

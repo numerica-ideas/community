@@ -10,9 +10,9 @@ public class ObserverMain {
 		
 		student.addGrades(15.0f);
 		System.out.println(student.getAverage());
-		eleve.ajouterNote(5.0f);
+		student.addGrades(5.0f);
 		System.out.println(student.getAverage());
-		eleve.ajouterNote(13.0f);
+		student.addGrades(13.0f);
 		System.out.println(student.getAverage());
 		
 	}
