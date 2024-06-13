@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Design Pattern Observer](https://numericaideas.com/blog/design-pattern-observer/)
 - [The Surprisingly Simple Way to Build Your Own Local “ChatGPT”](https://numericaideas.com/blog/build-your-own-chatgpt/)
 - [What is Spring Cloud?](https://numericaideas.com/blog/what-is-spring-cloud/)
 - [Design Pattern Strategy](https://numericaideas.com/blog/design-pattern-strategy/)
