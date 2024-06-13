@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Design Pattern Observer](https://numericaideas.com/blog/design-pattern-observer/)
 - [What is Spring Cloud?](https://numericaideas.com/blog/what-is-spring-cloud/)
 - [Design Pattern Strategy](https://numericaideas.com/blog/design-pattern-strategy/)
 - [How To Design REST APIs: A Comprehensive Guide](https://numericaideas.com/blog/how-to-design-rest-apis-a-comprehensive-guide/)
