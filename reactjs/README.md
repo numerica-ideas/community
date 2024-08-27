@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Next.js vs Angular: Choosing the Best Framework for Your Front-End Project](https://numericaideas.com/blog/next-js-vs-angular-choosing-the-best-framework-for-your-front-end-project/)
 - [React Hooks to Manage Component State and Lifecycle](https://numericaideas.com/blog/react-hooks/)
 <!-- TAG-POSTS-LIST:END -->
 
