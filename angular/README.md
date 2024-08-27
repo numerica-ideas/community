@@ -7,6 +7,7 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [Next.js vs Angular: Choosing the Best Framework for Your Front-End Project](https://numericaideas.com/blog/next-js-vs-angular-choosing-the-best-framework-for-your-front-end-project/)
 - [Apply SOLID Principles in Angular Projects](https://numericaideas.com/blog/solid-principles-in-angular-cheat-sheet/)
 - [Custom State Management Architecture using RxJS](https://numericaideas.com/blog/custom-rxjs-store-architecture/)
 <!-- TAG-POSTS-LIST:END -->
