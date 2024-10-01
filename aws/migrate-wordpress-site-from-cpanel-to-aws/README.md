@@ -58,14 +58,19 @@ Store these backups securely on your local machine.
 1.	Connect to Your EC2 Instance:
 -	Use SSH to connect to your instance. The command will look something like this: ssh -i "your-key.pem" bitnami@your-ec2-ip
 ![alt text](images/image12.png)
--	Make the website secure => sudo /opt/bitnami/bncert-tool
-![alt text](images/image13.png)
 2.	Access the WordPress Directory:
 -	Navigate to the WordPress directory, typically located at /opt/bitnami/apps/wordpress/htdocs/.
 
 ## Step 4: Migrate Your Files and Database
 1.	Transfer Files:
 -	Use an SCP client or FTP to upload your WordPress files (from the backup) to the /htdocs/ directory on your EC2 instance.
+-   In this case, we used Filezilla for FTP setup with EC2 instance
+-   After opening filezilla click on File ->  Site Manager -> New site
+-   Copy the IP Address of your EC2 instance and paste it as your Host in Filezilla
+-   In Protocol section chose SFTP - SSH File Transfer Protocol
+-   For Port set "22", Logon Type chose Key file, User set "bitnami", for Key file chose your .ppk file
+-   After that click on connect 
+![alt text](images/image21.png)
 ![alt text](images/image14.png)
 2.	Import the Database:
 -	Log in to phpMyAdmin on your EC2 instance (access it via http://your-ec2-ip/phpmyadmin).
@@ -90,7 +95,10 @@ Store these backups securely on your local machine.
 
 ## Step 6: Secure Your WordPress Site on AWS
 1.	Install SSL:
--	You can use Let's Encrypt to install a free SSL certificate on your site. Bitnami provides an automated tool for this purpose.
+-	You can use Let's Encrypt to install a free SSL certificate on your site. Bitnami provides an automated tool for this purpose. The Bitnami HTTPS Configuration Tool is a command line tool for configuring mainly HTTPS certificates on Bitnami stacks, but also for automatic renewals, redirections (HTTP TO HTTPS), etc.. This tool is located in the installation directory of the stack at /opt/bitnami
+-	sudo /opt/bitnami/bncert-tool 
+![alt text](images/image13.png)
+-   Another way is using the AWS ACM to request for a free public SSL certificate https://docs.aws.amazon.com/acm/latest/userguide/acm-public-certificates.html 
 2.	Configure Security Groups:
 -	Ensure your EC2 instance's security groups allow traffic only on necessary ports (80 for HTTP, 443 for HTTPS).
 3.	Enable Backups:
