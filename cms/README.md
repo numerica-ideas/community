@@ -7,6 +7,8 @@ The source codes of the articles in this category are present in this [folder](.
 
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
+- [How to Scale WordPress on AWS](https://numericaideas.com/blog/aws-scale-wordpress/)
+- [Deploy WordPress on a 2-Tier AWS Architecture with Terraform](https://numericaideas.com/blog/deploy-wordpress-2-tier-aws-architecture-with-terraform/)
 - [Fastest Blog Architecture](https://numericaideas.com/blog/fastest-blog-architecture/)
 - [Ghost as Choice over Traditional CMS](https://numericaideas.com/blog/ghost-as-choice-over-traditional-cms/)
 <!-- TAG-POSTS-LIST:END -->
