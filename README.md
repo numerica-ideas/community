@@ -40,6 +40,7 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 
 ### <a href="https://numericaideas.com/blog"><img src="https://avatars.githubusercontent.com/u/84835921?s=48&v=4" title="NumericaIdeas" alt="NumericaIdeas" width="25"/></a>   Latest Articles on n-i.cm     
 <!-- TECH-POSTS-LIST:START -->
+- [Migrate WordPress Site From cPanel To AWS](https://numericaideas.com/blog/migrate-wordpress-from-cpanel-to-aws/)
 - [Next.js vs Angular: Choosing the Best Framework for Your Front-End Project](https://numericaideas.com/blog/next-js-vs-angular-choosing-the-best-framework-for-your-front-end-project/)
 - [Design Pattern Observer](https://numericaideas.com/blog/design-pattern-observer/)
 - [The Surprisingly Simple Way to Build Your Own Local “ChatGPT”](https://numericaideas.com/blog/build-your-own-chatgpt/)
@@ -49,7 +50,6 @@ Does this speak to you? If **YES**, feel free to subscribe to our [YouTube Chann
 - [How To Build Python Lambda Functions Using Serverless Framework](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/)
 - [Solid Principles in Spring Boot Applications](https://numericaideas.com/blog/solid-principles-in-spring-boot/)
 - [Design Patterns](https://numericaideas.com/blog/design-patterns/)
-- [NUMIES 2023: NUMERICAIDEAS’S TOP CONTRIBUTORS AWARDS](https://numericaideas.com/blog/numies-2023/)
 <!-- TECH-POSTS-LIST:END -->
 
 </td></tr></table>
