@@ -8,6 +8,7 @@ The source codes of the articles in this category are present in this [folder](.
 ## Related Articles
 - [Important Cloud Concepts](./important-cloud-concepts)
 <!-- TAG-POSTS-LIST:START -->
+- [Migrate WordPress Site From cPanel To AWS](https://numericaideas.com/blog/migrate-wordpress-from-cpanel-to-aws/)
 - [How To Build Python Lambda Functions Using Serverless Framework](https://numericaideas.com/blog/how-to-build-python-lambda-functions-using-serverless-framework/)
 - [Migrating Resources to AWS CDK Using “CDK Migrate” Command](https://numericaideas.com/blog/aws-cdk-migrate/)
 - [Demystifying Terraform Modules](https://numericaideas.com/blog/terraform-modules/)
