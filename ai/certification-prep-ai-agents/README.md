@@ -1,6 +1,9 @@
-# AI Agents for Certification Exam Preparation
+# AI Agents for Certification Exam Preparation&nbsp;[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnumerica-ideas%2Fcommunity%2Ftree%2Fmaster%2Fai%2Fcertification-prep-ai-agents&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://numericaideas.com/blog/building-ai-agents-for-certification-exam-prep-part-1)
 
-This code repository contains the codes for building AI agents to generate certification exam preparation materials. 
+This repository contains the codes for building AI agents to generate certification exam preparation materials as described in the following two articles written by **Armel Aymdji, PhD**: 
+- [Building AI Agents for Certification Exam Preparation: Part 1 - From Concept to Code](https://numericaideas.com/blog/building-ai-agents-for-certification-exam-prep-part-1); 
+- Building AI Agents for Certification Exam Preparation: Part 2 - Production application with CrewAI, FastAPI, Vue.js, and Docker (*Coming soon*)
+Here's the [original repo](https://github.com/ayimdji/certification-prep-ai-agents).
 
 **Important note**: This resource is for **educational purposes only** and does not guarantee the accuracy of the generated materials nor a successful exam.
 
@@ -39,11 +42,6 @@ To generate the certification exam preparation materials, the assistant leverage
 - **Exam Editor**: Reviews and refines mock exams for accuracy and clarity
 
 ![Certification Crew Architecture](media/certif-crew-agents.gif)
-
-Read the articles below to learn more about AI agents and the design of the certification exam preparation assistant.
-
-- [Building AI Agents for Certification Exam Preparation: Part 1 - From Concept to Code](https://numericaideas.com/blog/building-ai-agents-for-certification-exam-prep-part-1)
-- Building AI Agents for Certification Exam Preparation: Part 2 - Production application with CrewAI, FastAPI, Vue.js, and Docker (*Coming soon*)
 
 ## Directory Structure
 
