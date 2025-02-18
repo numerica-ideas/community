@@ -3,6 +3,7 @@
 This repository contains the codes for building AI agents to generate certification exam preparation materials as described in the following two articles written by **Armel Aymdji, PhD**: 
 - [Building AI Agents for Certification Exam Preparation: Part 1 - From Concept to Code](https://numericaideas.com/blog/building-ai-agents-for-certification-exam-prep-part-1); 
 - Building AI Agents for Certification Exam Preparation: Part 2 - Production application with CrewAI, FastAPI, Vue.js, and Docker (*Coming soon*)
+
 Here's the [original repo](https://github.com/ayimdji/certification-prep-ai-agents).
 
 **Important note**: This resource is for **educational purposes only** and does not guarantee the accuracy of the generated materials nor a successful exam.
