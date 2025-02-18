@@ -7,6 +7,7 @@ The source codes of all the articles are present [here](../).
 
 ## Related Articles
 <!-- ALL-POSTS-LIST:START -->
+- [Building AI Agents for Certification Exam Preparation: Part 1 – From Concept to Code](https://numericaideas.com/blog/building-ai-agents-for-certification-exam-prep-part-1/)
 - [Migrate WordPress Site From cPanel To AWS](https://numericaideas.com/blog/migrate-wordpress-from-cpanel-to-aws/)
 - [Next.js vs Angular: Choosing the Best Framework for Your Front-End Project](https://numericaideas.com/blog/next-js-vs-angular-choosing-the-best-framework-for-your-front-end-project/)
 - [Design Pattern Observer](https://numericaideas.com/blog/design-pattern-observer/)
