@@ -8,6 +8,7 @@ The source codes of the articles in this category are present in this [folder](.
 ## Related Articles
 <!-- TAG-POSTS-LIST:START -->
 - [The Surprisingly Simple Way to Build Your Own Local “ChatGPT”](https://numericaideas.com/blog/build-your-own-chatgpt/)
+- [Building AI Agents for Certification Exam Preparation: Part 1 – From Concept to Code](https://github.com/ayimdji/numericaideas/tree/master/ai/certification-prep-ai-agents)
 <!-- TAG-POSTS-LIST:END -->
 
 **More tech content is available on [the blog](https://numericaideas.com/blog/) and on [YouTube](https://www.youtube.com/@numericaideas/channels?sub_confirmation=1)**, subscribe to the [monthly activities newsletter](https://numericaideas.com/news/) to be kept posted ✅

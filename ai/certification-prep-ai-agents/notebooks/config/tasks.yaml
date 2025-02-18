@@ -1,0 +1,140 @@
+prepare_training_resources:
+  description: >
+    Search and analyse the latest resources, updates and contents 
+    related to the {certification_name} certification.
+    Identify and collect the most relevant content that could help candidates 
+    to get all the knowledge and skills required to pass the certification exam.
+    Utilize the certification official website ({certification_link}), 
+    web search and data scraping tools to gather up-to-date information. 
+    Focus on collecting study contents and various type of practice questions 
+    from official and unofficial sources, and verified answers. 
+    Include  various situational questions, a situational question being a question 
+    that requires the candidate to apply the knowledge to a real-world scenario.
+  expected_output: >
+    A detailed report with accurate and up-to-date information and resources 
+    about the {certification_name} certification. 
+    This report should include exam topics, exam contents, 
+    practice questions and answers necessary to create flashcards 
+    and mock exams to prepare students to take and pass 
+    the {certification_name} certification exam. 
+    Make sure the report contains enough content to create 2 times {num_flashcards} 
+    flashcard questions and 2 times {num_questions} mock exam questions that are 
+    diverse enough to not overlap with each other.
+
+
+create_flashcards:
+  description: >
+    Based on the insights provided by the Certification Trainer, 
+    create {num_flashcards} high-quality flashcards to be used 
+    as an aid to memorize exam contents.
+    Produce various types of flashcards, including direct questions 
+    and situational questions and their corresponding answers, explanations, 
+    and diverse links to relevant resources, 
+    to effectively help in memorizing exam contents.
+    Include relevant examples and use cases.
+    Ensure coverage of all exam topics.
+    One flashcard contains one to three links to additional resources.
+    Carefully check that the links are reachable and point to resources 
+    that contains further explanation. 
+    Do not make up links. You will be penalized if you make up links. 
+    You can use the links provided by the Certification Trainer.
+    Use the website search tool to check the content of the links 
+    and make sure they are reachable.
+    Refer to the Certification Trainer to ensure the questions in the flashcards 
+    are diverse enough to not overlap with the questions in the mock exam.
+  expected_output: >
+    A collection of {num_flashcards} high-quality flashcards, 
+    each one being made of a front with a question and 
+    a back with the corresponding answer, a comprehensive explanation of the answer, 
+    and one to three relevant and reachable links 
+    to additional resources containing further explanation. 
+
+
+edit_flashcards:
+  description: >
+    Review and refine the flashcards created by the Flashcard Author 
+    to ensure they meet the highest standards of accuracy, clarity, 
+    and alignment with the {certification_name} certification content
+    as described in the official website ({certification_link}). 
+    Thoroughly proofread and edit the flashcards, checking
+    for errors, the validity of links to additional resources, inconsistencies, 
+    and alignment with the {certification_name} certification style.
+    If a link to additional resources is not reachable, remove it and use serper and website search tools 
+    to search for a reachable and relevant link to replace it.
+    Ensure that the flashcards accurately reflects the key insights and
+    guidelines provided by the Certification Trainer.
+    Make sure none of the flashcard fronts contain multiple choice questions.
+  expected_output: >
+    A finalized set of {num_flashcards} flashcards, thoroughly
+    reviewed, and formatted in markdown.  
+    Each flashcard is made of a front with a question and 
+    a back with the corresponding answer, a comprehensive explanation of the answer, 
+    and one to three relevant and reachable links 
+    to additional resources containing further explanation.
+    Provide the markdown content without any other markers (e.g. ```markdown).
+
+
+create_mock_exam:
+  description: >
+    Based on the insights provided by the Certification Trainer, 
+    create a mock exam, made of {num_questions} challenging practice questions. 
+    Analyze exam contents and guidelines related to {certification_name} certification, 
+    with a focus on details that could be leveraged in mock exam creation.
+    The mock exam should be a multiple-choice exam, made of 
+    complex questions, and options for each question. 
+    Make sure to include a large number of complex situational questions, 
+    where a real-world scenario is described 
+    and the candidate is asked to choose the answer adapted to the scenario.
+    Write the answer to match exactly the content of the right options, including 
+    its number.
+    Put an effort to make the questions challenging and require the candidate 
+    to think deeply about the certification content.
+    The difficulty level of the questions and the number of options 
+    and correct answers should reflect the {certification_name} certification exam style.
+    Make sure you avoid obvious questions.
+    Refer to the Certification Trainer to make sure the questions in the mock exam 
+    are diverse enough to not overlap with the questions in the flashcards.
+  expected_output: >
+    A mock exam, made of {num_questions} challenging questions, answers and explanations 
+    to be used as a practice exam.
+
+edit_mock_exam:
+  description: >
+    Review and refine the mock exam created about {certification_name} certification 
+    to ensure it meets the highest standards of accuracy, clarity, 
+    and alignment with the certification standard 
+    as described in the official website ({certification_link}). 
+    Thoroughly proofread and edit the content, checking 
+    for errors, inconsistencies, and alignment with the {certification_name} 
+    certification style and difficulty level.
+    Ensure that the position of the right option is not the same in different questions.
+    Ensure that the content accurately reflects the key insights and
+    direction provided by the Certification Trainer.
+  expected_output: >
+    A comprehensive mock exam, made of {num_questions} questions, 
+    answers and explanations, thoroughly reviewed to be used as a practice exam.
+    Ensure that the final mock exam is well-formatted in markdown, 
+    using appropriate headers, bullet points,
+    and other markdown features to enhance readability and engagement.
+    Provide the markdown content without any other markers (e.g. ```markdown).
+
+# The mock exam should be a multiple-choice exam, made of situational questions, 
+# and options for each question. 
+# Make sure the answer matches exactly the content of the right option, 
+# not only the number of the right option.
+# Make sure the right option can be independently the first one, 
+# the second one, the third one, etc.
+# Ensure that the number of options and correct answers reflects 
+# the {certification_name} certification exam style.
+
+# create_final_document:
+#   description: >
+#     Add the flashcards from the Flashcard Editor and the mock exam 
+#     from the Chief Exam Officer to a final practice document. 
+#   expected_output: >
+#     A final practice document containing {num_flashcards} flashcards 
+#     and a mock exam of {num_questions} questions.
+#     Ensure that the final document is well-formatted in markdown, 
+#     using appropriate headers, bullet points,
+#     and other markdown features to enhance readability and engagement.
+#     Provide the markdown content without any other markers (e.g. ```markdown).
