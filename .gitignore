@@ -5,3 +5,7 @@
 .terraform*
 terraform.tfstate
 terraform.tfstate.backup
+
+# IntelliJ and other Jetbrains IDEs
+.idea
+.jpb
